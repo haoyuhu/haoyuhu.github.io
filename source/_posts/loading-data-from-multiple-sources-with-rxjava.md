@@ -39,6 +39,8 @@ Observable<Data> source = Observable
 
 Note that the order of the source `Observables` in `concat()` matters, since it's checking them one-by-one.
 
+<!--more-->
+
 # Stale Data
 Unfortunately, now our data-saving code is working a little *too*well! It's always returning the same data, no matter how out-of-date it is. Remember, we'd like to go back to the server occasionally for fresh data.
 

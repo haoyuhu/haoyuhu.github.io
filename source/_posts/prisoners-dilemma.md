@@ -31,6 +31,8 @@ In that episode, both were promising they would split the prize, but then one pe
 
 So trying to split the money in a conventional way doesn’t work. Is there a better strategy?
 
+<!--more-->
+
 # **Why it’s bad to promise you will split**
 First, I want to explain why the strategy of splitting does not work. When you promise the other person you will split the prize, you are trying to change the game.
 
