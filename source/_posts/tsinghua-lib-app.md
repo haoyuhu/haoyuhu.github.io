@@ -2,6 +2,7 @@
 title: 清华大学研读间预约应用
 date: 2018-06-05
 toc: true
+thumbnail: /2018/06/05/tsinghua-lib-app/0.jpeg
 categories: 
 - 来自新世界
 tags:
@@ -21,15 +22,15 @@ tags:
 
 <!--more-->
 
-![screen1](http://git.oschina.net/huhaoyu/picture/raw/master/tutu_screen_1.jpg)
-![screen2](http://git.oschina.net/huhaoyu/picture/raw/master/tutu_screen_2.jpg)
-![screen3](http://git.oschina.net/huhaoyu/picture/raw/master/tutu_screen_3.jpg)
-![screen4](http://git.oschina.net/huhaoyu/picture/raw/master/tutu_screen_4.jpg)
-![screen5](http://git.oschina.net/huhaoyu/picture/raw/master/tutu_screen_5.jpg)
-![screen6](http://git.oschina.net/huhaoyu/picture/raw/master/tutu_screen_6.jpg)
-![screen7](http://git.oschina.net/huhaoyu/picture/raw/master/tutu_screen_7.jp)
-![screen8](http://git.oschina.net/huhaoyu/picture/raw/master/tutu_screen_10.jpg)
-![screen9](http://git.oschina.net/huhaoyu/picture/raw/master/tutu_screen_11.jpg)
+![screen1](/2018/06/05/tsinghua-lib-app/1.jpg)
+![screen2](/2018/06/05/tsinghua-lib-app/2.jpg)
+![screen3](/2018/06/05/tsinghua-lib-app/3.jpg)
+![screen4](/2018/06/05/tsinghua-lib-app/4.jpg)
+![screen5](/2018/06/05/tsinghua-lib-app/5.jpg)
+![screen6](/2018/06/05/tsinghua-lib-app/6.jpg)
+![screen7](/2018/06/05/tsinghua-lib-app/7.jpg)
+![screen8](/2018/06/05/tsinghua-lib-app/8.jpg)
+![screen9](/2018/06/05/tsinghua-lib-app/9.jpg)
 
 ## 主要功能
 

@@ -2,6 +2,7 @@
 title: 浅谈Prisoner's Dilemma
 date: 2016-02-01
 toc: true
+thumbnail: /2016/02/01/prisoners-dilemma/0.jpg
 categories:
 - 来自新世界
 tags:
@@ -15,7 +16,7 @@ If you’re never seen the show, here is how it works. Each of two contestants i
 
 Here’s the normal form representation of the game:
 
-![game matrix](http://upload-images.jianshu.io/upload_images/2092228-5f7770142412e7b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![game matrix](/2016/02/01/prisoners-dilemma/1.png)
 
 How should you play this game?
 One contestant had an amazingly brilliant strategy.
@@ -38,7 +39,7 @@ First, I want to explain why the strategy of splitting does not work. When you p
 
 You are telling them that instead of looking at the original payoffs, they should only consider the game under the assumption that you are going to split the prize. So you are telling them to consider the following game:
 
-![game matrix](http://upload-images.jianshu.io/upload_images/2092228-5c3cc7b76f9fcda0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![game matrix](/2016/02/01/prisoners-dilemma/2.png)
 
 Do you see what’s wrong with your strategy? If you promise them that you will split the prize, they are faced with a very tempting option to steal. If they split, they will only get 50 percent. But if they steal, they will get the entire 100 percent.
 
@@ -63,7 +64,7 @@ Nick promises over and over that he is an honest person and that he will definit
 At the 5:21 mark in the video, they reveal their choices. It turns out that both of them choose to SPLIT after all! Thus both end up with a 50 percent share of the money.
 Here’s why Nick’s strategy was so brilliant. Nick was credibly explaining that he was going to steal. This changed the game into the following payoffs:
 
-![new game matrix](http://upload-images.jianshu.io/upload_images/2092228-ee2c0ffd5b18482b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![new game matrix](/2016/02/01/prisoners-dilemma/3.png)
 
 On the one hand, the other contestant could steal and destroy the prize money. On the other, he could split and hope that Nick kept to his word. In other words, Nick has transformed the game so that the weakly dominant best response is to split!
 
