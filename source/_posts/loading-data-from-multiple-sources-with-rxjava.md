@@ -1,6 +1,10 @@
 ---
 title: Loading data from multiple sources with RxJava
 toc: true
+categories: 
+- 来自新世界
+tags:
+- RxJava
 ---
 Simply copy from [Loading data from multiple sources with RxJava](http://blog.danlew.net/2015/06/22/loading-data-from-multiple-sources-with-rxjava/)
 
