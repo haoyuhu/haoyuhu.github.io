@@ -1,5 +1,6 @@
 ---
 title: 浅谈Prisoner's Dilemma
+date: 2016-02-01
 toc: true
 categories:
 - 来自新世界

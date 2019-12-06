@@ -1,5 +1,6 @@
 ---
 title: CRC循环冗余校验码
+date: 2016-04-29
 toc: true
 categories: 
 - 来自新世界

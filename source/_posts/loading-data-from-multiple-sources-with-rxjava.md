@@ -1,5 +1,6 @@
 ---
 title: Loading data from multiple sources with RxJava
+date: 2016-01-19
 toc: true
 categories: 
 - 来自新世界
