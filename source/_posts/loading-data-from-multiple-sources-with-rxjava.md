@@ -6,6 +6,8 @@ categories:
 - 来自新世界
 tags:
 - RxJava
+- Java
+- Android
 ---
 Simply copy from [Loading data from multiple sources with RxJava](http://blog.danlew.net/2015/06/22/loading-data-from-multiple-sources-with-rxjava/)
 
