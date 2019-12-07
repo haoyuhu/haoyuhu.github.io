@@ -2,6 +2,7 @@
 title: OpenCV实现图像搜索引擎
 date: 2017-12-07
 toc: true
+thumbnail: /2017/12/07/opencv/5.jpeg
 categories: 
 - 来自新世界
 tags:
