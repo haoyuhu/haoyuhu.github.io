@@ -1,7 +1,8 @@
 ---
-title: greedy-snake
+title: C++贪吃蛇
 date: 2016-12-07 16:17:56
 toc: true
+thumbnail: /2016/12/07/greedy-snake/0.jpeg
 categories: 
 - 来自新世界
 tags:
