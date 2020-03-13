@@ -53,18 +53,18 @@ npm run build
 ## 多分支部署
 
 ```
-# 获取当前分支和目标分支
-CURR_BRANCH=`git symbolic-ref --short -q HEAD`
-echo "current branch: ${CURR_BRANCH}"
-TARGET_BRANCH=`echo $1 | awk -F/ '{print $3}'`
-echo "target branch: ${TARGET_BRANCH}"
-
 # 初始化仓库
 git init
 git remote add origin /opt/tmp/test-bare.git
 # 清除未跟踪或未暂存的代码
 git reset --hard
 git clean -df
+
+# 获取当前分支和目标分支
+CURR_BRANCH=`git symbolic-ref --short -q HEAD`
+echo "current branch: ${CURR_BRANCH}"
+TARGET_BRANCH=`echo $1 | awk -F/ '{print $3}'`
+echo "target branch: ${TARGET_BRANCH}"
 
 # 拉取远端所有分支最新代码
 git fetch origin
