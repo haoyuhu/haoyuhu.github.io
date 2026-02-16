@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+google-genai
+pypdf
+pyyaml
+requests
+python-multipart
+beautifulsoup4
+PyGithub
+questionary
+python-dotenv

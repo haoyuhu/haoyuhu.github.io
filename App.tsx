@@ -5,6 +5,7 @@ import { AppConfig, NavigationTab, ThemeMode } from './types';
 import ProjectCard from './components/ProjectCard';
 import BlogCard from './components/BlogCard';
 import ResumeView from './components/ResumeView';
+import ChatTerminal from './components/ChatTerminal';
 
 const PAGE_SIZE = 10;
 
@@ -15,6 +16,7 @@ const App: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [theme, setTheme] = useState<ThemeMode>('system');
   const [textToType, setTextToType] = useState("");
+  const [terminalOpen, setTerminalOpen] = useState(false);
   
   // Pagination State
   const [gardenLimit, setGardenLimit] = useState(PAGE_SIZE);
@@ -562,6 +564,17 @@ ${aiTools.map(tool => `| ${tool.name.padEnd(11)} | ${tool.time.padEnd(5)} | ${to
                     <span>TypeScript React</span>
                 </div>
             </div>
+
+            {/* Chat Terminal FAB */}
+            <button 
+                onClick={() => setTerminalOpen(true)}
+                className="fixed bottom-10 right-8 w-14 h-14 bg-geek-orange text-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform z-50 group border-2 border-[#ff7a55]"
+                aria-label="Open Terminal"
+            >
+                <TerminalIcon size={24} className="group-hover:animate-pulse" />
+            </button>
+            
+            <ChatTerminal isOpen={terminalOpen} onClose={() => setTerminalOpen(false)} />
 
         </main>
       </div>

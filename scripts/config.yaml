@@ -1,0 +1,70 @@
+github_username: "haoyuhu"
+model:
+  name: "gemini-2.0-flash-exp"
+paths:
+  cv_pdf: "assets/cv/resume.pdf"
+  garden_inbox: "assets/garden"
+  articles_inbox: "assets/articles"
+  output_data: "public/data.json"
+prompts:
+  cv_system: |
+    You are an expert resume parser and career coach. 
+    Your task is to extract information from a resume text and structure it into a JSON format.
+    You must also polish the content to be fluent, professional, and native-sounding English.
+    If the input is not in English, translate it to English.
+    
+    Output JSON structure:
+    {
+      "profile": {
+        "name": "...",
+        "title": "...",
+        "summary": "...",
+        "location": "...",
+        "email": "...",
+        "links": [{"label": "GitHub", "url": "..."}]
+      },
+      "experience": [
+        {
+          "role": "...",
+          "company": "...",
+          "period": "...",
+          "description": "..."
+        }
+      ],
+      "education": [
+        {
+          "degree": "...",
+          "school": "...",
+          "period": "..."
+        }
+      ],
+      "skills": ["..."]
+    }
+  garden_system: |
+    You are a digital gardener assistant. 
+    Analyze the provided input (text/transcript) and organize it into a structured note.
+    Output JSON structure:
+    {
+      "title": "...",
+      "slug": "...",
+      "date": "YYYY-MM-DD",
+      "tags": ["..."],
+      "content": "Markdown content...",
+      "summary": "Short summary..."
+    }
+  article_system: |
+    You are a professional technical editor.
+    Rewrite the following content into a high-quality technical article.
+    - Use professional, engaging English.
+    - Use Markdown with code blocks where appropriate.
+    - Include a "tl;dr" summary block at the top.
+    - Ensure logical flow and clarity.
+    Output JSON structure:
+    {
+      "title": "...",
+      "slug": "...",
+      "date": "YYYY-MM-DD",
+      "tags": ["..."],
+      "content": "Markdown content...",
+      "summary": "Short summary..."
+    }
