@@ -3,12 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Haoyu Hu | Geek Portfolio</title>
-    <!-- JetBrains Mono Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet">
-    
+    <meta name="description" content="Config-first portfolio and creator studio." />
+    <title>Haoyu Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -16,18 +15,16 @@
         theme: {
           extend: {
             colors: {
-              'geek-orange': '#D94D22', 
-              'geek-black': '#1A1A1A',
-              'geek-gray': '#F5F5F4',
+              accent: 'var(--accent)',
               'ide-bg': 'var(--ide-bg)',
-              'ide-sidebar': 'var(--ide-sidebar)',
+              'ide-panel': 'var(--ide-panel)',
               'ide-border': 'var(--ide-border)',
               'ide-text': 'var(--ide-text)',
               'ide-text-dim': 'var(--ide-text-dim)',
             },
             fontFamily: {
-              mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'],
-              sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", 'Arial', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+              display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
             },
             animation: {
               'cursor-blink': 'cursor-blink 1s step-end infinite',
@@ -36,87 +33,15 @@
               'cursor-blink': {
                 '0%, 100%': { opacity: '1' },
                 '50%': { opacity: '0' },
-              }
-            }
-          }
-        }
-      }
+              },
+            },
+          },
+        },
+      };
     </script>
-    <style>
-      :root {
-        --ide-bg: #ffffff;
-        --ide-sidebar: #F3F4F6;
-        --ide-border: #E5E7EB;
-        --ide-text: #1A1A1A;
-        --ide-text-dim: #6B7280;
-      }
-      .dark {
-        --ide-bg: #1e1e1e;
-        --ide-sidebar: #252526;
-        --ide-border: #333333;
-        --ide-text: #d4d4d4;
-        --ide-text-dim: #858585;
-      }
-
-      body {
-        font-family: 'JetBrains Mono', monospace;
-        background-color: var(--ide-bg);
-        color: var(--ide-text);
-        transition: background-color 0.3s, color 0.3s;
-      }
-      ::-webkit-scrollbar {
-        width: 10px;
-        height: 10px;
-      }
-      ::-webkit-scrollbar-track {
-        background: var(--ide-sidebar);
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #D1D5DB;
-        border: 2px solid var(--ide-sidebar);
-        border-radius: 6px;
-      }
-      .dark ::-webkit-scrollbar-thumb {
-        background: #4a4a4a;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #9CA3AF;
-      }
-      .pixelated {
-        image-rendering: pixelated;
-      }
-      /* Markdown Styles */
-      .markdown-body h1 { font-size: 1.5em; font-weight: bold; margin-bottom: 0.5em; margin-top: 1em; color: var(--ide-text); }
-      .markdown-body h2 { font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em; margin-top: 1em; color: var(--ide-text); }
-      .markdown-body p { margin-bottom: 1em; line-height: 1.6; color: var(--ide-text); }
-      .markdown-body code { background-color: var(--ide-sidebar); padding: 0.2em 0.4em; border-radius: 4px; font-size: 0.85em; color: #D94D22; }
-      .markdown-body pre { background-color: #1A1A1A; padding: 1em; border-radius: 8px; overflow-x: auto; margin-bottom: 1em; }
-      .markdown-body pre code { background-color: transparent; color: #f8f8f2; padding: 0; }
-      .markdown-body ul { list-style-type: disc; padding-left: 1.5em; margin-bottom: 1em; }
-      .markdown-body blockquote { border-left: 4px solid #D94D22; padding-left: 1em; color: var(--ide-text-dim); font-style: italic; }
-      .markdown-body a { color: #D94D22; text-decoration: underline; text-underline-offset: 2px; }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
-    "fs": "https://esm.sh/fs@^0.0.1-security",
-    "recharts": "https://esm.sh/recharts@^3.7.0",
-    "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
-    "path": "https://esm.sh/path@^0.12.7",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "process": "https://esm.sh/process@^0.11.10",
-    "html-to-image": "https://esm.sh/html-to-image@^1.11.13",
-    "react-markdown": "https://esm.sh/react-markdown@9.0.1"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
-  <body class="overflow-hidden">
+  </head>
+  <body class="overflow-hidden bg-ide-bg">
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
-</html>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+  </html>

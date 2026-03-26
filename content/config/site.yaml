@@ -1,0 +1,137 @@
+site:
+  title:
+    zh-CN: "胡皓宇 | 终端风格作品集"
+    en: "Haoyu Hu | Terminal Portfolio"
+  description:
+    zh-CN: "一个以配置驱动、支持双语内容与本地创作工作流的个人作品集。"
+    en: "A config-first personal portfolio with bilingual content and a local creator workflow."
+  localeDefault: "zh-CN"
+  ownerHandle: "haoyuhu"
+  navigation:
+    - id: "home"
+      label:
+        zh-CN: "首页"
+        en: "Home"
+      fileLabel: "home.py"
+    - id: "projects"
+      label:
+        zh-CN: "项目"
+        en: "Projects"
+      fileLabel: "projects.tsx"
+    - id: "resume"
+      label:
+        zh-CN: "履历"
+        en: "Resume"
+      fileLabel: "cv.yaml"
+    - id: "garden"
+      label:
+        zh-CN: "花园"
+        en: "Garden"
+      fileLabel: "garden.md"
+    - id: "articles"
+      label:
+        zh-CN: "文章"
+        en: "Articles"
+      fileLabel: "articles.md"
+    - id: "settings"
+      label:
+        zh-CN: "设置"
+        en: "Settings"
+      fileLabel: "settings.yaml"
+    - id: "studio"
+      label:
+        zh-CN: "创作台"
+        en: "Creator Studio"
+      fileLabel: "studio.local"
+      studioOnly: true
+  theme:
+    accent: "#D94D22"
+    background: "#111827"
+    panel: "#1F2937"
+    border: "#374151"
+    text: "#F9FAFB"
+    muted: "#9CA3AF"
+    success: "#10B981"
+    warning: "#F59E0B"
+  settingsPanel:
+    aiModelLabel: "Local multi-provider runtime"
+    version: "3.0.0-config-core"
+    scripts:
+      - "portfolio build"
+      - "portfolio serve --reload"
+      - "portfolio release"
+  statusBar:
+    branchLabel: "main"
+    diagnosticsLabel:
+      zh-CN: "0 errors, 0 warnings"
+      en: "0 errors, 0 warnings"
+    fileTypeLabel: "TypeScript React"
+    encodingLabel: "UTF-8"
+  runtime:
+    apiBaseUrl: null
+    localStudioEnabled: false
+    publicSite: true
+  studio:
+    title:
+      zh-CN: "本地创作控制台"
+      en: "Local Creator Console"
+    description:
+      zh-CN: "导入简历、发布短文与长文、预览 bundle、运行校验。"
+      en: "Import resumes, publish notes and articles, preview the bundle, and run checks."
+    supportVoiceViaCli: true
+  copy:
+    bootLabel:
+      zh-CN: "正在启动内容内核..."
+      en: "Booting content kernel..."
+    bootSubLabel:
+      zh-CN: "正在挂载 /dev/portfolio ..."
+      en: "Mounting /dev/portfolio ..."
+    explorerLabel:
+      zh-CN: "资源浏览器"
+      en: "Explorer"
+    externalLabel:
+      zh-CN: "外部链接"
+      en: "External Links"
+    liveServer:
+      zh-CN: "本地服务已就绪"
+      en: "Local server ready"
+    systemIdentity:
+      zh-CN: "系统身份"
+      en: "System Identity"
+    techMetrics:
+      zh-CN: "技术能力刻度"
+      en: "Tech Stack Metrics"
+    toolTelemetry:
+      zh-CN: "工具遥测"
+      en: "AI Tool Telemetry"
+    careerLog:
+      zh-CN: "经历时间线"
+      en: "Career Log"
+    widgets:
+      latestProject:
+        zh-CN: "最新项目"
+        en: "Latest Deployment"
+      latestNote:
+        zh-CN: "最新短文"
+        en: "Buffer Stream"
+      latestArticle:
+        zh-CN: "最新文章"
+        en: "Kernel Log"
+      currentRole:
+        zh-CN: "当前角色"
+        en: "Runtime Env"
+    loadMore:
+      zh-CN: "加载更多"
+      en: "Load More"
+    projectsFooter:
+      zh-CN: "return curated_projects_from_config"
+      en: "return curated_projects_from_config"
+    settingsHeading:
+      zh-CN: "系统配置"
+      en: "System Configuration"
+    scriptsHeading:
+      zh-CN: "常用脚本"
+      en: "Scripts"
+    localeToggle:
+      zh-CN: "语言"
+      en: "Locale"

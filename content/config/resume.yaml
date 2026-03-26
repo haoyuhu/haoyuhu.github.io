@@ -1,0 +1,109 @@
+resume:
+  summary:
+    zh-CN: "聚焦智能体架构、推理基础设施、内容工作流与工程效率平台，能够从产品体验、系统设计到自动化发布链路做端到端落地。"
+    en: "Focused on agent architectures, inference platforms, content workflows, and engineering productivity systems across product, infrastructure, and release pipelines."
+  experience:
+    - id: "exp-ai-infra"
+      company: "Tech Giant Corp"
+      role:
+        zh-CN: "AI 基础设施架构师"
+        en: "AI Infrastructure Architect"
+      startDate: "2021"
+      endDate: "Present"
+      location:
+        zh-CN: "上海"
+        en: "Shanghai"
+      description:
+        zh-CN:
+          - "负责大模型推理平台与智能体运行时的架构设计。"
+          - "优化 GPU 资源利用率，并显著降低服务延迟。"
+        en:
+          - "Architected large-model inference platforms and agent runtimes."
+          - "Improved GPU utilization while reducing serving latency."
+      projects:
+        - name: "Model Serving Platform"
+          description:
+            zh-CN: "面向大模型的可扩展 Kubernetes 推理服务层。"
+            en: "A scalable Kubernetes-based serving layer for large language models."
+          tech:
+            - "Go"
+            - "Kubernetes"
+            - "Python"
+        - name: "Data Viz Platform"
+          description:
+            zh-CN: "实时分析看板，处理海量事件流。"
+            en: "A real-time analytics dashboard processing large event streams."
+          tech:
+            - "D3.js"
+            - "Canvas"
+            - "WebSockets"
+    - id: "exp-full-stack"
+      company: "Innovative Startup Inc"
+      role:
+        zh-CN: "全栈工程师"
+        en: "Full-stack Developer"
+      startDate: "2019"
+      endDate: "2021"
+      location:
+        zh-CN: "杭州"
+        en: "Hangzhou"
+      description:
+        zh-CN:
+          - "从零到一搭建产品 MVP 与部署流程。"
+          - "建设 CI/CD 与自动化测试体系。"
+        en:
+          - "Built the MVP and deployment workflow from scratch."
+          - "Established CI/CD pipelines and automated testing strategies."
+      projects:
+        - name: "E-commerce Core"
+          description:
+            zh-CN: "支撑高并发秒杀场景的核心后端服务。"
+            en: "Core backend services for high-concurrency commerce workloads."
+          tech:
+            - "Node.js"
+            - "Redis"
+            - "MongoDB"
+  education:
+    - id: "edu-sjtu"
+      school: "Shanghai Jiao Tong University"
+      degree:
+        zh-CN: "理学硕士"
+        en: "Master of Science"
+      field:
+        zh-CN: "计算机科学"
+        en: "Computer Science"
+      startDate: "2016"
+      endDate: "2019"
+    - id: "edu-tongji"
+      school: "Tongji University"
+      degree:
+        zh-CN: "工学学士"
+        en: "Bachelor of Engineering"
+      field:
+        zh-CN: "软件工程"
+        en: "Software Engineering"
+      startDate: "2012"
+      endDate: "2016"
+  skillGroups:
+    - id: "skill-agent"
+      label:
+        zh-CN: "智能体与模型系统"
+        en: "Agents and Model Systems"
+      items:
+        - name: "Agent orchestration"
+          level: "Advanced"
+        - name: "Inference platform"
+          level: "Advanced"
+        - name: "Prompt workflows"
+          level: "Advanced"
+    - id: "skill-platform"
+      label:
+        zh-CN: "平台与工程化"
+        en: "Platform Engineering"
+      items:
+        - name: "Full-stack delivery"
+          level: "Advanced"
+        - name: "CI/CD"
+          level: "Advanced"
+        - name: "Developer tooling"
+          level: "Advanced"

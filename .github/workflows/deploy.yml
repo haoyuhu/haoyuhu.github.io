@@ -1,8 +1,9 @@
-name: Deploy Portfolio to GitHub Pages
+name: Verify and Deploy Portfolio
 
 on:
+  pull_request:
   push:
-    branches: [ main ]
+    branches: [main, master]
   workflow_dispatch:
 
 permissions:
@@ -11,45 +12,67 @@ permissions:
   id-token: write
 
 jobs:
-  deploy:
+  verify:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          submodules: true
-          fetch-depth: 0
 
-      - name: Set up Node.js
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
+          cache: "npm"
 
-      - name: Cache dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.OS }}-node-
+      - name: Install Python dependencies
+        run: python -m pip install -e ".[dev]"
 
-      - name: Install dependencies
+      - name: Install frontend dependencies
         run: npm ci
 
-      - name: Build project
-        run: npm run build
+      - name: Secret scan
+        uses: gitleaks/gitleaks-action@v2
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload production artifacts
+      - name: Run Python tests
+        run: pytest -q
+
+      - name: Typecheck frontend
+        run: npm run typecheck
+
+      - name: Build portfolio bundle
+        run: portfolio build
+
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Run Playwright regression
+        run: npm run test:e2e
+
+      - name: Build frontend
+        run: npm run build
+
+      - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
+  deploy:
+    if: github.event_name != 'pull_request' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+    needs: verify
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          artifact_name: github-pages

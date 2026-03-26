@@ -1,0 +1,14 @@
+id: "note-agentic-garden"
+kind: "note"
+slug: "agentic-garden"
+date: "2026-03-26"
+title:
+  zh-CN: "把个人站重构成内容操作系统"
+  en: "Turning a portfolio into a content operating system"
+summary:
+  zh-CN: "页面应该只负责显示，内容与工作流应该在本地工具链中可维护、可重建、可发布。"
+  en: "The page should only render; the content and workflow should remain maintainable, rebuildable, and releasable in local tooling."
+tags:
+  - "portfolio"
+  - "workflow"
+  - "agents"

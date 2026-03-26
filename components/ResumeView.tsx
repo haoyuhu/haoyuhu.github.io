@@ -1,138 +1,139 @@
 import React, { useState } from 'react';
-import { Briefcase, GraduationCap, GitCommit, Calendar, MapPin } from 'lucide-react';
-import { Experience, Education } from '../types';
+import { Briefcase, Calendar, GraduationCap, MapPin, Sparkles } from 'lucide-react';
+import { LocaleCode, ResumeConfig } from '../types';
+import { getLocalizedText } from '../lib/i18n';
 
 interface ResumeViewProps {
-  experience: Experience[];
-  education: Education[];
+  resume: ResumeConfig;
+  locale: LocaleCode;
 }
 
-const ResumeView: React.FC<ResumeViewProps> = ({ experience, education }) => {
+const ResumeView: React.FC<ResumeViewProps> = ({ resume, locale }) => {
   const [viewMode, setViewMode] = useState<'visual' | 'json'>('visual');
 
   if (viewMode === 'json') {
     return (
-        <div className="font-mono text-sm overflow-auto">
-             <div className="flex justify-end mb-4">
-                <button 
-                    onClick={() => setViewMode('visual')}
-                    className="text-xs border border-ide-border px-2 py-1 rounded hover:bg-ide-sidebar transition-colors"
-                >
-                    Switch to Visual View
-                </button>
-            </div>
-            <pre className="text-ide-text bg-ide-sidebar p-4 rounded-lg">
-                {JSON.stringify({ experience, education }, null, 2)}
-            </pre>
+      <div className="font-mono text-sm">
+        <div className="mb-4 flex justify-end">
+          <button
+            onClick={() => setViewMode('visual')}
+            className="rounded border border-ide-border px-3 py-1 text-xs text-ide-text-dim transition-colors hover:bg-ide-panel hover:text-accent"
+          >
+            Switch to Visual View
+          </button>
         </div>
+        <pre className="overflow-auto rounded-lg border border-ide-border bg-ide-panel p-4 text-ide-text">
+          {JSON.stringify(resume, null, 2)}
+        </pre>
+      </div>
     );
   }
 
   return (
     <div className="animate-in fade-in slide-in-from-bottom-2 duration-300">
-        <div className="flex justify-between items-center mb-8 border-b border-ide-border pb-4">
-             <h2 className="text-xl font-bold flex items-center gap-2">
-                <span className="text-geek-orange">git</span> log --graph --all
-            </h2>
-             <button 
-                onClick={() => setViewMode('json')}
-                className="text-xs font-mono text-ide-text-dim hover:text-geek-orange transition-colors"
-            >
-                {'{ JSON }'}
-            </button>
-        </div>
-
-        {/* Experience Section - Git Graph Style */}
-        <div className="mb-12 relative">
-            <h3 className="text-lg font-bold font-mono mb-6 flex items-center gap-2 text-ide-text">
-                <Briefcase size={18} className="text-geek-orange" />
-                <span>EXPERIENCE_HISTORY</span>
-            </h3>
-            
-            <div className="pl-2">
-                {experience.map((exp, index) => (
-                    <div key={exp.id} className="relative pl-8 pb-12 last:pb-0 group">
-                        {/* Timeline Line */}
-                        <div className="absolute left-[7px] top-2 bottom-0 w-0.5 bg-ide-border group-last:bg-transparent"></div>
-                        {/* Node */}
-                        <div className="absolute left-0 top-2 w-4 h-4 rounded-full border-4 border-white dark:border-zinc-900 bg-geek-orange z-10"></div>
-                        
-                        <div className="bg-ide-sidebar p-5 rounded-lg border border-ide-border hover:border-geek-orange/50 transition-colors">
-                            <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
-                                <div>
-                                    <h4 className="text-lg font-bold text-ide-text">{exp.role}</h4>
-                                    <div className="text-geek-orange font-mono font-bold text-sm">@{exp.company}</div>
-                                </div>
-                                <div className="text-xs font-mono text-ide-text-dim flex flex-col md:items-end mt-2 md:mt-0 gap-1">
-                                    <div className="flex items-center gap-1 bg-white dark:bg-black/20 px-2 py-1 rounded">
-                                        <Calendar size={12} />
-                                        {exp.startDate} - {exp.endDate}
-                                    </div>
-                                    <div className="flex items-center gap-1">
-                                        <MapPin size={12} />
-                                        {exp.location}
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <ul className="list-disc list-inside text-sm text-ide-text-dim mb-4 space-y-1 font-sans">
-                                {exp.description.map((item, i) => (
-                                    <li key={i}>{item}</li>
-                                ))}
-                            </ul>
-
-                            {/* Work Projects */}
-                            {exp.projects.length > 0 && (
-                                <div className="mt-4 pt-3 border-t border-ide-border/50">
-                                    <div className="text-xs font-bold text-ide-text mb-2 font-mono">RELATED_COMMITS (Projects):</div>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                                        {exp.projects.map((proj, i) => (
-                                            <div key={i} className="bg-white dark:bg-black/20 p-3 rounded border border-ide-border">
-                                                <div className="flex items-center gap-2 mb-1">
-                                                    <GitCommit size={14} className="text-geek-orange" />
-                                                    <span className="font-bold text-sm">{proj.name}</span>
-                                                </div>
-                                                <p className="text-xs text-ide-text-dim mb-2">{proj.description}</p>
-                                                <div className="flex flex-wrap gap-1">
-                                                    {proj.tech.map(t => (
-                                                        <span key={t} className="text-[10px] bg-ide-sidebar px-1.5 py-0.5 rounded text-ide-text border border-ide-border">
-                                                            {t}
-                                                        </span>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </div>
-
-        {/* Education Section */}
+      <div className="mb-8 flex items-center justify-between border-b border-ide-border pb-4">
         <div>
-            <h3 className="text-lg font-bold font-mono mb-6 flex items-center gap-2 text-ide-text">
-                <GraduationCap size={18} className="text-geek-orange" />
-                <span>EDUCATION_LOG</span>
-            </h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {education.map((edu) => (
-                    <div key={edu.id} className="bg-ide-sidebar p-4 rounded-lg border border-ide-border flex items-start justify-between">
-                        <div>
-                            <div className="font-bold text-ide-text">{edu.school}</div>
-                            <div className="text-sm text-geek-orange">{edu.degree}</div>
-                            <div className="text-xs text-ide-text-dim mt-1">{edu.field}</div>
-                        </div>
-                        <div className="text-xs font-mono bg-white dark:bg-black/20 px-2 py-1 rounded">
-                            {edu.startDate} - {edu.endDate}
-                        </div>
-                    </div>
-                ))}
-            </div>
+          <h2 className="text-xl font-bold text-ide-text">git log --graph --all</h2>
+          <p className="mt-2 max-w-3xl text-sm leading-6 text-ide-text-dim">{getLocalizedText(resume.summary, locale)}</p>
         </div>
+        <button
+          onClick={() => setViewMode('json')}
+          className="text-xs font-mono text-ide-text-dim transition-colors hover:text-accent"
+        >
+          {'{ JSON }'}
+        </button>
+      </div>
+
+      <div className="mb-12">
+        <h3 className="mb-6 flex items-center gap-2 text-lg font-bold text-ide-text">
+          <Briefcase size={18} className="text-accent" />
+          EXPERIENCE_HISTORY
+        </h3>
+        <div className="space-y-6">
+          {resume.experience.map((experience) => (
+            <article key={experience.id} className="rounded-lg border border-ide-border bg-ide-panel p-5">
+              <div className="mb-3 flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <h4 className="text-lg font-bold text-ide-text">{getLocalizedText(experience.role, locale)}</h4>
+                  <div className="font-mono text-sm font-bold text-accent">@{experience.company}</div>
+                </div>
+                <div className="space-y-1 text-xs text-ide-text-dim">
+                  <div className="flex items-center gap-1">
+                    <Calendar size={12} />
+                    {experience.startDate} - {experience.endDate}
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <MapPin size={12} />
+                    {getLocalizedText(experience.location, locale)}
+                  </div>
+                </div>
+              </div>
+              <ul className="list-disc space-y-1 pl-5 text-sm leading-6 text-ide-text-dim">
+                {experience.description[locale].map((line) => (
+                  <li key={line}>{line}</li>
+                ))}
+              </ul>
+
+              <div className="mt-5 grid gap-3 md:grid-cols-2">
+                {experience.projects.map((project) => (
+                  <div key={project.name} className="rounded border border-ide-border bg-ide-bg p-4">
+                    <div className="mb-2 font-semibold text-ide-text">{project.name}</div>
+                    <p className="mb-3 text-sm leading-6 text-ide-text-dim">{getLocalizedText(project.description, locale)}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((tech) => (
+                        <span key={tech} className="rounded border border-ide-border bg-ide-panel px-2 py-1 text-[10px] uppercase tracking-wide text-ide-text-dim">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <div className="mb-12">
+        <h3 className="mb-6 flex items-center gap-2 text-lg font-bold text-ide-text">
+          <GraduationCap size={18} className="text-accent" />
+          EDUCATION_LOG
+        </h3>
+        <div className="grid gap-4 md:grid-cols-2">
+          {resume.education.map((education) => (
+            <div key={education.id} className="rounded-lg border border-ide-border bg-ide-panel p-4">
+              <div className="font-bold text-ide-text">{education.school}</div>
+              <div className="mt-1 text-sm text-accent">{getLocalizedText(education.degree, locale)}</div>
+              <div className="mt-1 text-sm text-ide-text-dim">{getLocalizedText(education.field, locale)}</div>
+              <div className="mt-3 text-xs text-ide-text-dim">
+                {education.startDate} - {education.endDate}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h3 className="mb-6 flex items-center gap-2 text-lg font-bold text-ide-text">
+          <Sparkles size={18} className="text-accent" />
+          SKILL_GROUPS
+        </h3>
+        <div className="grid gap-4 md:grid-cols-2">
+          {resume.skillGroups.map((group) => (
+            <div key={group.id} className="rounded-lg border border-ide-border bg-ide-panel p-4">
+              <div className="mb-3 font-bold text-ide-text">{getLocalizedText(group.label, locale)}</div>
+              <div className="space-y-2">
+                {group.items.map((item) => (
+                  <div key={item.name} className="flex items-center justify-between rounded border border-ide-border bg-ide-bg px-3 py-2 text-sm">
+                    <span className="text-ide-text">{item.name}</span>
+                    <span className="text-ide-text-dim">{item.level}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

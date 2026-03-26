@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "haoyu-portfolio"
+version = "3.0.0"
+description = "Config-first portfolio tooling, local studio API, and bilingual content pipeline."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi",
+  "google-genai",
+  "httpx",
+  "inquirerpy",
+  "pydantic>=2",
+  "pypdf",
+  "pyyaml",
+  "python-multipart",
+  "requests",
+  "typer",
+  "uvicorn",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pytest-asyncio",
+]
+voice = [
+  "faster-whisper",
+  "numpy",
+  "scipy",
+  "sounddevice",
+]
+
+[project.scripts]
+portfolio = "haoyu_portfolio.cli:app"
+
+[tool.setuptools.packages.find]
+include = ["haoyu_portfolio*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

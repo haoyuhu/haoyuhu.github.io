@@ -1,78 +1,159 @@
-# Haoyu Hu | Geek Portfolio
+# Haoyu Portfolio
 
-A highly customizable, terminal-style personal portfolio template built with React, TypeScript, and Python automation.
+一个以 `YAML + Markdown + generated JSON bundle` 为中心的双语作品集仓库，同时提供：
 
-## Features
+- 静态可部署的公开作品集页面
+- 本地 `Creator Studio` GUI
+- Python CLI `portfolio`
+- 本地 FastAPI Studio / Chat API
+- GitHub Pages 自动构建与部署链路
 
-- **Terminal UI**: Fully interactive terminal component (`askme` command).
-- **AI Integration**: Backend service powered by Gemini 2.0 Flash Exp for answering questions about your portfolio.
-- **Automation Scripts**: Python scripts to auto-update CV, GitHub projects, and content.
-- **Modern Stack**: Vite, React 19, TailwindCSS.
+## 架构概览
 
-## Getting Started
+### 1. 内容源
 
-### 1. Setup Environment
+- `content/config/*.yaml`
+  结构化个人信息、站点配置、履历、项目、终端 persona
+- `content/posts/garden/<slug>/`
+  短文目录，含 `meta.yaml`、`body.zh-CN.md`、`body.en.md`
+- `content/posts/articles/<slug>/`
+  长文章目录，结构同上
 
-Create a `.env` file in the root directory:
+### 2. 运行时产物
+
+- `public/data.json`
+  统一生成的 `PortfolioBundle`，前端和本地问答服务都只读它
+
+### 3. Python 工具层
+
+- `haoyu_portfolio/`
+  统一的 schema、bundle builder、LLM provider、CLI、FastAPI API
+- `portfolio`
+  通过 `Typer` 暴露的命令行工具
+
+### 4. 前端
+
+- `App.tsx` + `components/`
+  只负责读取 bundle 并渲染 UI，不直接持有个人内容
+
+### 5. 工程化
+
+- `tests/`
+  Python 单元/集成测试与 Playwright 回归测试
+- `.github/workflows/deploy.yml`
+  类型检查、测试、secret scan、GitHub Pages 部署
+
+## 快速开始
+
+### 1. 安装依赖
 
 ```bash
-# Frontend
-VITE_API_URL=http://localhost:8000
-
-# Backend & Scripts
-GEMINI_API_KEY=your_gemini_api_key_here
-GITHUB_TOKEN=your_github_token_here
-```
-
-Install dependencies:
-
-```bash
-# Frontend
+python3 -m pip install -e '.[dev]'
 npm install
-
-# Backend & Scripts
-pip install -r requirements.txt
-pip install pytest pytest-mock pytest-asyncio httpx # For testing
 ```
 
-### 2. Run Automation
-
-Use the orchestrator to update your data:
+可选语音增强：
 
 ```bash
-# Interactive mode
-python scripts/orchestrator.py
-
-# CLI mode
-python scripts/orchestrator.py --all --verbose
+python3 -m pip install -e '.[voice]'
 ```
 
-This will generate `public/data.json` which drives the frontend.
+### 2. 配置环境变量
 
-### 3. Start Services
+复制并修改：
 
-**Frontend:**
+```bash
+cp .env.example .env
+```
+
+常用变量：
+
+```bash
+VITE_API_URL=http://127.0.0.1:8000
+VITE_ENABLE_STUDIO=true
+PORTFOLIO_LLM_PROVIDER=gemini
+GEMINI_API_KEY=...
+GITHUB_TOKEN=...
+```
+
+### 3. 生成 bundle
+
+```bash
+portfolio build
+```
+
+### 4. 启动本地 API
+
+```bash
+portfolio serve --reload
+```
+
+### 5. 启动前端
+
 ```bash
 npm run dev
 ```
 
-**Backend (for AI Chat):**
-```bash
-python backend/server.py
-```
+## CLI 用法
 
-### 4. Run Tests
-
-To verify the Python automation scripts and backend logic:
+### 导入简历
 
 ```bash
-pytest tests/
+portfolio profile import --source ./resume.pdf --provider gemini
+portfolio profile import --interactive
 ```
 
-## Structure
+### 发布短文
 
-- `components/ChatTerminal.tsx`: The terminal UI logic.
-- `scripts/`: Python automation modules.
-- `backend/`: FastAPI service for the chat agent.
-- `tests/`: Unit tests for Python scripts.
-- `public/data.json`: The single source of truth for portfolio data.
+```bash
+portfolio content note --text "今天重构了内容工作流" --title "Refactor Note"
+portfolio content note --interactive
+```
+
+### 发布长文
+
+```bash
+portfolio content article --source ./draft.md --title "Config-first Portfolio"
+```
+
+### 校验与发布准备
+
+```bash
+portfolio check
+portfolio release
+```
+
+## Creator Studio
+
+本地 GUI 与公开作品集共用同一套视觉语言，但只在本地开发模式或显式开启 `VITE_ENABLE_STUDIO=true` 时显示。
+
+Studio 当前支持：
+
+- 导入本地 PDF / Markdown 简历
+- 发布短文 note
+- 发布长文章 article
+- 预览 bundle
+- 运行 build / check
+
+## 测试
+
+```bash
+pytest -q
+npm run typecheck
+npm run build
+npm run test:e2e
+```
+
+## GitHub Pages
+
+工作流默认把静态站点构建为根路径部署，适合 `haoyuhu.github.io` 用户主页仓库。
+
+主分支推送后会自动执行：
+
+1. `gitleaks` secret scan
+2. Python 测试
+3. TypeScript typecheck
+4. `portfolio build`
+5. Playwright 回归
+6. `vite build`
+7. GitHub Pages deploy

@@ -1,0 +1,14 @@
+id: "article-terminal-ide-portfolio"
+kind: "article"
+slug: "terminal-ide-portfolio"
+date: "2026-03-26"
+title:
+  zh-CN: "为什么我的作品集要长得像一台 IDE"
+  en: "Why my portfolio wants to feel like an IDE"
+summary:
+  zh-CN: "IDE 风格不是噱头，它天然适合展示工程上下文、内容版本和创作流程。"
+  en: "The IDE aesthetic is not just a gimmick. It is a useful way to expose engineering context, versioned content, and creator workflows."
+tags:
+  - "design"
+  - "tui"
+  - "portfolio"

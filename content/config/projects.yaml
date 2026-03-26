@@ -1,0 +1,57 @@
+projects:
+  github:
+    username: "haoyuhu"
+    cacheFile: "content/cache/github_repos.json"
+    includeCachedRepos: true
+  items:
+    - id: "react-cool-library"
+      name: "react-cool-library"
+      description:
+        zh-CN: "面向现代 Web 的高性能 React hooks 工具库。"
+        en: "A high-performance React hooks library for modern web applications."
+      language: "TypeScript"
+      stars: 342
+      forks: 45
+      url: "https://github.com/haoyuhu/react-cool-library"
+      homepage: null
+      topics:
+        - "react"
+        - "hooks"
+        - "frontend"
+      featured: true
+      source: "manual"
+      updatedAt: "2024-03-15T10:00:00Z"
+    - id: "agent-orchestrator"
+      name: "agent-orchestrator"
+      description:
+        zh-CN: "用于生产环境多智能体工作流编排的框架。"
+        en: "A framework for orchestrating multi-agent workflows in production."
+      language: "Python"
+      stars: 512
+      forks: 80
+      url: "https://github.com/haoyuhu/agent-orchestrator"
+      homepage: null
+      topics:
+        - "ai"
+        - "agents"
+        - "python"
+      featured: true
+      source: "manual"
+      updatedAt: "2024-03-20T12:00:00Z"
+    - id: "terminal-portfolio"
+      name: "terminal-portfolio"
+      description:
+        zh-CN: "终端 / IDE 风格、以内容配置驱动的个人站模板。"
+        en: "A terminal and IDE inspired portfolio template powered by content configuration."
+      language: "TypeScript"
+      stars: 156
+      forks: 34
+      url: "https://github.com/haoyuhu/terminal-portfolio"
+      homepage: null
+      topics:
+        - "portfolio"
+        - "design"
+        - "ui"
+      featured: true
+      source: "manual"
+      updatedAt: "2024-01-20T12:00:00Z"

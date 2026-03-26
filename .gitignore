@@ -49,6 +49,8 @@ __pycache__/
 *$py.class
 *.so
 .Python
+.venv/
+venv/
 build/
 develop-eggs/
 dist/
@@ -78,6 +80,9 @@ config/.key
 *.temp
 .cache/
 .tmp/
+tmp/
+artifacts/
+uploads/
 
 # Audio and video files
 public/assets/audio/*.mp3
@@ -90,3 +95,13 @@ public/assets/images/*.jpg
 public/assets/images/*.jpeg
 public/assets/images/*.png
 public/assets/images/*.gif
+
+# Portfolio local content cache
+content/cache/*
+!content/cache/.gitkeep
+
+# Frontend test artifacts
+playwright-report/
+test-results/
+.playwright/
+.playwright-cache/

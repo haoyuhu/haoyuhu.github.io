@@ -1,0 +1,88 @@
+profile:
+  name: "Haoyu Hu"
+  avatarUrl: "https://avatars.githubusercontent.com/u/9149575?v=4"
+  primaryUrl: "https://github.com/haoyuhu"
+  title:
+    zh-CN: "智能体工程 / AI 基础设施 / 全栈系统设计"
+    en: "Agent Engineering / AI Infrastructure / Full-stack Systems"
+  heroExtends:
+    zh-CN: "AgentOrchestrator, AIInfraArchitect"
+    en: "AgentOrchestrator, AIInfraArchitect"
+  biography:
+    zh-CN: "正在构建面向下一代 AI 应用的智能体系统、内容工作流与可扩展基础设施，让个人表达和工程实践可以被持续编排、持续交付。"
+    en: "Building intelligent agents, content workflows, and scalable infrastructure for the next generation of AI-native products."
+  location:
+    zh-CN: "中国，上海"
+    en: "Shanghai, China"
+  email: "haoyu.hu@example.com"
+  socialLinks:
+    - id: "github"
+      label:
+        zh-CN: "GitHub"
+        en: "GitHub"
+      url: "https://github.com/haoyuhu"
+      icon: "github"
+    - id: "linkedin"
+      label:
+        zh-CN: "LinkedIn"
+        en: "LinkedIn"
+      url: "https://www.linkedin.com/in/haoyuhu"
+      icon: "link"
+  stats:
+    publicRepos: 30
+    followers: 46
+    following: 17
+  systemIdentity:
+    - label:
+        zh-CN: "Host"
+        en: "Host"
+      value:
+        zh-CN: "github.com/haoyuhu"
+        en: "github.com/haoyuhu"
+    - label:
+        zh-CN: "Base"
+        en: "Base"
+      value:
+        zh-CN: "上海，中国"
+        en: "Shanghai, China"
+    - label:
+        zh-CN: "Edu"
+        en: "Edu"
+      value:
+        zh-CN: "上海交通大学（计算机硕士）"
+        en: "SJTU (M.S. in Computer Science)"
+    - label:
+        zh-CN: "Work"
+        en: "Work"
+      value:
+        zh-CN: "AI Infra Architect"
+        en: "AI Infra Architect"
+    - label:
+        zh-CN: "Focus"
+        en: "Focus"
+      value:
+        zh-CN: "配置驱动内容系统"
+        en: "Config-first content systems"
+  techStack:
+    - name: "Agent Arch"
+      level: 95
+    - name: "SFT / RLHF"
+      level: 85
+    - name: "Inference"
+      level: 90
+    - name: "Full Stack"
+      level: 92
+  aiTools:
+    - name: "Claude Code"
+      usage: "1250h"
+      rating: "S-Tier"
+    - name: "Trae"
+      usage: "340h"
+      rating: "A-Tier"
+    - name: "OpenClaw"
+      usage: "680h"
+      rating: "A-Tier"
+    - name: "Codex"
+      usage: "2.1kh"
+      rating: "Legacy"
+  careerStartYear: 2018

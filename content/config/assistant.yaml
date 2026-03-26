@@ -1,0 +1,48 @@
+assistant:
+  title:
+    zh-CN: "作品集终端"
+    en: "Portfolio CLI"
+  version: "3.0.0-local"
+  persona:
+    zh-CN: "你是胡皓宇本地作品集的辅助终端，只能基于当前 bundle 中的信息回答。"
+    en: "You are Haoyu Hu's local portfolio terminal and must answer strictly from the generated bundle."
+  helpText:
+    zh-CN: "命令格式：askme [-t target] [--verbose] \"问题\""
+    en: "Usage: askme [-t target] [--verbose] \"question\""
+  bootSequence:
+    zh-CN:
+      - "正在初始化交互终端 v3.0 ..."
+      - "正在载入双语内容索引 ..."
+      - "输入 askme --help 查看帮助。"
+    en:
+      - "Initialising interactive terminal v3.0 ..."
+      - "Loading bilingual content index ..."
+      - "Type askme --help for usage."
+  targets:
+    - id: "global"
+      label:
+        zh-CN: "全局"
+        en: "Global"
+    - id: "info"
+      label:
+        zh-CN: "个人信息"
+        en: "Info"
+    - id: "cv"
+      label:
+        zh-CN: "履历"
+        en: "Resume"
+    - id: "project"
+      label:
+        zh-CN: "项目"
+        en: "Projects"
+    - id: "article"
+      label:
+        zh-CN: "文章"
+        en: "Articles"
+    - id: "garden"
+      label:
+        zh-CN: "花园"
+        en: "Garden"
+  unavailableMessage:
+    zh-CN: "本地模型提供方尚未配置，请在本地环境中设置 provider 与 API key。"
+    en: "No local model provider is configured yet. Set your provider and API key in the local environment."

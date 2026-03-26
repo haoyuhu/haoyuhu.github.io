@@ -1,11 +1,11 @@
 fastapi
-uvicorn
 google-genai
+httpx
+inquirerpy
+pydantic>=2
 pypdf
 pyyaml
-requests
 python-multipart
-beautifulsoup4
-PyGithub
-questionary
-python-dotenv
+requests
+typer
+uvicorn

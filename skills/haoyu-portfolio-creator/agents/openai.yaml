@@ -1,0 +1,7 @@
+interface:
+  display_name: "Haoyu Portfolio Creator"
+  short_description: "Manage the config-first portfolio workflow"
+  default_prompt: "Use $haoyu-portfolio-creator to import a resume, publish bilingual content, rebuild the bundle, and prepare this portfolio repo for release."
+
+policy:
+  allow_implicit_invocation: true

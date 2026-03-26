@@ -1,15 +1,708 @@
 {
+  "site": {
+    "title": {
+      "zh-CN": "胡皓宇 | 终端风格作品集",
+      "en": "Haoyu Hu | Terminal Portfolio"
+    },
+    "description": {
+      "zh-CN": "一个以配置驱动、支持双语内容与本地创作工作流的个人作品集。",
+      "en": "A config-first personal portfolio with bilingual content and a local creator workflow."
+    },
+    "localeDefault": "zh-CN",
+    "ownerHandle": "haoyuhu",
+    "navigation": [
+      {
+        "id": "home",
+        "label": {
+          "zh-CN": "首页",
+          "en": "Home"
+        },
+        "fileLabel": "home.py",
+        "studioOnly": false
+      },
+      {
+        "id": "projects",
+        "label": {
+          "zh-CN": "项目",
+          "en": "Projects"
+        },
+        "fileLabel": "projects.tsx",
+        "studioOnly": false
+      },
+      {
+        "id": "resume",
+        "label": {
+          "zh-CN": "履历",
+          "en": "Resume"
+        },
+        "fileLabel": "cv.yaml",
+        "studioOnly": false
+      },
+      {
+        "id": "garden",
+        "label": {
+          "zh-CN": "花园",
+          "en": "Garden"
+        },
+        "fileLabel": "garden.md",
+        "studioOnly": false
+      },
+      {
+        "id": "articles",
+        "label": {
+          "zh-CN": "文章",
+          "en": "Articles"
+        },
+        "fileLabel": "articles.md",
+        "studioOnly": false
+      },
+      {
+        "id": "settings",
+        "label": {
+          "zh-CN": "设置",
+          "en": "Settings"
+        },
+        "fileLabel": "settings.yaml",
+        "studioOnly": false
+      },
+      {
+        "id": "studio",
+        "label": {
+          "zh-CN": "创作台",
+          "en": "Creator Studio"
+        },
+        "fileLabel": "studio.local",
+        "studioOnly": true
+      }
+    ],
+    "theme": {
+      "accent": "#D94D22",
+      "background": "#111827",
+      "panel": "#1F2937",
+      "border": "#374151",
+      "text": "#F9FAFB",
+      "muted": "#9CA3AF",
+      "success": "#10B981",
+      "warning": "#F59E0B"
+    },
+    "settingsPanel": {
+      "aiModelLabel": "Local multi-provider runtime",
+      "version": "3.0.0-config-core",
+      "scripts": [
+        "portfolio build",
+        "portfolio serve --reload",
+        "portfolio release"
+      ]
+    },
+    "statusBar": {
+      "branchLabel": "main",
+      "diagnosticsLabel": {
+        "zh-CN": "0 errors, 0 warnings",
+        "en": "0 errors, 0 warnings"
+      },
+      "fileTypeLabel": "TypeScript React",
+      "encodingLabel": "UTF-8"
+    },
+    "runtime": {
+      "localStudioEnabled": false,
+      "publicSite": true
+    },
+    "studio": {
+      "title": {
+        "zh-CN": "本地创作控制台",
+        "en": "Local Creator Console"
+      },
+      "description": {
+        "zh-CN": "导入简历、发布短文与长文、预览 bundle、运行校验。",
+        "en": "Import resumes, publish notes and articles, preview the bundle, and run checks."
+      },
+      "supportVoiceViaCli": true
+    },
+    "copy": {
+      "bootLabel": {
+        "zh-CN": "正在启动内容内核...",
+        "en": "Booting content kernel..."
+      },
+      "bootSubLabel": {
+        "zh-CN": "正在挂载 /dev/portfolio ...",
+        "en": "Mounting /dev/portfolio ..."
+      },
+      "explorerLabel": {
+        "zh-CN": "资源浏览器",
+        "en": "Explorer"
+      },
+      "externalLabel": {
+        "zh-CN": "外部链接",
+        "en": "External Links"
+      },
+      "liveServer": {
+        "zh-CN": "本地服务已就绪",
+        "en": "Local server ready"
+      },
+      "systemIdentity": {
+        "zh-CN": "系统身份",
+        "en": "System Identity"
+      },
+      "techMetrics": {
+        "zh-CN": "技术能力刻度",
+        "en": "Tech Stack Metrics"
+      },
+      "toolTelemetry": {
+        "zh-CN": "工具遥测",
+        "en": "AI Tool Telemetry"
+      },
+      "careerLog": {
+        "zh-CN": "经历时间线",
+        "en": "Career Log"
+      },
+      "widgets": {
+        "latestProject": {
+          "zh-CN": "最新项目",
+          "en": "Latest Deployment"
+        },
+        "latestNote": {
+          "zh-CN": "最新短文",
+          "en": "Buffer Stream"
+        },
+        "latestArticle": {
+          "zh-CN": "最新文章",
+          "en": "Kernel Log"
+        },
+        "currentRole": {
+          "zh-CN": "当前角色",
+          "en": "Runtime Env"
+        }
+      },
+      "loadMore": {
+        "zh-CN": "加载更多",
+        "en": "Load More"
+      },
+      "projectsFooter": {
+        "zh-CN": "return curated_projects_from_config",
+        "en": "return curated_projects_from_config"
+      },
+      "settingsHeading": {
+        "zh-CN": "系统配置",
+        "en": "System Configuration"
+      },
+      "scriptsHeading": {
+        "zh-CN": "常用脚本",
+        "en": "Scripts"
+      },
+      "localeToggle": {
+        "zh-CN": "语言",
+        "en": "Locale"
+      }
+    }
+  },
   "profile": {
     "name": "Haoyu Hu",
-    "title": "Software Engineer",
-    "summary": "Passionate developer building cool things.",
-    "location": "Earth",
-    "email": "me@example.com",
-    "links": []
+    "avatarUrl": "https://avatars.githubusercontent.com/u/9149575?v=4",
+    "primaryUrl": "https://github.com/haoyuhu",
+    "title": {
+      "zh-CN": "智能体工程 / AI 基础设施 / 全栈系统设计",
+      "en": "Agent Engineering / AI Infrastructure / Full-stack Systems"
+    },
+    "heroExtends": {
+      "zh-CN": "AgentOrchestrator, AIInfraArchitect",
+      "en": "AgentOrchestrator, AIInfraArchitect"
+    },
+    "biography": {
+      "zh-CN": "正在构建面向下一代 AI 应用的智能体系统、内容工作流与可扩展基础设施，让个人表达和工程实践可以被持续编排、持续交付。",
+      "en": "Building intelligent agents, content workflows, and scalable infrastructure for the next generation of AI-native products."
+    },
+    "location": {
+      "zh-CN": "中国，上海",
+      "en": "Shanghai, China"
+    },
+    "email": "haoyu.hu@example.com",
+    "socialLinks": [
+      {
+        "id": "github",
+        "label": {
+          "zh-CN": "GitHub",
+          "en": "GitHub"
+        },
+        "url": "https://github.com/haoyuhu",
+        "icon": "github"
+      },
+      {
+        "id": "linkedin",
+        "label": {
+          "zh-CN": "LinkedIn",
+          "en": "LinkedIn"
+        },
+        "url": "https://www.linkedin.com/in/haoyuhu",
+        "icon": "link"
+      }
+    ],
+    "stats": {
+      "publicRepos": 30,
+      "followers": 46,
+      "following": 17
+    },
+    "systemIdentity": [
+      {
+        "label": {
+          "zh-CN": "Host",
+          "en": "Host"
+        },
+        "value": {
+          "zh-CN": "github.com/haoyuhu",
+          "en": "github.com/haoyuhu"
+        }
+      },
+      {
+        "label": {
+          "zh-CN": "Base",
+          "en": "Base"
+        },
+        "value": {
+          "zh-CN": "上海，中国",
+          "en": "Shanghai, China"
+        }
+      },
+      {
+        "label": {
+          "zh-CN": "Edu",
+          "en": "Edu"
+        },
+        "value": {
+          "zh-CN": "上海交通大学（计算机硕士）",
+          "en": "SJTU (M.S. in Computer Science)"
+        }
+      },
+      {
+        "label": {
+          "zh-CN": "Work",
+          "en": "Work"
+        },
+        "value": {
+          "zh-CN": "AI Infra Architect",
+          "en": "AI Infra Architect"
+        }
+      },
+      {
+        "label": {
+          "zh-CN": "Focus",
+          "en": "Focus"
+        },
+        "value": {
+          "zh-CN": "配置驱动内容系统",
+          "en": "Config-first content systems"
+        }
+      }
+    ],
+    "techStack": [
+      {
+        "name": "Agent Arch",
+        "level": 95
+      },
+      {
+        "name": "SFT / RLHF",
+        "level": 85
+      },
+      {
+        "name": "Inference",
+        "level": 90
+      },
+      {
+        "name": "Full Stack",
+        "level": 92
+      }
+    ],
+    "aiTools": [
+      {
+        "name": "Claude Code",
+        "usage": "1250h",
+        "rating": "S-Tier"
+      },
+      {
+        "name": "Trae",
+        "usage": "340h",
+        "rating": "A-Tier"
+      },
+      {
+        "name": "OpenClaw",
+        "usage": "680h",
+        "rating": "A-Tier"
+      },
+      {
+        "name": "Codex",
+        "usage": "2.1kh",
+        "rating": "Legacy"
+      }
+    ],
+    "careerStartYear": 2018
   },
-  "experience": [],
-  "education": [],
-  "skills": [],
-  "repos": [],
-  "blogs": []
+  "resume": {
+    "summary": {
+      "zh-CN": "聚焦智能体架构、推理基础设施、内容工作流与工程效率平台，能够从产品体验、系统设计到自动化发布链路做端到端落地。",
+      "en": "Focused on agent architectures, inference platforms, content workflows, and engineering productivity systems across product, infrastructure, and release pipelines."
+    },
+    "experience": [
+      {
+        "id": "exp-ai-infra",
+        "company": "Tech Giant Corp",
+        "role": {
+          "zh-CN": "AI 基础设施架构师",
+          "en": "AI Infrastructure Architect"
+        },
+        "startDate": "2021",
+        "endDate": "Present",
+        "location": {
+          "zh-CN": "上海",
+          "en": "Shanghai"
+        },
+        "description": {
+          "zh-CN": [
+            "负责大模型推理平台与智能体运行时的架构设计。",
+            "优化 GPU 资源利用率，并显著降低服务延迟。"
+          ],
+          "en": [
+            "Architected large-model inference platforms and agent runtimes.",
+            "Improved GPU utilization while reducing serving latency."
+          ]
+        },
+        "projects": [
+          {
+            "name": "Model Serving Platform",
+            "description": {
+              "zh-CN": "面向大模型的可扩展 Kubernetes 推理服务层。",
+              "en": "A scalable Kubernetes-based serving layer for large language models."
+            },
+            "tech": [
+              "Go",
+              "Kubernetes",
+              "Python"
+            ]
+          },
+          {
+            "name": "Data Viz Platform",
+            "description": {
+              "zh-CN": "实时分析看板，处理海量事件流。",
+              "en": "A real-time analytics dashboard processing large event streams."
+            },
+            "tech": [
+              "D3.js",
+              "Canvas",
+              "WebSockets"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "exp-full-stack",
+        "company": "Innovative Startup Inc",
+        "role": {
+          "zh-CN": "全栈工程师",
+          "en": "Full-stack Developer"
+        },
+        "startDate": "2019",
+        "endDate": "2021",
+        "location": {
+          "zh-CN": "杭州",
+          "en": "Hangzhou"
+        },
+        "description": {
+          "zh-CN": [
+            "从零到一搭建产品 MVP 与部署流程。",
+            "建设 CI/CD 与自动化测试体系。"
+          ],
+          "en": [
+            "Built the MVP and deployment workflow from scratch.",
+            "Established CI/CD pipelines and automated testing strategies."
+          ]
+        },
+        "projects": [
+          {
+            "name": "E-commerce Core",
+            "description": {
+              "zh-CN": "支撑高并发秒杀场景的核心后端服务。",
+              "en": "Core backend services for high-concurrency commerce workloads."
+            },
+            "tech": [
+              "Node.js",
+              "Redis",
+              "MongoDB"
+            ]
+          }
+        ]
+      }
+    ],
+    "education": [
+      {
+        "id": "edu-sjtu",
+        "school": "Shanghai Jiao Tong University",
+        "degree": {
+          "zh-CN": "理学硕士",
+          "en": "Master of Science"
+        },
+        "field": {
+          "zh-CN": "计算机科学",
+          "en": "Computer Science"
+        },
+        "startDate": "2016",
+        "endDate": "2019"
+      },
+      {
+        "id": "edu-tongji",
+        "school": "Tongji University",
+        "degree": {
+          "zh-CN": "工学学士",
+          "en": "Bachelor of Engineering"
+        },
+        "field": {
+          "zh-CN": "软件工程",
+          "en": "Software Engineering"
+        },
+        "startDate": "2012",
+        "endDate": "2016"
+      }
+    ],
+    "skillGroups": [
+      {
+        "id": "skill-agent",
+        "label": {
+          "zh-CN": "智能体与模型系统",
+          "en": "Agents and Model Systems"
+        },
+        "items": [
+          {
+            "name": "Agent orchestration",
+            "level": "Advanced"
+          },
+          {
+            "name": "Inference platform",
+            "level": "Advanced"
+          },
+          {
+            "name": "Prompt workflows",
+            "level": "Advanced"
+          }
+        ]
+      },
+      {
+        "id": "skill-platform",
+        "label": {
+          "zh-CN": "平台与工程化",
+          "en": "Platform Engineering"
+        },
+        "items": [
+          {
+            "name": "Full-stack delivery",
+            "level": "Advanced"
+          },
+          {
+            "name": "CI/CD",
+            "level": "Advanced"
+          },
+          {
+            "name": "Developer tooling",
+            "level": "Advanced"
+          }
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "github": {
+      "username": "haoyuhu",
+      "cacheFile": "content/cache/github_repos.json",
+      "includeCachedRepos": true
+    },
+    "items": [
+      {
+        "id": "react-cool-library",
+        "name": "react-cool-library",
+        "description": {
+          "zh-CN": "面向现代 Web 的高性能 React hooks 工具库。",
+          "en": "A high-performance React hooks library for modern web applications."
+        },
+        "language": "TypeScript",
+        "stars": 342,
+        "forks": 45,
+        "url": "https://github.com/haoyuhu/react-cool-library",
+        "topics": [
+          "react",
+          "hooks",
+          "frontend"
+        ],
+        "featured": true,
+        "source": "manual",
+        "updatedAt": "2024-03-15T10:00:00Z"
+      },
+      {
+        "id": "agent-orchestrator",
+        "name": "agent-orchestrator",
+        "description": {
+          "zh-CN": "用于生产环境多智能体工作流编排的框架。",
+          "en": "A framework for orchestrating multi-agent workflows in production."
+        },
+        "language": "Python",
+        "stars": 512,
+        "forks": 80,
+        "url": "https://github.com/haoyuhu/agent-orchestrator",
+        "topics": [
+          "ai",
+          "agents",
+          "python"
+        ],
+        "featured": true,
+        "source": "manual",
+        "updatedAt": "2024-03-20T12:00:00Z"
+      },
+      {
+        "id": "terminal-portfolio",
+        "name": "terminal-portfolio",
+        "description": {
+          "zh-CN": "终端 / IDE 风格、以内容配置驱动的个人站模板。",
+          "en": "A terminal and IDE inspired portfolio template powered by content configuration."
+        },
+        "language": "TypeScript",
+        "stars": 156,
+        "forks": 34,
+        "url": "https://github.com/haoyuhu/terminal-portfolio",
+        "topics": [
+          "portfolio",
+          "design",
+          "ui"
+        ],
+        "featured": true,
+        "source": "manual",
+        "updatedAt": "2024-01-20T12:00:00Z"
+      }
+    ]
+  },
+  "posts": [
+    {
+      "id": "note-agentic-garden",
+      "kind": "note",
+      "slug": "agentic-garden",
+      "date": "2026-03-26",
+      "title": {
+        "zh-CN": "把个人站重构成内容操作系统",
+        "en": "Turning a portfolio into a content operating system"
+      },
+      "summary": {
+        "zh-CN": "页面应该只负责显示，内容与工作流应该在本地工具链中可维护、可重建、可发布。",
+        "en": "The page should only render; the content and workflow should remain maintainable, rebuildable, and releasable in local tooling."
+      },
+      "tags": [
+        "portfolio",
+        "workflow",
+        "agents"
+      ],
+      "body": {
+        "zh-CN": "把作品集当成一个静态页面很容易，但那通常意味着内容会慢慢再次被写死回代码里。\n\n我更想把它做成一个本地优先的内容操作系统：\n\n- 页面只负责渲染已经整理好的 bundle。\n- 简历、短文、长文都来自统一的 YAML 与 Markdown。\n- CLI、Skill、Studio GUI 复用同一套 schema 与服务层。\n- 发布之前必须通过校验、类型检查和页面回归。\n\n这样每一次内容更新都不是“改页面”，而是“运行一次可靠的内容工作流”。",
+        "en": "It is easy to treat a portfolio as a static page, but that usually means the content slowly leaks back into hardcoded UI strings.\n\nI want this project to act more like a local-first content operating system:\n\n- The page should only render a generated bundle.\n- Resumes, notes, and articles should come from shared YAML and Markdown sources.\n- The CLI, Skill, and Studio GUI should reuse the same schema and services.\n- Every release should pass validation, type checks, and browser regression coverage.\n\nThat turns each update from “editing the page” into “running a reliable content workflow”."
+      },
+      "sourcePath": "content/posts/garden/agentic-garden"
+    },
+    {
+      "id": "article-terminal-ide-portfolio",
+      "kind": "article",
+      "slug": "terminal-ide-portfolio",
+      "date": "2026-03-26",
+      "title": {
+        "zh-CN": "为什么我的作品集要长得像一台 IDE",
+        "en": "Why my portfolio wants to feel like an IDE"
+      },
+      "summary": {
+        "zh-CN": "IDE 风格不是噱头，它天然适合展示工程上下文、内容版本和创作流程。",
+        "en": "The IDE aesthetic is not just a gimmick. It is a useful way to expose engineering context, versioned content, and creator workflows."
+      },
+      "tags": [
+        "design",
+        "tui",
+        "portfolio"
+      ],
+      "body": {
+        "zh-CN": "# 为什么我的作品集要长得像一台 IDE\n\n很多作品集首页都在做同一件事：把信息铺平、把经历压缩、把表达变成几个通用卡片。\n\n我更喜欢把个人站做成一台可以被阅读的“工作环境”。\n\n## IDE 风格适合展示什么\n\n- 它天然支持“文件与模块”的心智模型。\n- 它允许内容带着上下文一起出现，而不是孤立地摆在页面上。\n- 它能把经历、项目、短文、长文和本地创作工具放到同一个叙事空间里。\n\n## 为什么这次要做配置驱动\n\n过去很多个人站会把个人信息直接写在前端组件里。短期很快，长期会让内容更新越来越难。\n\n这次重构的目标是：\n\n1. 所有可维护内容都进入 YAML / Markdown。\n2. 页面只渲染 bundle，不直接持有个人信息。\n3. 本地 CLI 与 Studio GUI 负责导入、整理、预览与发布。\n4. 发布前自动跑校验、类型检查和浏览器回归。\n\n## 结果会是什么\n\n作品集不再只是一个“展示结果”的页面，而是一个“生成结果”的系统。",
+        "en": "# Why my portfolio wants to feel like an IDE\n\nMany portfolio homepages do the same thing: flatten information, compress experience, and turn expression into a few familiar cards.\n\nI prefer treating a personal site like a readable working environment.\n\n## What the IDE aesthetic gives me\n\n- A natural mental model for files, modules, and context.\n- A place where experience, projects, notes, and articles can live together.\n- A visual language that feels closer to how I actually work.\n\n## Why this rebuild is config-first\n\nHardcoding personal information into UI components is fast in the short term, but expensive to maintain over time.\n\nThis refactor aims to:\n\n1. Move every maintainable content fragment into YAML and Markdown.\n2. Make the page render a generated bundle instead of owning raw personal data.\n3. Let the local CLI and Studio GUI handle import, normalization, preview, and release.\n4. Run validation, type checking, and browser regression before publishing.\n\n## The outcome\n\nThe portfolio stops being a page that merely shows results and becomes a system that produces them."
+      },
+      "sourcePath": "content/posts/articles/terminal-ide-portfolio"
+    }
+  ],
+  "assistant": {
+    "title": {
+      "zh-CN": "作品集终端",
+      "en": "Portfolio CLI"
+    },
+    "version": "3.0.0-local",
+    "persona": {
+      "zh-CN": "你是胡皓宇本地作品集的辅助终端，只能基于当前 bundle 中的信息回答。",
+      "en": "You are Haoyu Hu's local portfolio terminal and must answer strictly from the generated bundle."
+    },
+    "helpText": {
+      "zh-CN": "命令格式：askme [-t target] [--verbose] \"问题\"",
+      "en": "Usage: askme [-t target] [--verbose] \"question\""
+    },
+    "bootSequence": {
+      "zh-CN": [
+        "正在初始化交互终端 v3.0 ...",
+        "正在载入双语内容索引 ...",
+        "输入 askme --help 查看帮助。"
+      ],
+      "en": [
+        "Initialising interactive terminal v3.0 ...",
+        "Loading bilingual content index ...",
+        "Type askme --help for usage."
+      ]
+    },
+    "targets": [
+      {
+        "id": "global",
+        "label": {
+          "zh-CN": "全局",
+          "en": "Global"
+        }
+      },
+      {
+        "id": "info",
+        "label": {
+          "zh-CN": "个人信息",
+          "en": "Info"
+        }
+      },
+      {
+        "id": "cv",
+        "label": {
+          "zh-CN": "履历",
+          "en": "Resume"
+        }
+      },
+      {
+        "id": "project",
+        "label": {
+          "zh-CN": "项目",
+          "en": "Projects"
+        }
+      },
+      {
+        "id": "article",
+        "label": {
+          "zh-CN": "文章",
+          "en": "Articles"
+        }
+      },
+      {
+        "id": "garden",
+        "label": {
+          "zh-CN": "花园",
+          "en": "Garden"
+        }
+      }
+    ],
+    "unavailableMessage": {
+      "zh-CN": "本地模型提供方尚未配置，请在本地环境中设置 provider 与 API key。",
+      "en": "No local model provider is configured yet. Set your provider and API key in the local environment."
+    }
+  },
+  "generated": {
+    "generatedAt": "2026-03-26T06:43:22.828157+00:00",
+    "source": "content/config + content/posts",
+    "bundleVersion": "3.0.0",
+    "warnings": []
+  }
 }
