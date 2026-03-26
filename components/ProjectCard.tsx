@@ -27,6 +27,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, locale }) => {
       <div className="mb-4 flex items-start justify-between gap-3">
         <div className="min-w-0 flex-1">
           <div className="mb-3 flex flex-wrap gap-2">
+            {project.pinned && (
+              <span className="rounded-full border border-amber-500/30 bg-amber-500/10 px-2 py-1 text-[10px] uppercase tracking-[0.2em] text-amber-300">
+                PINNED
+              </span>
+            )}
             <span
               className={`rounded-full border px-2 py-1 text-[10px] uppercase tracking-[0.2em] ${relationshipTone}`}
             >

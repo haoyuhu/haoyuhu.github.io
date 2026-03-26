@@ -214,6 +214,7 @@ class ProjectItem(PortfolioBaseModel):
     homepage: str | None = None
     topics: list[str] = Field(default_factory=list)
     featured: bool = False
+    pinned: bool = False
     relationship: str = "owner"
     source: str = "github-sync"
     pushedAt: str | None = None

@@ -128,7 +128,11 @@ def _merge_projects(projects: dict[str, Any], cached: list[dict[str, Any]]) -> l
 
     merged: list[dict[str, Any]] = []
     for cached_item in cached:
-        if not include_contribution_repos and cached_item.get("relationship") == "contributor":
+        if (
+            not include_contribution_repos
+            and cached_item.get("relationship") == "contributor"
+            and not cached_item.get("pinned")
+        ):
             continue
         full_name = cached_item.get("nameWithOwner") or cached_item.get("name")
         short_name = cached_item.get("name")

@@ -17,10 +17,34 @@
       "homepage": "http://www.huhaoyu.com",
       "topics": [],
       "featured": false,
+      "pinned": false,
       "relationship": "owner",
       "source": "github-sync",
-      "pushedAt": "2026-03-26T07:08:53Z",
-      "updatedAt": "2026-03-26T07:08:56Z"
+      "pushedAt": "2026-03-26T12:27:44Z",
+      "updatedAt": "2026-03-26T12:27:48Z"
+    },
+    {
+      "id": "haoyuhu--clustering-playbook",
+      "name": "clustering-playbook",
+      "nameWithOwner": "haoyuhu/clustering-playbook",
+      "repositoryOwner": "haoyuhu",
+      "description": {
+        "zh-CN": "Trilingual clustering tutorial with Mermaid diagrams, comparison tables, and Python 3.9+ runnable demos for K-Means++, Fuzzy C-Means, Hierarchical, DBSCAN, OPTICS, and Spectral Clustering.",
+        "en": "Trilingual clustering tutorial with Mermaid diagrams, comparison tables, and Python 3.9+ runnable demos for K-Means++, Fuzzy C-Means, Hierarchical, DBSCAN, OPTICS, and Spectral Clustering."
+      },
+      "language": "Python",
+      "stars": 395,
+      "forks": 86,
+      "watchers": 10,
+      "url": "https://github.com/haoyuhu/clustering-playbook",
+      "homepage": "",
+      "topics": [],
+      "featured": true,
+      "pinned": true,
+      "relationship": "owner",
+      "source": "github-sync",
+      "pushedAt": "2026-03-26T12:21:41Z",
+      "updatedAt": "2026-03-26T12:21:46Z"
     },
     {
       "id": "haoyuhu--splendor-duel-terminator",
@@ -39,6 +63,7 @@
       "homepage": null,
       "topics": [],
       "featured": false,
+      "pinned": false,
       "relationship": "owner",
       "source": "github-sync",
       "pushedAt": "2026-03-26T04:24:12Z",
@@ -60,33 +85,12 @@
       "url": "https://github.com/haoyuhu/dify-client-python",
       "homepage": null,
       "topics": [],
-      "featured": false,
+      "featured": true,
+      "pinned": true,
       "relationship": "owner",
       "source": "github-sync",
       "pushedAt": "2026-03-25T06:13:31Z",
       "updatedAt": "2026-03-25T06:13:35Z"
-    },
-    {
-      "id": "haoyuhu--cluster-analysis",
-      "name": "cluster-analysis",
-      "nameWithOwner": "haoyuhu/cluster-analysis",
-      "repositoryOwner": "haoyuhu",
-      "description": {
-        "zh-CN": "K-Means++(HCM), Fuzzy C-Means(FCM), Hierarchical Clustering, DBscan",
-        "en": "K-Means++(HCM), Fuzzy C-Means(FCM), Hierarchical Clustering, DBscan"
-      },
-      "language": "Python",
-      "stars": 395,
-      "forks": 86,
-      "watchers": 10,
-      "url": "https://github.com/haoyuhu/cluster-analysis",
-      "homepage": "",
-      "topics": [],
-      "featured": false,
-      "relationship": "owner",
-      "source": "github-sync",
-      "pushedAt": "2025-04-15T14:55:57Z",
-      "updatedAt": "2026-03-11T07:47:06Z"
     },
     {
       "id": "haoyuhu--kronos-dashboard",
@@ -105,6 +109,7 @@
       "homepage": null,
       "topics": [],
       "featured": false,
+      "pinned": false,
       "relationship": "owner",
       "source": "github-sync",
       "pushedAt": "2025-08-11T16:04:35Z",
@@ -126,7 +131,8 @@
       "url": "https://github.com/haoyuhu/bert-multi-gpu",
       "homepage": "",
       "topics": [],
-      "featured": false,
+      "featured": true,
+      "pinned": true,
       "relationship": "owner",
       "source": "github-sync",
       "pushedAt": "2020-03-09T15:14:25Z",
@@ -149,6 +155,7 @@
       "homepage": null,
       "topics": [],
       "featured": false,
+      "pinned": false,
       "relationship": "owner",
       "source": "github-sync",
       "pushedAt": "2017-11-30T16:24:29Z",
@@ -171,6 +178,7 @@
       "homepage": "",
       "topics": [],
       "featured": false,
+      "pinned": false,
       "relationship": "owner",
       "source": "github-sync",
       "pushedAt": "2019-08-12T11:11:39Z",
@@ -197,6 +205,7 @@
         "jenkins"
       ],
       "featured": false,
+      "pinned": false,
       "relationship": "owner",
       "source": "github-sync",
       "pushedAt": "2017-11-30T16:29:40Z",
@@ -219,6 +228,7 @@
       "homepage": null,
       "topics": [],
       "featured": false,
+      "pinned": false,
       "relationship": "owner",
       "source": "github-sync",
       "pushedAt": "2023-04-07T15:09:54Z",
@@ -241,6 +251,7 @@
       "homepage": "",
       "topics": [],
       "featured": false,
+      "pinned": false,
       "relationship": "owner",
       "source": "github-sync",
       "pushedAt": "2015-04-12T09:02:35Z",
@@ -263,6 +274,7 @@
       "homepage": "http://www.huhaoyu.com/image-search-engine/",
       "topics": [],
       "featured": false,
+      "pinned": false,
       "relationship": "owner",
       "source": "github-sync",
       "pushedAt": "2015-06-21T01:31:05Z",
@@ -285,6 +297,7 @@
       "homepage": "",
       "topics": [],
       "featured": false,
+      "pinned": false,
       "relationship": "owner",
       "source": "github-sync",
       "pushedAt": "2017-02-23T11:10:18Z",
@@ -307,6 +320,7 @@
       "homepage": "",
       "topics": [],
       "featured": false,
+      "pinned": false,
       "relationship": "owner",
       "source": "github-sync",
       "pushedAt": "2015-05-29T07:31:50Z",
@@ -329,6 +343,7 @@
       "homepage": null,
       "topics": [],
       "featured": false,
+      "pinned": false,
       "relationship": "owner",
       "source": "github-sync",
       "pushedAt": "2017-02-20T14:29:40Z",
@@ -351,6 +366,7 @@
       "homepage": null,
       "topics": [],
       "featured": false,
+      "pinned": false,
       "relationship": "owner",
       "source": "github-sync",
       "pushedAt": "2017-03-30T06:43:39Z",
@@ -373,6 +389,7 @@
       "homepage": null,
       "topics": [],
       "featured": false,
+      "pinned": false,
       "relationship": "owner",
       "source": "github-sync",
       "pushedAt": "2017-01-08T11:30:23Z",
@@ -395,6 +412,7 @@
       "homepage": null,
       "topics": [],
       "featured": false,
+      "pinned": false,
       "relationship": "owner",
       "source": "github-sync",
       "pushedAt": "2016-02-25T10:52:06Z",
@@ -417,6 +435,7 @@
       "homepage": null,
       "topics": [],
       "featured": false,
+      "pinned": false,
       "relationship": "owner",
       "source": "github-sync",
       "pushedAt": "2016-02-25T11:44:56Z",
@@ -439,6 +458,7 @@
       "homepage": null,
       "topics": [],
       "featured": false,
+      "pinned": false,
       "relationship": "owner",
       "source": "github-sync",
       "pushedAt": "2016-02-19T15:51:55Z",
@@ -454,7 +474,7 @@
         "en": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction."
       },
       "language": "TypeScript",
-      "stars": 74333,
+      "stars": 74347,
       "forks": 14838,
       "watchers": 289,
       "url": "https://github.com/lobehub/lobehub",
@@ -472,10 +492,11 @@
         "mcp"
       ],
       "featured": false,
+      "pinned": false,
       "relationship": "contributor",
       "source": "github-sync",
-      "pushedAt": "2026-03-26T09:08:26Z",
-      "updatedAt": "2026-03-26T09:05:36Z"
+      "pushedAt": "2026-03-26T12:35:34Z",
+      "updatedAt": "2026-03-26T12:33:53Z"
     },
     {
       "id": "tiann--hapi",
@@ -487,9 +508,9 @@
         "en": "App for Claude Code / Codex / Gemini / OpenCode, vibe coding anytime, anywhere"
       },
       "language": "TypeScript",
-      "stars": 3089,
+      "stars": 3091,
       "forks": 308,
-      "watchers": 10,
+      "watchers": 11,
       "url": "https://github.com/tiann/hapi",
       "homepage": "https://hapi.run",
       "topics": [
@@ -501,10 +522,11 @@
         "remote-control"
       ],
       "featured": false,
+      "pinned": false,
       "relationship": "contributor",
       "source": "github-sync",
       "pushedAt": "2026-03-26T00:07:07Z",
-      "updatedAt": "2026-03-26T07:19:58Z"
+      "updatedAt": "2026-03-26T09:57:16Z"
     },
     {
       "id": "zhulinsen--daily_stock_analysis",
@@ -516,9 +538,9 @@
         "en": "LLM驱动的 A/H/美股智能分析器：多数据源行情 + 实时新闻 + LLM决策仪表盘 + 多渠道推送，零成本定时运行，纯白嫖. LLM-powered stock analysis system for A/H/US markets."
       },
       "language": "Python",
-      "stars": 25643,
-      "forks": 26522,
-      "watchers": 123,
+      "stars": 25734,
+      "forks": 26591,
+      "watchers": 124,
       "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
       "homepage": "",
       "topics": [
@@ -533,10 +555,109 @@
         "quantitative-trading"
       ],
       "featured": false,
+      "pinned": false,
       "relationship": "contributor",
       "source": "github-sync",
       "pushedAt": "2026-03-25T16:16:44Z",
-      "updatedAt": "2026-03-26T09:04:38Z"
+      "updatedAt": "2026-03-26T12:35:18Z"
+    },
+    {
+      "id": "brikerman--kashgari",
+      "name": "Kashgari",
+      "nameWithOwner": "BrikerMan/Kashgari",
+      "repositoryOwner": "BrikerMan",
+      "description": {
+        "zh-CN": "Kashgari is a production-level NLP Transfer learning framework built on top of tf.keras for text-labeling and text-classification, includes Word2Vec, BERT, and GPT2 Language Embedding.",
+        "en": "Kashgari is a production-level NLP Transfer learning framework built on top of tf.keras for text-labeling and text-classification, includes Word2Vec, BERT, and GPT2 Language Embedding."
+      },
+      "language": "Python",
+      "stars": 2387,
+      "forks": 432,
+      "watchers": 61,
+      "url": "https://github.com/BrikerMan/Kashgari",
+      "homepage": "http://kashgari.readthedocs.io/",
+      "topics": [
+        "nlp",
+        "sequence-labeling",
+        "text-classification",
+        "bert-model",
+        "ner",
+        "machine-learning",
+        "nlp-framework",
+        "named-entity-recognition",
+        "gpt-2",
+        "transfer-learning"
+      ],
+      "featured": true,
+      "pinned": true,
+      "relationship": "contributor",
+      "source": "github-sync",
+      "pushedAt": "2024-09-03T21:05:29Z",
+      "updatedAt": "2026-03-17T07:16:52Z"
+    },
+    {
+      "id": "typeorm--typeorm",
+      "name": "typeorm",
+      "nameWithOwner": "typeorm/typeorm",
+      "repositoryOwner": "typeorm",
+      "description": {
+        "zh-CN": "TypeScript & JavaScript ORM for Node.js — supports PostgreSQL, MySQL, MariaDB, SQLite, SQL Server, Oracle, and more.",
+        "en": "TypeScript & JavaScript ORM for Node.js — supports PostgreSQL, MySQL, MariaDB, SQLite, SQL Server, Oracle, and more."
+      },
+      "language": "TypeScript",
+      "stars": 36410,
+      "forks": 6508,
+      "watchers": 337,
+      "url": "https://github.com/typeorm/typeorm",
+      "homepage": "http://typeorm.io",
+      "topics": [
+        "orm",
+        "typescript",
+        "javascript",
+        "database",
+        "typeorm",
+        "mysql",
+        "mariadb",
+        "postgresql",
+        "sqlite",
+        "sqlserver"
+      ],
+      "featured": true,
+      "pinned": true,
+      "relationship": "contributor",
+      "source": "github-sync",
+      "pushedAt": "2026-03-26T02:40:10Z",
+      "updatedAt": "2026-03-26T12:06:34Z"
+    },
+    {
+      "id": "vutran1710--pyratelimiter",
+      "name": "PyrateLimiter",
+      "nameWithOwner": "vutran1710/PyrateLimiter",
+      "repositoryOwner": "vutran1710",
+      "description": {
+        "zh-CN": "⚔️Python Rate-Limiter using Leaky-Bucket Algorithm Family",
+        "en": "⚔️Python Rate-Limiter using Leaky-Bucket Algorithm Family"
+      },
+      "language": "Python",
+      "stars": 487,
+      "forks": 47,
+      "watchers": 6,
+      "url": "https://github.com/vutran1710/PyrateLimiter",
+      "homepage": "https://pyratelimiter.readthedocs.io",
+      "topics": [
+        "python",
+        "rate-limiter",
+        "rate-limiting",
+        "leaky-bucket",
+        "request-rate-limit",
+        "rate-limit"
+      ],
+      "featured": true,
+      "pinned": true,
+      "relationship": "contributor",
+      "source": "github-sync",
+      "pushedAt": "2026-03-22T14:36:49Z",
+      "updatedAt": "2026-03-23T09:14:54Z"
     }
   ]
 }

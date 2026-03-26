@@ -186,6 +186,7 @@ export interface ProjectItem {
   homepage?: string | null;
   topics: string[];
   featured: boolean;
+  pinned?: boolean;
   relationship: 'owner' | 'contributor';
   source: string;
   pushedAt?: string | null;

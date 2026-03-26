@@ -10,6 +10,34 @@ from ..utils import dump_json
 
 
 GITHUB_SYNC_QUERY = """
+fragment RepoFields on Repository {
+  name
+  nameWithOwner
+  url
+  description
+  stargazerCount
+  forkCount
+  watchers {
+    totalCount
+  }
+  pushedAt
+  updatedAt
+  homepageUrl
+  owner {
+    login
+  }
+  primaryLanguage {
+    name
+  }
+  repositoryTopics(first: 10) {
+    nodes {
+      topic {
+        name
+      }
+    }
+  }
+}
+
 query {
   user(login: "__USERNAME__") {
     repositories(
@@ -21,28 +49,7 @@ query {
     ) {
       totalCount
       nodes {
-        name
-        nameWithOwner
-        url
-        description
-        stargazerCount
-        forkCount
-        watchers {
-          totalCount
-        }
-        pushedAt
-        updatedAt
-        homepageUrl
-        primaryLanguage {
-          name
-        }
-        repositoryTopics(first: 10) {
-          nodes {
-            topic {
-              name
-            }
-          }
-        }
+        ...RepoFields
       }
     }
     repositoriesContributedTo(
@@ -52,27 +59,13 @@ query {
       orderBy: { field: UPDATED_AT, direction: DESC }
     ) {
       nodes {
-        name
-        nameWithOwner
-        url
-        description
-        stargazerCount
-        forkCount
-        watchers {
-          totalCount
-        }
-        pushedAt
-        updatedAt
-        homepageUrl
-        primaryLanguage {
-          name
-        }
-        repositoryTopics(first: 10) {
-          nodes {
-            topic {
-              name
-            }
-          }
+        ...RepoFields
+      }
+    }
+    pinnedItems(first: 6, types: REPOSITORY) {
+      nodes {
+        ... on Repository {
+          ...RepoFields
         }
       }
     }
@@ -137,7 +130,13 @@ def _localized_description(raw: str | None) -> dict[str, str]:
     }
 
 
-def _normalize_repo(node: dict[str, Any], relationship: str) -> dict[str, Any]:
+def _normalize_repo(
+    node: dict[str, Any],
+    relationship: str,
+    *,
+    featured: bool = False,
+    pinned: bool = False,
+) -> dict[str, Any]:
     name_with_owner = node["nameWithOwner"]
     owner, name = name_with_owner.split("/", 1)
     return {
@@ -157,7 +156,8 @@ def _normalize_repo(node: dict[str, Any], relationship: str) -> dict[str, Any]:
             for topic_node in (node.get("repositoryTopics") or {}).get("nodes", [])
             if topic_node.get("topic", {}).get("name")
         ],
-        "featured": False,
+        "featured": featured,
+        "pinned": pinned,
         "relationship": relationship,
         "source": "github-sync",
         "pushedAt": node.get("pushedAt"),
@@ -174,6 +174,7 @@ def fetch_github_snapshot(username: str) -> dict[str, Any]:
 
     owned_nodes = (user.get("repositories") or {}).get("nodes", [])
     contributed_nodes = (user.get("repositoriesContributedTo") or {}).get("nodes", [])
+    pinned_nodes = (user.get("pinnedItems") or {}).get("nodes", [])
 
     repos_by_full_name: dict[str, dict[str, Any]] = {}
     for node in owned_nodes:
@@ -186,6 +187,20 @@ def fetch_github_snapshot(username: str) -> dict[str, Any]:
             continue
         repo = _normalize_repo(node, relationship="contributor")
         repos_by_full_name.setdefault(repo["nameWithOwner"], repo)
+    for node in pinned_nodes:
+        if not isinstance(node, dict) or not node.get("url"):
+            continue
+        owner_login = ((node.get("owner") or {}).get("login") or "").strip().lower()
+        relationship = "owner" if owner_login == username.strip().lower() else "contributor"
+        repo = _normalize_repo(node, relationship=relationship, featured=True, pinned=True)
+        existing = repos_by_full_name.get(repo["nameWithOwner"])
+        if existing:
+            existing["featured"] = True
+            existing["pinned"] = True
+            existing["homepage"] = existing.get("homepage") or repo.get("homepage")
+            existing["topics"] = existing.get("topics") or repo.get("topics") or []
+            continue
+        repos_by_full_name[repo["nameWithOwner"]] = repo
 
     return {
         "profile": {
