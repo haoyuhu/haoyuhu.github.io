@@ -44,6 +44,7 @@ export interface SiteStatusBar {
 export interface RuntimeSettings {
   apiBaseUrl?: string | null;
   localStudioEnabled: boolean;
+  chatEnabled: boolean;
   publicSite: boolean;
 }
 

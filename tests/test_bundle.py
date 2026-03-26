@@ -10,6 +10,7 @@ def test_build_bundle_writes_public_json(temp_repo):
     assert bundle.profile.name == "Haoyu Hu"
     payload = json.loads((temp_repo / "public" / "data.json").read_text(encoding="utf-8"))
     assert payload["site"]["localeDefault"] == "en"
+    assert payload["site"]["runtime"]["chatEnabled"] is False
     assert len(payload["posts"]) >= 2
 
 

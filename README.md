@@ -82,6 +82,12 @@ GITHUB_TOKEN=...
 portfolio build
 ```
 
+如果希望在生成 `public/data.json` 前先刷新 GitHub 数据：
+
+```bash
+portfolio build --refresh-github
+```
+
 ### 4. 启动本地 API
 
 ```bash
@@ -123,6 +129,36 @@ portfolio check
 portfolio release
 ```
 
+### 同步 GitHub 数据
+
+```bash
+portfolio sync github
+```
+
+这个命令会刷新并写入：
+
+- GitHub 个人资料缓存：头像、主页、location、email、followers、following、public repos
+- 自己的公开仓库
+- 参与贡献的公开仓库
+- GitHub profile 页面 pin 的仓库
+
+缓存文件位置：
+
+- `content/cache/github_profile.json`
+- `content/cache/github_repos.json`
+
+如果你希望“一步同步并更新页面运行数据”，推荐直接执行：
+
+```bash
+portfolio build --refresh-github
+```
+
+如果你希望在发布前完成同步、校验和前端构建：
+
+```bash
+portfolio release --refresh-github
+```
+
 ## Creator Studio
 
 本地 GUI 与公开作品集共用同一套视觉语言，但只在本地开发模式或显式开启 `VITE_ENABLE_STUDIO=true` 时显示。
@@ -141,7 +177,7 @@ Studio 当前支持：
 pytest -q
 npm run typecheck
 npm run build
-npm run test:e2e
+npm run test:browser-local
 ```
 
 ## GitHub Pages

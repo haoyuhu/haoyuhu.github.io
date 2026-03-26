@@ -70,6 +70,7 @@ site:
   runtime:
     apiBaseUrl: null
     localStudioEnabled: false
+    chatEnabled: false
     publicSite: true
   studio:
     title:

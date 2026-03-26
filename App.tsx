@@ -233,6 +233,7 @@ const App: React.FC = () => {
 
   const studioEnabled =
     bundle.site.runtime.localStudioEnabled || import.meta.env.DEV || import.meta.env.VITE_ENABLE_STUDIO === 'true';
+  const chatEnabled = bundle.site.runtime.chatEnabled;
   const apiBaseUrl = normalizeApiBaseUrl(import.meta.env.VITE_API_URL ?? bundle.site.runtime.apiBaseUrl);
   const copy = bundle.site.copy;
   const posts = [...bundle.posts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -990,21 +991,25 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          <button
-            onClick={() => setTerminalOpen(true)}
-            className="fixed bottom-10 right-8 z-50 flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#ff7a55] bg-accent text-white shadow-lg transition-transform hover:scale-110"
-            aria-label="Open terminal"
-          >
-            <TerminalIcon size={24} />
-          </button>
+          {chatEnabled && (
+            <>
+              <button
+                onClick={() => setTerminalOpen(true)}
+                className="fixed bottom-10 right-8 z-50 flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#ff7a55] bg-accent text-white shadow-lg transition-transform hover:scale-110"
+                aria-label="Open terminal"
+              >
+                <TerminalIcon size={24} />
+              </button>
 
-          <ChatTerminal
-            assistant={bundle.assistant}
-            locale={locale}
-            apiBaseUrl={apiBaseUrl}
-            isOpen={terminalOpen}
-            onClose={() => setTerminalOpen(false)}
-          />
+              <ChatTerminal
+                assistant={bundle.assistant}
+                locale={locale}
+                apiBaseUrl={apiBaseUrl}
+                isOpen={terminalOpen}
+                onClose={() => setTerminalOpen(false)}
+              />
+            </>
+          )}
         </main>
       </div>
     </div>

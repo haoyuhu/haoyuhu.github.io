@@ -72,6 +72,7 @@ class StatusBar(PortfolioBaseModel):
 class RuntimeSettings(PortfolioBaseModel):
     apiBaseUrl: str | None = None
     localStudioEnabled: bool = False
+    chatEnabled: bool = False
     publicSite: bool = True
 
 
