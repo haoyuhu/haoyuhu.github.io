@@ -81,6 +81,13 @@ class StudioConfig(PortfolioBaseModel):
     supportVoiceViaCli: bool = True
 
 
+class HomeRecommendations(PortfolioBaseModel):
+    latestProject: str = "auto"
+    latestNote: str = "auto"
+    latestArticle: str = "auto"
+    currentRole: str = "auto"
+
+
 class SiteConfig(PortfolioBaseModel):
     title: LocalizedText
     description: LocalizedText
@@ -92,6 +99,7 @@ class SiteConfig(PortfolioBaseModel):
     statusBar: StatusBar
     runtime: RuntimeSettings
     studio: StudioConfig
+    homeRecommendations: HomeRecommendations = Field(default_factory=HomeRecommendations)
     uiCopy: dict[str, Any] = Field(default_factory=dict, alias="copy")
 
 
@@ -104,6 +112,9 @@ class ProfileStats(PortfolioBaseModel):
 class SystemIdentityItem(PortfolioBaseModel):
     label: LocalizedText
     value: LocalizedText
+    detail: LocalizedText | None = None
+    tags: list[str] = Field(default_factory=list)
+    useTechStackAsTags: bool = False
 
 
 class MetricItem(PortfolioBaseModel):
@@ -113,8 +124,10 @@ class MetricItem(PortfolioBaseModel):
 
 class ToolTelemetryItem(PortfolioBaseModel):
     name: str
+    level: int = Field(ge=0, le=100)
     usage: str
     rating: str
+    summary: LocalizedText
 
 
 class ProfileConfig(PortfolioBaseModel):
@@ -181,21 +194,29 @@ class ResumeConfig(PortfolioBaseModel):
 class GitHubProjectSettings(PortfolioBaseModel):
     username: str
     cacheFile: str
+    profileCacheFile: str
     includeCachedRepos: bool = True
+    includeContributionRepos: bool = True
+    excludeRepos: list[str] = Field(default_factory=list)
 
 
 class ProjectItem(PortfolioBaseModel):
     id: str
     name: str
+    nameWithOwner: str
+    repositoryOwner: str
     description: LocalizedText
     language: str
     stars: int = 0
     forks: int = 0
+    watchers: int = 0
     url: str
     homepage: str | None = None
     topics: list[str] = Field(default_factory=list)
     featured: bool = False
-    source: str = "manual"
+    relationship: str = "owner"
+    source: str = "github-sync"
+    pushedAt: str | None = None
     updatedAt: str | None = None
 
 

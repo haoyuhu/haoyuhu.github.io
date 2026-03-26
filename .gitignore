@@ -101,6 +101,8 @@ public/assets/images/*.gif
 # Portfolio local content cache
 content/cache/*
 !content/cache/.gitkeep
+!content/cache/github_profile.json
+!content/cache/github_repos.json
 
 # Frontend test artifacts
 playwright-report/

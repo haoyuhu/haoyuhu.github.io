@@ -9,5 +9,97 @@ def test_build_bundle_writes_public_json(temp_repo):
     bundle = build_bundle(write=True)
     assert bundle.profile.name == "Haoyu Hu"
     payload = json.loads((temp_repo / "public" / "data.json").read_text(encoding="utf-8"))
-    assert payload["site"]["localeDefault"] == "zh-CN"
+    assert payload["site"]["localeDefault"] == "en"
     assert len(payload["posts"]) >= 2
+
+
+def test_build_bundle_merges_cached_github_profile_and_projects(temp_repo):
+    cache_dir = temp_repo / "content" / "cache"
+    cache_dir.mkdir(parents=True, exist_ok=True)
+
+    (cache_dir / "github_profile.json").write_text(
+        json.dumps(
+            {
+                "login": "haoyuhu",
+                "avatarUrl": "https://example.com/avatar.png",
+                "primaryUrl": "https://github.com/haoyuhu",
+                "location": "Shanghai",
+                "email": "im@huhaoyu.com",
+                "stats": {
+                    "publicRepos": 88,
+                    "followers": 123,
+                    "following": 45,
+                },
+            }
+        ),
+        encoding="utf-8",
+    )
+    (cache_dir / "github_repos.json").write_text(
+        json.dumps(
+            {
+                "items": [
+                    {
+                        "id": "openai--evals",
+                        "name": "evals",
+                        "nameWithOwner": "openai/evals",
+                        "repositoryOwner": "openai",
+                        "description": {
+                            "zh-CN": "参与贡献的评测仓库",
+                            "en": "A contributed evaluation repository.",
+                        },
+                        "language": "Python",
+                        "stars": 1200,
+                        "forks": 320,
+                        "watchers": 64,
+                        "url": "https://github.com/openai/evals",
+                        "homepage": None,
+                        "topics": ["evaluation", "llm"],
+                        "featured": False,
+                        "relationship": "contributor",
+                        "source": "github-sync",
+                        "pushedAt": "2026-03-20T12:00:00Z",
+                        "updatedAt": "2026-03-20T12:00:00Z",
+                    },
+                    {
+                        "id": "haoyuhu--dify-client-python",
+                        "name": "dify-client-python",
+                        "nameWithOwner": "haoyuhu/dify-client-python",
+                        "repositoryOwner": "haoyuhu",
+                        "description": {
+                            "zh-CN": "原始缓存描述",
+                            "en": "Original cached description.",
+                        },
+                        "language": "Python",
+                        "stars": 42,
+                        "forks": 10,
+                        "watchers": 8,
+                        "url": "https://github.com/haoyuhu/dify-client-python",
+                        "homepage": None,
+                        "topics": ["api", "sdk"],
+                        "featured": False,
+                        "relationship": "owner",
+                        "source": "github-sync",
+                        "pushedAt": "2026-03-21T08:00:00Z",
+                        "updatedAt": "2026-03-21T08:00:00Z",
+                    },
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    bundle = build_bundle(write=False)
+
+    assert bundle.profile.avatarUrl == "https://example.com/avatar.png"
+    assert bundle.profile.email == "im@huhaoyu.com"
+    assert bundle.profile.location["en"] == "Shanghai"
+    assert bundle.profile.stats.followers == 123
+    assert bundle.profile.socialLinks[0].url == "https://github.com/haoyuhu"
+
+    assert [project.nameWithOwner for project in bundle.projects.items] == [
+        "openai/evals",
+        "haoyuhu/dify-client-python",
+    ]
+    assert bundle.projects.items[0].relationship == "contributor"
+    assert bundle.projects.items[1].featured is True
+    assert bundle.projects.items[1].description["en"].startswith("A Python client for the Dify API")

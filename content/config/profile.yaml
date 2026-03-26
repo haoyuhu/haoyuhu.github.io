@@ -14,7 +14,7 @@ profile:
   location:
     zh-CN: "中国，上海"
     en: "Shanghai, China"
-  email: "haoyu.hu@example.com"
+  email: "im@huhaoyu.com"
   socialLinks:
     - id: "github"
       label:
@@ -22,12 +22,6 @@ profile:
         en: "GitHub"
       url: "https://github.com/haoyuhu"
       icon: "github"
-    - id: "linkedin"
-      label:
-        zh-CN: "LinkedIn"
-        en: "LinkedIn"
-      url: "https://www.linkedin.com/in/haoyuhu"
-      icon: "link"
   stats:
     publicRepos: 30
     followers: 46
@@ -39,30 +33,37 @@ profile:
       value:
         zh-CN: "github.com/haoyuhu"
         en: "github.com/haoyuhu"
+      detail:
+        zh-CN: "公开仓库、文章与部署产物都从这个主节点出发，保证内容与代码的发布来源一致。"
+        en: "Public repositories, writing, and deployment artifacts all publish from this primary node."
     - label:
         zh-CN: "Base"
         en: "Base"
       value:
         zh-CN: "上海，中国"
         en: "Shanghai, China"
+      detail:
+        zh-CN: "常驻上海，默认按中英双语组织内容与个人信息，兼顾本地构建与异步协作。"
+        en: "Operating from Shanghai with bilingual-by-default content organization and async-friendly delivery."
     - label:
         zh-CN: "Edu"
         en: "Edu"
       value:
         zh-CN: "上海交通大学（计算机硕士）"
         en: "SJTU (M.S. in Computer Science)"
-    - label:
-        zh-CN: "Work"
-        en: "Work"
-      value:
-        zh-CN: "AI Infra Architect"
-        en: "AI Infra Architect"
+      detail:
+        zh-CN: "计算机科学训练提供了研究、算法与系统设计的共同底座，也让表达更偏向结构化。"
+        en: "Computer science training provides the shared base for research, algorithms, and system-oriented thinking."
     - label:
         zh-CN: "Focus"
         en: "Focus"
       value:
-        zh-CN: "配置驱动内容系统"
-        en: "Config-first content systems"
+        zh-CN: "配置驱动内容系统 / 智能体工程 / AI 基础设施"
+        en: "Config-first content systems / Agent engineering / AI infrastructure"
+      detail:
+        zh-CN: "当前重点围绕内容工作流、智能体系统与可扩展交付链路持续推进。"
+        en: "Current work centers on content workflows, agent systems, and scalable delivery loops."
+      useTechStackAsTags: true
   techStack:
     - name: "Agent Arch"
       level: 95
@@ -74,15 +75,31 @@ profile:
       level: 92
   aiTools:
     - name: "Claude Code"
+      level: 96
       usage: "1250h"
       rating: "S-Tier"
+      summary:
+        zh-CN: "主力重构、代码生成与仓库级实现。"
+        en: "Primary driver for refactors, code generation, and repo-wide implementation."
     - name: "Trae"
+      level: 78
       usage: "340h"
       rating: "A-Tier"
+      summary:
+        zh-CN: "用于快速草拟、探索与轻量协作。"
+        en: "Used for fast drafts, exploration, and lightweight collaboration."
     - name: "OpenClaw"
+      level: 84
       usage: "680h"
       rating: "A-Tier"
+      summary:
+        zh-CN: "偏向多步骤任务编排与自动化实验。"
+        en: "Best suited for multi-step orchestration and automation experiments."
     - name: "Codex"
+      level: 62
       usage: "2.1kh"
       rating: "Legacy"
+      summary:
+        zh-CN: "长期积累使用经验，偏经典代码工作流。"
+        en: "Long-term accumulated usage in more classic code workflows."
   careerStartYear: 2018

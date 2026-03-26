@@ -8,7 +8,7 @@
       "zh-CN": "一个以配置驱动、支持双语内容与本地创作工作流的个人作品集。",
       "en": "A config-first personal portfolio with bilingual content and a local creator workflow."
     },
-    "localeDefault": "zh-CN",
+    "localeDefault": "en",
     "ownerHandle": "haoyuhu",
     "navigation": [
       {
@@ -118,6 +118,12 @@
       },
       "supportVoiceViaCli": true
     },
+    "homeRecommendations": {
+      "latestProject": "auto",
+      "latestNote": "auto",
+      "latestArticle": "auto",
+      "currentRole": "auto"
+    },
     "copy": {
       "bootLabel": {
         "zh-CN": "正在启动内容内核...",
@@ -157,8 +163,8 @@
       },
       "widgets": {
         "latestProject": {
-          "zh-CN": "最新项目",
-          "en": "Latest Deployment"
+          "zh-CN": "推荐仓库",
+          "en": "Featured Repository"
         },
         "latestNote": {
           "zh-CN": "最新短文",
@@ -178,8 +184,8 @@
         "en": "Load More"
       },
       "projectsFooter": {
-        "zh-CN": "return curated_projects_from_config",
-        "en": "return curated_projects_from_config"
+        "zh-CN": "return repositories_synced_from_github(order='stars,pushed_at')",
+        "en": "return repositories_synced_from_github(order='stars,pushed_at')"
       },
       "settingsHeading": {
         "zh-CN": "系统配置",
@@ -213,9 +219,9 @@
     },
     "location": {
       "zh-CN": "中国，上海",
-      "en": "Shanghai, China"
+      "en": "Shanghai"
     },
-    "email": "haoyu.hu@example.com",
+    "email": "im@huhaoyu.com",
     "socialLinks": [
       {
         "id": "github",
@@ -225,15 +231,6 @@
         },
         "url": "https://github.com/haoyuhu",
         "icon": "github"
-      },
-      {
-        "id": "linkedin",
-        "label": {
-          "zh-CN": "LinkedIn",
-          "en": "LinkedIn"
-        },
-        "url": "https://www.linkedin.com/in/haoyuhu",
-        "icon": "link"
       }
     ],
     "stats": {
@@ -250,7 +247,13 @@
         "value": {
           "zh-CN": "github.com/haoyuhu",
           "en": "github.com/haoyuhu"
-        }
+        },
+        "detail": {
+          "zh-CN": "公开仓库、文章与部署产物都从这个主节点出发，保证内容与代码的发布来源一致。",
+          "en": "Public repositories, writing, and deployment artifacts all publish from this primary node."
+        },
+        "tags": [],
+        "useTechStackAsTags": false
       },
       {
         "label": {
@@ -260,7 +263,13 @@
         "value": {
           "zh-CN": "上海，中国",
           "en": "Shanghai, China"
-        }
+        },
+        "detail": {
+          "zh-CN": "常驻上海，默认按中英双语组织内容与个人信息，兼顾本地构建与异步协作。",
+          "en": "Operating from Shanghai with bilingual-by-default content organization and async-friendly delivery."
+        },
+        "tags": [],
+        "useTechStackAsTags": false
       },
       {
         "label": {
@@ -270,17 +279,13 @@
         "value": {
           "zh-CN": "上海交通大学（计算机硕士）",
           "en": "SJTU (M.S. in Computer Science)"
-        }
-      },
-      {
-        "label": {
-          "zh-CN": "Work",
-          "en": "Work"
         },
-        "value": {
-          "zh-CN": "AI Infra Architect",
-          "en": "AI Infra Architect"
-        }
+        "detail": {
+          "zh-CN": "计算机科学训练提供了研究、算法与系统设计的共同底座，也让表达更偏向结构化。",
+          "en": "Computer science training provides the shared base for research, algorithms, and system-oriented thinking."
+        },
+        "tags": [],
+        "useTechStackAsTags": false
       },
       {
         "label": {
@@ -288,9 +293,15 @@
           "en": "Focus"
         },
         "value": {
-          "zh-CN": "配置驱动内容系统",
-          "en": "Config-first content systems"
-        }
+          "zh-CN": "配置驱动内容系统 / 智能体工程 / AI 基础设施",
+          "en": "Config-first content systems / Agent engineering / AI infrastructure"
+        },
+        "detail": {
+          "zh-CN": "当前重点围绕内容工作流、智能体系统与可扩展交付链路持续推进。",
+          "en": "Current work centers on content workflows, agent systems, and scalable delivery loops."
+        },
+        "tags": [],
+        "useTechStackAsTags": true
       }
     ],
     "techStack": [
@@ -314,23 +325,43 @@
     "aiTools": [
       {
         "name": "Claude Code",
+        "level": 96,
         "usage": "1250h",
-        "rating": "S-Tier"
+        "rating": "S-Tier",
+        "summary": {
+          "zh-CN": "主力重构、代码生成与仓库级实现。",
+          "en": "Primary driver for refactors, code generation, and repo-wide implementation."
+        }
       },
       {
         "name": "Trae",
+        "level": 78,
         "usage": "340h",
-        "rating": "A-Tier"
+        "rating": "A-Tier",
+        "summary": {
+          "zh-CN": "用于快速草拟、探索与轻量协作。",
+          "en": "Used for fast drafts, exploration, and lightweight collaboration."
+        }
       },
       {
         "name": "OpenClaw",
+        "level": 84,
         "usage": "680h",
-        "rating": "A-Tier"
+        "rating": "A-Tier",
+        "summary": {
+          "zh-CN": "偏向多步骤任务编排与自动化实验。",
+          "en": "Best suited for multi-step orchestration and automation experiments."
+        }
       },
       {
         "name": "Codex",
+        "level": 62,
         "usage": "2.1kh",
-        "rating": "Legacy"
+        "rating": "Legacy",
+        "summary": {
+          "zh-CN": "长期积累使用经验，偏经典代码工作流。",
+          "en": "Long-term accumulated usage in more classic code workflows."
+        }
       }
     ],
     "careerStartYear": 2018
@@ -388,6 +419,18 @@
               "Canvas",
               "WebSockets"
             ]
+          },
+          {
+            "name": "Agent Runtime Control Plane",
+            "description": {
+              "zh-CN": "统一智能体编排、工具调用与多环境发布的运行时控制平面。",
+              "en": "A runtime control plane for agent orchestration, tool execution, and multi-environment releases."
+            },
+            "tech": [
+              "Python",
+              "PostgreSQL",
+              "Kubernetes"
+            ]
           }
         ]
       },
@@ -425,6 +468,118 @@
               "Node.js",
               "Redis",
               "MongoDB"
+            ]
+          },
+          {
+            "name": "Growth CMS",
+            "description": {
+              "zh-CN": "面向市场与运营团队的内容编排后台，支持可视化活动配置。",
+              "en": "A growth CMS for marketing and operations teams with visual campaign configuration."
+            },
+            "tech": [
+              "React",
+              "TypeScript",
+              "MySQL"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "exp-ml-platform",
+        "company": "Research Platform Lab",
+        "role": {
+          "zh-CN": "机器学习平台工程师",
+          "en": "ML Platform Engineer"
+        },
+        "startDate": "2018",
+        "endDate": "2019",
+        "location": {
+          "zh-CN": "上海",
+          "en": "Shanghai"
+        },
+        "description": {
+          "zh-CN": [
+            "建设训练任务调度、实验管理与特征处理的基础平台。",
+            "与算法团队共同推进模型训练效率与可复现性。"
+          ],
+          "en": [
+            "Built the foundations for experiment tracking, scheduling, and feature workflows.",
+            "Partnered with research teams to improve training efficiency and reproducibility."
+          ]
+        },
+        "projects": [
+          {
+            "name": "Training Scheduler",
+            "description": {
+              "zh-CN": "面向 GPU 集群的任务调度与实验排队系统。",
+              "en": "A scheduling and experiment queuing system for shared GPU clusters."
+            },
+            "tech": [
+              "Python",
+              "Celery",
+              "Kubernetes"
+            ]
+          },
+          {
+            "name": "Feature Workflow Studio",
+            "description": {
+              "zh-CN": "将特征生成、校验与发布流程标准化的内部工具。",
+              "en": "An internal tool standardizing feature generation, validation, and release workflows."
+            },
+            "tech": [
+              "Airflow",
+              "Spark",
+              "Vue"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "exp-product-engineering",
+        "company": "Product Studio",
+        "role": {
+          "zh-CN": "产品工程师",
+          "en": "Product Engineer"
+        },
+        "startDate": "2016",
+        "endDate": "2018",
+        "location": {
+          "zh-CN": "上海",
+          "en": "Shanghai"
+        },
+        "description": {
+          "zh-CN": [
+            "负责数据产品前后台开发与交付，连接设计、产品与工程协作。",
+            "在早期阶段建立设计系统、日志方案与发布节奏。"
+          ],
+          "en": [
+            "Owned front-end and back-end delivery for data-driven products.",
+            "Set up early design system, observability, and release practices."
+          ]
+        },
+        "projects": [
+          {
+            "name": "Insights Workspace",
+            "description": {
+              "zh-CN": "面向业务团队的分析工作台，支持自定义报表与钻取。",
+              "en": "An insights workspace for business teams with custom reports and drill-down analysis."
+            },
+            "tech": [
+              "React",
+              "Node.js",
+              "PostgreSQL"
+            ]
+          },
+          {
+            "name": "Release Dashboard",
+            "description": {
+              "zh-CN": "统一聚合版本信息、告警与回滚入口的内部发布面板。",
+              "en": "An internal release dashboard aggregating versions, alerts, and rollback actions."
+            },
+            "tech": [
+              "TypeScript",
+              "GraphQL",
+              "Docker"
             ]
           }
         ]
@@ -509,68 +664,538 @@
     "github": {
       "username": "haoyuhu",
       "cacheFile": "content/cache/github_repos.json",
-      "includeCachedRepos": true
+      "profileCacheFile": "content/cache/github_profile.json",
+      "includeCachedRepos": true,
+      "includeContributionRepos": true,
+      "excludeRepos": []
     },
     "items": [
       {
-        "id": "react-cool-library",
-        "name": "react-cool-library",
+        "id": "lobehub--lobehub",
+        "name": "lobehub",
+        "nameWithOwner": "lobehub/lobehub",
+        "repositoryOwner": "lobehub",
         "description": {
-          "zh-CN": "面向现代 Web 的高性能 React hooks 工具库。",
-          "en": "A high-performance React hooks library for modern web applications."
+          "zh-CN": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
+          "en": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction."
         },
         "language": "TypeScript",
-        "stars": 342,
-        "forks": 45,
-        "url": "https://github.com/haoyuhu/react-cool-library",
+        "stars": 74333,
+        "forks": 14838,
+        "watchers": 289,
+        "url": "https://github.com/lobehub/lobehub",
+        "homepage": "https://lobehub.com",
         "topics": [
-          "react",
-          "hooks",
-          "frontend"
+          "chatgpt",
+          "openai",
+          "ai",
+          "gpt",
+          "claude",
+          "gemini",
+          "knowledge-base",
+          "deepseek",
+          "agent",
+          "mcp"
         ],
-        "featured": true,
-        "source": "manual",
-        "updatedAt": "2024-03-15T10:00:00Z"
+        "featured": false,
+        "relationship": "contributor",
+        "source": "github-sync",
+        "pushedAt": "2026-03-26T09:08:26Z",
+        "updatedAt": "2026-03-26T09:05:36Z"
       },
       {
-        "id": "agent-orchestrator",
-        "name": "agent-orchestrator",
+        "id": "zhulinsen--daily_stock_analysis",
+        "name": "daily_stock_analysis",
+        "nameWithOwner": "ZhuLinsen/daily_stock_analysis",
+        "repositoryOwner": "ZhuLinsen",
         "description": {
-          "zh-CN": "用于生产环境多智能体工作流编排的框架。",
-          "en": "A framework for orchestrating multi-agent workflows in production."
+          "zh-CN": "LLM驱动的 A/H/美股智能分析器：多数据源行情 + 实时新闻 + LLM决策仪表盘 + 多渠道推送，零成本定时运行，纯白嫖. LLM-powered stock analysis system for A/H/US markets.",
+          "en": "LLM驱动的 A/H/美股智能分析器：多数据源行情 + 实时新闻 + LLM决策仪表盘 + 多渠道推送，零成本定时运行，纯白嫖. LLM-powered stock analysis system for A/H/US markets."
         },
         "language": "Python",
-        "stars": 512,
-        "forks": 80,
-        "url": "https://github.com/haoyuhu/agent-orchestrator",
+        "stars": 25643,
+        "forks": 26522,
+        "watchers": 123,
+        "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+        "homepage": "",
         "topics": [
           "ai",
-          "agents",
-          "python"
+          "aigc",
+          "gemini",
+          "llm",
+          "quant",
+          "stock",
+          "agent",
+          "rag",
+          "quantitative-trading"
         ],
-        "featured": true,
-        "source": "manual",
-        "updatedAt": "2024-03-20T12:00:00Z"
+        "featured": false,
+        "relationship": "contributor",
+        "source": "github-sync",
+        "pushedAt": "2026-03-25T16:16:44Z",
+        "updatedAt": "2026-03-26T09:04:38Z"
       },
       {
-        "id": "terminal-portfolio",
-        "name": "terminal-portfolio",
+        "id": "tiann--hapi",
+        "name": "hapi",
+        "nameWithOwner": "tiann/hapi",
+        "repositoryOwner": "tiann",
         "description": {
-          "zh-CN": "终端 / IDE 风格、以内容配置驱动的个人站模板。",
-          "en": "A terminal and IDE inspired portfolio template powered by content configuration."
+          "zh-CN": "App for Claude Code / Codex / Gemini / OpenCode, vibe coding anytime, anywhere",
+          "en": "App for Claude Code / Codex / Gemini / OpenCode, vibe coding anytime, anywhere"
         },
         "language": "TypeScript",
-        "stars": 156,
-        "forks": 34,
-        "url": "https://github.com/haoyuhu/terminal-portfolio",
+        "stars": 3089,
+        "forks": 308,
+        "watchers": 10,
+        "url": "https://github.com/tiann/hapi",
+        "homepage": "https://hapi.run",
         "topics": [
-          "portfolio",
-          "design",
-          "ui"
+          "app",
+          "claude-code",
+          "codex",
+          "gemini-cli",
+          "opencode",
+          "remote-control"
         ],
+        "featured": false,
+        "relationship": "contributor",
+        "source": "github-sync",
+        "pushedAt": "2026-03-26T00:07:07Z",
+        "updatedAt": "2026-03-26T07:19:58Z"
+      },
+      {
+        "id": "haoyuhu--cluster-analysis",
+        "name": "cluster-analysis",
+        "nameWithOwner": "haoyuhu/cluster-analysis",
+        "repositoryOwner": "haoyuhu",
+        "description": {
+          "zh-CN": "聚类算法实验仓库，覆盖 K-Means++、FCM、层次聚类与 DBSCAN。",
+          "en": "Clustering algorithm experiments covering K-Means++, FCM, hierarchical clustering, and DBSCAN."
+        },
+        "language": "Python",
+        "stars": 395,
+        "forks": 86,
+        "watchers": 10,
+        "url": "https://github.com/haoyuhu/cluster-analysis",
+        "homepage": "",
+        "topics": [],
         "featured": true,
-        "source": "manual",
-        "updatedAt": "2024-01-20T12:00:00Z"
+        "relationship": "owner",
+        "source": "github-sync",
+        "pushedAt": "2025-04-15T14:55:57Z",
+        "updatedAt": "2026-03-11T07:47:06Z"
+      },
+      {
+        "id": "haoyuhu--bert-multi-gpu",
+        "name": "bert-multi-gpu",
+        "nameWithOwner": "haoyuhu/bert-multi-gpu",
+        "repositoryOwner": "haoyuhu",
+        "description": {
+          "zh-CN": "面向大型 BERT 模型微调的多 GPU / FP16 训练实践。",
+          "en": "Multi-GPU and FP16 training workflows for fine-tuning large BERT models."
+        },
+        "language": "Python",
+        "stars": 192,
+        "forks": 42,
+        "watchers": 7,
+        "url": "https://github.com/haoyuhu/bert-multi-gpu",
+        "homepage": "",
+        "topics": [],
+        "featured": true,
+        "relationship": "owner",
+        "source": "github-sync",
+        "pushedAt": "2020-03-09T15:14:25Z",
+        "updatedAt": "2025-11-21T09:42:56Z"
+      },
+      {
+        "id": "haoyuhu--dify-client-python",
+        "name": "dify-client-python",
+        "nameWithOwner": "haoyuhu/dify-client-python",
+        "repositoryOwner": "haoyuhu",
+        "description": {
+          "zh-CN": "Dify API 的 Python 客户端封装，强调易集成与可扩展。",
+          "en": "A Python client for the Dify API with an emphasis on ease of integration and extensibility."
+        },
+        "language": "Python",
+        "stars": 49,
+        "forks": 17,
+        "watchers": 2,
+        "url": "https://github.com/haoyuhu/dify-client-python",
+        "topics": [],
+        "featured": true,
+        "relationship": "owner",
+        "source": "github-sync",
+        "pushedAt": "2026-03-25T06:13:31Z",
+        "updatedAt": "2026-03-25T06:13:35Z"
+      },
+      {
+        "id": "haoyuhu--gosimhash",
+        "name": "gosimhash",
+        "nameWithOwner": "haoyuhu/gosimhash",
+        "repositoryOwner": "haoyuhu",
+        "description": {
+          "zh-CN": "A simhasher for Chinese documents implemented by golang, simply translated from yanyiwu/gosimhash",
+          "en": "A simhasher for Chinese documents implemented by golang, simply translated from yanyiwu/gosimhash"
+        },
+        "language": "Go",
+        "stars": 17,
+        "forks": 5,
+        "watchers": 0,
+        "url": "https://github.com/haoyuhu/gosimhash",
+        "homepage": "",
+        "topics": [
+          "simhash",
+          "siphash",
+          "jenkins"
+        ],
+        "featured": false,
+        "relationship": "owner",
+        "source": "github-sync",
+        "pushedAt": "2017-11-30T16:29:40Z",
+        "updatedAt": "2024-08-17T13:50:02Z"
+      },
+      {
+        "id": "haoyuhu--sentence-tokenization",
+        "name": "sentence-tokenization",
+        "nameWithOwner": "haoyuhu/sentence-tokenization",
+        "repositoryOwner": "haoyuhu",
+        "description": {
+          "zh-CN": "Simple tool for tokenizing sentences, for BERT or other NLP preprocessing.",
+          "en": "Simple tool for tokenizing sentences, for BERT or other NLP preprocessing."
+        },
+        "language": "JavaScript",
+        "stars": 6,
+        "forks": 0,
+        "watchers": 0,
+        "url": "https://github.com/haoyuhu/sentence-tokenization",
+        "homepage": "",
+        "topics": [],
+        "featured": false,
+        "relationship": "owner",
+        "source": "github-sync",
+        "pushedAt": "2019-08-12T11:11:39Z",
+        "updatedAt": "2024-12-16T14:21:48Z"
+      },
+      {
+        "id": "haoyuhu--gosimhash-doc-server",
+        "name": "gosimhash-doc-server",
+        "nameWithOwner": "haoyuhu/gosimhash-doc-server",
+        "repositoryOwner": "haoyuhu",
+        "description": {
+          "zh-CN": "A document simhash server implement by golang",
+          "en": "A document simhash server implement by golang"
+        },
+        "language": "Go",
+        "stars": 6,
+        "forks": 3,
+        "watchers": 0,
+        "url": "https://github.com/haoyuhu/gosimhash-doc-server",
+        "topics": [],
+        "featured": false,
+        "relationship": "owner",
+        "source": "github-sync",
+        "pushedAt": "2017-11-30T16:24:29Z",
+        "updatedAt": "2025-04-15T03:38:13Z"
+      },
+      {
+        "id": "haoyuhu--kronos-dashboard",
+        "name": "kronos-dashboard",
+        "nameWithOwner": "haoyuhu/kronos-dashboard",
+        "repositoryOwner": "haoyuhu",
+        "description": {
+          "zh-CN": "待补充项目描述",
+          "en": "Project description pending."
+        },
+        "language": "Python",
+        "stars": 5,
+        "forks": 1,
+        "watchers": 0,
+        "url": "https://github.com/haoyuhu/kronos-dashboard",
+        "topics": [],
+        "featured": false,
+        "relationship": "owner",
+        "source": "github-sync",
+        "pushedAt": "2025-08-11T16:04:35Z",
+        "updatedAt": "2025-12-29T05:57:20Z"
+      },
+      {
+        "id": "haoyuhu--thu-stadium-reservation",
+        "name": "thu-stadium-reservation",
+        "nameWithOwner": "haoyuhu/thu-stadium-reservation",
+        "repositoryOwner": "haoyuhu",
+        "description": {
+          "zh-CN": "python scripts for stadium reservation in Tsinghua University",
+          "en": "python scripts for stadium reservation in Tsinghua University"
+        },
+        "language": "HTML",
+        "stars": 5,
+        "forks": 2,
+        "watchers": 0,
+        "url": "https://github.com/haoyuhu/thu-stadium-reservation",
+        "homepage": "",
+        "topics": [],
+        "featured": false,
+        "relationship": "owner",
+        "source": "github-sync",
+        "pushedAt": "2017-02-23T11:10:18Z",
+        "updatedAt": "2019-05-23T17:38:03Z"
+      },
+      {
+        "id": "haoyuhu--pytunet",
+        "name": "pytunet",
+        "nameWithOwner": "haoyuhu/pytunet",
+        "repositoryOwner": "haoyuhu",
+        "description": {
+          "zh-CN": "Python Scripts for Tsinghua University Network Connection Helper",
+          "en": "Python Scripts for Tsinghua University Network Connection Helper"
+        },
+        "language": "Python",
+        "stars": 3,
+        "forks": 2,
+        "watchers": 1,
+        "url": "https://github.com/haoyuhu/pytunet",
+        "homepage": "",
+        "topics": [],
+        "featured": false,
+        "relationship": "owner",
+        "source": "github-sync",
+        "pushedAt": "2015-04-12T09:02:35Z",
+        "updatedAt": "2021-03-04T06:16:32Z"
+      },
+      {
+        "id": "haoyuhu--tunet-macos",
+        "name": "TUNet-MacOS",
+        "nameWithOwner": "haoyuhu/TUNet-MacOS",
+        "repositoryOwner": "haoyuhu",
+        "description": {
+          "zh-CN": "待补充项目描述",
+          "en": "Project description pending."
+        },
+        "language": "Shell",
+        "stars": 2,
+        "forks": 0,
+        "watchers": 0,
+        "url": "https://github.com/haoyuhu/TUNet-MacOS",
+        "topics": [],
+        "featured": false,
+        "relationship": "owner",
+        "source": "github-sync",
+        "pushedAt": "2017-01-08T11:30:23Z",
+        "updatedAt": "2017-01-12T11:34:57Z"
+      },
+      {
+        "id": "haoyuhu--image-search-engine",
+        "name": "image-search-engine",
+        "nameWithOwner": "haoyuhu/image-search-engine",
+        "repositoryOwner": "haoyuhu",
+        "description": {
+          "zh-CN": "image search engine",
+          "en": "image search engine"
+        },
+        "language": "Python",
+        "stars": 2,
+        "forks": 2,
+        "watchers": 1,
+        "url": "https://github.com/haoyuhu/image-search-engine",
+        "homepage": "http://www.huhaoyu.com/image-search-engine/",
+        "topics": [],
+        "featured": false,
+        "relationship": "owner",
+        "source": "github-sync",
+        "pushedAt": "2015-06-21T01:31:05Z",
+        "updatedAt": "2020-11-19T02:04:59Z"
+      },
+      {
+        "id": "haoyuhu--haoyuhu.github.io",
+        "name": "haoyuhu.github.io",
+        "nameWithOwner": "haoyuhu/haoyuhu.github.io",
+        "repositoryOwner": "haoyuhu",
+        "description": {
+          "zh-CN": "当前作品集与本地创作工作流源码仓库。",
+          "en": "The source repository for this portfolio and its local authoring workflow."
+        },
+        "language": "TypeScript",
+        "stars": 1,
+        "forks": 0,
+        "watchers": 2,
+        "url": "https://github.com/haoyuhu/haoyuhu.github.io",
+        "homepage": "http://www.huhaoyu.com",
+        "topics": [],
+        "featured": false,
+        "relationship": "owner",
+        "source": "github-sync",
+        "pushedAt": "2026-03-26T07:08:53Z",
+        "updatedAt": "2026-03-26T07:08:56Z"
+      },
+      {
+        "id": "haoyuhu--thu-stadium-reservation-server",
+        "name": "thu-stadium-reservation-server",
+        "nameWithOwner": "haoyuhu/thu-stadium-reservation-server",
+        "repositoryOwner": "haoyuhu",
+        "description": {
+          "zh-CN": "A server for thu-stadium-reservation",
+          "en": "A server for thu-stadium-reservation"
+        },
+        "language": "Java",
+        "stars": 1,
+        "forks": 0,
+        "watchers": 0,
+        "url": "https://github.com/haoyuhu/thu-stadium-reservation-server",
+        "topics": [],
+        "featured": false,
+        "relationship": "owner",
+        "source": "github-sync",
+        "pushedAt": "2017-03-30T06:43:39Z",
+        "updatedAt": "2017-02-16T16:33:09Z"
+      },
+      {
+        "id": "haoyuhu--thu-stadium-reservation-weapp",
+        "name": "thu-stadium-reservation-weapp",
+        "nameWithOwner": "haoyuhu/thu-stadium-reservation-weapp",
+        "repositoryOwner": "haoyuhu",
+        "description": {
+          "zh-CN": "待补充项目描述",
+          "en": "Project description pending."
+        },
+        "language": "JavaScript",
+        "stars": 1,
+        "forks": 0,
+        "watchers": 0,
+        "url": "https://github.com/haoyuhu/thu-stadium-reservation-weapp",
+        "topics": [],
+        "featured": false,
+        "relationship": "owner",
+        "source": "github-sync",
+        "pushedAt": "2017-02-20T14:29:40Z",
+        "updatedAt": "2017-02-20T07:26:31Z"
+      },
+      {
+        "id": "haoyuhu--tutu",
+        "name": "Tutu",
+        "nameWithOwner": "haoyuhu/Tutu",
+        "repositoryOwner": "haoyuhu",
+        "description": {
+          "zh-CN": "Tsinghua Cab System Helper",
+          "en": "Tsinghua Cab System Helper"
+        },
+        "language": "Java",
+        "stars": 1,
+        "forks": 0,
+        "watchers": 0,
+        "url": "https://github.com/haoyuhu/Tutu",
+        "topics": [],
+        "featured": false,
+        "relationship": "owner",
+        "source": "github-sync",
+        "pushedAt": "2016-02-25T11:44:56Z",
+        "updatedAt": "2016-02-25T11:50:53Z"
+      },
+      {
+        "id": "haoyuhu--leetcode",
+        "name": "leetcode",
+        "nameWithOwner": "haoyuhu/leetcode",
+        "repositoryOwner": "haoyuhu",
+        "description": {
+          "zh-CN": "leetcode answer",
+          "en": "leetcode answer"
+        },
+        "language": "C++",
+        "stars": 1,
+        "forks": 0,
+        "watchers": 1,
+        "url": "https://github.com/haoyuhu/leetcode",
+        "topics": [],
+        "featured": false,
+        "relationship": "owner",
+        "source": "github-sync",
+        "pushedAt": "2016-02-25T10:52:06Z",
+        "updatedAt": "2016-02-25T11:51:01Z"
+      },
+      {
+        "id": "haoyuhu--bundleless",
+        "name": "Bundleless",
+        "nameWithOwner": "haoyuhu/Bundleless",
+        "repositoryOwner": "haoyuhu",
+        "description": {
+          "zh-CN": "Solution of data transmission between activities without Serializable and Parcelable.",
+          "en": "Solution of data transmission between activities without Serializable and Parcelable."
+        },
+        "language": "Java",
+        "stars": 1,
+        "forks": 0,
+        "watchers": 0,
+        "url": "https://github.com/haoyuhu/Bundleless",
+        "topics": [],
+        "featured": false,
+        "relationship": "owner",
+        "source": "github-sync",
+        "pushedAt": "2016-02-19T15:51:55Z",
+        "updatedAt": "2016-02-19T15:41:46Z"
+      },
+      {
+        "id": "haoyuhu--splendor-duel-terminator",
+        "name": "splendor-duel-terminator",
+        "nameWithOwner": "haoyuhu/splendor-duel-terminator",
+        "repositoryOwner": "haoyuhu",
+        "description": {
+          "zh-CN": "待补充项目描述",
+          "en": "Project description pending."
+        },
+        "language": "Python",
+        "stars": 0,
+        "forks": 0,
+        "watchers": 0,
+        "url": "https://github.com/haoyuhu/splendor-duel-terminator",
+        "topics": [],
+        "featured": false,
+        "relationship": "owner",
+        "source": "github-sync",
+        "pushedAt": "2026-03-26T04:24:12Z",
+        "updatedAt": "2026-03-26T04:24:16Z"
+      },
+      {
+        "id": "haoyuhu--golangchain",
+        "name": "golangchain",
+        "nameWithOwner": "haoyuhu/golangchain",
+        "repositoryOwner": "haoyuhu",
+        "description": {
+          "zh-CN": "⚡ Building applications with LLMs through composability ⚡",
+          "en": "⚡ Building applications with LLMs through composability ⚡"
+        },
+        "language": "Unknown",
+        "stars": 0,
+        "forks": 0,
+        "watchers": 1,
+        "url": "https://github.com/haoyuhu/golangchain",
+        "topics": [],
+        "featured": false,
+        "relationship": "owner",
+        "source": "github-sync",
+        "pushedAt": "2023-04-07T15:09:54Z",
+        "updatedAt": "2023-04-07T15:09:53Z"
+      },
+      {
+        "id": "haoyuhu--pytucab",
+        "name": "pytucab",
+        "nameWithOwner": "haoyuhu/pytucab",
+        "repositoryOwner": "haoyuhu",
+        "description": {
+          "zh-CN": "Python Scripts for Tsinghua University Library Reservations",
+          "en": "Python Scripts for Tsinghua University Library Reservations"
+        },
+        "language": "Python",
+        "stars": 0,
+        "forks": 0,
+        "watchers": 1,
+        "url": "https://github.com/haoyuhu/pytucab",
+        "homepage": "",
+        "topics": [],
+        "featured": false,
+        "relationship": "owner",
+        "source": "github-sync",
+        "pushedAt": "2015-05-29T07:31:50Z",
+        "updatedAt": "2019-03-12T10:16:27Z"
       }
     ]
   },
@@ -700,7 +1325,7 @@
     }
   },
   "generated": {
-    "generatedAt": "2026-03-26T06:43:22.828157+00:00",
+    "generatedAt": "2026-03-26T10:18:06.055981+00:00",
     "source": "content/config + content/posts",
     "bundleVersion": "3.0.0",
     "warnings": []

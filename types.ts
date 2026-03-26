@@ -53,6 +53,13 @@ export interface StudioConfig {
   supportVoiceViaCli: boolean;
 }
 
+export interface HomeRecommendations {
+  latestProject: string;
+  latestNote: string;
+  latestArticle: string;
+  currentRole: string;
+}
+
 export interface SiteConfig {
   title: LocalizedText;
   description: LocalizedText;
@@ -64,6 +71,7 @@ export interface SiteConfig {
   statusBar: SiteStatusBar;
   runtime: RuntimeSettings;
   studio: StudioConfig;
+  homeRecommendations: HomeRecommendations;
   copy: Record<string, any>;
 }
 
@@ -76,6 +84,9 @@ export interface ProfileStats {
 export interface SystemIdentityItem {
   label: LocalizedText;
   value: LocalizedText;
+  detail?: LocalizedText | null;
+  tags?: string[];
+  useTechStackAsTags?: boolean;
 }
 
 export interface MetricItem {
@@ -85,8 +96,10 @@ export interface MetricItem {
 
 export interface ToolTelemetryItem {
   name: string;
+  level: number;
   usage: string;
   rating: string;
+  summary: LocalizedText;
 }
 
 export interface ProfileConfig {
@@ -153,21 +166,29 @@ export interface ResumeConfig {
 export interface GitHubProjectSettings {
   username: string;
   cacheFile: string;
+  profileCacheFile: string;
   includeCachedRepos: boolean;
+  includeContributionRepos: boolean;
+  excludeRepos: string[];
 }
 
 export interface ProjectItem {
   id: string;
   name: string;
+  nameWithOwner: string;
+  repositoryOwner: string;
   description: LocalizedText;
   language: string;
   stars: number;
   forks: number;
+  watchers: number;
   url: string;
   homepage?: string | null;
   topics: string[];
   featured: boolean;
+  relationship: 'owner' | 'contributor';
   source: string;
+  pushedAt?: string | null;
   updatedAt?: string | null;
 }
 

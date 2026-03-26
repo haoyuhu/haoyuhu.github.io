@@ -8,10 +8,12 @@ import typer
 
 from .bundle import build_bundle
 from .llm.factory import get_provider
-from .paths import repo_root
+from .paths import config_dir, repo_root
+from .services.github_sync import refresh_github_caches
 from .services.checks import run_checks
 from .services.content_creation import create_content_entry, voice_capture_available
 from .services.profile_import import import_profile_from_resume
+from .utils import load_yaml
 
 try:
     from InquirerPy import inquirer
@@ -22,8 +24,10 @@ except Exception:  # pragma: no cover - soft dependency in tests/runtime
 app = typer.Typer(help="Haoyu Portfolio 本地内容与发布工具。")
 profile_app = typer.Typer(help="个人资料与简历导入。")
 content_app = typer.Typer(help="短文与长文内容创建。")
+sync_app = typer.Typer(help="外部平台数据同步。")
 app.add_typer(profile_app, name="profile")
 app.add_typer(content_app, name="content")
+app.add_typer(sync_app, name="sync")
 
 
 def _prompt_text(message: str, default: str = "") -> str:
@@ -36,6 +40,11 @@ def _prompt_confirm(message: str, default: bool = True) -> bool:
     if inquirer:
         return bool(inquirer.confirm(message=message, default=default).execute())
     return typer.confirm(message, default=default)
+
+
+def _github_settings() -> dict:
+    payload = load_yaml(config_dir() / "projects.yaml")
+    return payload.get("projects", {}).get("github", {})
 
 
 @profile_app.command("import")
@@ -99,6 +108,24 @@ def create_article(
     typer.echo(f"Article generated at {result['path']}")
 
 
+@sync_app.command("github")
+def sync_github(
+    username: Annotated[str | None, typer.Option("--username", help="覆盖 projects.yaml 中的 GitHub 用户名。")] = None,
+) -> None:
+    github_settings = _github_settings()
+    resolved_username = username or github_settings.get("username")
+    if not resolved_username:
+        raise typer.BadParameter("Missing GitHub username in projects.yaml or --username.")
+
+    snapshot = refresh_github_caches(
+        username=resolved_username,
+        cache_file=github_settings.get("cacheFile"),
+        profile_cache_file=github_settings.get("profileCacheFile"),
+    )
+    typer.echo(f"GitHub profile synced: {snapshot['profile']['login']}")
+    typer.echo(f"Repos cached: {len(snapshot['repos'])}")
+
+
 @app.command("build")
 def build(refresh_github: Annotated[bool, typer.Option("--refresh-github")] = False) -> None:
     bundle = build_bundle(write=True, refresh_github=refresh_github)
@@ -126,7 +153,7 @@ def serve(
 
 
 @app.command("release")
-def release(refresh_github: Annotated[bool, typer.Option("--refresh-github")] = False) -> None:
+def release(refresh_github: Annotated[bool, typer.Option("--refresh-github")] = True) -> None:
     checks = run_checks(refresh_github=refresh_github)
     if checks["invalidUrls"] or checks["secretFindings"]:
         raise typer.Exit(code=1)

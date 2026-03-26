@@ -2,56 +2,27 @@ projects:
   github:
     username: "haoyuhu"
     cacheFile: "content/cache/github_repos.json"
+    profileCacheFile: "content/cache/github_profile.json"
     includeCachedRepos: true
-  items:
-    - id: "react-cool-library"
-      name: "react-cool-library"
+    includeContributionRepos: true
+    excludeRepos: []
+  overrides:
+    "haoyuhu/cluster-analysis":
       description:
-        zh-CN: "面向现代 Web 的高性能 React hooks 工具库。"
-        en: "A high-performance React hooks library for modern web applications."
-      language: "TypeScript"
-      stars: 342
-      forks: 45
-      url: "https://github.com/haoyuhu/react-cool-library"
-      homepage: null
-      topics:
-        - "react"
-        - "hooks"
-        - "frontend"
+        zh-CN: "聚类算法实验仓库，覆盖 K-Means++、FCM、层次聚类与 DBSCAN。"
+        en: "Clustering algorithm experiments covering K-Means++, FCM, hierarchical clustering, and DBSCAN."
       featured: true
-      source: "manual"
-      updatedAt: "2024-03-15T10:00:00Z"
-    - id: "agent-orchestrator"
-      name: "agent-orchestrator"
+    "haoyuhu/bert-multi-gpu":
       description:
-        zh-CN: "用于生产环境多智能体工作流编排的框架。"
-        en: "A framework for orchestrating multi-agent workflows in production."
-      language: "Python"
-      stars: 512
-      forks: 80
-      url: "https://github.com/haoyuhu/agent-orchestrator"
-      homepage: null
-      topics:
-        - "ai"
-        - "agents"
-        - "python"
+        zh-CN: "面向大型 BERT 模型微调的多 GPU / FP16 训练实践。"
+        en: "Multi-GPU and FP16 training workflows for fine-tuning large BERT models."
       featured: true
-      source: "manual"
-      updatedAt: "2024-03-20T12:00:00Z"
-    - id: "terminal-portfolio"
-      name: "terminal-portfolio"
+    "haoyuhu/dify-client-python":
       description:
-        zh-CN: "终端 / IDE 风格、以内容配置驱动的个人站模板。"
-        en: "A terminal and IDE inspired portfolio template powered by content configuration."
-      language: "TypeScript"
-      stars: 156
-      forks: 34
-      url: "https://github.com/haoyuhu/terminal-portfolio"
-      homepage: null
-      topics:
-        - "portfolio"
-        - "design"
-        - "ui"
+        zh-CN: "Dify API 的 Python 客户端封装，强调易集成与可扩展。"
+        en: "A Python client for the Dify API with an emphasis on ease of integration and extensibility."
       featured: true
-      source: "manual"
-      updatedAt: "2024-01-20T12:00:00Z"
+    "haoyuhu/haoyuhu.github.io":
+      description:
+        zh-CN: "当前作品集与本地创作工作流源码仓库。"
+        en: "The source repository for this portfolio and its local authoring workflow."

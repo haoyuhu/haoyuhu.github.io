@@ -37,6 +37,14 @@ resume:
             - "D3.js"
             - "Canvas"
             - "WebSockets"
+        - name: "Agent Runtime Control Plane"
+          description:
+            zh-CN: "统一智能体编排、工具调用与多环境发布的运行时控制平面。"
+            en: "A runtime control plane for agent orchestration, tool execution, and multi-environment releases."
+          tech:
+            - "Python"
+            - "PostgreSQL"
+            - "Kubernetes"
     - id: "exp-full-stack"
       company: "Innovative Startup Inc"
       role:
@@ -63,6 +71,82 @@ resume:
             - "Node.js"
             - "Redis"
             - "MongoDB"
+        - name: "Growth CMS"
+          description:
+            zh-CN: "面向市场与运营团队的内容编排后台，支持可视化活动配置。"
+            en: "A growth CMS for marketing and operations teams with visual campaign configuration."
+          tech:
+            - "React"
+            - "TypeScript"
+            - "MySQL"
+    - id: "exp-ml-platform"
+      company: "Research Platform Lab"
+      role:
+        zh-CN: "机器学习平台工程师"
+        en: "ML Platform Engineer"
+      startDate: "2018"
+      endDate: "2019"
+      location:
+        zh-CN: "上海"
+        en: "Shanghai"
+      description:
+        zh-CN:
+          - "建设训练任务调度、实验管理与特征处理的基础平台。"
+          - "与算法团队共同推进模型训练效率与可复现性。"
+        en:
+          - "Built the foundations for experiment tracking, scheduling, and feature workflows."
+          - "Partnered with research teams to improve training efficiency and reproducibility."
+      projects:
+        - name: "Training Scheduler"
+          description:
+            zh-CN: "面向 GPU 集群的任务调度与实验排队系统。"
+            en: "A scheduling and experiment queuing system for shared GPU clusters."
+          tech:
+            - "Python"
+            - "Celery"
+            - "Kubernetes"
+        - name: "Feature Workflow Studio"
+          description:
+            zh-CN: "将特征生成、校验与发布流程标准化的内部工具。"
+            en: "An internal tool standardizing feature generation, validation, and release workflows."
+          tech:
+            - "Airflow"
+            - "Spark"
+            - "Vue"
+    - id: "exp-product-engineering"
+      company: "Product Studio"
+      role:
+        zh-CN: "产品工程师"
+        en: "Product Engineer"
+      startDate: "2016"
+      endDate: "2018"
+      location:
+        zh-CN: "上海"
+        en: "Shanghai"
+      description:
+        zh-CN:
+          - "负责数据产品前后台开发与交付，连接设计、产品与工程协作。"
+          - "在早期阶段建立设计系统、日志方案与发布节奏。"
+        en:
+          - "Owned front-end and back-end delivery for data-driven products."
+          - "Set up early design system, observability, and release practices."
+      projects:
+        - name: "Insights Workspace"
+          description:
+            zh-CN: "面向业务团队的分析工作台，支持自定义报表与钻取。"
+            en: "An insights workspace for business teams with custom reports and drill-down analysis."
+          tech:
+            - "React"
+            - "Node.js"
+            - "PostgreSQL"
+        - name: "Release Dashboard"
+          description:
+            zh-CN: "统一聚合版本信息、告警与回滚入口的内部发布面板。"
+            en: "An internal release dashboard aggregating versions, alerts, and rollback actions."
+          tech:
+            - "TypeScript"
+            - "GraphQL"
+            - "Docker"
   education:
     - id: "edu-sjtu"
       school: "Shanghai Jiao Tong University"

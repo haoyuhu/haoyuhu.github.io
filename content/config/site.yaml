@@ -5,7 +5,7 @@ site:
   description:
     zh-CN: "一个以配置驱动、支持双语内容与本地创作工作流的个人作品集。"
     en: "A config-first personal portfolio with bilingual content and a local creator workflow."
-  localeDefault: "zh-CN"
+  localeDefault: "en"
   ownerHandle: "haoyuhu"
   navigation:
     - id: "home"
@@ -79,6 +79,11 @@ site:
       zh-CN: "导入简历、发布短文与长文、预览 bundle、运行校验。"
       en: "Import resumes, publish notes and articles, preview the bundle, and run checks."
     supportVoiceViaCli: true
+  homeRecommendations:
+    latestProject: "auto"
+    latestNote: "auto"
+    latestArticle: "auto"
+    currentRole: "auto"
   copy:
     bootLabel:
       zh-CN: "正在启动内容内核..."
@@ -109,8 +114,8 @@ site:
       en: "Career Log"
     widgets:
       latestProject:
-        zh-CN: "最新项目"
-        en: "Latest Deployment"
+        zh-CN: "推荐仓库"
+        en: "Featured Repository"
       latestNote:
         zh-CN: "最新短文"
         en: "Buffer Stream"
@@ -124,8 +129,8 @@ site:
       zh-CN: "加载更多"
       en: "Load More"
     projectsFooter:
-      zh-CN: "return curated_projects_from_config"
-      en: "return curated_projects_from_config"
+      zh-CN: "return repositories_synced_from_github(order='stars,pushed_at')"
+      en: "return repositories_synced_from_github(order='stars,pushed_at')"
     settingsHeading:
       zh-CN: "系统配置"
       en: "System Configuration"
