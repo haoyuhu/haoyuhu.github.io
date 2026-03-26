@@ -161,6 +161,10 @@
         "zh-CN": "经历时间线",
         "en": "Career Log"
       },
+      "resumeCta": {
+        "zh-CN": "了解更多",
+        "en": "Learn More"
+      },
       "widgets": {
         "latestProject": {
           "zh-CN": "推荐仓库",
@@ -1333,7 +1337,7 @@
     }
   },
   "generated": {
-    "generatedAt": "2026-03-26T10:32:35.252196+00:00",
+    "generatedAt": "2026-03-26T12:26:50.908450+00:00",
     "source": "content/config + content/posts",
     "bundleVersion": "3.0.0",
     "warnings": []

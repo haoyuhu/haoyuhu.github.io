@@ -112,6 +112,9 @@ site:
     careerLog:
       zh-CN: "经历时间线"
       en: "Career Log"
+    resumeCta:
+      zh-CN: "了解更多"
+      en: "Learn More"
     widgets:
       latestProject:
         zh-CN: "推荐仓库"

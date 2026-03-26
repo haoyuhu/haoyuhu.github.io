@@ -795,7 +795,7 @@ const App: React.FC = () => {
                         </div>
                       </div>
                       <div className="space-y-5">
-                        {bundle.resume.experience.map((experience) => (
+                        {bundle.resume.experience.slice(0, 2).map((experience) => (
                           <div key={experience.id} className="border-l-2 border-ide-border pl-4 transition-colors hover:border-accent">
                             <div className="mb-1 flex flex-wrap justify-between gap-2 text-xs text-ide-text-dim">
                               <span>
@@ -830,6 +830,18 @@ const App: React.FC = () => {
                             </div>
                           </div>
                         ))}
+                      </div>
+                      <div className="mt-5 border-t border-ide-border pt-4">
+                        <button
+                          onClick={() => setActiveTab('resume')}
+                          className="group inline-flex items-center gap-2 rounded border border-ide-border bg-ide-bg px-3 py-2 text-sm text-ide-text-dim transition-all hover:border-accent hover:text-accent"
+                        >
+                          <span>{getLocalizedText(copy.resumeCta, locale)}</span>
+                          <span className="text-[10px] uppercase tracking-wide text-ide-text-dim group-hover:text-accent">
+                            cv.yaml
+                          </span>
+                          <ArrowRight size={14} />
+                        </button>
                       </div>
                     </section>
                   </div>
