@@ -177,6 +177,14 @@
         "currentRole": {
           "zh-CN": "当前角色",
           "en": "Runtime Env"
+        },
+        "education": {
+          "zh-CN": "教育背景",
+          "en": "Education Stack"
+        },
+        "signalDeck": {
+          "zh-CN": "信号面板",
+          "en": "Signal Deck"
         }
       },
       "loadMore": {
@@ -1325,7 +1333,7 @@
     }
   },
   "generated": {
-    "generatedAt": "2026-03-26T10:18:06.055981+00:00",
+    "generatedAt": "2026-03-26T10:32:35.252196+00:00",
     "source": "content/config + content/posts",
     "bundleVersion": "3.0.0",
     "warnings": []

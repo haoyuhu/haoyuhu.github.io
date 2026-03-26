@@ -125,6 +125,12 @@ site:
       currentRole:
         zh-CN: "当前角色"
         en: "Runtime Env"
+      education:
+        zh-CN: "教育背景"
+        en: "Education Stack"
+      signalDeck:
+        zh-CN: "信号面板"
+        en: "Signal Deck"
     loadMore:
       zh-CN: "加载更多"
       en: "Load More"

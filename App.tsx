@@ -74,6 +74,17 @@ type IdentityNarrative = {
   tags: string[];
 };
 
+type HomeSpotlightCard = {
+  id: string;
+  targetTab: string;
+  kicker: string;
+  title: string;
+  subtitle?: string;
+  icon: React.ComponentType<{ size?: number; className?: string }>;
+  body: React.ReactNode;
+  footer?: React.ReactNode;
+};
+
 const buildSystemIdentityNarratives = (
   rows: SystemIdentityItem[],
   techStack: Array<{ name: string; level: number }>,
@@ -256,6 +267,17 @@ const App: React.FC = () => {
       experience.company,
       getLocalizedText(experience.role, locale),
     ]) ?? bundle.resume.experience[0];
+  const latestEducation = bundle.resume.education[0];
+  const topPostTags = Object.entries(
+    posts.reduce<Record<string, number>>((counts, post) => {
+      post.tags.forEach((tag) => {
+        counts[tag] = (counts[tag] || 0) + 1;
+      });
+      return counts;
+    }, {}),
+  )
+    .sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0]))
+    .slice(0, 6);
 
   const uptime = new Date().getFullYear() - bundle.profile.careerStartYear;
   const systemIdentityNarratives = buildSystemIdentityNarratives(
@@ -269,6 +291,187 @@ const App: React.FC = () => {
     locale === 'zh-CN'
       ? '按 stars、最近 push、forks、watchers 排序'
       : 'Sorted by stars, recent pushes, forks, and watchers';
+
+  const homeSpotlightCards: HomeSpotlightCard[] = [];
+
+  if (latestProject) {
+    homeSpotlightCards.push({
+      id: 'latest-project',
+      targetTab: 'projects',
+      kicker: getLocalizedText(copy.widgets.latestProject, locale),
+      title: latestProject.nameWithOwner,
+      subtitle: latestProject.language,
+      icon: Folder,
+      body: (
+        <div className="space-y-3">
+          <p className="text-sm leading-6 text-ide-text-dim">{getLocalizedText(latestProject.description, locale)}</p>
+          <div className="flex flex-wrap gap-2 text-[10px] uppercase tracking-wide text-ide-text-dim">
+            <span className="rounded bg-ide-panel px-2 py-1">★ {latestProject.stars}</span>
+            <span className="rounded bg-ide-panel px-2 py-1">Forks {latestProject.forks}</span>
+            <span className="rounded bg-ide-panel px-2 py-1">
+              {latestProject.relationship === 'owner'
+                ? locale === 'zh-CN'
+                  ? '维护仓库'
+                  : 'Maintainer'
+                : locale === 'zh-CN'
+                  ? '贡献仓库'
+                  : 'Contributor'}
+            </span>
+          </div>
+        </div>
+      ),
+      footer: (
+        <div className="flex flex-wrap gap-1">
+          {latestProject.topics.slice(0, 4).map((tag) => (
+            <span key={tag} className="rounded border border-ide-border bg-ide-panel px-1.5 py-0.5 text-[10px] text-ide-text-dim">
+              #{tag}
+            </span>
+          ))}
+        </div>
+      ),
+    });
+  }
+
+  if (latestNote) {
+    homeSpotlightCards.push({
+      id: 'latest-note',
+      targetTab: 'garden',
+      kicker: getLocalizedText(copy.widgets.latestNote, locale),
+      title: getLocalizedText(latestNote.title, locale),
+      subtitle: formatDate(latestNote.date, locale),
+      icon: TerminalIcon,
+      body: (
+        <blockquote className="border-l-2 border-ide-border pl-3 text-sm italic leading-6 text-ide-text">
+          “{getLocalizedText(latestNote.summary, locale)}”
+        </blockquote>
+      ),
+      footer: (
+        <div className="flex flex-wrap gap-1">
+          {latestNote.tags.map((tag) => (
+            <span key={tag} className="rounded bg-ide-panel px-1.5 py-0.5 text-[10px] text-ide-text-dim">
+              #{tag}
+            </span>
+          ))}
+        </div>
+      ),
+    });
+  }
+
+  if (latestArticle) {
+    homeSpotlightCards.push({
+      id: 'latest-article',
+      targetTab: 'articles',
+      kicker: getLocalizedText(copy.widgets.latestArticle, locale),
+      title: getLocalizedText(latestArticle.title, locale),
+      subtitle: formatDate(latestArticle.date, locale),
+      icon: FileText,
+      body: (
+        <p className="text-sm leading-6 text-ide-text-dim">{getLocalizedText(latestArticle.summary, locale)}</p>
+      ),
+      footer: (
+        <div className="flex flex-wrap gap-1">
+          {latestArticle.tags.map((tag) => (
+            <span key={tag} className="rounded bg-ide-panel px-1.5 py-0.5 text-[10px] text-ide-text">
+              #{tag}
+            </span>
+          ))}
+        </div>
+      ),
+    });
+  }
+
+  if (currentJob) {
+    homeSpotlightCards.push({
+      id: 'current-role',
+      targetTab: 'resume',
+      kicker: getLocalizedText(copy.widgets.currentRole, locale),
+      title: getLocalizedText(currentJob.role, locale),
+      subtitle: `@${currentJob.company}`,
+      icon: Briefcase,
+      body: (
+        <div className="space-y-2 text-sm text-ide-text-dim">
+          {currentJob.projects.slice(0, 3).map((project) => (
+            <div key={`${currentJob.id}-${project.name}`} className="rounded border border-ide-border bg-ide-panel px-3 py-2">
+              <div className="font-semibold text-ide-text">{project.name}</div>
+              <div className="mt-1 leading-5">{getLocalizedText(project.description, locale)}</div>
+            </div>
+          ))}
+        </div>
+      ),
+      footer: (
+        <div className="flex items-center gap-1 text-[10px] text-ide-text-dim">
+          <Calendar size={10} />
+          {currentJob.startDate} - {currentJob.endDate}
+        </div>
+      ),
+    });
+  }
+
+  if (latestEducation) {
+    homeSpotlightCards.push({
+      id: 'education',
+      targetTab: 'resume',
+      kicker: getLocalizedText(copy.widgets.education, locale),
+      title: latestEducation.school,
+      subtitle: `${getLocalizedText(latestEducation.degree, locale)} · ${getLocalizedText(latestEducation.field, locale)}`,
+      icon: Globe,
+      body: (
+        <p className="text-sm leading-6 text-ide-text-dim">
+          {locale === 'zh-CN'
+            ? '作为当前履历配置中的最高学历节点，它也为研究、系统设计与工程表达提供了稳定背景。'
+            : 'This top education node anchors the current resume config with a stable base for research, systems thinking, and engineering communication.'}
+        </p>
+      ),
+      footer: (
+        <div className="flex items-center gap-1 text-[10px] text-ide-text-dim">
+          <Calendar size={10} />
+          {latestEducation.startDate} - {latestEducation.endDate}
+        </div>
+      ),
+    });
+  }
+
+  homeSpotlightCards.push({
+    id: 'signal-deck',
+    targetTab: 'garden',
+    kicker: getLocalizedText(copy.widgets.signalDeck, locale),
+    title: locale === 'zh-CN' ? '内容与仓库的实时脉冲' : 'Pulse across content and repositories',
+    subtitle:
+      locale === 'zh-CN'
+        ? '配置、公开仓库与 Markdown 内容共同驱动首页卡片。'
+        : 'Config, public repositories, and Markdown content drive the home surface together.',
+    icon: FileCode,
+    body: (
+      <div className="grid grid-cols-2 gap-3 text-sm">
+        <div className="rounded border border-ide-border bg-ide-panel px-3 py-2">
+          <div className="text-[10px] uppercase tracking-wide text-ide-text-dim">{locale === 'zh-CN' ? '仓库' : 'Repos'}</div>
+          <div className="mt-1 text-lg font-bold text-ide-text">{bundle.projects.items.length}</div>
+        </div>
+        <div className="rounded border border-ide-border bg-ide-panel px-3 py-2">
+          <div className="text-[10px] uppercase tracking-wide text-ide-text-dim">{locale === 'zh-CN' ? '短文' : 'Notes'}</div>
+          <div className="mt-1 text-lg font-bold text-ide-text">{notes.length}</div>
+        </div>
+        <div className="rounded border border-ide-border bg-ide-panel px-3 py-2">
+          <div className="text-[10px] uppercase tracking-wide text-ide-text-dim">{locale === 'zh-CN' ? '文章' : 'Articles'}</div>
+          <div className="mt-1 text-lg font-bold text-ide-text">{articles.length}</div>
+        </div>
+        <div className="rounded border border-ide-border bg-ide-panel px-3 py-2">
+          <div className="text-[10px] uppercase tracking-wide text-ide-text-dim">{locale === 'zh-CN' ? '关注者' : 'Followers'}</div>
+          <div className="mt-1 text-lg font-bold text-ide-text">{bundle.profile.stats.followers}</div>
+        </div>
+      </div>
+    ),
+    footer:
+      topPostTags.length > 0 ? (
+        <div className="flex flex-wrap gap-1">
+          {topPostTags.map(([tag, count]) => (
+            <span key={tag} className="rounded border border-ide-border bg-ide-panel px-2 py-1 text-[10px] text-ide-text-dim">
+              #{tag} x{count}
+            </span>
+          ))}
+        </div>
+      ) : undefined,
+  });
 
   const NavItem = ({ item, depth = 0 }: { item: NavigationItem; depth?: number }) => {
     const Icon = iconMap[item.id] ?? FileCode;
@@ -290,6 +493,34 @@ const App: React.FC = () => {
           <span>{item.fileLabel}</span>
         </span>
       </button>
+    );
+  };
+
+  const SpotlightCard = ({ card }: { card: HomeSpotlightCard }) => {
+    const Icon = card.icon;
+    return (
+      <div className="mb-4 break-inside-avoid">
+        <button
+          onClick={() => setActiveTab(card.targetTab)}
+          className="group flex w-full cursor-pointer flex-col rounded-xl border border-ide-border bg-ide-bg p-5 text-left transition-all hover:border-accent hover:shadow-md"
+        >
+          <div className="mb-3 flex items-start justify-between gap-3">
+            <span className="flex min-w-0 items-center gap-1.5 text-xs font-bold uppercase text-ide-text-dim">
+              <Icon size={14} className="shrink-0 text-accent" />
+              <span className="truncate">{card.kicker}</span>
+            </span>
+            <ArrowRight size={16} className="shrink-0 text-ide-text-dim transition-colors group-hover:text-accent" />
+          </div>
+          <div className="space-y-2">
+            <h3 className="break-words text-lg font-bold text-ide-text transition-colors group-hover:text-accent">
+              {card.title}
+            </h3>
+            {card.subtitle && <p className="text-sm text-ide-text-dim">{card.subtitle}</p>}
+          </div>
+          <div className="mt-4">{card.body}</div>
+          {card.footer && <div className="mt-4">{card.footer}</div>}
+        </button>
+      </div>
     );
   };
 
@@ -479,14 +710,14 @@ const App: React.FC = () => {
                     </div>
                   </section>
 
-                  <div className="grid gap-6 lg:grid-cols-2">
-                    <section className="flex min-h-[320px] flex-col overflow-hidden rounded-xl border border-ide-border bg-ide-panel p-6 shadow-sm">
+                  <div className="grid items-start gap-6 lg:grid-cols-2">
+                    <section className="flex min-h-[320px] flex-col rounded-xl border border-ide-border bg-ide-panel p-6 shadow-sm">
                       <div className="mb-4 text-xs text-ide-text-dim">neofetch_v3.sh</div>
                       <div className="mb-4 text-xs">
                         <span className="font-bold text-accent">{bundle.site.ownerHandle}@portfolio</span>:
                         <span className="text-sky-400">~</span>$ ./display_specs.sh --verbose
                       </div>
-                      <div className="flex-1 space-y-6 overflow-y-auto pr-2">
+                      <div className="space-y-6">
                         <div>
                           <div className="mb-2 text-[10px] font-bold uppercase tracking-wider text-ide-text-dim">
                             {getLocalizedText(copy.systemIdentity, locale)}
@@ -552,7 +783,7 @@ const App: React.FC = () => {
                       </div>
                     </section>
 
-                    <section className="flex h-[320px] flex-col overflow-hidden rounded-xl border border-ide-border bg-ide-panel p-6 shadow-sm">
+                    <section className="flex flex-col rounded-xl border border-ide-border bg-ide-panel p-6 shadow-sm">
                       <div className="mb-4 text-xs text-ide-text-dim">career_log.txt</div>
                       <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
                         <div className="flex items-center gap-2 font-bold text-accent">
@@ -563,7 +794,7 @@ const App: React.FC = () => {
                           {locale === 'zh-CN' ? `${uptime} 年经验` : `${uptime} years experience`}
                         </div>
                       </div>
-                      <div className="flex-1 space-y-4 overflow-y-auto pr-2">
+                      <div className="space-y-5">
                         {bundle.resume.experience.map((experience) => (
                           <div key={experience.id} className="border-l-2 border-ide-border pl-4 transition-colors hover:border-accent">
                             <div className="mb-1 flex flex-wrap justify-between gap-2 text-xs text-ide-text-dim">
@@ -573,12 +804,27 @@ const App: React.FC = () => {
                               <span>{getLocalizedText(experience.location, locale)}</span>
                             </div>
                             <div className="text-base font-bold text-ide-text">{getLocalizedText(experience.role, locale)}</div>
-                            <div className="mb-2 text-xs text-sky-400">@{experience.company}</div>
-                            <div className="space-y-2">
-                              {experience.projects.slice(0, 2).map((project) => (
-                                <div key={`${experience.id}-${project.name}`} className="text-xs text-ide-text-dim">
+                            <div className="mb-3 text-xs text-sky-400">@{experience.company}</div>
+                            <div className="space-y-3">
+                              <div className="space-y-1 text-xs leading-5 text-ide-text-dim">
+                                {experience.description[locale].map((line) => (
+                                  <div key={`${experience.id}-${line}`}>- {line}</div>
+                                ))}
+                              </div>
+                              {experience.projects.map((project) => (
+                                <div key={`${experience.id}-${project.name}`} className="rounded border border-ide-border bg-ide-bg px-3 py-2 text-xs text-ide-text-dim">
                                   <div className="font-semibold text-ide-text">{project.name}</div>
-                                  <div className="line-clamp-2 leading-5">{getLocalizedText(project.description, locale)}</div>
+                                  <div className="mt-1 leading-5">{getLocalizedText(project.description, locale)}</div>
+                                  <div className="mt-2 flex flex-wrap gap-1">
+                                    {project.tech.map((tech) => (
+                                      <span
+                                        key={`${experience.id}-${project.name}-${tech}`}
+                                        className="rounded border border-ide-border bg-ide-panel px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-ide-text-dim"
+                                      >
+                                        {tech}
+                                      </span>
+                                    ))}
+                                  </div>
                                 </div>
                               ))}
                             </div>
@@ -588,90 +834,10 @@ const App: React.FC = () => {
                     </section>
                   </div>
 
-                  <div className="grid gap-4 md:grid-cols-2">
-                    {latestProject && (
-                      <button
-                        onClick={() => setActiveTab('projects')}
-                        className="group rounded-xl border border-ide-border bg-ide-bg p-5 text-left transition-all hover:border-accent hover:shadow-md"
-                      >
-                        <div className="mb-3 flex items-start justify-between">
-                          <span className="flex items-center gap-1.5 text-xs font-bold uppercase text-ide-text-dim">
-                            <Folder size={14} className="text-accent" />
-                            {getLocalizedText(copy.widgets.latestProject, locale)}
-                          </span>
-                          <ArrowRight size={16} className="text-ide-text-dim transition-colors group-hover:text-accent" />
-                        </div>
-                        <h3 className="mb-1 truncate text-lg font-bold text-ide-text transition-colors group-hover:text-accent">
-                          {latestProject.name}
-                        </h3>
-                        <p className="line-clamp-2 text-sm text-ide-text-dim">{getLocalizedText(latestProject.description, locale)}</p>
-                      </button>
-                    )}
-
-                    {latestNote && (
-                      <button
-                        onClick={() => setActiveTab('garden')}
-                        className="group rounded-xl border border-ide-border bg-ide-bg p-5 text-left transition-all hover:border-accent hover:shadow-md"
-                      >
-                        <div className="mb-3 flex items-start justify-between">
-                          <span className="flex items-center gap-1.5 text-xs font-bold uppercase text-ide-text-dim">
-                            <TerminalIcon size={14} className="text-accent" />
-                            {getLocalizedText(copy.widgets.latestNote, locale)}
-                          </span>
-                          <ArrowRight size={16} className="text-ide-text-dim transition-colors group-hover:text-accent" />
-                        </div>
-                        <div className="line-clamp-4 border-l-2 border-ide-panel pl-3 text-sm italic text-ide-text">
-                          “{getLocalizedText(latestNote.summary, locale)}”
-                        </div>
-                        <div className="mt-4 text-[10px] text-ide-text-dim">{formatDate(latestNote.date, locale)}</div>
-                      </button>
-                    )}
-
-                    {latestArticle && (
-                      <button
-                        onClick={() => setActiveTab('articles')}
-                        className="group rounded-xl border border-ide-border bg-ide-bg p-5 text-left transition-all hover:border-accent hover:shadow-md"
-                      >
-                        <div className="mb-3 flex items-start justify-between">
-                          <span className="flex items-center gap-1.5 text-xs font-bold uppercase text-ide-text-dim">
-                            <FileText size={14} className="text-accent" />
-                            {getLocalizedText(copy.widgets.latestArticle, locale)}
-                          </span>
-                          <ArrowRight size={16} className="text-ide-text-dim transition-colors group-hover:text-accent" />
-                        </div>
-                        <h3 className="mb-2 text-base font-bold text-ide-text transition-colors group-hover:text-accent">
-                          {getLocalizedText(latestArticle.title, locale)}
-                        </h3>
-                        <div className="flex flex-wrap gap-1">
-                          {latestArticle.tags.map((tag) => (
-                            <span key={tag} className="rounded bg-ide-panel px-1.5 py-0.5 text-[10px] text-ide-text">
-                              #{tag}
-                            </span>
-                          ))}
-                        </div>
-                      </button>
-                    )}
-
-                    {currentJob && (
-                      <button
-                        onClick={() => setActiveTab('resume')}
-                        className="group rounded-xl border border-ide-border bg-ide-bg p-5 text-left transition-all hover:border-accent hover:shadow-md"
-                      >
-                        <div className="mb-3 flex items-start justify-between">
-                          <span className="flex items-center gap-1.5 text-xs font-bold uppercase text-ide-text-dim">
-                            <Briefcase size={14} className="text-accent" />
-                            {getLocalizedText(copy.widgets.currentRole, locale)}
-                          </span>
-                          <ArrowRight size={16} className="text-ide-text-dim transition-colors group-hover:text-accent" />
-                        </div>
-                        <h3 className="text-base font-bold text-ide-text">{getLocalizedText(currentJob.role, locale)}</h3>
-                        <p className="mt-1 text-sm text-ide-text-dim">@{currentJob.company}</p>
-                        <div className="mt-3 flex items-center gap-1 text-[10px] text-ide-text-dim">
-                          <Calendar size={10} />
-                          {currentJob.startDate} - {currentJob.endDate}
-                        </div>
-                      </button>
-                    )}
+                  <div className="columns-1 gap-4 md:columns-2 2xl:columns-3">
+                    {homeSpotlightCards.map((card) => (
+                      <SpotlightCard key={card.id} card={card} />
+                    ))}
                   </div>
                 </div>
               )}
