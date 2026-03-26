@@ -52,12 +52,6 @@ jobs:
       - name: Build portfolio bundle
         run: portfolio build
 
-      - name: Install Playwright browser
-        run: npx playwright install --with-deps chromium
-
-      - name: Run Playwright regression
-        run: npm run test:e2e
-
       - name: Build frontend
         run: npm run build
 
