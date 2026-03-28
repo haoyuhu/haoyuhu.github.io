@@ -68,7 +68,7 @@ const ResumeView: React.FC<ResumeViewProps> = ({ resume, locale, copy }) => {
               <div className="mb-3 flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                 <div>
                   <h4 className="text-lg font-bold text-ide-text">{getLocalizedText(experience.role, locale)}</h4>
-                  <div className="font-mono text-sm font-bold text-accent">@{experience.company}</div>
+                  <div className="font-mono text-sm font-bold text-accent">@{getLocalizedText(experience.company, locale)}</div>
                 </div>
                 <div className="space-y-1 text-xs text-ide-text-dim">
                   <div className="flex items-center gap-1">
@@ -89,15 +89,15 @@ const ResumeView: React.FC<ResumeViewProps> = ({ resume, locale, copy }) => {
 
               {experience.projects.length > 0 && (
                 <div className="mt-5 grid gap-3 md:grid-cols-2">
-                  {experience.projects.map((project) => (
-                    <div key={project.name} className="rounded border border-ide-border bg-ide-bg p-4">
-                      <div className="mb-2 font-semibold text-ide-text">{project.name}</div>
+                  {experience.projects.map((project, projectIndex) => (
+                    <div key={`${experience.id}-${projectIndex}`} className="rounded border border-ide-border bg-ide-bg p-4">
+                      <div className="mb-2 font-semibold text-ide-text">{getLocalizedText(project.name, locale)}</div>
                       <p className="mb-3 text-sm leading-6 text-ide-text-dim">{getLocalizedText(project.description, locale)}</p>
                       {project.tech.length > 0 && (
                         <div className="flex flex-wrap gap-2">
-                          {project.tech.map((tech) => (
-                            <span key={tech} className="rounded border border-ide-border bg-ide-panel px-2 py-1 text-[10px] uppercase tracking-wide text-ide-text-dim">
-                              {tech}
+                          {project.tech.map((tech, techIndex) => (
+                            <span key={`${experience.id}-${projectIndex}-${techIndex}`} className="rounded border border-ide-border bg-ide-panel px-2 py-1 text-[10px] uppercase tracking-wide text-ide-text-dim">
+                              {getLocalizedText(tech, locale)}
                             </span>
                           ))}
                         </div>
@@ -122,7 +122,7 @@ const ResumeView: React.FC<ResumeViewProps> = ({ resume, locale, copy }) => {
         <div className="grid gap-4 md:grid-cols-2">
           {resume.education.map((education) => (
             <div key={education.id} className="rounded-lg border border-ide-border bg-ide-panel p-4">
-              <div className="font-bold text-ide-text">{education.school}</div>
+              <div className="font-bold text-ide-text">{getLocalizedText(education.school, locale)}</div>
               <div className="mt-1 text-sm text-accent">{getLocalizedText(education.degree, locale)}</div>
               <div className="mt-3 text-xs text-ide-text-dim">
                 {education.startDate} - {education.endDate}
@@ -145,9 +145,9 @@ const ResumeView: React.FC<ResumeViewProps> = ({ resume, locale, copy }) => {
             <div key={group.id} className="rounded-lg border border-ide-border bg-ide-panel p-4">
               <div className="mb-3 font-bold text-ide-text">{getLocalizedText(group.label, locale)}</div>
               <div className="space-y-2">
-                {group.items.map((item) => (
-                  <div key={item.name} className="flex items-center justify-between rounded border border-ide-border bg-ide-bg px-3 py-2 text-sm">
-                    <span className="text-ide-text">{item.name}</span>
+                {group.items.map((item, itemIndex) => (
+                  <div key={`${group.id}-${itemIndex}`} className="flex items-center justify-between rounded border border-ide-border bg-ide-bg px-3 py-2 text-sm">
+                    <span className="text-ide-text">{getLocalizedText(item.name, locale)}</span>
                     <span className="text-ide-text-dim">{item.level}</span>
                   </div>
                 ))}

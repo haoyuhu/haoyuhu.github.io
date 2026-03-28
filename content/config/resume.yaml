@@ -8,7 +8,9 @@ resume:
       and stability governance.
   experience:
   - id: exp-bytedance-202412
-    company: 杭州今日头条科技有限公司
+    company:
+      zh-CN: 杭州今日头条科技有限公司
+      en: Bytedance Inc.
     role:
       zh-CN: 算法工程专家 工程与技术架构
       en: Algorithm Engineering Expert, Engineering and Technical Architecture
@@ -44,44 +46,67 @@ resume:
       - Established an automated dynamic benchmark and evaluation pipeline combining
         machine and human evaluation, along with supporting tools and platforms.
     projects:
-    - name: Cici Page 全球推全
+    - name:
+        zh-CN: Cici Page 全球推全
+        en: Cici Page Global Expansion
       description:
         zh-CN: 负责 Cici Page 在多国多场景的功能落地，覆盖模型迭代调优、召回策略、数据生产和评估体系。
         en: Led the rollout of Cici Page across multiple countries and scenarios,
           covering model iteration and tuning, recall strategy, data production, and
           evaluation systems.
       tech:
-      - PE
-      - 召回策略
-      - 评估体系
-      - 模型迭代
-    - name: 豆包编程 PC 和 Mobile 端应用生成业务
+      - zh-CN: PE
+        en: PE
+      - zh-CN: 召回策略
+        en: Recall Strategy
+      - zh-CN: 评估体系
+        en: Evaluation Framework
+      - zh-CN: 模型迭代
+        en: Model Iteration
+    - name:
+        zh-CN: 豆包编程 PC 和 Mobile 端应用生成业务
+        en: Doubao Coding PC and Mobile App Generation
       description:
         zh-CN: 从零到一交付豆包编程在 PC 和移动端的全量需求，覆盖 Agent 架构、上下文管理、Harness Engineering、PE 工程与推理调优。
         en: Delivered the full PC and mobile application generation business for Doubao
           Coding from scratch, covering agent architecture, context management, harness
           engineering, prompt engineering, and inference tuning.
       tech:
-      - Agent
-      - 上下文管理
-      - Harness Engineering
-      - PE
-      - 推理调优
-    - name: 训推评一体架构
+      - zh-CN: Agent
+        en: Agent
+      - zh-CN: 上下文管理
+        en: Context Management
+      - zh-CN: Harness Engineering
+        en: Harness Engineering
+      - zh-CN: PE
+        en: PE
+      - zh-CN: 推理调优
+        en: Inference Optimization
+    - name:
+        zh-CN: 训推评一体架构
+        en: Unified Training, Inference, and Evaluation Architecture
       description:
         zh-CN: 重构 Agent Core 并统一多端架构，构建 Replay+Bugfixing 循环、真实 Rollout 环境和自动化评测体系，支撑完整模型闭环迭代。
         en: Refactored Agent Core and unified multi-end architecture, building Replay
           + Bugfixing loops, real rollout environments, and automated evaluation systems
           to support full closed-loop model iteration.
       tech:
-      - Agent Core
-      - Replay
-      - Bugfixing
-      - Rollout
-      - benchmark
-      - browser-use
+      - zh-CN: Agent Core
+        en: Agent Core
+      - zh-CN: Replay
+        en: Replay
+      - zh-CN: Bugfixing
+        en: Bug Fixing
+      - zh-CN: Rollout
+        en: Rollout
+      - zh-CN: benchmark
+        en: Benchmark
+      - zh-CN: browser-use
+        en: browser-use
   - id: exp-bytedance-202112
-    company: 北京字节跳动科技有限公司
+    company:
+      zh-CN: 北京字节跳动科技有限公司
+      en: Bytedance Inc.
     role:
       zh-CN: 算法工程专家 Lark AI
       en: Algorithm Engineering Expert, Lark AI
@@ -119,49 +144,76 @@ resume:
         policies, optimized TTFT and TPOT metrics, and led model resource coordination,
         smooth upgrades, and traffic migration.
     projects:
-    - name: 会议语音识别
+    - name:
+        zh-CN: 会议语音识别
+        en: Meeting Speech Recognition
       description:
         zh-CN: 支持飞书会中字幕及妙记相关功能，主导语音热词重构，优化性能问题。
         en: Supported in-meeting captions and Minutes-related features in Lark, leading
           the refactor of speech hotwords and optimizing performance issues.
       tech:
-      - 语音识别
-      - 性能优化
-    - name: 算法池推理架构及服务质量管理
+      - zh-CN: 语音识别
+        en: Speech Recognition
+      - zh-CN: 性能优化
+        en: Performance Optimization
+    - name:
+        zh-CN: 算法池推理架构及服务质量管理
+        en: Algorithm Pool Inference Architecture and Service Quality Management
       description:
         zh-CN: 建设支持 CPU/GPU、插件隔离、动态插拔、负载均衡和容灾恢复的泛化推理架构。
         en: Built a generalized inference architecture supporting CPU/GPU, plugin
           isolation, dynamic plug-and-play, load balancing, and disaster recovery.
       tech:
-      - CPU
-      - GPU
-      - 流式推理
-      - 负载均衡
-      - 容灾恢复
-    - name: 模型推理全生命周期 DevOps
+      - zh-CN: CPU
+        en: CPU
+      - zh-CN: GPU
+        en: GPU
+      - zh-CN: 流式推理
+        en: Streaming Inference
+      - zh-CN: 负载均衡
+        en: Load Balancing
+      - zh-CN: 容灾恢复
+        en: Disaster Recovery
+    - name:
+        zh-CN: 模型推理全生命周期 DevOps
+        en: End-to-End Model Inference DevOps
       description:
         zh-CN: 提供 SDK、脚手架工具和发布流水线，建设监控告警体系，支撑五十余个模型服务。
         en: Provided SDKs, scaffolding tools, and release pipelines, and built monitoring
           and alerting systems for more than 50 model services.
       tech:
-      - DevOps
-      - SDK
-      - 监控告警
-      - 发布流水线
-    - name: 飞书 LLM 基座和 AI 智能体
+      - zh-CN: DevOps
+        en: DevOps
+      - zh-CN: SDK
+        en: SDK
+      - zh-CN: 监控告警
+        en: Monitoring and Alerting
+      - zh-CN: 发布流水线
+        en: Release Pipeline
+    - name:
+        zh-CN: 飞书 LLM 基座和 AI 智能体
+        en: Feishu LLM Platform and AI Agents
       description:
         zh-CN: 建设大模型任务平台与大模型网关，整合安全策略并优化全链路稳定性和推理指标。
         en: Built a large model task platform and gateway, integrating security policies
           and optimizing end-to-end stability and inference metrics.
       tech:
-      - LLM
-      - AI Agent
-      - TNS
-      - DLP
-      - TTFT
-      - TPOT
+      - zh-CN: LLM
+        en: LLM
+      - zh-CN: AI Agent
+        en: AI Agent
+      - zh-CN: TNS
+        en: TNS
+      - zh-CN: DLP
+        en: DLP
+      - zh-CN: TTFT
+        en: TTFT
+      - zh-CN: TPOT
+        en: TPOT
   - id: exp-bytedance-202012
-    company: 北京字节跳动科技有限公司
+    company:
+      zh-CN: 北京字节跳动科技有限公司
+      en: Bytedance Inc.
     role:
       zh-CN: 后端开发工程师 抖音直播-活动
       en: Backend Development Engineer, Douyin Live - Activities
@@ -186,26 +238,38 @@ resume:
         force, and drove cross-team collaboration to exceed overall goals across three
         platforms.
     projects:
-    - name: 抖音/TikTok 直播活动组件化
+    - name:
+        zh-CN: 抖音/TikTok 直播活动组件化
+        en: Douyin/TikTok Live Campaign Componentization
       description:
         zh-CN: 通过插件化架构支撑直播活动条件项和多种玩法扩展，并稳定支持高并发场景。
         en: Supported extensible live activity conditions and gameplay modules with
           a plugin-based architecture, while reliably handling high-concurrency scenarios.
       tech:
-      - 插件化
-      - 多机房容灾
-      - DTS
-      - 缓存
-    - name: 重要营收活动专项
+      - zh-CN: 插件化
+        en: Plugin Architecture
+      - zh-CN: 多机房容灾
+        en: Multi-Region Disaster Recovery
+      - zh-CN: DTS
+        en: DTS
+      - zh-CN: 缓存
+        en: Caching
+    - name:
+        zh-CN: 重要营收活动专项
+        en: Key Revenue Campaigns
       description:
         zh-CN: 负责 3 场重要营收活动开发与交付，组建专项团队并推动跨团队协作。
         en: Led the development and delivery of 3 major revenue campaigns, forming
           a dedicated team and driving cross-team collaboration.
       tech:
-      - 项目交付
-      - 跨团队协作
+      - zh-CN: 项目交付
+        en: Project Delivery
+      - zh-CN: 跨团队协作
+        en: Cross-Functional Collaboration
   - id: exp-deepbrown-201907
-    company: 北京深褐科技有限公司
+    company:
+      zh-CN: 北京深褐科技有限公司
+      en: Shenhe Inc.
     role:
       zh-CN: 项目经理、技术负责人
       en: Project Manager, Technical Lead
@@ -248,30 +312,44 @@ resume:
         certification, software credit enterprise evaluation, and more than ten software
         copyrights.
     projects:
-    - name: 油气勘探算法开发
+    - name:
+        zh-CN: 油气勘探算法开发
+        en: Oil and Gas Exploration Algorithm Development
       description:
         zh-CN: 自研 LMAS、两段式半幅点、LDPCNN 等算法，实现地质数据上的高精度预测与复杂薄互层识别。
         en: Developed proprietary algorithms such as LMAS, two-stage half-amplitude
           point, and LDPCNN for high-accuracy prediction and complex thin interbed
           recognition on geological data.
       tech:
-      - LMAS
-      - LDPCNN
-      - CPU/GPU
-    - name: 软件系统工程实现
+      - zh-CN: LMAS
+        en: LMAS
+      - zh-CN: LDPCNN
+        en: LDPCNN
+      - zh-CN: CPU/GPU
+        en: CPU/GPU
+    - name:
+        zh-CN: 软件系统工程实现
+        en: Software System Engineering
       description:
         zh-CN: 构建基于 Electron 的客户端与支持训推一体的服务端系统，覆盖权限控制、缓存、调度、Serving 和私有化部署。
         en: Built an Electron-based client and an integrated server system for training
           and inference, covering access control, caching, scheduling, serving, and
           private deployment.
       tech:
-      - Electron
-      - ECharts
-      - Redis
-      - Docker
-      - Serving
+      - zh-CN: Electron
+        en: Electron
+      - zh-CN: ECharts
+        en: ECharts
+      - zh-CN: Redis
+        en: Redis
+      - zh-CN: Docker
+        en: Docker
+      - zh-CN: Serving
+        en: Serving
   - id: exp-tencent-201706
-    company: 腾讯科技（北京）有限公司
+    company:
+      zh-CN: 腾讯科技（北京）有限公司
+      en: Tencent Inc.
     role:
       zh-CN: 算法开发工程师 MIG/CSIG
       en: Algorithm Development Engineer, MIG/CSIG
@@ -312,50 +390,77 @@ resume:
       - Enhanced the original google-bert to support Multi-GPU, fp16, and custom tasks
         including single-label, multi-label, and sequence labeling.
     projects:
-    - name: LightLDA 分布式机器学习平台
+    - name:
+        zh-CN: LightLDA 分布式机器学习平台
+        en: LightLDA Distributed Machine Learning Platform
       description:
         zh-CN: 参与集群管理、任务调度、异常处理与容灾恢复，支持大规模训练和推理。
         en: Contributed to cluster management, task scheduling, exception handling,
           and disaster recovery for large-scale training and inference.
       tech:
-      - LightLDA
-      - 分布式机器学习
-    - name: NSFW识别模型开发及在线部署
+      - zh-CN: LightLDA
+        en: LightLDA
+      - zh-CN: 分布式机器学习
+        en: Distributed Machine Learning
+    - name:
+        zh-CN: NSFW识别模型开发及在线部署
+        en: NSFW Detection Model Development and Online Deployment
       description:
         zh-CN: 基于 Xception+TextCNN 开发 NSFW 识别模型，并使用 Flask+uWSGI+gevent 在线部署。
         en: Developed an NSFW recognition model based on Xception + TextCNN and deployed
           it online with Flask + uWSGI + gevent.
       tech:
-      - Xception
-      - TextCNN
-      - Flask
-      - uWSGI
-      - gevent
-    - name: 信息流推荐系统
+      - zh-CN: Xception
+        en: Xception
+      - zh-CN: TextCNN
+        en: TextCNN
+      - zh-CN: Flask
+        en: Flask
+      - zh-CN: uWSGI
+        en: uWSGI
+      - zh-CN: gevent
+        en: gevent
+    - name:
+        zh-CN: 信息流推荐系统
+        en: Feed Recommendation System
       description:
         zh-CN: 支持 LR/FM/GBDT 在线推理、融合模型、多模型热更新、召回服务重写与多维 CTR 统计。
         en: Built feed recommendation capabilities including LR/FM/GBDT online inference,
           hybrid models, hot updates, recall service rewrite, and multi-dimensional
           CTR statistics.
       tech:
-      - LR
-      - FM
-      - GBDT
-      - LightGBM
-      - TAF
-      - C++
-      - hiredis
-    - name: 英文语义相似度算法开发
+      - zh-CN: LR
+        en: LR
+      - zh-CN: FM
+        en: FM
+      - zh-CN: GBDT
+        en: GBDT
+      - zh-CN: LightGBM
+        en: LightGBM
+      - zh-CN: TAF
+        en: TAF
+      - zh-CN: C++
+        en: C++
+      - zh-CN: hiredis
+        en: hiredis
+    - name:
+        zh-CN: 英文语义相似度算法开发
+        en: English Semantic Similarity Algorithm Development
       description:
         zh-CN: 改进 google-bert，支持 Multi-GPU、fp16 和多类自定义任务。
         en: Enhanced google-bert to support Multi-GPU, fp16, and multiple custom task
           types.
       tech:
-      - BERT
-      - Multi-GPU
-      - fp16
+      - zh-CN: BERT
+        en: BERT
+      - zh-CN: Multi-GPU
+        en: Multi-GPU
+      - zh-CN: fp16
+        en: fp16
   - id: exp-open-source-201904
-    company: GitHub
+    company:
+      zh-CN: GitHub
+      en: GitHub
     role:
       zh-CN: 作者、贡献者
       en: Author, Contributor
@@ -372,58 +477,85 @@ resume:
         BERT multi-GPU fine-tuning, clustering algorithm analysis, NLP transfer learning
         frameworks, ORM frameworks, and a Python rate limiter.
     projects:
-    - name: haoyuhu/bert-multi-gpu
+    - name:
+        zh-CN: haoyuhu/bert-multi-gpu
+        en: haoyuhu/bert-multi-gpu
       description:
         zh-CN: 支持微调大批量的大型 BERT 模型，支持多 GPU 和 FP16。
         en: Supports fine-tuning large BERT models with large batch sizes, including
           Multi-GPU and FP16 support.
       tech:
-      - BERT
-      - Multi-GPU
-      - FP16
-    - name: haoyuhu/cluster-analysis
+      - zh-CN: BERT
+        en: BERT
+      - zh-CN: Multi-GPU
+        en: Multi-GPU
+      - zh-CN: FP16
+        en: FP16
+    - name:
+        zh-CN: haoyuhu/cluster-analysis
+        en: haoyuhu/cluster-analysis
       description:
         zh-CN: 各种聚类算法分析。
         en: Analysis of various clustering algorithms.
       tech:
-      - 聚类算法
-    - name: BrikerMan/Kashgari
+      - zh-CN: 聚类算法
+        en: Clustering Algorithms
+    - name:
+        zh-CN: BrikerMan/Kashgari
+        en: BrikerMan/Kashgari
       description:
         zh-CN: 简单而强大的 NLP 迁移学习框架，可快速构建命名实体识别、词性标注和文本分类模型。
         en: A simple yet powerful NLP transfer learning framework for quickly building
           models for NER, PoS tagging, and text classification.
       tech:
-      - NLP
-      - 迁移学习
-      - NER
-      - PoS
-    - name: typeorm/typeorm
+      - zh-CN: NLP
+        en: NLP
+      - zh-CN: 迁移学习
+        en: Transfer Learning
+      - zh-CN: NER
+        en: NER
+      - zh-CN: PoS
+        en: PoS
+    - name:
+        zh-CN: typeorm/typeorm
+        en: typeorm/typeorm
       description:
         zh-CN: 运行于 NodeJS、Browser、Cordova、PhoneGap、Ionic、React Native、NativeScript、Expo
           和 Electron 平台的 ORM。
         en: An ORM that runs on NodeJS, Browser, Cordova, PhoneGap, Ionic, React Native,
           NativeScript, Expo, and Electron.
       tech:
-      - TypeORM
-      - NodeJS
-      - Electron
-    - name: vutran1710/PyrateLimiter
+      - zh-CN: TypeORM
+        en: TypeORM
+      - zh-CN: NodeJS
+        en: NodeJS
+      - zh-CN: Electron
+        en: Electron
+    - name:
+        zh-CN: vutran1710/PyrateLimiter
+        en: vutran1710/PyrateLimiter
       description:
         zh-CN: Python 的 Leaky-bucket 算法请求限流器。
         en: A Python request rate limiter based on the leaky-bucket algorithm.
       tech:
-      - Python
-      - Leaky-bucket
+      - zh-CN: Python
+        en: Python
+      - zh-CN: Leaky-bucket
+        en: Leaky Bucket
   education:
   - id: edu-tsinghua-201409
-    school: 清华大学
+    school:
+      zh-CN: 清华大学
+      en: Tsinghua University
     degree:
       zh-CN: 硕士
       en: Master's Degree
     startDate: 2014-09
     endDate: 2017-06
   - id: edu-tsinghua-201009
-    school: 清华大学
+    school:
+      zh-CN: 清华大学
+      en: Tsinghua University
     degree:
       zh-CN: 本科
       en: Bachelor's Degree
@@ -435,30 +567,52 @@ resume:
       zh-CN: 编程语言
       en: Programming Languages
     items:
-    - name: Golang
+    - name:
+        zh-CN: Golang
+        en: Golang
       level: Advanced
-    - name: Node.js
+    - name:
+        zh-CN: Node.js
+        en: Node.js
       level: Advanced
-    - name: Java
+    - name:
+        zh-CN: Java
+        en: Java
       level: Advanced
-    - name: Python
+    - name:
+        zh-CN: Python
+        en: Python
       level: Advanced
-    - name: C/C++
+    - name:
+        zh-CN: C/C++
+        en: C/C++
       level: Advanced
   - id: skill-techstack
     label:
       zh-CN: 技术栈
       en: Tech Stack
     items:
-    - name: 推荐系统
+    - name:
+        zh-CN: 推荐系统
+        en: Recommendation Systems
       level: Advanced
-    - name: 自然语言处理
+    - name:
+        zh-CN: 自然语言处理
+        en: Natural Language Processing
       level: Advanced
-    - name: 高并发
+    - name:
+        zh-CN: 高并发
+        en: High Concurrency
       level: Advanced
-    - name: 推理架构
+    - name:
+        zh-CN: 推理架构
+        en: Inference Architecture
       level: Advanced
-    - name: 大模型
+    - name:
+        zh-CN: 大模型
+        en: Large Language Models
       level: Advanced
-    - name: 智能体
+    - name:
+        zh-CN: 智能体
+        en: AI Agents
       level: Advanced

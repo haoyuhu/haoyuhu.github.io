@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 
 from haoyu_portfolio.bundle import build_bundle
+from haoyu_portfolio.utils import dump_yaml, load_yaml
 
 
 def test_build_bundle_writes_public_json(temp_repo):
@@ -145,3 +146,25 @@ def test_build_bundle_generates_project_topics_when_missing(temp_repo):
     bundle = build_bundle(write=False)
 
     assert bundle.projects.items[0].topics[:4] == ["python", "agent", "cli", "workflow"]
+
+
+def test_build_bundle_accepts_localized_resume_display_fields(temp_repo):
+    resume_path = temp_repo / "content" / "config" / "resume.yaml"
+    resume_payload = load_yaml(resume_path)
+    resume = resume_payload["resume"]
+
+    resume["experience"][0]["company"] = {"zh-CN": "杭州今日头条科技有限公司", "en": "Bytedance Inc."}
+    resume["experience"][0]["projects"][0]["name"] = {"zh-CN": "Cici Page 全球推全", "en": "Cici Page Global Rollout"}
+    resume["experience"][0]["projects"][0]["tech"][0] = {"zh-CN": "召回策略", "en": "Recall Strategy"}
+    resume["education"][0]["school"] = {"zh-CN": "清华大学", "en": "Tsinghua University"}
+    resume["skillGroups"][1]["items"][0]["name"] = {"zh-CN": "推荐系统", "en": "Recommendation Systems"}
+
+    dump_yaml(resume_path, resume_payload)
+
+    bundle = build_bundle(write=False)
+
+    assert bundle.resume.experience[0].company["en"] == "Bytedance Inc."
+    assert bundle.resume.experience[0].projects[0].name["en"] == "Cici Page Global Rollout"
+    assert bundle.resume.experience[0].projects[0].tech[0]["en"] == "Recall Strategy"
+    assert bundle.resume.education[0].school["en"] == "Tsinghua University"
+    assert bundle.resume.skillGroups[1].items[0].name["en"] == "Recommendation Systems"

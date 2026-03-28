@@ -25,6 +25,7 @@ def validate_localized_lines(value: dict[str, list[str]]) -> dict[str, list[str]
 
 LocalizedText = Annotated[dict[str, str], AfterValidator(validate_localized_text)]
 LocalizedLines = Annotated[dict[str, list[str]], AfterValidator(validate_localized_lines)]
+DisplayText = LocalizedText | str
 
 
 class PortfolioBaseModel(BaseModel):
@@ -119,7 +120,7 @@ class SystemIdentityItem(PortfolioBaseModel):
 
 
 class MetricItem(PortfolioBaseModel):
-    name: str
+    name: DisplayText
     level: int = Field(ge=0, le=100)
 
 
@@ -149,7 +150,7 @@ class ProfileConfig(PortfolioBaseModel):
 
 
 class SkillEntry(PortfolioBaseModel):
-    name: str
+    name: DisplayText
     level: str
 
 
@@ -160,14 +161,14 @@ class SkillGroup(PortfolioBaseModel):
 
 
 class ProjectDetail(PortfolioBaseModel):
-    name: str
+    name: DisplayText
     description: LocalizedText
-    tech: list[str]
+    tech: list[DisplayText]
 
 
 class ExperienceEntry(PortfolioBaseModel):
     id: str
-    company: str
+    company: DisplayText
     role: LocalizedText
     startDate: str
     endDate: str
@@ -178,7 +179,7 @@ class ExperienceEntry(PortfolioBaseModel):
 
 class EducationEntry(PortfolioBaseModel):
     id: str
-    school: str
+    school: DisplayText
     degree: LocalizedText
     field: LocalizedText | None = None
     startDate: str

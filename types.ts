@@ -2,6 +2,7 @@ export type LocaleCode = 'zh-CN' | 'en';
 export type ThemeMode = 'light' | 'dark' | 'system';
 export type LocalizedText = Record<LocaleCode, string>;
 export type LocalizedLines = Record<LocaleCode, string[]>;
+export type DisplayText = LocalizedText | string;
 
 export interface LinkItem {
   id: string;
@@ -91,7 +92,7 @@ export interface SystemIdentityItem {
 }
 
 export interface MetricItem {
-  name: string;
+  name: DisplayText;
   level: number;
 }
 
@@ -121,7 +122,7 @@ export interface ProfileConfig {
 }
 
 export interface SkillEntry {
-  name: string;
+  name: DisplayText;
   level: string;
 }
 
@@ -132,14 +133,14 @@ export interface SkillGroup {
 }
 
 export interface ProjectDetail {
-  name: string;
+  name: DisplayText;
   description: LocalizedText;
-  tech: string[];
+  tech: DisplayText[];
 }
 
 export interface ExperienceEntry {
   id: string;
-  company: string;
+  company: DisplayText;
   role: LocalizedText;
   startDate: string;
   endDate: string;
@@ -150,7 +151,7 @@ export interface ExperienceEntry {
 
 export interface EducationEntry {
   id: string;
-  school: string;
+  school: DisplayText;
   degree: LocalizedText;
   field?: LocalizedText | null;
   startDate: string;

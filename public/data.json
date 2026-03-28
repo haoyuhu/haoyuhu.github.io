@@ -162,10 +162,19 @@
         "zh-CN": "经历时间线",
         "en": "Career Log"
       },
+      "careerLogExpandLabel": {
+        "zh-CN": "展开详情",
+        "en": "Expand Details"
+      },
+      "careerLogCollapseLabel": {
+        "zh-CN": "收起详情",
+        "en": "Collapse Details"
+      },
       "resumeCta": {
         "zh-CN": "了解更多",
         "en": "Learn More"
       },
+      "heroClassName": "HAOYU_HU",
       "widgets": {
         "latestProject": {
           "zh-CN": "推荐仓库",
@@ -187,9 +196,37 @@
           "zh-CN": "教育背景",
           "en": "Education Stack"
         },
+        "educationBody": {
+          "zh-CN": "当前履历中的最近教育节点，会在首页作为基础背景信息展示。",
+          "en": "The latest education node from the resume is surfaced here as background context."
+        },
         "signalDeck": {
           "zh-CN": "信号面板",
           "en": "Signal Deck"
+        },
+        "signalDeckTitle": {
+          "zh-CN": "内容与仓库的实时脉冲",
+          "en": "Pulse across content and repositories"
+        },
+        "signalDeckSubtitle": {
+          "zh-CN": "配置、公开仓库与 Markdown 内容共同驱动首页卡片。",
+          "en": "Config, public repositories, and Markdown content drive the home surface together."
+        },
+        "signalDeckRepos": {
+          "zh-CN": "仓库",
+          "en": "Repos"
+        },
+        "signalDeckNotes": {
+          "zh-CN": "短文",
+          "en": "Notes"
+        },
+        "signalDeckArticles": {
+          "zh-CN": "文章",
+          "en": "Articles"
+        },
+        "signalDeckFollowers": {
+          "zh-CN": "关注者",
+          "en": "Followers"
         }
       },
       "loadMore": {
@@ -211,27 +248,169 @@
       "localeToggle": {
         "zh-CN": "语言",
         "en": "Locale"
+      },
+      "followersLabel": {
+        "zh-CN": "关注者",
+        "en": "Followers"
+      },
+      "yearsExperienceLabel": {
+        "zh-CN": "年经验",
+        "en": "years experience"
+      },
+      "primaryLinkLabel": {
+        "zh-CN": "主链接",
+        "en": "Primary Link"
+      },
+      "projectsSortHint": {
+        "zh-CN": "按 stars、最近 push、forks、watchers 排序",
+        "en": "Sorted by stars, recent pushes, forks, and watchers"
+      },
+      "projectsEmptyState": {
+        "zh-CN": "尚未同步到公开仓库数据，请先运行 portfolio sync github。",
+        "en": "No public repositories are cached yet. Run portfolio sync github first."
+      },
+      "resumeView": {
+        "switchToVisual": {
+          "zh-CN": "切换到可视视图",
+          "en": "Switch to Visual View"
+        },
+        "title": {
+          "zh-CN": "git log --graph --all",
+          "en": "git log --graph --all"
+        },
+        "jsonToggle": {
+          "zh-CN": "{ JSON }",
+          "en": "{ JSON }"
+        },
+        "experienceHeading": {
+          "zh-CN": "经历时间线",
+          "en": "EXPERIENCE_HISTORY"
+        },
+        "educationHeading": {
+          "zh-CN": "教育背景",
+          "en": "EDUCATION_LOG"
+        },
+        "skillGroupsHeading": {
+          "zh-CN": "技能分组",
+          "en": "SKILL_GROUPS"
+        }
+      },
+      "projectCard": {
+        "pinned": {
+          "zh-CN": "置顶",
+          "en": "PINNED"
+        },
+        "featured": {
+          "zh-CN": "推荐",
+          "en": "FEATURED"
+        },
+        "live": {
+          "zh-CN": "在线",
+          "en": "LIVE"
+        },
+        "contributor": {
+          "zh-CN": "贡献者",
+          "en": "CONTRIBUTOR"
+        },
+        "owner": {
+          "zh-CN": "维护者",
+          "en": "OWNER"
+        },
+        "contributedWith": {
+          "zh-CN": "协作方",
+          "en": "Contributed with"
+        },
+        "ownedBy": {
+          "zh-CN": "维护方",
+          "en": "Owned by"
+        },
+        "updated": {
+          "zh-CN": "更新于",
+          "en": "Updated"
+        }
+      },
+      "studio": {
+        "resumeImportHeading": {
+          "zh-CN": "简历导入",
+          "en": "Resume Import"
+        },
+        "selectResumeFirst": {
+          "zh-CN": "请先选择简历文件。",
+          "en": "Please select a resume file first."
+        },
+        "importing": {
+          "zh-CN": "导入中...",
+          "en": "Importing..."
+        },
+        "importResume": {
+          "zh-CN": "导入简历",
+          "en": "Import Resume"
+        },
+        "bundleOpsHeading": {
+          "zh-CN": "Bundle 操作",
+          "en": "Bundle Ops"
+        },
+        "buildBundle": {
+          "zh-CN": "构建 Bundle",
+          "en": "Build Bundle"
+        },
+        "runChecks": {
+          "zh-CN": "运行校验",
+          "en": "Run Checks"
+        },
+        "previewBundle": {
+          "zh-CN": "预览 Bundle",
+          "en": "Preview Bundle"
+        },
+        "publishNoteHeading": {
+          "zh-CN": "发布短文",
+          "en": "Publish Note"
+        },
+        "publishNote": {
+          "zh-CN": "发布短文",
+          "en": "Publish Note"
+        },
+        "publishArticleHeading": {
+          "zh-CN": "发布文章",
+          "en": "Publish Article"
+        },
+        "publishArticle": {
+          "zh-CN": "发布文章",
+          "en": "Publish Article"
+        },
+        "publishing": {
+          "zh-CN": "发布中...",
+          "en": "Publishing..."
+        },
+        "studioResponse": {
+          "zh-CN": "创作台响应",
+          "en": "Studio Response"
+        },
+        "voiceHint": {
+          "zh-CN": "语音录制仅在 CLI 路径中可用，并依赖本地可选扩展。",
+          "en": "Voice capture is available through the CLI path and only activates when optional local extras are installed."
+        }
       }
     }
   },
   "profile": {
-    "name": "Haoyu Hu",
+    "name": "胡皓宇",
     "avatarUrl": "https://avatars.githubusercontent.com/u/9149575?v=4",
     "primaryUrl": "https://github.com/haoyuhu",
     "title": {
-      "zh-CN": "智能体工程 / AI 基础设施 / 全栈系统设计",
-      "en": "Agent Engineering / AI Infrastructure / Full-stack Systems"
+      "zh-CN": "算法工程专家",
+      "en": "Algorithm Engineering Expert"
     },
     "heroExtends": {
       "zh-CN": "AgentOrchestrator, AIInfraArchitect",
       "en": "AgentOrchestrator, AIInfraArchitect"
     },
     "biography": {
-      "zh-CN": "正在构建面向下一代 AI 应用的智能体系统、内容工作流与可扩展基础设施，让个人表达和工程实践可以被持续编排、持续交付。",
-      "en": "Building intelligent agents, content workflows, and scalable infrastructure for the next generation of AI-native products."
+      "zh-CN": "算法工程专家，具备推荐系统、自然语言处理、高并发、推理架构、大模型与智能体相关经验，曾任职于字节跳动、腾讯、深褐科技等公司。",
+      "en": "Algorithm engineering expert with experience in recommendation systems, natural language processing, high-concurrency systems, inference architecture, large language models, and AI agents. Previously worked at Bytedance Inc., Tencent Inc., and Shenhe Inc."
     },
     "location": {
-      "zh-CN": "中国，上海",
+      "zh-CN": "上海",
       "en": "Shanghai"
     },
     "email": "im@huhaoyu.com",
@@ -244,6 +423,15 @@
         },
         "url": "https://github.com/haoyuhu",
         "icon": "github"
+      },
+      {
+        "id": "homepage",
+        "label": {
+          "zh-CN": "个人主页",
+          "en": "Homepage"
+        },
+        "url": "https://www.huhaoyu.com",
+        "icon": "globe"
       }
     ],
     "stats": {
@@ -262,8 +450,8 @@
           "en": "github.com/haoyuhu"
         },
         "detail": {
-          "zh-CN": "公开仓库、文章与部署产物都从这个主节点出发，保证内容与代码的发布来源一致。",
-          "en": "Public repositories, writing, and deployment artifacts all publish from this primary node."
+          "zh-CN": "主要公开资料入口与作品链接。",
+          "en": "Primary public entry point for repositories and work."
         },
         "tags": [],
         "useTechStackAsTags": false
@@ -274,12 +462,12 @@
           "en": "Base"
         },
         "value": {
-          "zh-CN": "上海，中国",
-          "en": "Shanghai, China"
+          "zh-CN": "上海",
+          "en": "Shanghai"
         },
         "detail": {
-          "zh-CN": "常驻上海，默认按中英双语组织内容与个人信息，兼顾本地构建与异步协作。",
-          "en": "Operating from Shanghai with bilingual-by-default content organization and async-friendly delivery."
+          "zh-CN": "当前常驻城市。",
+          "en": "Current base location."
         },
         "tags": [],
         "useTechStackAsTags": false
@@ -290,12 +478,12 @@
           "en": "Edu"
         },
         "value": {
-          "zh-CN": "上海交通大学（计算机硕士）",
-          "en": "SJTU (M.S. in Computer Science)"
+          "zh-CN": "清华大学（硕士）",
+          "en": "Tsinghua University (Master's Degree)"
         },
         "detail": {
-          "zh-CN": "计算机科学训练提供了研究、算法与系统设计的共同底座，也让表达更偏向结构化。",
-          "en": "Computer science training provides the shared base for research, algorithms, and system-oriented thinking."
+          "zh-CN": "来自导入简历的最近教育节点。",
+          "en": "Latest education node derived from the imported resume."
         },
         "tags": [],
         "useTechStackAsTags": false
@@ -306,12 +494,12 @@
           "en": "Focus"
         },
         "value": {
-          "zh-CN": "配置驱动内容系统 / 智能体工程 / AI 基础设施",
-          "en": "Config-first content systems / Agent engineering / AI infrastructure"
+          "zh-CN": "Golang / Node.js / Java / Python",
+          "en": "Golang / Node.js / Java / Python"
         },
         "detail": {
-          "zh-CN": "当前重点围绕内容工作流、智能体系统与可扩展交付链路持续推进。",
-          "en": "Current work centers on content workflows, agent systems, and scalable delivery loops."
+          "zh-CN": "根据简历中的岗位与技能归纳的当前关注方向。",
+          "en": "Current focus derived from imported roles and skills."
         },
         "tags": [],
         "useTechStackAsTags": true
@@ -377,222 +565,758 @@
         }
       }
     ],
-    "careerStartYear": 2018
+    "careerStartYear": 2017
   },
   "resume": {
     "summary": {
-      "zh-CN": "聚焦智能体架构、推理基础设施、内容工作流与工程效率平台，能够从产品体验、系统设计到自动化发布链路做端到端落地。",
-      "en": "Focused on agent architectures, inference platforms, content workflows, and engineering productivity systems across product, infrastructure, and release pipelines."
+      "zh-CN": "具备多年算法与后端工程经验，长期聚焦推荐系统、语音识别、推理架构、大模型平台、智能体系统及高并发服务建设，覆盖从模型训练、推理、评测到工程交付与稳定性治理的完整链路。",
+      "en": "Experienced in algorithm engineering and backend development, with long-term focus on recommendation systems, speech recognition, inference architecture, large model platforms, AI agent systems, and high-concurrency services, covering the full lifecycle from training, inference, and evaluation to engineering delivery and stability governance."
     },
     "experience": [
       {
-        "id": "exp-ai-infra",
-        "company": "Tech Giant Corp",
-        "role": {
-          "zh-CN": "AI 基础设施架构师",
-          "en": "AI Infrastructure Architect"
+        "id": "exp-bytedance-202412",
+        "company": {
+          "zh-CN": "杭州今日头条科技有限公司",
+          "en": "Bytedance Inc."
         },
-        "startDate": "2021",
+        "role": {
+          "zh-CN": "算法工程专家 工程与技术架构",
+          "en": "Algorithm Engineering Expert, Engineering and Technical Architecture"
+        },
+        "startDate": "2024-12",
         "endDate": "Present",
-        "location": {
-          "zh-CN": "上海",
-          "en": "Shanghai"
-        },
-        "description": {
-          "zh-CN": [
-            "负责大模型推理平台与智能体运行时的架构设计。",
-            "优化 GPU 资源利用率，并显著降低服务延迟。"
-          ],
-          "en": [
-            "Architected large-model inference platforms and agent runtimes.",
-            "Improved GPU utilization while reducing serving latency."
-          ]
-        },
-        "projects": [
-          {
-            "name": "Model Serving Platform",
-            "description": {
-              "zh-CN": "面向大模型的可扩展 Kubernetes 推理服务层。",
-              "en": "A scalable Kubernetes-based serving layer for large language models."
-            },
-            "tech": [
-              "Go",
-              "Kubernetes",
-              "Python"
-            ]
-          },
-          {
-            "name": "Data Viz Platform",
-            "description": {
-              "zh-CN": "实时分析看板，处理海量事件流。",
-              "en": "A real-time analytics dashboard processing large event streams."
-            },
-            "tech": [
-              "D3.js",
-              "Canvas",
-              "WebSockets"
-            ]
-          },
-          {
-            "name": "Agent Runtime Control Plane",
-            "description": {
-              "zh-CN": "统一智能体编排、工具调用与多环境发布的运行时控制平面。",
-              "en": "A runtime control plane for agent orchestration, tool execution, and multi-environment releases."
-            },
-            "tech": [
-              "Python",
-              "PostgreSQL",
-              "Kubernetes"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "exp-full-stack",
-        "company": "Innovative Startup Inc",
-        "role": {
-          "zh-CN": "全栈工程师",
-          "en": "Full-stack Developer"
-        },
-        "startDate": "2019",
-        "endDate": "2021",
         "location": {
           "zh-CN": "杭州",
           "en": "Hangzhou"
         },
         "description": {
           "zh-CN": [
-            "从零到一搭建产品 MVP 与部署流程。",
-            "建设 CI/CD 与自动化测试体系。"
+            "负责 Cici Page 全球推全，在多国多场景应用 Page 功能，负责在线离线算法模型迭代调优、PE 工程、召回策略设计、数据生产与评估体系建设，在性能、成本、LT 上取得显著正向实验收益。",
+            "从零到一高质量交付豆包编程 PC 端和移动端全量需求，包括 Agent 架构、上下文管理、Harness Engineering、PE 工程、模型迭代与推理调优。",
+            "推进训推评一体架构建设，完成 Agent Core 整体重构和多端架构统一，设计 Replay+Bugfixing 循环、大规模真实 Rollout 环境与 browser-use 质检，支撑 Coding 方向完整模型迭代闭环。",
+            "通过 Skill、CLI 布道推动工程效率提升，智能化团队技能与自动化研发工作流，持续提升人效比。",
+            "搭建自动化动态 benchmark、评估链路和机评人评结合的评测体系，建设评测周边生态工具和平台。"
           ],
           "en": [
-            "Built the MVP and deployment workflow from scratch.",
-            "Established CI/CD pipelines and automated testing strategies."
+            "Led the global rollout of Cici Page across multiple countries and scenarios, responsible for online/offline model iteration and tuning, prompt engineering, recall strategy design, data production, and evaluation systems, achieving significant gains in performance, cost, and LT.",
+            "Delivered from scratch the full PC and mobile application generation business for Doubao Coding, including agent architecture, context management, harness engineering, prompt engineering, model iteration, and inference tuning.",
+            "Built an integrated training-inference-evaluation architecture, completed the overall refactoring of Agent Core and unified multi-end architecture, and designed Replay + Bugfixing loops, large-scale real rollout environments, and browser-use quality inspection to support a complete model iteration loop for coding tasks.",
+            "Improved engineering efficiency through Skill and CLI adoption, enabling team capabilities and automated R&D workflows to continuously increase productivity.",
+            "Established an automated dynamic benchmark and evaluation pipeline combining machine and human evaluation, along with supporting tools and platforms."
           ]
         },
         "projects": [
           {
-            "name": "E-commerce Core",
+            "name": {
+              "zh-CN": "Cici Page 全球推全",
+              "en": "Cici Page Global Expansion"
+            },
             "description": {
-              "zh-CN": "支撑高并发秒杀场景的核心后端服务。",
-              "en": "Core backend services for high-concurrency commerce workloads."
+              "zh-CN": "负责 Cici Page 在多国多场景的功能落地，覆盖模型迭代调优、召回策略、数据生产和评估体系。",
+              "en": "Led the rollout of Cici Page across multiple countries and scenarios, covering model iteration and tuning, recall strategy, data production, and evaluation systems."
             },
             "tech": [
-              "Node.js",
-              "Redis",
-              "MongoDB"
+              {
+                "zh-CN": "PE",
+                "en": "PE"
+              },
+              {
+                "zh-CN": "召回策略",
+                "en": "Recall Strategy"
+              },
+              {
+                "zh-CN": "评估体系",
+                "en": "Evaluation Framework"
+              },
+              {
+                "zh-CN": "模型迭代",
+                "en": "Model Iteration"
+              }
             ]
           },
           {
-            "name": "Growth CMS",
+            "name": {
+              "zh-CN": "豆包编程 PC 和 Mobile 端应用生成业务",
+              "en": "Doubao Coding PC and Mobile App Generation"
+            },
             "description": {
-              "zh-CN": "面向市场与运营团队的内容编排后台，支持可视化活动配置。",
-              "en": "A growth CMS for marketing and operations teams with visual campaign configuration."
+              "zh-CN": "从零到一交付豆包编程在 PC 和移动端的全量需求，覆盖 Agent 架构、上下文管理、Harness Engineering、PE 工程与推理调优。",
+              "en": "Delivered the full PC and mobile application generation business for Doubao Coding from scratch, covering agent architecture, context management, harness engineering, prompt engineering, and inference tuning."
             },
             "tech": [
-              "React",
-              "TypeScript",
-              "MySQL"
+              {
+                "zh-CN": "Agent",
+                "en": "Agent"
+              },
+              {
+                "zh-CN": "上下文管理",
+                "en": "Context Management"
+              },
+              {
+                "zh-CN": "Harness Engineering",
+                "en": "Harness Engineering"
+              },
+              {
+                "zh-CN": "PE",
+                "en": "PE"
+              },
+              {
+                "zh-CN": "推理调优",
+                "en": "Inference Optimization"
+              }
+            ]
+          },
+          {
+            "name": {
+              "zh-CN": "训推评一体架构",
+              "en": "Unified Training, Inference, and Evaluation Architecture"
+            },
+            "description": {
+              "zh-CN": "重构 Agent Core 并统一多端架构，构建 Replay+Bugfixing 循环、真实 Rollout 环境和自动化评测体系，支撑完整模型闭环迭代。",
+              "en": "Refactored Agent Core and unified multi-end architecture, building Replay + Bugfixing loops, real rollout environments, and automated evaluation systems to support full closed-loop model iteration."
+            },
+            "tech": [
+              {
+                "zh-CN": "Agent Core",
+                "en": "Agent Core"
+              },
+              {
+                "zh-CN": "Replay",
+                "en": "Replay"
+              },
+              {
+                "zh-CN": "Bugfixing",
+                "en": "Bug Fixing"
+              },
+              {
+                "zh-CN": "Rollout",
+                "en": "Rollout"
+              },
+              {
+                "zh-CN": "benchmark",
+                "en": "Benchmark"
+              },
+              {
+                "zh-CN": "browser-use",
+                "en": "browser-use"
+              }
             ]
           }
         ]
       },
       {
-        "id": "exp-ml-platform",
-        "company": "Research Platform Lab",
-        "role": {
-          "zh-CN": "机器学习平台工程师",
-          "en": "ML Platform Engineer"
+        "id": "exp-bytedance-202112",
+        "company": {
+          "zh-CN": "北京字节跳动科技有限公司",
+          "en": "Bytedance Inc."
         },
-        "startDate": "2018",
-        "endDate": "2019",
+        "role": {
+          "zh-CN": "算法工程专家 Lark AI",
+          "en": "Algorithm Engineering Expert, Lark AI"
+        },
+        "startDate": "2021-12",
+        "endDate": "2024-12",
         "location": {
           "zh-CN": "上海",
           "en": "Shanghai"
         },
         "description": {
           "zh-CN": [
-            "建设训练任务调度、实验管理与特征处理的基础平台。",
-            "与算法团队共同推进模型训练效率与可复现性。"
+            "支持飞书会中字幕及妙记相关功能开发迭代，主导语音热词全面重构，解决超时与资源利用率低等性能缺陷，并培养新人一名。",
+            "建设算法池推理架构及服务质量管理体系，支持 CPU/GPU、进程隔离型与原生型算法插件、流式与非流式泛化推理，以及依赖隔离、资源隔离、动态插拔、负载均衡与容灾恢复。",
+            "推进模型推理全生命周期 DevOps，提供 SDK、脚手架与自定义发布流水线，建立监控告警体系，推动累计五十余个算法模型迁入或新增，峰值 QPS 4k+。",
+            "担任部门稳定性、成本与私有化交付 POC，负责代码质量、变更管控、性能测试、攻防演练、容灾演练、降本优化与 AI 功能私有化交付，累计交付 4 个大版本、7 个 AI 业务功能。",
+            "参与打造飞书 LLM 基座和 AI 智能体，支持 AI 智能伙伴项目，建设大模型任务平台和大模型网关，整合安全策略并优化 TTFT、TPOT 等指标，主持模型资源协调、平稳升级和流量迁移。"
           ],
           "en": [
-            "Built the foundations for experiment tracking, scheduling, and feature workflows.",
-            "Partnered with research teams to improve training efficiency and reproducibility."
+            "Supported the development and iteration of in-meeting captions and Minutes-related features in Lark, led a full refactor of speech hotwords, resolved timeout and low resource utilization issues, and mentored one new team member.",
+            "Built an inference architecture and service quality management system for algorithm pools, supporting CPU/GPU environments, process-isolated and native algorithm plugins, streaming and non-streaming inference, dependency isolation, resource isolation, dynamic plug-and-play, load balancing, and disaster recovery.",
+            "Promoted full-lifecycle DevOps for model inference by providing SDKs, scaffolding tools, and custom release pipelines, and built a comprehensive monitoring and alerting system. More than 50 algorithm services were migrated or newly added, with peak QPS exceeding 4k.",
+            "Served as the department POC for stability, cost governance, and private deployment delivery, covering code quality, change management, performance testing, attack-defense drills, disaster recovery drills, cost optimization, and high-quality private delivery of AI features. Delivered 4 major versions and 7 AI business features.",
+            "Helped build the LLM foundation and AI agents for Lark, supported the AI companion project, built a large model task platform and gateway, integrated security policies, optimized TTFT and TPOT metrics, and led model resource coordination, smooth upgrades, and traffic migration."
           ]
         },
         "projects": [
           {
-            "name": "Training Scheduler",
+            "name": {
+              "zh-CN": "会议语音识别",
+              "en": "Meeting Speech Recognition"
+            },
             "description": {
-              "zh-CN": "面向 GPU 集群的任务调度与实验排队系统。",
-              "en": "A scheduling and experiment queuing system for shared GPU clusters."
+              "zh-CN": "支持飞书会中字幕及妙记相关功能，主导语音热词重构，优化性能问题。",
+              "en": "Supported in-meeting captions and Minutes-related features in Lark, leading the refactor of speech hotwords and optimizing performance issues."
             },
             "tech": [
-              "Python",
-              "Celery",
-              "Kubernetes"
+              {
+                "zh-CN": "语音识别",
+                "en": "Speech Recognition"
+              },
+              {
+                "zh-CN": "性能优化",
+                "en": "Performance Optimization"
+              }
             ]
           },
           {
-            "name": "Feature Workflow Studio",
+            "name": {
+              "zh-CN": "算法池推理架构及服务质量管理",
+              "en": "Algorithm Pool Inference Architecture and Service Quality Management"
+            },
             "description": {
-              "zh-CN": "将特征生成、校验与发布流程标准化的内部工具。",
-              "en": "An internal tool standardizing feature generation, validation, and release workflows."
+              "zh-CN": "建设支持 CPU/GPU、插件隔离、动态插拔、负载均衡和容灾恢复的泛化推理架构。",
+              "en": "Built a generalized inference architecture supporting CPU/GPU, plugin isolation, dynamic plug-and-play, load balancing, and disaster recovery."
             },
             "tech": [
-              "Airflow",
-              "Spark",
-              "Vue"
+              {
+                "zh-CN": "CPU",
+                "en": "CPU"
+              },
+              {
+                "zh-CN": "GPU",
+                "en": "GPU"
+              },
+              {
+                "zh-CN": "流式推理",
+                "en": "Streaming Inference"
+              },
+              {
+                "zh-CN": "负载均衡",
+                "en": "Load Balancing"
+              },
+              {
+                "zh-CN": "容灾恢复",
+                "en": "Disaster Recovery"
+              }
+            ]
+          },
+          {
+            "name": {
+              "zh-CN": "模型推理全生命周期 DevOps",
+              "en": "End-to-End Model Inference DevOps"
+            },
+            "description": {
+              "zh-CN": "提供 SDK、脚手架工具和发布流水线，建设监控告警体系，支撑五十余个模型服务。",
+              "en": "Provided SDKs, scaffolding tools, and release pipelines, and built monitoring and alerting systems for more than 50 model services."
+            },
+            "tech": [
+              {
+                "zh-CN": "DevOps",
+                "en": "DevOps"
+              },
+              {
+                "zh-CN": "SDK",
+                "en": "SDK"
+              },
+              {
+                "zh-CN": "监控告警",
+                "en": "Monitoring and Alerting"
+              },
+              {
+                "zh-CN": "发布流水线",
+                "en": "Release Pipeline"
+              }
+            ]
+          },
+          {
+            "name": {
+              "zh-CN": "飞书 LLM 基座和 AI 智能体",
+              "en": "Feishu LLM Platform and AI Agents"
+            },
+            "description": {
+              "zh-CN": "建设大模型任务平台与大模型网关，整合安全策略并优化全链路稳定性和推理指标。",
+              "en": "Built a large model task platform and gateway, integrating security policies and optimizing end-to-end stability and inference metrics."
+            },
+            "tech": [
+              {
+                "zh-CN": "LLM",
+                "en": "LLM"
+              },
+              {
+                "zh-CN": "AI Agent",
+                "en": "AI Agent"
+              },
+              {
+                "zh-CN": "TNS",
+                "en": "TNS"
+              },
+              {
+                "zh-CN": "DLP",
+                "en": "DLP"
+              },
+              {
+                "zh-CN": "TTFT",
+                "en": "TTFT"
+              },
+              {
+                "zh-CN": "TPOT",
+                "en": "TPOT"
+              }
             ]
           }
         ]
       },
       {
-        "id": "exp-product-engineering",
-        "company": "Product Studio",
-        "role": {
-          "zh-CN": "产品工程师",
-          "en": "Product Engineer"
+        "id": "exp-bytedance-202012",
+        "company": {
+          "zh-CN": "北京字节跳动科技有限公司",
+          "en": "Bytedance Inc."
         },
-        "startDate": "2016",
-        "endDate": "2018",
+        "role": {
+          "zh-CN": "后端开发工程师 抖音直播-活动",
+          "en": "Backend Development Engineer, Douyin Live - Activities"
+        },
+        "startDate": "2020-12",
+        "endDate": "2021-12",
         "location": {
-          "zh-CN": "上海",
-          "en": "Shanghai"
+          "zh-CN": "杭州",
+          "en": "Hangzhou"
         },
         "description": {
           "zh-CN": [
-            "负责数据产品前后台开发与交付，连接设计、产品与工程协作。",
-            "在早期阶段建立设计系统、日志方案与发布节奏。"
+            "负责抖音/TikTok 直播活动组件化，迭代活动条件项和组件玩法，包括圈人、任务、榜单、投票、直播间指示器、礼物、奖励等，基于插件化满足扩展性与复用性诉求。",
+            "结合多机房容灾、DTS 同步和缓存技术，稳定支持 150k QPS 高并发直播场景。",
+            "负责 3 场重要营收活动的开发和交付，组建专项团队并推动跨团队协作，超预期完成三端活动总目标。"
           ],
           "en": [
-            "Owned front-end and back-end delivery for data-driven products.",
-            "Set up early design system, observability, and release practices."
+            "Led componentization for Douyin/TikTok live-streaming activities, iterating on activity conditions and gameplay modules such as audience targeting, tasks, leaderboards, voting, live room indicators, gifts, and rewards through a plugin-based architecture.",
+            "Combined multi-region disaster recovery, DTS synchronization, and caching technologies to stably support high-concurrency live scenarios at 150k QPS.",
+            "Delivered 3 major revenue-generating campaigns, organized a dedicated task force, and drove cross-team collaboration to exceed overall goals across three platforms."
           ]
         },
         "projects": [
           {
-            "name": "Insights Workspace",
+            "name": {
+              "zh-CN": "抖音/TikTok 直播活动组件化",
+              "en": "Douyin/TikTok Live Campaign Componentization"
+            },
             "description": {
-              "zh-CN": "面向业务团队的分析工作台，支持自定义报表与钻取。",
-              "en": "An insights workspace for business teams with custom reports and drill-down analysis."
+              "zh-CN": "通过插件化架构支撑直播活动条件项和多种玩法扩展，并稳定支持高并发场景。",
+              "en": "Supported extensible live activity conditions and gameplay modules with a plugin-based architecture, while reliably handling high-concurrency scenarios."
             },
             "tech": [
-              "React",
-              "Node.js",
-              "PostgreSQL"
+              {
+                "zh-CN": "插件化",
+                "en": "Plugin Architecture"
+              },
+              {
+                "zh-CN": "多机房容灾",
+                "en": "Multi-Region Disaster Recovery"
+              },
+              {
+                "zh-CN": "DTS",
+                "en": "DTS"
+              },
+              {
+                "zh-CN": "缓存",
+                "en": "Caching"
+              }
             ]
           },
           {
-            "name": "Release Dashboard",
+            "name": {
+              "zh-CN": "重要营收活动专项",
+              "en": "Key Revenue Campaigns"
+            },
             "description": {
-              "zh-CN": "统一聚合版本信息、告警与回滚入口的内部发布面板。",
-              "en": "An internal release dashboard aggregating versions, alerts, and rollback actions."
+              "zh-CN": "负责 3 场重要营收活动开发与交付，组建专项团队并推动跨团队协作。",
+              "en": "Led the development and delivery of 3 major revenue campaigns, forming a dedicated team and driving cross-team collaboration."
             },
             "tech": [
-              "TypeScript",
-              "GraphQL",
-              "Docker"
+              {
+                "zh-CN": "项目交付",
+                "en": "Project Delivery"
+              },
+              {
+                "zh-CN": "跨团队协作",
+                "en": "Cross-Functional Collaboration"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "exp-deepbrown-201907",
+        "company": {
+          "zh-CN": "北京深褐科技有限公司",
+          "en": "Shenhe Inc."
+        },
+        "role": {
+          "zh-CN": "项目经理、技术负责人",
+          "en": "Project Manager, Technical Lead"
+        },
+        "startDate": "2019-07",
+        "endDate": "2020-09",
+        "location": {
+          "zh-CN": "北京",
+          "en": "Beijing"
+        },
+        "description": {
+          "zh-CN": [
+            "作为项目经理负责需求开发、架构设计、软件实现、软件交付全流程管理，团队规模 10 人。",
+            "开展油气勘探算法开发，自研 LMAS、两段式半幅点、LDPCNN 等算法，基于连续、离散、分层、结构化地质数据实现深度方向高精度预测，复杂薄互层识别能力接近专家水平。",
+            "完成软件系统工程实现，客户端基于 Electron 和 ECharts 支持复杂数据交互，服务端支持数据存储切片索引、细粒度权限控制、Redis 集群热点缓存、增量备份、模型训练/推理、CPU/GPU 调度、异常发现恢复、多机 Serving 和推理优化。",
+            "推动私有化部署交付，包括服务代码编译混淆/加密、客户端 License+USBKey 和 Docker 部署。",
+            "主持软件客户管理及售卖，覆盖石油勘探院、中石油、中石化下属研究所的软件推广、商务谈判与售后支持，累计营收数百万元。",
+            "获得创业基金、人工智能产业引导基金、雏鹰计划、中关村高新技术企业认证、北京市双软企业认证、软件信用企业评价及十余项软件著作权。"
+          ],
+          "en": [
+            "Managed the full lifecycle of software projects as project manager, including requirements development, architecture design, implementation, and delivery, leading a team of 10.",
+            "Developed oil and gas exploration algorithms including LMAS, two-stage half-amplitude point, and LDPCNN, achieving high-accuracy prediction of lithology, physical properties, and oil/gas potential from continuous, discrete, layered, and structured geological data, with complex thin interbed recognition approaching expert level.",
+            "Built the software engineering system: Electron and ECharts on the client side for complex data interaction, and server-side support for sharded storage indexing, fine-grained access control, Redis cluster hot caching, incremental backup, model training/inference, CPU/GPU scheduling, anomaly detection and recovery, multi-machine serving, and inference optimization.",
+            "Delivered private deployments including service code obfuscation/encryption, client License + USBKey, and Docker deployment.",
+            "Led customer management and software sales for petroleum exploration institutes and research institutes under CNPC and Sinopec, covering promotion, business negotiation, and after-sales support, with cumulative revenue of several million RMB.",
+            "Received startup funding, AI industry guidance funding, Eagle Plan support, Zhongguancun high-tech enterprise certification, Beijing software enterprise certification, software credit enterprise evaluation, and more than ten software copyrights."
+          ]
+        },
+        "projects": [
+          {
+            "name": {
+              "zh-CN": "油气勘探算法开发",
+              "en": "Oil and Gas Exploration Algorithm Development"
+            },
+            "description": {
+              "zh-CN": "自研 LMAS、两段式半幅点、LDPCNN 等算法，实现地质数据上的高精度预测与复杂薄互层识别。",
+              "en": "Developed proprietary algorithms such as LMAS, two-stage half-amplitude point, and LDPCNN for high-accuracy prediction and complex thin interbed recognition on geological data."
+            },
+            "tech": [
+              {
+                "zh-CN": "LMAS",
+                "en": "LMAS"
+              },
+              {
+                "zh-CN": "LDPCNN",
+                "en": "LDPCNN"
+              },
+              {
+                "zh-CN": "CPU/GPU",
+                "en": "CPU/GPU"
+              }
+            ]
+          },
+          {
+            "name": {
+              "zh-CN": "软件系统工程实现",
+              "en": "Software System Engineering"
+            },
+            "description": {
+              "zh-CN": "构建基于 Electron 的客户端与支持训推一体的服务端系统，覆盖权限控制、缓存、调度、Serving 和私有化部署。",
+              "en": "Built an Electron-based client and an integrated server system for training and inference, covering access control, caching, scheduling, serving, and private deployment."
+            },
+            "tech": [
+              {
+                "zh-CN": "Electron",
+                "en": "Electron"
+              },
+              {
+                "zh-CN": "ECharts",
+                "en": "ECharts"
+              },
+              {
+                "zh-CN": "Redis",
+                "en": "Redis"
+              },
+              {
+                "zh-CN": "Docker",
+                "en": "Docker"
+              },
+              {
+                "zh-CN": "Serving",
+                "en": "Serving"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "exp-tencent-201706",
+        "company": {
+          "zh-CN": "腾讯科技（北京）有限公司",
+          "en": "Tencent Inc."
+        },
+        "role": {
+          "zh-CN": "算法开发工程师 MIG/CSIG",
+          "en": "Algorithm Development Engineer, MIG/CSIG"
+        },
+        "startDate": "2017-06",
+        "endDate": "2019-07",
+        "location": {
+          "zh-CN": "北京",
+          "en": "Beijing"
+        },
+        "description": {
+          "zh-CN": [
+            "参与 LightLDA 分布式机器学习平台建设，包括集群管理、任务调度、异常处理与容灾恢复，支持千万级用户和万级 Topic 的训练与推理。",
+            "开展用户画像与文章模型开发，基于图文 CNN+Bi-LSTM 点击率预估模型，离线 AUC > 0.58。",
+            "开发并在线部署 NSFW 识别模型，基于 Xception+TextCNN，测试集 P/R > 0.8/0.9，采用 Flask+uWSGI+gevent 部署。",
+            "建设信息流推荐系统，支持 LR/FM/GBDT(LightGBM) 在线推理、LR+GBDT 融合模型、多模型热更新、精排无量系统、分布式参数训练、模型压缩及热更新。",
+            "基于 TAF 框架采用 C++ 重写召回服务，支持多源倒排召回与 FM 排序，召回峰值 400k QPS/5kecu，解决 hiredis 多线程并发和旧召回服务稳定性缺陷。",
+            "开发用户行为实时/累计多维度分段 CTR 统计及粗排打分能力。",
+            "改进原 google-bert 以支持 Multi-GPU、fp16，以及单标签、多标签、序列标注等自定义任务。"
+          ],
+          "en": [
+            "Contributed to the LightLDA distributed machine learning platform, including cluster management, task scheduling, exception handling, and disaster recovery, supporting training and inference for tens of millions of users and ten-thousand-level topics.",
+            "Developed user profiling and article models, including a CTR prediction model based on image-text CNN + Bi-LSTM with offline AUC greater than 0.58.",
+            "Developed and deployed an NSFW recognition model online using Xception + TextCNN, achieving test-set precision/recall above 0.8/0.9, deployed with Flask + uWSGI + gevent.",
+            "Built feed recommendation systems supporting online inference for LR/FM/GBDT (LightGBM), LR + GBDT hybrid models, multi-model hot updates, fine-ranking systems, distributed parameter training, model compression, and hot updates.",
+            "Rewrote the recall service in C++ based on the TAF framework, supporting multi-source inverted-index recall and FM ranking, reaching peak recall throughput of 400k QPS/5kecu and resolving multithreaded hiredis concurrency and stability issues in the legacy service.",
+            "Developed real-time and cumulative multi-dimensional segmented CTR statistics and coarse ranking scoring capabilities.",
+            "Enhanced the original google-bert to support Multi-GPU, fp16, and custom tasks including single-label, multi-label, and sequence labeling."
+          ]
+        },
+        "projects": [
+          {
+            "name": {
+              "zh-CN": "LightLDA 分布式机器学习平台",
+              "en": "LightLDA Distributed Machine Learning Platform"
+            },
+            "description": {
+              "zh-CN": "参与集群管理、任务调度、异常处理与容灾恢复，支持大规模训练和推理。",
+              "en": "Contributed to cluster management, task scheduling, exception handling, and disaster recovery for large-scale training and inference."
+            },
+            "tech": [
+              {
+                "zh-CN": "LightLDA",
+                "en": "LightLDA"
+              },
+              {
+                "zh-CN": "分布式机器学习",
+                "en": "Distributed Machine Learning"
+              }
+            ]
+          },
+          {
+            "name": {
+              "zh-CN": "NSFW识别模型开发及在线部署",
+              "en": "NSFW Detection Model Development and Online Deployment"
+            },
+            "description": {
+              "zh-CN": "基于 Xception+TextCNN 开发 NSFW 识别模型，并使用 Flask+uWSGI+gevent 在线部署。",
+              "en": "Developed an NSFW recognition model based on Xception + TextCNN and deployed it online with Flask + uWSGI + gevent."
+            },
+            "tech": [
+              {
+                "zh-CN": "Xception",
+                "en": "Xception"
+              },
+              {
+                "zh-CN": "TextCNN",
+                "en": "TextCNN"
+              },
+              {
+                "zh-CN": "Flask",
+                "en": "Flask"
+              },
+              {
+                "zh-CN": "uWSGI",
+                "en": "uWSGI"
+              },
+              {
+                "zh-CN": "gevent",
+                "en": "gevent"
+              }
+            ]
+          },
+          {
+            "name": {
+              "zh-CN": "信息流推荐系统",
+              "en": "Feed Recommendation System"
+            },
+            "description": {
+              "zh-CN": "支持 LR/FM/GBDT 在线推理、融合模型、多模型热更新、召回服务重写与多维 CTR 统计。",
+              "en": "Built feed recommendation capabilities including LR/FM/GBDT online inference, hybrid models, hot updates, recall service rewrite, and multi-dimensional CTR statistics."
+            },
+            "tech": [
+              {
+                "zh-CN": "LR",
+                "en": "LR"
+              },
+              {
+                "zh-CN": "FM",
+                "en": "FM"
+              },
+              {
+                "zh-CN": "GBDT",
+                "en": "GBDT"
+              },
+              {
+                "zh-CN": "LightGBM",
+                "en": "LightGBM"
+              },
+              {
+                "zh-CN": "TAF",
+                "en": "TAF"
+              },
+              {
+                "zh-CN": "C++",
+                "en": "C++"
+              },
+              {
+                "zh-CN": "hiredis",
+                "en": "hiredis"
+              }
+            ]
+          },
+          {
+            "name": {
+              "zh-CN": "英文语义相似度算法开发",
+              "en": "English Semantic Similarity Algorithm Development"
+            },
+            "description": {
+              "zh-CN": "改进 google-bert，支持 Multi-GPU、fp16 和多类自定义任务。",
+              "en": "Enhanced google-bert to support Multi-GPU, fp16, and multiple custom task types."
+            },
+            "tech": [
+              {
+                "zh-CN": "BERT",
+                "en": "BERT"
+              },
+              {
+                "zh-CN": "Multi-GPU",
+                "en": "Multi-GPU"
+              },
+              {
+                "zh-CN": "fp16",
+                "en": "fp16"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "exp-open-source-201904",
+        "company": {
+          "zh-CN": "GitHub",
+          "en": "GitHub"
+        },
+        "role": {
+          "zh-CN": "作者、贡献者",
+          "en": "Author, Contributor"
+        },
+        "startDate": "2019-04",
+        "endDate": "Present",
+        "location": {
+          "zh-CN": "线上",
+          "en": "Online"
+        },
+        "description": {
+          "zh-CN": [
+            "持续维护与参与多个 GitHub 开源项目，包括 BERT 多 GPU 微调、聚类算法分析、NLP 迁移学习框架、ORM 框架和 Python 限流器等。"
+          ],
+          "en": [
+            "Maintains and contributes to multiple GitHub open-source projects, including BERT multi-GPU fine-tuning, clustering algorithm analysis, NLP transfer learning frameworks, ORM frameworks, and a Python rate limiter."
+          ]
+        },
+        "projects": [
+          {
+            "name": {
+              "zh-CN": "haoyuhu/bert-multi-gpu",
+              "en": "haoyuhu/bert-multi-gpu"
+            },
+            "description": {
+              "zh-CN": "支持微调大批量的大型 BERT 模型，支持多 GPU 和 FP16。",
+              "en": "Supports fine-tuning large BERT models with large batch sizes, including Multi-GPU and FP16 support."
+            },
+            "tech": [
+              {
+                "zh-CN": "BERT",
+                "en": "BERT"
+              },
+              {
+                "zh-CN": "Multi-GPU",
+                "en": "Multi-GPU"
+              },
+              {
+                "zh-CN": "FP16",
+                "en": "FP16"
+              }
+            ]
+          },
+          {
+            "name": {
+              "zh-CN": "haoyuhu/cluster-analysis",
+              "en": "haoyuhu/cluster-analysis"
+            },
+            "description": {
+              "zh-CN": "各种聚类算法分析。",
+              "en": "Analysis of various clustering algorithms."
+            },
+            "tech": [
+              {
+                "zh-CN": "聚类算法",
+                "en": "Clustering Algorithms"
+              }
+            ]
+          },
+          {
+            "name": {
+              "zh-CN": "BrikerMan/Kashgari",
+              "en": "BrikerMan/Kashgari"
+            },
+            "description": {
+              "zh-CN": "简单而强大的 NLP 迁移学习框架，可快速构建命名实体识别、词性标注和文本分类模型。",
+              "en": "A simple yet powerful NLP transfer learning framework for quickly building models for NER, PoS tagging, and text classification."
+            },
+            "tech": [
+              {
+                "zh-CN": "NLP",
+                "en": "NLP"
+              },
+              {
+                "zh-CN": "迁移学习",
+                "en": "Transfer Learning"
+              },
+              {
+                "zh-CN": "NER",
+                "en": "NER"
+              },
+              {
+                "zh-CN": "PoS",
+                "en": "PoS"
+              }
+            ]
+          },
+          {
+            "name": {
+              "zh-CN": "typeorm/typeorm",
+              "en": "typeorm/typeorm"
+            },
+            "description": {
+              "zh-CN": "运行于 NodeJS、Browser、Cordova、PhoneGap、Ionic、React Native、NativeScript、Expo 和 Electron 平台的 ORM。",
+              "en": "An ORM that runs on NodeJS, Browser, Cordova, PhoneGap, Ionic, React Native, NativeScript, Expo, and Electron."
+            },
+            "tech": [
+              {
+                "zh-CN": "TypeORM",
+                "en": "TypeORM"
+              },
+              {
+                "zh-CN": "NodeJS",
+                "en": "NodeJS"
+              },
+              {
+                "zh-CN": "Electron",
+                "en": "Electron"
+              }
+            ]
+          },
+          {
+            "name": {
+              "zh-CN": "vutran1710/PyrateLimiter",
+              "en": "vutran1710/PyrateLimiter"
+            },
+            "description": {
+              "zh-CN": "Python 的 Leaky-bucket 算法请求限流器。",
+              "en": "A Python request rate limiter based on the leaky-bucket algorithm."
+            },
+            "tech": [
+              {
+                "zh-CN": "Python",
+                "en": "Python"
+              },
+              {
+                "zh-CN": "Leaky-bucket",
+                "en": "Leaky Bucket"
+              }
             ]
           }
         ]
@@ -600,73 +1324,124 @@
     ],
     "education": [
       {
-        "id": "edu-sjtu",
-        "school": "Shanghai Jiao Tong University",
+        "id": "edu-tsinghua-201409",
+        "school": {
+          "zh-CN": "清华大学",
+          "en": "Tsinghua University"
+        },
         "degree": {
-          "zh-CN": "理学硕士",
-          "en": "Master of Science"
+          "zh-CN": "硕士",
+          "en": "Master's Degree"
         },
-        "field": {
-          "zh-CN": "计算机科学",
-          "en": "Computer Science"
-        },
-        "startDate": "2016",
-        "endDate": "2019"
+        "startDate": "2014-09",
+        "endDate": "2017-06"
       },
       {
-        "id": "edu-tongji",
-        "school": "Tongji University",
+        "id": "edu-tsinghua-201009",
+        "school": {
+          "zh-CN": "清华大学",
+          "en": "Tsinghua University"
+        },
         "degree": {
-          "zh-CN": "工学学士",
-          "en": "Bachelor of Engineering"
+          "zh-CN": "本科",
+          "en": "Bachelor's Degree"
         },
-        "field": {
-          "zh-CN": "软件工程",
-          "en": "Software Engineering"
-        },
-        "startDate": "2012",
-        "endDate": "2016"
+        "startDate": "2010-09",
+        "endDate": "2014-06"
       }
     ],
     "skillGroups": [
       {
-        "id": "skill-agent",
+        "id": "skill-languages",
         "label": {
-          "zh-CN": "智能体与模型系统",
-          "en": "Agents and Model Systems"
+          "zh-CN": "编程语言",
+          "en": "Programming Languages"
         },
         "items": [
           {
-            "name": "Agent orchestration",
+            "name": {
+              "zh-CN": "Golang",
+              "en": "Golang"
+            },
             "level": "Advanced"
           },
           {
-            "name": "Inference platform",
+            "name": {
+              "zh-CN": "Node.js",
+              "en": "Node.js"
+            },
             "level": "Advanced"
           },
           {
-            "name": "Prompt workflows",
+            "name": {
+              "zh-CN": "Java",
+              "en": "Java"
+            },
+            "level": "Advanced"
+          },
+          {
+            "name": {
+              "zh-CN": "Python",
+              "en": "Python"
+            },
+            "level": "Advanced"
+          },
+          {
+            "name": {
+              "zh-CN": "C/C++",
+              "en": "C/C++"
+            },
             "level": "Advanced"
           }
         ]
       },
       {
-        "id": "skill-platform",
+        "id": "skill-techstack",
         "label": {
-          "zh-CN": "平台与工程化",
-          "en": "Platform Engineering"
+          "zh-CN": "技术栈",
+          "en": "Tech Stack"
         },
         "items": [
           {
-            "name": "Full-stack delivery",
+            "name": {
+              "zh-CN": "推荐系统",
+              "en": "Recommendation Systems"
+            },
             "level": "Advanced"
           },
           {
-            "name": "CI/CD",
+            "name": {
+              "zh-CN": "自然语言处理",
+              "en": "Natural Language Processing"
+            },
             "level": "Advanced"
           },
           {
-            "name": "Developer tooling",
+            "name": {
+              "zh-CN": "高并发",
+              "en": "High Concurrency"
+            },
+            "level": "Advanced"
+          },
+          {
+            "name": {
+              "zh-CN": "推理架构",
+              "en": "Inference Architecture"
+            },
+            "level": "Advanced"
+          },
+          {
+            "name": {
+              "zh-CN": "大模型",
+              "en": "Large Language Models"
+            },
+            "level": "Advanced"
+          },
+          {
+            "name": {
+              "zh-CN": "智能体",
+              "en": "AI Agents"
+            },
             "level": "Advanced"
           }
         ]
@@ -893,7 +1668,11 @@
         "watchers": 10,
         "url": "https://github.com/haoyuhu/clustering-playbook",
         "homepage": "",
-        "topics": [],
+        "topics": [
+          "python",
+          "clustering",
+          "playbook"
+        ],
         "featured": true,
         "pinned": true,
         "relationship": "owner",
@@ -916,7 +1695,13 @@
         "watchers": 7,
         "url": "https://github.com/haoyuhu/bert-multi-gpu",
         "homepage": "",
-        "topics": [],
+        "topics": [
+          "python",
+          "workflow",
+          "bert",
+          "multi",
+          "gpu"
+        ],
         "featured": true,
         "pinned": true,
         "relationship": "owner",
@@ -938,7 +1723,13 @@
         "forks": 17,
         "watchers": 2,
         "url": "https://github.com/haoyuhu/dify-client-python",
-        "topics": [],
+        "topics": [
+          "python",
+          "api",
+          "client",
+          "cli",
+          "dify"
+        ],
         "featured": true,
         "pinned": true,
         "relationship": "owner",
@@ -988,7 +1779,13 @@
         "watchers": 0,
         "url": "https://github.com/haoyuhu/sentence-tokenization",
         "homepage": "",
-        "topics": [],
+        "topics": [
+          "javascript",
+          "bert",
+          "nlp",
+          "sentence",
+          "tokenization"
+        ],
         "featured": false,
         "pinned": false,
         "relationship": "owner",
@@ -1010,7 +1807,12 @@
         "forks": 3,
         "watchers": 0,
         "url": "https://github.com/haoyuhu/gosimhash-doc-server",
-        "topics": [],
+        "topics": [
+          "go",
+          "gosimhash",
+          "doc",
+          "server"
+        ],
         "featured": false,
         "pinned": false,
         "relationship": "owner",
@@ -1032,7 +1834,11 @@
         "forks": 1,
         "watchers": 0,
         "url": "https://github.com/haoyuhu/kronos-dashboard",
-        "topics": [],
+        "topics": [
+          "python",
+          "kronos",
+          "dashboard"
+        ],
         "featured": false,
         "pinned": false,
         "relationship": "owner",
@@ -1055,7 +1861,13 @@
         "watchers": 0,
         "url": "https://github.com/haoyuhu/thu-stadium-reservation",
         "homepage": "",
-        "topics": [],
+        "topics": [
+          "html",
+          "python",
+          "thu",
+          "stadium",
+          "reservation"
+        ],
         "featured": false,
         "pinned": false,
         "relationship": "owner",
@@ -1078,7 +1890,10 @@
         "watchers": 1,
         "url": "https://github.com/haoyuhu/pytunet",
         "homepage": "",
-        "topics": [],
+        "topics": [
+          "python",
+          "pytunet"
+        ],
         "featured": false,
         "pinned": false,
         "relationship": "owner",
@@ -1100,7 +1915,11 @@
         "forks": 0,
         "watchers": 0,
         "url": "https://github.com/haoyuhu/TUNet-MacOS",
-        "topics": [],
+        "topics": [
+          "shell",
+          "tunet",
+          "macos"
+        ],
         "featured": false,
         "pinned": false,
         "relationship": "owner",
@@ -1123,7 +1942,12 @@
         "watchers": 1,
         "url": "https://github.com/haoyuhu/image-search-engine",
         "homepage": "http://www.huhaoyu.com/image-search-engine/",
-        "topics": [],
+        "topics": [
+          "python",
+          "image",
+          "search",
+          "engine"
+        ],
         "featured": false,
         "pinned": false,
         "relationship": "owner",
@@ -1146,7 +1970,12 @@
         "watchers": 2,
         "url": "https://github.com/haoyuhu/haoyuhu.github.io",
         "homepage": "http://www.huhaoyu.com",
-        "topics": [],
+        "topics": [
+          "typescript",
+          "workflow",
+          "haoyuhu",
+          "github"
+        ],
         "featured": false,
         "pinned": false,
         "relationship": "owner",
@@ -1168,7 +1997,13 @@
         "forks": 0,
         "watchers": 0,
         "url": "https://github.com/haoyuhu/thu-stadium-reservation-server",
-        "topics": [],
+        "topics": [
+          "java",
+          "thu",
+          "stadium",
+          "reservation",
+          "server"
+        ],
         "featured": false,
         "pinned": false,
         "relationship": "owner",
@@ -1190,7 +2025,13 @@
         "forks": 0,
         "watchers": 0,
         "url": "https://github.com/haoyuhu/thu-stadium-reservation-weapp",
-        "topics": [],
+        "topics": [
+          "javascript",
+          "thu",
+          "stadium",
+          "reservation",
+          "weapp"
+        ],
         "featured": false,
         "pinned": false,
         "relationship": "owner",
@@ -1212,7 +2053,10 @@
         "forks": 0,
         "watchers": 0,
         "url": "https://github.com/haoyuhu/Tutu",
-        "topics": [],
+        "topics": [
+          "java",
+          "tutu"
+        ],
         "featured": false,
         "pinned": false,
         "relationship": "owner",
@@ -1234,7 +2078,10 @@
         "forks": 0,
         "watchers": 1,
         "url": "https://github.com/haoyuhu/leetcode",
-        "topics": [],
+        "topics": [
+          "c",
+          "leetcode"
+        ],
         "featured": false,
         "pinned": false,
         "relationship": "owner",
@@ -1256,7 +2103,10 @@
         "forks": 0,
         "watchers": 0,
         "url": "https://github.com/haoyuhu/Bundleless",
-        "topics": [],
+        "topics": [
+          "java",
+          "bundleless"
+        ],
         "featured": false,
         "pinned": false,
         "relationship": "owner",
@@ -1278,7 +2128,12 @@
         "forks": 0,
         "watchers": 0,
         "url": "https://github.com/haoyuhu/splendor-duel-terminator",
-        "topics": [],
+        "topics": [
+          "python",
+          "splendor",
+          "duel",
+          "terminator"
+        ],
         "featured": false,
         "pinned": false,
         "relationship": "owner",
@@ -1300,7 +2155,11 @@
         "forks": 0,
         "watchers": 1,
         "url": "https://github.com/haoyuhu/golangchain",
-        "topics": [],
+        "topics": [
+          "llm",
+          "go",
+          "golangchain"
+        ],
         "featured": false,
         "pinned": false,
         "relationship": "owner",
@@ -1323,7 +2182,10 @@
         "watchers": 1,
         "url": "https://github.com/haoyuhu/pytucab",
         "homepage": "",
-        "topics": [],
+        "topics": [
+          "python",
+          "pytucab"
+        ],
         "featured": false,
         "pinned": false,
         "relationship": "owner",
@@ -1400,7 +2262,7 @@
       },
       "summary": {
         "en": "The most useful lesson from long-running Claude is not that agents can work for hours or days. It is that autonomy only becomes durable when the environment can judge progress, preserve state, and let the system recover without starting from zero.",
-        "zh-CN": "long-running Claude 最有价值的启发，不是智能体能连续工作数小时甚至数天，而是只有当环境能判断进展、保存状态，并允许系统从中间恢复时，自主性才会真正变得可靠。"
+        "zh-CN": "长程任务 Claude 最有价值的启发，不是智能体能连续工作数小时甚至数天，而是只有当环境能判断进展、保存状态，并允许系统从中间恢复时，自主性才会真正变得可靠。"
       },
       "tags": [
         "long-running-agents",
@@ -1410,7 +2272,7 @@
         "agent-infrastructure"
       ],
       "body": {
-        "zh-CN": "## “能跑很久”其实是最不重要的指标\n\nAnthropic 在 2026 年 3 月 23 日发布的 long-running Claude 研究，很容易被总结成一句话：智能体现在可以连续工作很久。这当然是真的，但也是最不有意思的那部分。\n\n时间本身不会自动产生自治。一个坏掉的智能体，同样可以错上十二个小时。真正的问题是：一个长时运行的系统，能不能持续产生 **可纠偏的进展**，而不是把失败越积越漂亮。\n\n这也是这篇研究真正值得看的地方。它揭示了一个更底层的事实：长时间跨度上的 agent 工作，只有在环境同时提供 **oracle**、**记忆** 和 **恢复回路** 时，才会变得可信。\n\n## 三个不能缺的部件\n\n| 缺什么 | 没有它会怎样 | 一个靠谱系统应该怎么做 |\n|---|---|---|\n| Oracle | 智能体不知道自己是在变好还是在跑偏 | 用测试、模拟器、benchmark 或 evaluator 提供客观反馈 |\n| 记忆 | 智能体每隔几小时就把同一个教训重新学一遍 | 保存决策、失败记录、checkpoint 和待验证假设 |\n| 恢复回路 | 一次错误分支就把整个长任务拖垮 | 允许系统回滚、重试、分叉并继续推进 |\n\n比起追问“模型能不能想更久”，这个框架对工程实践有用得多。\n\n## 为什么科学计算和工程任务特别适合\n\n长时运行智能体之所以在科学代码、数值实验和真实软件任务里显得更强，一个关键原因是：**世界会回嘴**。\n\n这些领域通常拥有很多纯语言任务没有的东西：\n\n- 可执行产物；\n- 测试套件；\n- 可量化输出；\n- 更难蒙混过关的外部校验。\n\n这很重要，因为长时间任务本质上并不只是推理问题，而是一个 **闭环控制问题**。\n\n```mermaid\nflowchart TD\n    A[\"规划下一步\"] --> B[\"执行工具调用或代码修改\"]\n    B --> C[\"运行 oracle：测试、benchmark、模拟器、评测\"]\n    C --> D{\"有进展吗？\"}\n    D -->|\"有\"| E[\"保存 checkpoint 并继续\"]\n    D -->|\"没有\"| F[\"诊断失败原因\"]\n    F --> G[\"回滚、分叉或修改计划\"]\n    G --> A\n    E --> A\n```\n\n一旦把 oracle 拿掉，这个回路就会退化成讲故事；一旦把 checkpoint 拿掉，这个回路就会退化成赌博。\n\n## 运营设计上的启发\n\n我最大的体感是：长时运行智能体越来越不像“超级聊天机器人”，反而越来越像一个小型分布式系统。\n\n它需要：\n\n- 持久化的工作记忆；\n- 明确的草稿区与运行日志；\n- 可恢复的任务；\n- 有边界的工具权限；\n- 以及一套稳定的成功判定标准。\n\n一个人类操作者，大概会把这套纪律编码成类似下面的东西：\n\n```text\nRUN_ID=chem-sim-042\nGOAL=stabilize benchmark variance below 1.5%\nORACLE=pytest -q && python benchmark.py --trials 20\nCHECKPOINT=save notes, git diff, metrics snapshot every major branch\nSTOP_IF=two failed branches with no metric improvement\n```\n\n它一点也不浪漫，但这恰恰说明问题。可靠的自治，通常不是从神话里长出来的，而是从流程里长出来的。\n\n## 还有什么被低估了\n\n现在很多团队谈 agent 进展，仍然像是在默认“主要瓶颈还是模型本身够不够聪明”。我觉得这不完整。\n\n对于长时运行任务，更难的问题往往是：**什么样的环境，能让智能不断累积，而不是不断漂移？**\n\n如果系统做不到：\n\n- 判断自己是否真的改进了；\n- 记住自己为什么中途改道；\n- 在走错一步之后还能恢复，\n\n那么给它更多时间，只是给失败更多空间。\n\n> 真正的自治，不是从“能一直跑”开始，而是从“失败之后还能正常恢复”开始。\n\n## 如果让我围绕这个方向搭系统\n\n如果我要设计一套严肃的 long-running agent stack，我会优先建设基础设施，而不是人格幻觉：\n\n1. **可验证进展信号**，优先于模糊自省。\n2. **可 checkpoint 的状态**，优先于超长隐藏上下文。\n3. **可恢复分支**，优先于单次不可逆长跑。\n4. **压缩后的操作者摘要**，优先于原始长 transcript 倾倒。\n\n所以，这篇研究真正让我在意的，不是“智能体现在周末也能一直工作”。\n\n真正让我在意的是：只有当系统能在时间维度上保持方向感时，长时自治才成立。它必须知道自己做过什么、哪里失败了、什么真的提升了、下一次该从哪里继续。这首先是系统设计问题，其次才是提示词设计问题。\n\n## 参考\n\n- [Long-running Claude in autonomous scientific coding](https://www.anthropic.com/research/long-running-Claude)",
+        "zh-CN": "## “能跑很久”其实是最不重要的指标\n\nAnthropic 在 2026 年 3 月 23 日发布的 长程任务 Claude 研究，很容易被总结成一句话：智能体现在可以连续工作很久。这当然是真的，但也是最不有意思的那部分。\n\n时间本身不会自动产生自治。一个坏掉的智能体，同样可以错上十二个小时。真正的问题是：一个长时运行的系统，能不能持续产生 **可纠偏的进展**，而不是把失败越积越漂亮。\n\n这也是这篇研究真正值得看的地方。它揭示了一个更底层的事实：长时间跨度上的 agent 工作，只有在环境同时提供 **客观判标（真值校验器）**、**记忆** 和 **恢复回路** 时，才会变得可信。\n\n## 三个不能缺的部件\n\n| 缺什么 | 没有它会怎样 | 一个靠谱系统应该怎么做 |\n|---|---|---|\n| 客观判标 | 智能体不知道自己是在变好还是在跑偏 | 用测试、模拟器、benchmark 或 evaluator 提供客观反馈 |\n| 记忆 | 智能体每隔几小时就把同一个教训重新学一遍 | 保存决策、失败记录、checkpoint 和待验证假设 |\n| 恢复回路 | 一次错误分支就把整个长任务拖垮 | 允许系统回滚、重试、分叉并继续推进 |\n\n比起追问“模型能不能想更久”，这个框架对工程实践有用得多。\n\n## 为什么科学计算和工程任务特别适合\n\n长时运行智能体之所以在科学代码、数值实验和真实软件任务里显得更强，一个关键原因是：**世界会回嘴**。\n\n这些领域通常拥有很多纯语言任务没有的东西：\n\n- 可执行产物；\n- 测试套件；\n- 可量化输出；\n- 更难蒙混过关的外部校验。\n\n这很重要，因为长时间任务本质上并不只是推理问题，而是一个 **闭环控制问题**。\n\n```mermaid\nflowchart TD\n    A[\"规划下一步\"] --> B[\"执行工具调用或代码修改\"]\n    B --> C[\"运行校验器：测试、benchmark、模拟器、评测\"]\n    C --> D{\"有进展吗？\"}\n    D -->|\"有\"| E[\"保存 checkpoint 并继续\"]\n    D -->|\"没有\"| F[\"诊断失败原因\"]\n    F --> G[\"回滚、分叉或修改计划\"]\n    G --> A\n    E --> A\n```\n\n一旦把客观判标（真值校验器）拿掉，这个回路就会退化成讲故事；一旦把 checkpoint 拿掉，这个回路就会退化成赌博。\n\n## 运营设计上的启发\n\n我最大的体感是：长时运行智能体越来越不像“超级聊天机器人”，反而越来越像一个小型分布式系统。\n\n它需要：\n\n- 持久化的工作记忆；\n- 明确的草稿区与运行日志；\n- 可恢复的任务；\n- 有边界的工具权限；\n- 以及一套稳定的成功判定标准。\n\n一个人类操作者，大概会把这套纪律编码成类似下面的东西：\n\n```text\nRUN_ID=chem-sim-042\nGOAL=stabilize benchmark variance below 1.5%\nORACLE=pytest -q && python benchmark.py --trials 20\nCHECKPOINT=save notes, git diff, metrics snapshot every major branch\nSTOP_IF=two failed branches with no metric improvement\n```\n\n它一点也不浪漫，但这恰恰说明问题。可靠的自治，通常不是从神话里长出来的，而是从流程里长出来的。\n\n## 还有什么被低估了\n\n现在很多团队谈 agent 进展，仍然像是在默认“主要瓶颈还是模型本身够不够聪明”。我觉得这不完整。\n\n对于长时运行任务，更难的问题往往是：**什么样的环境，能让智能不断累积，而不是不断漂移？**\n\n如果系统做不到：\n\n- 判断自己是否真的改进了；\n- 记住自己为什么中途改道；\n- 在走错一步之后还能恢复，\n\n那么给它更多时间，只是给失败更多空间。\n\n> 真正的自治，不是从“能一直跑”开始，而是从“失败之后还能正常恢复”开始。\n\n## 如果让我围绕这个方向搭系统\n\n如果我要设计一套严肃的长程任务智能体，我会优先建设基础设施，而不是人格幻觉：\n\n1. **可验证进展信号**，优先于模糊自省。\n2. **可 checkpoint 的状态**，优先于超长隐藏上下文。\n3. **可恢复分支**，优先于单次不可逆长跑。\n4. **压缩后的操作者摘要**，优先于原始长 transcript 倾倒。\n\n所以，这篇研究真正让我在意的，不是“智能体现在周末也能一直工作”。\n\n真正让我在意的是：只有当系统能在时间维度上保持方向感时，长时自治才成立。它必须知道自己做过什么、哪里失败了、什么真的提升了、下一次该从哪里继续。这首先是系统设计问题，其次才是提示词设计问题。\n\n## 参考\n\n- [Long-running Claude in autonomous scientific coding](https://www.anthropic.com/research/long-running-Claude)",
         "en": "## Duration is the least interesting metric\n\nAnthropic's March 23, 2026 research note on long-running Claude is easy to summarize as \"agents can now work for a long time.\" That is true, but it is the least interesting part.\n\nTime alone does not create autonomy. A broken agent can also run for twelve hours. The real question is whether a long-running system can keep making **corrective progress** instead of accumulating elegant failure.\n\nThat is why the report matters. It highlights a deeper idea: long-horizon agent work only becomes credible when the environment supplies an **oracle**, a **memory**, and a **recovery loop**.\n\n## The three missing pieces\n\n| Missing piece | What breaks without it | What a good system does instead |\n|---|---|---|\n| Oracle | The agent cannot tell whether it is getting warmer or colder | Gives objective feedback from tests, simulators, benchmarks, or evaluators |\n| Memory | The agent relearns the same lesson every few hours | Preserves decisions, failures, checkpoints, and open hypotheses |\n| Recovery loop | One bad branch ruins the whole run | Lets the system roll back, retry, branch, and continue |\n\nThis framing is far more useful than asking whether a model can \"think longer.\"\n\n## Why scientific and engineering work are special\n\nLong-running agents look strongest in domains where the world answers back.\n\nScientific coding, numerical experiments, and real software tasks often have something many language tasks do not:\n\n- executable artifacts,\n- test suites,\n- measurable outputs,\n- and external checks that are harder to bluff.\n\nThat matters because long-horizon work is not mainly a reasoning problem. It is a **closed-loop control problem**.\n\n```mermaid\nflowchart TD\n    A[\"Plan next step\"] --> B[\"Execute tool or code change\"]\n    B --> C[\"Run oracle: tests, benchmark, simulator, eval\"]\n    C --> D{\"Progress?\"}\n    D -->|\"Yes\"| E[\"Checkpoint state and continue\"]\n    D -->|\"No\"| F[\"Diagnose failure\"]\n    F --> G[\"Rollback, branch, or revise plan\"]\n    G --> A\n    E --> A\n```\n\nIf you remove the oracle, the loop turns into storytelling. If you remove the checkpoint, it turns into gambling.\n\n## The operational design lesson\n\nMy strongest takeaway is that long-running agents are less like \"super chatbots\" and more like small distributed systems.\n\nThey need:\n\n- persistent working memory;\n- explicit scratchpads and run logs;\n- resumable tasks;\n- bounded tool permissions;\n- and a stable notion of what counts as success.\n\nA human operator would probably encode that discipline with artifacts like these:\n\n```text\nRUN_ID=chem-sim-042\nGOAL=stabilize benchmark variance below 1.5%\nORACLE=pytest -q && python benchmark.py --trials 20\nCHECKPOINT=save notes, git diff, metrics snapshot every major branch\nSTOP_IF=two failed branches with no metric improvement\n```\n\nThis looks unromantic, but that is the point. Durable autonomy usually grows out of procedure, not mythology.\n\n## What people still underestimate\n\nMany teams still talk about agent progress as if the frontier is mostly in model intelligence. I think that is incomplete.\n\nFor long-running work, the harder question is often: **what kind of environment lets intelligence compound instead of drift?**\n\nIf the system cannot:\n\n- measure whether it improved,\n- remember why it changed course,\n- and recover after a bad move,\n\nthen giving it more time just gives failure more room.\n\n> Autonomy begins where recovery becomes normal, not exceptional.\n\n## What I would build around this\n\nIf I were designing a serious long-running agent stack, I would prioritize infrastructure before personality:\n\n1. **Verifiable progress signals** over vague self-reflection.\n2. **Checkpointed state** over long hidden context.\n3. **Recoverable branches** over single irreversible runs.\n4. **Compact operator summaries** over raw transcript dumping.\n\nThe lesson is not that agents can now work all weekend.\n\nThe lesson is that long-running agency becomes real when the system can stay oriented in time: what it tried, what failed, what improved, and where to resume next. That is a systems design problem before it is a prompt design problem.\n\n## References\n\n- [Long-running Claude in autonomous scientific coding](https://www.anthropic.com/research/long-running-Claude)"
       },
       "sourcePath": "content/posts/articles/long-running-agents-need-oracles-and-memory"
@@ -4017,7 +4879,7 @@
     }
   },
   "generated": {
-    "generatedAt": "2026-03-28T11:06:11.330395+00:00",
+    "generatedAt": "2026-03-28T14:47:24.119755+00:00",
     "source": "content/config + content/posts",
     "bundleVersion": "3.0.0",
     "warnings": []

@@ -3,7 +3,9 @@ import {
   ArrowRight,
   Briefcase,
   Calendar,
+  ChevronDown,
   ChevronRight,
+  ChevronUp,
   ChevronsDown,
   ExternalLink,
   FileCode,
@@ -100,7 +102,7 @@ const buildSystemIdentityNarratives = (
   return rows.map((row, index) => {
     const label = getLocalizedText(row.label, locale);
     const value = getLocalizedText(row.value, locale);
-    const tags = row.useTechStackAsTags ? techStack.map((metric) => metric.name) : row.tags ?? [];
+    const tags = row.useTechStackAsTags ? techStack.map((metric) => getLocalizedText(metric.name, locale)) : row.tags ?? [];
     return {
       id: `identity-${index}`,
       label,
@@ -129,6 +131,7 @@ const App: React.FC = () => {
   const [terminalOpen, setTerminalOpen] = useState(false);
   const [gardenLimit, setGardenLimit] = useState(PAGE_SIZE);
   const [articleLimit, setArticleLimit] = useState(PAGE_SIZE);
+  const [careerLogExpanded, setCareerLogExpanded] = useState(false);
 
   const loadBundle = async () => {
     setLoading(true);
@@ -272,7 +275,8 @@ const App: React.FC = () => {
   const currentJob =
     resolveRecommendedItem<ExperienceEntry>(bundle.resume.experience, recommendations.currentRole, (experience) => [
       experience.id,
-      experience.company,
+      getLocalizedText(experience.company, 'zh-CN'),
+      getLocalizedText(experience.company, 'en'),
       getLocalizedText(experience.role, locale),
     ]) ?? bundle.resume.experience[0];
   const latestEducation = bundle.resume.education[0];
@@ -317,6 +321,7 @@ const App: React.FC = () => {
   const primaryProfileLinkLabel = primaryProfileLink
     ? getLocalizedText(primaryProfileLink.label, locale)
     : getLocalizedText(copy.primaryLinkLabel ?? { 'zh-CN': '主链接', en: 'Primary Link' }, locale);
+  const heroClassName = getLocalizedText(copy.heroClassName ?? bundle.profile.name, locale);
 
   const homeSpotlightCards: HomeSpotlightCard[] = [];
 
@@ -412,14 +417,14 @@ const App: React.FC = () => {
       targetTab: 'resume',
       kicker: getLocalizedText(copy.widgets.currentRole, locale),
       title: getLocalizedText(currentJob.role, locale),
-      subtitle: `@${currentJob.company}`,
+      subtitle: `@${getLocalizedText(currentJob.company, locale)}`,
       icon: Briefcase,
       body: (
         <div className="space-y-2 text-sm text-ide-text-dim">
           {currentJob.projects.length > 0
-            ? currentJob.projects.slice(0, 3).map((project) => (
-                <div key={`${currentJob.id}-${project.name}`} className="rounded border border-ide-border bg-ide-panel px-3 py-2">
-                  <div className="font-semibold text-ide-text">{project.name}</div>
+            ? currentJob.projects.slice(0, 3).map((project, projectIndex) => (
+                <div key={`${currentJob.id}-${projectIndex}`} className="rounded border border-ide-border bg-ide-panel px-3 py-2">
+                  <div className="font-semibold text-ide-text">{getLocalizedText(project.name, locale)}</div>
                   <div className="mt-1 leading-5">{getLocalizedText(project.description, locale)}</div>
                 </div>
               ))
@@ -444,7 +449,7 @@ const App: React.FC = () => {
       id: 'education',
       targetTab: 'resume',
       kicker: getLocalizedText(copy.widgets.education, locale),
-      title: latestEducation.school,
+      title: getLocalizedText(latestEducation.school, locale),
       subtitle: getLocalizedText(latestEducation.degree, locale),
       icon: Globe,
       body: (
@@ -742,7 +747,7 @@ const App: React.FC = () => {
                     </div>
                     <div className="min-w-0 flex-1 space-y-3">
                       <h1 className="text-xl font-bold tracking-tight text-ide-text md:text-2xl lg:text-3xl">
-                        <span className="text-accent">class</span> {bundle.profile.name}{' '}
+                        <span className="text-accent">class</span> {heroClassName}{' '}
                         <span className="text-accent">extends</span>{' '}
                         <span className="text-ide-text-dim">{getLocalizedText(bundle.profile.heroExtends, locale)}</span>
                       </h1>
@@ -768,7 +773,7 @@ const App: React.FC = () => {
                     </div>
                   </section>
 
-                  <div className="grid items-start gap-6 lg:grid-cols-2">
+                  <div className="grid items-start gap-6 lg:grid-cols-2 lg:items-stretch">
                     <section className="flex min-h-[320px] flex-col rounded-xl border border-ide-border bg-ide-panel p-6 shadow-sm">
                       <div className="mb-4 text-xs text-ide-text-dim">neofetch_v3.sh</div>
                       <div className="mb-4 text-xs">
@@ -841,7 +846,7 @@ const App: React.FC = () => {
                       </div>
                     </section>
 
-                    <section className="flex flex-col rounded-xl border border-ide-border bg-ide-panel p-6 shadow-sm">
+                    <section className="flex h-full min-h-[320px] flex-col rounded-xl border border-ide-border bg-ide-panel p-6 shadow-sm">
                       <div className="mb-4 text-xs text-ide-text-dim">career_log.txt</div>
                       <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
                         <div className="flex items-center gap-2 font-bold text-accent">
@@ -855,7 +860,7 @@ const App: React.FC = () => {
                         </div>
                       </div>
                       <div className="space-y-5">
-                        {bundle.resume.experience.slice(0, 2).map((experience) => (
+                        {bundle.resume.experience.slice(0, 1).map((experience) => (
                           <div key={experience.id} className="border-l-2 border-ide-border pl-4 transition-colors hover:border-accent">
                             <div className="mb-1 flex flex-wrap justify-between gap-2 text-xs text-ide-text-dim">
                               <span>
@@ -864,30 +869,49 @@ const App: React.FC = () => {
                               <span>{getLocalizedText(experience.location, locale)}</span>
                             </div>
                             <div className="text-base font-bold text-ide-text">{getLocalizedText(experience.role, locale)}</div>
-                            <div className="mb-3 text-xs text-sky-400">@{experience.company}</div>
-                            <div className="space-y-3">
-                              <div className="space-y-1 text-xs leading-5 text-ide-text-dim">
-                                {experience.description[locale].map((line) => (
-                                  <div key={`${experience.id}-${line}`}>- {line}</div>
+                            <div className="mb-3 text-xs text-sky-400">@{getLocalizedText(experience.company, locale)}</div>
+                            <div className="relative">
+                              <div className={`space-y-3 ${careerLogExpanded ? '' : 'max-h-[240px] overflow-hidden'}`}>
+                                <div className="space-y-1 text-xs leading-5 text-ide-text-dim">
+                                  {experience.description[locale].map((line, lineIndex) => (
+                                    <div key={`${experience.id}-${lineIndex}`}>- {line}</div>
+                                  ))}
+                                </div>
+                                {experience.projects.map((project, projectIndex) => (
+                                  <div key={`${experience.id}-${projectIndex}`} className="rounded border border-ide-border bg-ide-bg px-3 py-2 text-xs text-ide-text-dim">
+                                    <div className="font-semibold text-ide-text">{getLocalizedText(project.name, locale)}</div>
+                                    <div className="mt-1 leading-5">{getLocalizedText(project.description, locale)}</div>
+                                    <div className="mt-2 flex flex-wrap gap-1">
+                                      {project.tech.map((tech, techIndex) => (
+                                        <span
+                                          key={`${experience.id}-${projectIndex}-${techIndex}`}
+                                          className="rounded border border-ide-border bg-ide-panel px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-ide-text-dim"
+                                        >
+                                          {getLocalizedText(tech, locale)}
+                                        </span>
+                                      ))}
+                                    </div>
+                                  </div>
                                 ))}
                               </div>
-                              {experience.projects.map((project) => (
-                                <div key={`${experience.id}-${project.name}`} className="rounded border border-ide-border bg-ide-bg px-3 py-2 text-xs text-ide-text-dim">
-                                  <div className="font-semibold text-ide-text">{project.name}</div>
-                                  <div className="mt-1 leading-5">{getLocalizedText(project.description, locale)}</div>
-                                  <div className="mt-2 flex flex-wrap gap-1">
-                                    {project.tech.map((tech) => (
-                                      <span
-                                        key={`${experience.id}-${project.name}-${tech}`}
-                                        className="rounded border border-ide-border bg-ide-panel px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-ide-text-dim"
-                                      >
-                                        {tech}
-                                      </span>
-                                    ))}
-                                  </div>
-                                </div>
-                              ))}
+                              {!careerLogExpanded && (
+                                <div
+                                  className="pointer-events-none absolute inset-x-0 bottom-0 h-20 rounded-b-xl"
+                                  style={{ background: 'linear-gradient(to top, var(--theme-panel), rgba(15, 23, 42, 0))' }}
+                                />
+                              )}
                             </div>
+                            <button
+                              onClick={() => setCareerLogExpanded((current) => !current)}
+                              className="mt-3 inline-flex items-center gap-2 rounded border border-ide-border bg-ide-bg px-3 py-1.5 text-[11px] uppercase tracking-wide text-ide-text-dim transition-colors hover:border-accent hover:text-accent"
+                            >
+                              <span>
+                                {careerLogExpanded
+                                  ? getLocalizedText(copy.careerLogCollapseLabel ?? { 'zh-CN': '收起详情', en: 'Collapse Details' }, locale)
+                                  : getLocalizedText(copy.careerLogExpandLabel ?? { 'zh-CN': '展开详情', en: 'Expand Details' }, locale)}
+                              </span>
+                              {careerLogExpanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+                            </button>
                           </div>
                         ))}
                       </div>

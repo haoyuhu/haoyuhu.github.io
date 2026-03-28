@@ -12,8 +12,8 @@ profile:
     zh-CN: 算法工程专家，具备推荐系统、自然语言处理、高并发、推理架构、大模型与智能体相关经验，曾任职于字节跳动、腾讯、深褐科技等公司。
     en: Algorithm engineering expert with experience in recommendation systems, natural
       language processing, high-concurrency systems, inference architecture, large
-      language models, and AI agents. Previously worked at ByteDance, Tencent, and
-      Deep Brown Technology.
+      language models, and AI agents. Previously worked at Bytedance Inc., Tencent
+      Inc., and Shenhe Inc.
   location:
     zh-CN: 上海
     en: Shanghai
@@ -59,7 +59,7 @@ profile:
       en: Edu
     value:
       zh-CN: 清华大学（硕士）
-      en: 清华大学 (Master's Degree)
+      en: Tsinghua University (Master's Degree)
     detail:
       zh-CN: 来自导入简历的最近教育节点。
       en: Latest education node derived from the imported resume.
