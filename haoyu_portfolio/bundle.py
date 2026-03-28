@@ -36,6 +36,7 @@ def _load_post_directories(kind: str) -> list[dict[str, Any]]:
                 "kind": meta.get("kind") or kind[:-1],
                 "slug": meta.get("slug") or entry.name,
                 "date": meta.get("date"),
+                "publishedAt": meta.get("publishedAt"),
                 "title": meta.get("title"),
                 "summary": meta.get("summary"),
                 "tags": meta.get("tags") or [],
@@ -45,6 +46,16 @@ def _load_post_directories(kind: str) -> list[dict[str, Any]]:
             }
         )
     return posts
+
+
+def _sort_posts(posts: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return sorted(
+        posts,
+        key=lambda item: (
+            -_sort_timestamp(item.get("publishedAt") or item.get("date")),
+            str(item.get("slug") or ""),
+        ),
+    )
 
 
 def _normalize_project_overrides(raw_overrides: Any) -> dict[str, dict[str, Any]]:
@@ -186,7 +197,7 @@ def build_bundle(write: bool = True, refresh_github: bool = False) -> PortfolioB
             "github": github_settings,
             "items": _merge_projects(projects, cached_repos),
         },
-        "posts": _load_post_directories("garden") + _load_post_directories("articles"),
+        "posts": _sort_posts(_load_post_directories("garden") + _load_post_directories("articles")),
         "assistant": assistant,
         "generated": {
             "generatedAt": datetime.now(timezone.utc).isoformat(),

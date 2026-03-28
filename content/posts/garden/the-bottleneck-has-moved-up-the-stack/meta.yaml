@@ -1,0 +1,19 @@
+id: note-the-bottleneck-has-moved-up-the-stack
+kind: note
+slug: the-bottleneck-has-moved-up-the-stack
+date: '2026-02-21'
+publishedAt: '2026-02-21T17:00:23+08:00'
+title:
+  zh-CN: 瓶颈已经上移到更高层级
+  en: The Bottleneck Has Moved Up the Stack
+summary:
+  zh-CN: 随着代码变得更便宜，软件工程受到实现成本的约束越来越少，而越来越受制于判断力：架构、抽象，以及拒绝无谓复杂性的纪律。
+  en: 'As code gets cheaper, software engineering is less constrained by implementation
+    and more constrained by judgment: architecture, abstractions, and the discipline
+    to reject needless complexity.'
+tags:
+- software-engineering
+- architecture
+- abstraction
+- engineering-judgment
+- complexity

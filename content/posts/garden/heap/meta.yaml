@@ -1,0 +1,19 @@
+id: note-heap
+kind: note
+slug: heap
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:29:40+08:00'
+title:
+  zh-CN: 建堆O(n)时间复杂度证明
+  en: Proof of O(n) Time Complexity for Heap Construction
+summary:
+  zh-CN: 本文详细证明从完全二叉树构造堆的时间复杂度为O(n)。通过逐层分析自底向上的建堆过程，并采用错位相减法计算总交换次数，从而得出线性时间复杂度。
+  en: This note provides a detailed mathematical proof that building a heap from a
+    complete binary tree of size N operates in O(n) time complexity. The proof models
+    the process layer by layer (from bottom to top) and leverages a shifted subtraction
+    technique to sum the total swap operations.
+tags:
+- heap
+- 堆
+- 时间复杂度
+- 数据结构

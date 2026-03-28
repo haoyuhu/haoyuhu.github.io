@@ -1,0 +1,17 @@
+id: note-lintcode-178
+kind: note
+slug: lintcode-178
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LintCode 178：图是否为有效树
+  en: 'LintCode 178: Graph Valid Tree'
+summary:
+  zh-CN: 对于无向图，只需先检查 `edges.size() == n - 1`，再验证一次 DFS 能访问到所有节点，就足以判断它是否是一棵有效树。
+  en: For an undirected graph, checking `edges.size() == n - 1` and then verifying
+    that one DFS visits all nodes is enough to decide whether it is a valid tree.
+tags:
+- LintCode
+- Graph
+- DFS
+- Tree

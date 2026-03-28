@@ -1,0 +1,20 @@
+id: note-reward-models-need-coverage-control-not-just-kl
+kind: note
+slug: reward-models-need-coverage-control-not-just-kl
+date: '2026-02-07'
+publishedAt: '2026-02-07T23:21:44+08:00'
+title:
+  zh-CN: 奖励模型需要覆盖控制，而不只是 KL
+  en: Reward Models Need Coverage Control, Not Just KL
+summary:
+  zh-CN: 奖励模型通常只在参考分布附近可靠，离开之后就会变脆弱。如果这才是它的失效模式，那么 KL 只是很弱的护栏：它控制的是平均意义上的接近，却控制不了真正驱动分布外错误的那些巨大密度比。
+  en: 'A reward model is usually reliable near its reference distribution and fragile
+    away from it. If that is the failure mode, KL is a weak guardrail: it controls
+    average closeness, but not the large density ratios that actually drive out-of-distribution
+    errors.'
+tags:
+- reinforcement-learning
+- reward-models
+- distribution-shift
+- regularization
+- offline-rl

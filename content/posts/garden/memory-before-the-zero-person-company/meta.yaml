@@ -1,0 +1,20 @@
+id: note-memory-before-the-zero-person-company
+kind: note
+slug: memory-before-the-zero-person-company
+date: '2026-03-21'
+publishedAt: '2026-03-21T14:00:56+08:00'
+title:
+  zh-CN: 在零人公司之前，先解决记忆
+  en: Memory Before the Zero-Person Company
+summary:
+  zh-CN: 智能体系统真正困难的部分，不是更强的自主性，而是跨设备的持久记忆、团队共享上下文，以及在副驾与更自主的智能体网格之间建立清晰护栏。
+  en: The hard part of agent systems is not raw autonomy. It is durable memory across
+    devices, shared team context, and clear guardrails between a copilot and a more
+    autonomous agent mesh.
+tags:
+- agents
+- agent-memory
+- copilot
+- agent-organization
+- autoresearch
+- knowledge-management

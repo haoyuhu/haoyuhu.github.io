@@ -1,0 +1,17 @@
+id: note-transaction-scoped-sessions-for-lightweight-anti-sharing
+kind: note
+slug: transaction-scoped-sessions-for-lightweight-anti-sharing
+date: '2024-03-02'
+publishedAt: '2024-03-02T02:10:46+08:00'
+title:
+  zh-CN: 事务级会话：一种轻量级防共享方案
+  en: Transaction-Scoped Sessions for Lightweight Anti-Sharing
+summary:
+  zh-CN: 一种轻量的认证模式：先校验与上一笔事务的连续性，再为当前事务签发短时会话，其余风险交由限流兜底。
+  en: 'A small auth pattern: validate continuity from the previous transaction, issue
+    a short-lived session for the current one, and rely on rate limits for the rest.'
+tags:
+- authentication
+- session-management
+- api-design
+- anti-abuse

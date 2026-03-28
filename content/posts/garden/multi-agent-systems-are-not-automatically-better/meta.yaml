@@ -1,0 +1,18 @@
+id: note-multi-agent-systems-are-not-automatically-better
+kind: note
+slug: multi-agent-systems-are-not-automatically-better
+date: '2026-02-04'
+publishedAt: '2026-02-04T10:28:29+08:00'
+title:
+  zh-CN: 多智能体系统并不会自动更好
+  en: Multi-Agent Systems Are Not Automatically Better
+summary:
+  zh-CN: 多智能体架构只有在能带来上下文隔离、并行探索或真正的专业化时才算物有所值；否则，强大的单智能体通常才是更好的默认选择。
+  en: A multi-agent architecture only earns its keep when it buys context isolation,
+    parallel exploration, or real specialization; otherwise, a strong single agent
+    is usually the better default.
+tags:
+- ai-agents
+- multi-agent-systems
+- llm-architecture
+- system-design

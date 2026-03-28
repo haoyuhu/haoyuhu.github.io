@@ -1,0 +1,19 @@
+id: note-rendered-text-extraction-with-playwright-and-beautifulsoup
+kind: note
+slug: rendered-text-extraction-with-playwright-and-beautifulsoup
+date: '2024-03-14'
+publishedAt: '2024-03-14T23:54:24+08:00'
+title:
+  zh-CN: 使用 Playwright 和 BeautifulSoup 提取渲染后的文本
+  en: Rendered text extraction with Playwright and BeautifulSoup
+summary:
+  zh-CN: 对于高度依赖 JavaScript 的页面，最简单且可靠的做法通常是：先让浏览器完成渲染，再解析最终得到的 HTML。它并不是完美的正文提取器，但作为第一步非常实用。
+  en: 'For JavaScript-heavy pages, the simplest reliable move is often: let a browser
+    render first, then parse the resulting HTML. It is not a perfect main-content
+    extractor, but it is a very practical first pass.'
+tags:
+- web scraping
+- Playwright
+- BeautifulSoup
+- HTML parsing
+- content extraction

@@ -1,0 +1,19 @@
+id: note-leetcode-187
+kind: note
+slug: leetcode-187
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LeetCode 187 - 重复的DNA序列：位运算优化解析
+  en: 'LeetCode 187 - Repeated DNA Sequences: Bit Manipulation Optimization'
+summary:
+  zh-CN: 本文探讨了一种使用位运算将DNA序列进行紧凑编码的方法，以高效查找所有重复出现的长度为10的DNA子串。通过用整数集合替代字符串集合，节省了内存，并利用位掩码实现了对字符串的线性滑动。
+  en: This note explores an efficient way to find all repeated 10-letter DNA sequences
+    using bit manipulation to encode sequences compactly. It replaces string-based
+    hash sets with integer sets to reduce memory usage, and uses bitmasking to slide
+    over the DNA string in O(n) time.
+tags:
+- LeetCode
+- 算法
+- 位运算
+- 字符串算法

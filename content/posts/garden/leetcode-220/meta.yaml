@@ -1,0 +1,19 @@
+id: note-leetcode-220
+kind: note
+slug: leetcode-220
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LeetCode 220：存在重复元素 III —— 利用排序与队列的高效滑动窗口搜索
+  en: 'LeetCode 220: Contains Duplicate III - Efficient Windowed Search with Sorting
+    and Queues'
+summary:
+  zh-CN: 给定一个整型数组，判断是否存在两个不同下标 i 和 j，使得 nums[i] 和 nums[j] 之差的绝对值不超过 t，且 i 和 j 的差的绝对值不超过
+    k。本文分析了一种基于排序的 O(n log n) 解法，通过维护一个特定的队列结构，高效追踪满足条件的元素对。
+  en: Given an integer array, determine if there exist two distinct indices i and
+    j such that the absolute difference between nums[i] and nums[j] is at most t,
+    and the absolute difference between i and j is at most k. This note analyzes a
+    sorting-based approach to achieve O(n log n) complexity by maintaining a special
+    queue structure to track candidate pairs efficiently.
+tags:
+- LeetCode

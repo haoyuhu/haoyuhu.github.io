@@ -1,0 +1,24 @@
+id: note-core-component-choices-for-modern-backend-development
+kind: note
+slug: core-component-choices-for-modern-backend-development
+date: '2024-02-29'
+publishedAt: '2024-02-29T04:09:27+08:00'
+title:
+  zh-CN: 现代后端开发的核心组件选择
+  en: Core Component Choices for Modern Backend Development
+summary:
+  zh-CN: 一份简明指南，涵盖构建可扩展高效后端服务的关键库与工具，包括用于关系数据库的 SQLModel、Redis 客户端、FastAPI、AI 集成、语言检测、标点修正、Markdown
+    处理及分布式限流解决方案。
+  en: A concise guide to key libraries and tools forming the backbone of scalable,
+    efficient backend services, including SQLModel for RDS, Redis clients, FastAPI,
+    AI integration, language detection, punctuation correction, markdown processing,
+    and distributed rate limiting.
+tags:
+- backend
+- RDS
+- Redis
+- FastAPI
+- AI
+- LangDetect
+- Markdown
+- Rate Limiting

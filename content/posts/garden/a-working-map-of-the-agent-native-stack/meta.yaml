@@ -1,0 +1,19 @@
+id: note-a-working-map-of-the-agent-native-stack
+kind: note
+slug: a-working-map-of-the-agent-native-stack
+date: '2026-03-12'
+publishedAt: '2026-03-12T00:25:26+08:00'
+title:
+  zh-CN: 智能体原生技术栈的实用图谱
+  en: A Working Map of the Agent-Native Stack
+summary:
+  zh-CN: 我当前的核心判断是：智能体时代不会由某一个聊天机器人产品赢下。它会被构建为一整套由身份、支付、安全、接口、记忆、评估与市场组成的技术栈，让智能体真正能够工作。
+  en: 'My current thesis: the agent era will not be won by a single chatbot product.
+    It will be built as a stack of identity, payment, safety, interfaces, memory,
+    evaluation, and marketplaces that let agents actually work.'
+tags:
+- agents
+- ai-infrastructure
+- automation
+- protocols
+- marketplaces

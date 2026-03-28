@@ -1,0 +1,17 @@
+id: article-git-commit
+kind: article
+slug: git-commit
+date: '2016-12-08'
+publishedAt: '2016-12-08T13:46:30+08:00'
+title:
+  zh-CN: Git整理commit的基本方法
+  en: Fundamental Techniques for Organizing Git Commits
+summary:
+  zh-CN: 本文总结了Git整理commit的基本流程及技巧，包括如何合并、拆分和重新组织提交记录。介绍了通过交互式rebase、软重置、stash管理及选择性暂存，实现高质量、语义清晰的commit历史。并附带常见问题及解决方案。
+  en: A concise guide on restructuring Git commits by combining, splitting, and refining
+    patches. Demonstrates an effective workflow leveraging interactive rebasing, soft
+    resets, stash management, and selective staging to produce clean, purposeful commit
+    histories. Includes practical troubleshooting tips for common pitfalls encountered
+    during commit rewriting.
+tags:
+- Git

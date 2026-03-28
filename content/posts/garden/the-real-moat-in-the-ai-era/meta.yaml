@@ -1,0 +1,19 @@
+id: note-the-real-moat-in-the-ai-era
+kind: note
+slug: the-real-moat-in-the-ai-era
+date: '2026-03-03'
+publishedAt: '2026-03-03T09:41:42+08:00'
+title:
+  zh-CN: 人工智能时代真正的护城河
+  en: The Real Moat in the AI Era
+summary:
+  zh-CN: 我当前的判断是：人工智能的持久价值，不太会来自模型访问本身，而会更多来自把团队上下文编码进系统、将可重复工作流智能体化，以及让团队在贴近工作的地方构建小型定制工具。
+  en: 'My current thesis: durable AI value will come less from model access and more
+    from encoding team context, agentifying repeatable workflows, and letting teams
+    build small custom tools close to the work.'
+tags:
+- ai
+- team-context
+- agents
+- workflows
+- custom-tools

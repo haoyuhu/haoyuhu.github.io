@@ -1,0 +1,17 @@
+id: note-from-files-to-agents-still-programming
+kind: note
+slug: from-files-to-agents-still-programming
+date: '2026-03-13'
+publishedAt: '2026-03-13T10:54:22+08:00'
+title:
+  zh-CN: 从文件到智能体，仍然是编程
+  en: From Files to Agents, Still Programming
+summary:
+  zh-CN: 智能体 IDE 将组合单元从文件提升为工作者，但这项工作仍然是编程：任务分解、约束、接口与评测。
+  en: 'Agent IDEs raise the unit of composition from files to workers, but the work
+    is still programming: decomposition, constraints, interfaces, and evals.'
+tags:
+- agents
+- programming
+- software-engineering
+- developer-tools

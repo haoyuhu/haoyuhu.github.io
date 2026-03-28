@@ -1,0 +1,17 @@
+id: note-watermelon
+kind: note
+slug: watermelon
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:52:06+08:00'
+title:
+  zh-CN: 九次平面切割最多能把西瓜分成多少块？
+  en: How Many Pieces Can Nine Planar Cuts Make from a Watermelon?
+summary:
+  zh-CN: 把西瓜建模为三维实心球，并应用超平面分区公式：9 次平面切割最多可得到 130 块。
+  en: 'Model the watermelon as a 3D ball and apply the hyperplane-region formula:
+    nine plane cuts can create at most 130 pieces.'
+tags:
+- geometry
+- combinatorics
+- spatial-reasoning
+- brainstorming

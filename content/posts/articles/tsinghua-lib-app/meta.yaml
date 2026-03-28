@@ -1,0 +1,18 @@
+id: article-tsinghua-lib-app
+kind: article
+slug: tsinghua-lib-app
+date: '2018-06-05'
+publishedAt: '2018-06-05T00:00:00+08:00'
+title:
+  zh-CN: Tutu-Android：清华大学自习室预约助手
+  en: 'Tutu-Android: A Study Room Booking Assistant for Tsinghua University'
+summary:
+  zh-CN: 面向清华大学人文图书馆的 Android 预约助手，结合智能预约、后台轮询、实时余座查询与提醒操作，降低预约摩擦，并帮助避免爽约处罚。
+  en: A focused Android assistant for Tsinghua University's Humanities Library, combining
+    smart booking, background polling, live seat checks, and reminder actions to reduce
+    reservation friction and avoid penalties.
+tags:
+- Tsinghua University
+- Android
+- Campus Automation
+- Library Systems

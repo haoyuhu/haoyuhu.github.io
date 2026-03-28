@@ -1,0 +1,19 @@
+id: note-leetcode-211
+kind: note
+slug: leetcode-211
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LeetCode 211：添加与搜索单词 - 高级数据结构设计
+  en: 'LeetCode 211: Add and Search Word - Advanced Data Structure Design'
+summary:
+  zh-CN: 设计一种数据结构，支持添加单词和含通配符 '.' 的搜索操作。本文采用Trie树实现，兼顾精确匹配与模糊匹配，确保查询高效。
+  en: Design a data structure that efficiently supports adding words and searching
+    words with support for wildcard '.' characters. The solution leverages a Trie
+    to handle both exact and pattern matching queries with optimal complexity.
+tags:
+- LeetCode
+- Trie
+- Algorithm
+- Data Structure
+- Wildcard Search

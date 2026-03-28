@@ -1,0 +1,21 @@
+id: note-a-rough-decomposition-of-agentic-rl
+kind: note
+slug: a-rough-decomposition-of-agentic-rl
+date: '2026-02-27'
+publishedAt: '2026-02-27T14:14:47+08:00'
+title:
+  zh-CN: 对智能体式强化学习的粗略拆解
+  en: A Rough Decomposition of Agentic RL
+summary:
+  zh-CN: 我目前的工作模型是，智能体式强化学习可以拆成三个相互作用的部分：随时间的适应、单个回合内的能力，以及面向环境的感知。这不是一个正式的分类法，但作为调试系统和构建评估框架的方式，它很有用。
+  en: 'My current working model is that agentic RL breaks into three interacting buckets:
+    adaptation over time, competence within an episode, and environment-facing perception.
+    It is not a formal taxonomy, but it is a useful way to debug systems and frame
+    evaluation.'
+tags:
+- agentic RL
+- reinforcement learning
+- agents
+- memory
+- reasoning
+- planning

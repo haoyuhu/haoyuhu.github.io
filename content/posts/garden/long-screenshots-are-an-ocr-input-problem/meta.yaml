@@ -1,0 +1,18 @@
+id: note-long-screenshots-are-an-ocr-input-problem
+kind: note
+slug: long-screenshots-are-an-ocr-input-problem
+date: '2024-03-02'
+publishedAt: '2024-03-02T02:35:32+08:00'
+title:
+  zh-CN: 长截图本质上是 OCR 的输入问题
+  en: Long screenshots are an OCR input problem
+summary:
+  zh-CN: 如果 iPhone 上的 OCR 在超长截图上表现很差，解决办法往往不是换一个更好的模型，而是换一个更好的输入：把图片切成更小、彼此重叠的裁剪块，再次在设备端做识别。
+  en: 'If OCR on an iPhone performs badly on a very tall screenshot, the fix is often
+    not a better model but a better input: slice the image into smaller overlapping
+    crops and run on-device recognition again.'
+tags:
+- ocr
+- iphone
+- image-preprocessing
+- live-text

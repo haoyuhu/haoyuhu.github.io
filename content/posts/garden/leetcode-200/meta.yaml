@@ -1,0 +1,15 @@
+id: note-leetcode-200
+kind: note
+slug: leetcode-200
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LeetCode 200：岛屿数量 - 深度优先搜索解析
+  en: 'LeetCode 200: Number of Islands - DFS Solution Explained'
+summary:
+  zh-CN: 本文说明了解决 LeetCode 200 题「岛屿数量」的深度优先搜索（DFS）方法。核心思想是遍历网格，对每片陆地递归遍历并标记，防止重复计数，从而计算独立岛屿数量。
+  en: This note presents a clear DFS-based approach to solve LeetCode problem 200
+    - Number of Islands. The core idea is to traverse the grid and perform a DFS to
+    mark connected land cells, preventing revisits, thereby counting distinct islands.
+tags:
+- LeetCode

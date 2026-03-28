@@ -23,6 +23,19 @@ export const formatDate = (raw: string, locale: LocaleCode): string =>
     day: 'numeric',
   });
 
+export const formatPostDate = (date: string, publishedAt: string | null | undefined, locale: LocaleCode): string => {
+  if (!publishedAt) {
+    return formatDate(date, locale);
+  }
+  return new Date(publishedAt).toLocaleString(getLocaleDateTag(locale), {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+  });
+};
+
 export const normalizeApiBaseUrl = (raw: string | null | undefined): string =>
   (raw || '').replace(/\/$/, '');
 

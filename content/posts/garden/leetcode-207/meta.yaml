@@ -1,0 +1,24 @@
+id: note-leetcode-207
+kind: note
+slug: leetcode-207
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LeetCode 207 - 课程表：有向图中的环检测
+  en: 'LeetCode 207 - Course Schedule: Detecting Cycles in Directed Graphs'
+summary:
+  zh-CN: 本文分析了 LeetCode 第 207 题，给定课程之间的先修关系，判断是否能够完成所有课程。问题实质是判断有向图中是否存在环，文中采用基于邻接表的深度优先搜索（DFS）算法进行高效的环检测。
+  en: This note analyzes LeetCode Problem 207, which requires determining if all courses
+    can be finished given prerequisite relationships. The problem hinges on detecting
+    cycles in a directed graph, for which a DFS-based approach with an adjacency list
+    is implemented to ensure efficient cycle detection.
+tags:
+- LeetCode
+- Graph
+- Cycle Detection
+- DFS
+- Algorithms
+- 课程表
+- 图论
+- 环检测
+- 深度优先搜索

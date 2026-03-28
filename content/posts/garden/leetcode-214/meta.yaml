@@ -1,0 +1,16 @@
+id: note-leetcode-214
+kind: note
+slug: leetcode-214
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LeetCode 214：最短回文串
+  en: 'LeetCode 214: Shortest Palindrome'
+summary:
+  zh-CN: 本文分析了如何通过在字符串前端添加字符，将其转化为最短回文串的问题。首先介绍了朴素的O(n²)思路，随后通过对KMP算法的巧妙改造，实现了线性O(n)时间复杂度的解法，并附上简洁的C++代码。
+  en: This note explores the problem of forming the shortest palindrome by prepending
+    characters to a given string. It analyzes a naive O(n²) approach and then presents
+    an optimal O(n) solution using a modified Knuth–Morris–Pratt (KMP) string matching
+    algorithm, including a concise C++ implementation.
+tags:
+- LeetCode

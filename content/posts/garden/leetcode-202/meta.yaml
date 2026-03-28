@@ -1,0 +1,20 @@
+id: note-leetcode-202
+kind: note
+slug: leetcode-202
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LeetCode 202：快乐数分析与解法
+  en: 'LeetCode 202: Happy Number Analysis and Solution'
+summary:
+  zh-CN: 本文分析了LeetCode第202题“快乐数”的核心思路，阐述了通过计算数字各位平方和并检测循环来判断是否为快乐数，引用了相关数学背景，并给出了使用哈希集合高效判重的C++代码实现。
+  en: This note analyzes the LeetCode problem 202, Happy Number. It explains the core
+    idea of detecting cycles in the process of summing the squares of digits, references
+    the relevant mathematical background, and presents a clean C++ implementation
+    using hash sets to detect repetition efficiently.
+tags:
+- LeetCode
+- 算法
+- 哈希
+- 循环检测
+- 数学问题

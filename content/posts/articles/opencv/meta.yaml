@@ -1,0 +1,18 @@
+id: article-opencv
+kind: article
+slug: opencv
+date: '2017-12-07'
+publishedAt: '2017-12-07T00:00:00+08:00'
+title:
+  zh-CN: 使用 OpenCV 和 Python 构建轻量级图像搜索引擎
+  en: Building a Lightweight Image Search Engine with OpenCV and Python
+summary:
+  zh-CN: 一个紧凑的基于内容的图像检索项目：为 HSV 颜色直方图和粗粒度布局描述符建立索引，然后用融合距离度量对相似图像进行排序。
+  en: A compact content-based image retrieval project that indexes HSV color histograms
+    and coarse layout descriptors, then ranks similar images with a fused distance
+    metric.
+tags:
+- OpenCV
+- Python
+- Image Search
+- Computer Vision

@@ -1,0 +1,19 @@
+id: note-what-i-actually-want-from-a-chat-assistant
+kind: note
+slug: what-i-actually-want-from-a-chat-assistant
+date: '2024-03-13'
+publishedAt: '2024-03-13T09:53:17+08:00'
+title:
+  zh-CN: 我真正想从聊天助手那里得到什么
+  en: What I Actually Want from a Chat Assistant
+summary:
+  zh-CN: 一份简短的产品备忘录：我想要的助手能做对话分析、回复起草、自定义记忆，以及合理的异步处理，而不会抹掉人与人交流的质感。
+  en: 'A small product memo: the assistant I want does conversation analysis, reply
+    drafting, custom memory, and sane async handling without stripping away the human
+    texture.'
+tags:
+- chat-assistants
+- conversation-design
+- product-thinking
+- writing-tools
+- async-systems

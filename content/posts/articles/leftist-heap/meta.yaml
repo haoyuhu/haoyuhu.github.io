@@ -1,0 +1,19 @@
+id: article-leftist-heap
+kind: article
+slug: leftist-heap
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:29:40+08:00'
+title:
+  zh-CN: 左偏堆与斜堆
+  en: Leftist Heaps and Skew Heaps
+summary:
+  zh-CN: 对两种擅长合并的优先队列做一份简明比较，重点解释左偏堆与斜堆背后的不变式，并附上修正后的现代 C++ `merge` 例程。
+  en: A compact comparison of two merge-friendly priority queues, focused on the invariants
+    behind leftist heaps and skew heaps, and backed by corrected modern C++ merge
+    routines.
+tags:
+- data-structures
+- priority-queue
+- leftist-heap
+- skew-heap
+- cpp

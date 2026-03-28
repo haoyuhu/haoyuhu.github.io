@@ -1,0 +1,19 @@
+id: note-coin-heap
+kind: note
+slug: coin-heap
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:52:06+08:00'
+title:
+  zh-CN: 硬币分堆：蒙眼分出相同正面数
+  en: 'Coin Partition Puzzle: Equal Heads While Blindfolded'
+summary:
+  zh-CN: 这道题之所以显得无解，是因为人容易盯着单枚硬币看。真正有效的是全局约束：若桌上有 $n$ 枚硬币，其中 $k$ 枚正面朝上，那么任意取出 $k$
+    枚并整体翻面，两堆最终的正面数一定相同。
+  en: 'The puzzle looks impossible only if you think locally. The winning move is
+    global: if there are $n$ coins with $k$ heads up, take any $k$ coins, flip that
+    pile, and both piles will end with the same number of heads.'
+tags:
+- puzzle
+- invariant
+- combinatorics
+- proof

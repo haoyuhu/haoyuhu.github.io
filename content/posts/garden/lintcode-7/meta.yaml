@@ -1,0 +1,18 @@
+id: note-lintcode-7
+kind: note
+slug: lintcode-7
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LintCode 7：序列化与反序列化二叉树
+  en: 'LintCode 7: Serialize and Deserialize a Binary Tree'
+summary:
+  zh-CN: 一种基于遍历的解法：将树序列化为 `inorder + preorder`，用 `#` 分隔，然后递归重建。该方法仅在节点值唯一时成立。
+  en: 'A traversal-based solution: serialize the tree as inorder + preorder, split
+    with `#`, then rebuild it recursively. This works when node values are unique.'
+tags:
+- LintCode
+- Binary Tree
+- Serialization
+- C++
+- Algorithms

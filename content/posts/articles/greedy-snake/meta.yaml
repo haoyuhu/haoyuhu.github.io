@@ -1,0 +1,20 @@
+id: article-greedy-snake
+kind: article
+slug: greedy-snake
+date: '2016-12-07'
+publishedAt: '2016-12-07T16:17:56+08:00'
+title:
+  zh-CN: C++贪吃蛇游戏实现及碰撞逻辑修正
+  en: C++ Implementation of a Classic Snake Game with Collision Fixes
+summary:
+  zh-CN: 基于经典C++贪吃蛇游戏的改进实现，增加了生成食物时避免出现在蛇身上的检测，并修正了蛇头与自身身体碰撞的判定。代码结构清晰，模块划分合理，涵盖了游戏画面渲染、蛇节点管理及运动控制。
+  en: An enhanced C++ implementation of the classic Snake game, featuring improved
+    collision detection by ensuring food does not spawn on the snake and the snake
+    head collision with its body is detected. The post includes a clean, modular design
+    with frame rendering, snake node management, and movement control.
+tags:
+- C++
+- Snake Game
+- Console Game
+- Collision Detection
+- Game Development

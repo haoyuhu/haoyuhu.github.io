@@ -1,0 +1,19 @@
+id: note-gpt-as-a-semantic-layer-for-long-image-algorithms
+kind: note
+slug: gpt-as-a-semantic-layer-for-long-image-algorithms
+date: '2024-03-02'
+publishedAt: '2024-03-02T03:22:16+08:00'
+title:
+  zh-CN: GPT 作为长图算法的语义层
+  en: GPT as a Semantic Layer for Long-Image Algorithms
+summary:
+  zh-CN: GPT 也许无法提升长图处理流水线中像素级计算本身，但它可以显著改进围绕这条流水线的语义规则、评估标准和边界情况覆盖。
+  en: GPT probably will not improve the pixel math of a long-image pipeline, but it
+    can meaningfully improve the semantic rules, evaluation criteria, and edge-case
+    coverage around it.
+tags:
+- llm
+- image-processing
+- computer-vision
+- algorithm-design
+- product-engineering

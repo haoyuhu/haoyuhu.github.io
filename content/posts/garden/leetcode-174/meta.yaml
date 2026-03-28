@@ -1,0 +1,23 @@
+id: note-leetcode-174
+kind: note
+slug: leetcode-174
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LeetCode 174 - 地牢游戏：计算最小初始血量
+  en: 'LeetCode 174 - Dungeon Game: Calculating Minimum Initial Health'
+summary:
+  zh-CN: 本文深入分析了 LeetCode 第174题《地牢游戏》，旨在求解骑士在二维房间网格中仅向右或向下移动，救出公主所需的最小初始血量。文章阐述了正向动态规划在处理血量状态时的复杂性，最终采用反向动态规划，将状态定义为进入当前房间前所需的最小剩余血量，提供了清晰高效的
+    C++ 解法。
+  en: This note analyzes LeetCode Problem 174 Dungeon Game, which requires computing
+    the knight's minimum initial health to rescue the princess by moving only right
+    or down in a grid of rooms with health-affecting values. It presents the challenge
+    of forward dynamic programming due to health state dependencies and settles on
+    a reverse DP formulation that naturally models the minimum health required before
+    entering each cell. The included C++ solution efficiently implements this approach.
+tags:
+- LeetCode
+- Dynamic Programming
+- 算法
+- Dungeon Game
+- DP

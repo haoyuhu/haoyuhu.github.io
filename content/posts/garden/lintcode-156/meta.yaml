@@ -1,0 +1,17 @@
+id: note-lintcode-156
+kind: note
+slug: lintcode-156
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LintCode 156：合并区间
+  en: 'LintCode 156: Merge Intervals'
+summary:
+  zh-CN: 先按 `start` 排序，再线性扫描一次合并重叠区间。关键在于把边界条件写对，并交给 `std::sort` 处理排序。
+  en: Sort intervals by `start`, then scan once to merge overlaps. The key is getting
+    the boundary condition right and letting `std::sort` handle ordering.
+tags:
+- LintCode
+- Algorithms
+- Intervals
+- C++

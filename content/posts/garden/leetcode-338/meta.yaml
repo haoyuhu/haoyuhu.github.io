@@ -1,0 +1,20 @@
+id: note-leetcode-338
+kind: note
+slug: leetcode-338
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LeetCode 338：比特位计数
+  en: LeetCode 338 — Counting Bits
+summary:
+  zh-CN: 用 Brian Kernighan 的位运算技巧：`x &= x - 1` 每次都会去掉最低位的一个 `1`，循环次数就是 `1` 的个数。对 `[0,
+    num]` 中每个数分别统计即可。这是最直接、最干净的基线解；如果追求题目的严格线性时间，则更适合用 DP。
+  en: 'Use Brian Kernighan’s bit trick: `x &= x - 1` removes the lowest set bit each
+    time, so the loop count is the number of `1`s. Apply it to every `i` in `[0, num]`.
+    This is the clean baseline, though the strict follow-up is better solved with
+    DP.'
+tags:
+- LeetCode
+- Algorithms
+- Bit Manipulation
+- C++

@@ -1,0 +1,20 @@
+id: article-clustering-playbook
+kind: article
+slug: clustering-playbook
+date: '2019-12-11'
+publishedAt: '2019-12-11T00:00:00+08:00'
+title:
+  zh-CN: 聚类本质上是一个定义问题
+  en: Clustering Is Really a Definition Problem
+summary:
+  zh-CN: 聚类与其说是挑选某个知名算法，不如说是先定义“哪些点应当归在一起”究竟意味着什么。更新后的 `clustering-playbook` 的价值在于，它把这些彼此竞争的定义转化为一个可运行、可比较的决策系统。
+  en: Clustering is less about picking a famous algorithm than about defining what
+    it means for points to belong together. The updated `clustering-playbook` is valuable
+    because it turns those competing definitions into a runnable, comparable decision
+    system.
+tags:
+- clustering
+- machine-learning
+- unsupervised-learning
+- data-science
+- algorithms

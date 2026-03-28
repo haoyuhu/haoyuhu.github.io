@@ -1,0 +1,20 @@
+id: note-zero-trust-is-the-default-for-agent-networks
+kind: note
+slug: zero-trust-is-the-default-for-agent-networks
+date: '2026-03-17'
+publishedAt: '2026-03-17T02:21:04+08:00'
+title:
+  zh-CN: 零信任是智能体网络的默认前提
+  en: Zero Trust Is the Default for Agent Networks
+summary:
+  zh-CN: 在开放式智能体网络中，消息传递、执行与支付会收敛成同一个问题：如何在对抗性条件下建立信任。更稳健的技术栈会是凭证与证明、沙箱执行、可观测性，以及机器原生结算。
+  en: 'In open agent networks, messaging, execution, and payments collapse into one
+    problem: trust under adversarial conditions. The durable stack looks like attestations,
+    sandboxed execution, observability, and machine-native settlement.'
+tags:
+- zero-trust
+- agent-networks
+- a2a
+- sandbox-execution
+- machine-payments
+- enterprise-security

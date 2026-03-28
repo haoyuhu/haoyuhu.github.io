@@ -1,0 +1,17 @@
+id: article-prisoners-dilemma
+kind: article
+slug: prisoners-dilemma
+date: '2016-02-01'
+publishedAt: '2016-02-01T00:00:00+08:00'
+title:
+  zh-CN: 在《Golden Balls》中战胜囚徒困境
+  en: Beating the Prisoner’s Dilemma on Golden Balls
+summary:
+  zh-CN: 对《Golden Balls》终局的一种现代解读：为什么承诺平分往往反而招致背叛，以及一次恰到好处的威胁如何重构一局一次性的囚徒困境。
+  en: 'A modern read of the Golden Balls endgame: why promising to split often invites
+    betrayal, and how a well-timed threat can reframe a one-shot Prisoner’s Dilemma.'
+tags:
+- Prisoner's Dilemma
+- game theory
+- Golden Balls
+- strategic thinking

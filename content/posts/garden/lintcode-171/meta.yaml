@@ -1,0 +1,19 @@
+id: note-lintcode-171
+kind: note
+slug: lintcode-171
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LintCode 171：字母异位词
+  en: 'LintCode 171: Anagrams'
+summary:
+  zh-CN: 按基于字符频次的哈希键对字符串分组，然后只输出大小大于 1 的分组。在保留原始思路的同时，简化了实现，也让键的生成更安全。
+  en: Group strings by a frequency-based hash key, then output only the groups whose
+    size is greater than one. This keeps the original idea intact while simplifying
+    the implementation and making the key generation safer.
+tags:
+- LintCode
+- Algorithm
+- Hash Table
+- String
+- C++

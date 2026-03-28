@@ -1,0 +1,19 @@
+id: note-agentic-coding-and-the-compounding-power-of-specs
+kind: note
+slug: agentic-coding-and-the-compounding-power-of-specs
+date: '2026-01-22'
+publishedAt: '2026-01-22T10:03:25+08:00'
+title:
+  zh-CN: 智能体式编码与规格说明的复利效应
+  en: Agentic Coding and the Compounding Power of Specs
+summary:
+  zh-CN: 我当前的核心判断是：智能体式编码之所以重要，是因为它会持续把低判断需求的工作推入基础设施层。真正的价值不在于更快地写代码，而在于那些能作为组织资本不断复利的规格说明。
+  en: 'My current thesis: agentic coding matters because it steadily pushes low-judgment
+    work into infrastructure. The real prize is not faster coding, but specs that
+    compound as organizational capital.'
+tags:
+- agentic-coding
+- ai-agents
+- specs
+- organization-design
+- automation

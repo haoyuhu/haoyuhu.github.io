@@ -1,0 +1,17 @@
+id: note-adaptive-daily-quotas-with-a-simple-aimd-rule
+kind: note
+slug: adaptive-daily-quotas-with-a-simple-aimd-rule
+date: '2024-03-04'
+publishedAt: '2024-03-04T00:58:32+08:00'
+title:
+  zh-CN: 用简单的 AIMD 规则实现自适应每日配额
+  en: Adaptive Daily Quotas with a Simple AIMD Rule
+summary:
+  zh-CN: 一个小巧的 AIMD 风格配额控制器：超额后次日减半，正常使用后逐步增加，并且支持按用户配置。
+  en: 'A small AIMD-style quota controller: halve the next day after overuse, add
+    gradually after normal use, and keep it configurable per user.'
+tags:
+- rate-limiting
+- quota
+- backend-design
+- adaptive-control

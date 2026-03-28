@@ -1,0 +1,18 @@
+id: note-toward-a-zero-trust-protocol-for-agent-networks
+kind: note
+slug: toward-a-zero-trust-protocol-for-agent-networks
+date: '2026-03-21'
+publishedAt: '2026-03-21T21:55:07+08:00'
+title:
+  zh-CN: 迈向智能体网络的零信任协议
+  en: Toward a Zero-Trust Protocol for Agent Networks
+summary:
+  zh-CN: 我反复回到同一个想法：智能体需要一个零信任协议层，才能安全地彼此发现、调用、协作并完成结算。
+  en: 'I keep coming back to the same idea: agents need a zero-trust protocol layer
+    to safely discover, invoke, collaborate with, and pay one another.'
+tags:
+- agents
+- zero-trust
+- protocol-design
+- interoperability
+- machine-economy

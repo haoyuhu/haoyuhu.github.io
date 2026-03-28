@@ -1,0 +1,16 @@
+id: note-leetcode-204
+kind: note
+slug: leetcode-204
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LeetCode 204 - 计数质数（厄拉多塞筛法）
+  en: LeetCode 204 - Count Primes Using the Sieve of Eratosthenes
+summary:
+  zh-CN: 本文分析了经典的计算小于 n 的质数数量的问题，利用时间复杂度为 O(nloglogn) 的厄拉多塞筛法，相比朴素方法大幅提升性能，并采用布尔数组优化内存使用。
+  en: This note analyzes the classic algorithm problem of counting primes less than
+    n using the Sieve of Eratosthenes. This algorithm achieves an efficient O(n log
+    log n) time complexity compared to naive approaches and is implemented with an
+    optimized boolean array to reduce memory usage.
+tags:
+- LeetCode

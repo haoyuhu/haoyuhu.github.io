@@ -1,0 +1,21 @@
+id: article-binary-tree
+kind: article
+slug: binary-tree
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:29:40+08:00'
+title:
+  zh-CN: 二叉树与森林的转换
+  en: Conversions Between Binary Trees and Forests
+summary:
+  zh-CN: 本文介绍了森林结构与二叉树之间的转换方法，重点讲解了利用递归算法将孩子表示法、孩子双亲表示法以及同构和异构链式孩子表示法的森林转换成二叉树的实现。核心在于递归过程中正确处理兄弟节点和第一个孩子的关系。
+  en: This article explores methods to convert data structures between forest representations
+    and binary trees. It covers recursive algorithms for transforming child and parent-child
+    based forest representations into binary trees, as well as both homogeneous and
+    heterogeneous linked child representation conversions. Emphasis is placed on recursion
+    design to correctly handle sibling and first child relations during transformation.
+tags:
+- 二叉树
+- 森林
+- 数据结构
+- 递归
+- 转换

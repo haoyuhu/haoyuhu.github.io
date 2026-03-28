@@ -1,0 +1,17 @@
+id: note-lintcode-30
+kind: note
+slug: lintcode-30
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LintCode 30：插入区间
+  en: 'LintCode 30: Insert Interval'
+summary:
+  zh-CN: 一种简洁的线性扫描方法，用于在已排序且互不重叠的区间列表中插入并合并新区间。
+  en: A clean linear scan for inserting and merging an interval in a sorted, non-overlapping
+    interval list.
+tags:
+- LintCode
+- Algorithms
+- Intervals
+- C++

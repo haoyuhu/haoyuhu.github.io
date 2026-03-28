@@ -1,0 +1,17 @@
+id: article-github-page
+kind: article
+slug: github-page
+date: '2019-12-08'
+publishedAt: '2019-12-08T13:48:56+08:00'
+title:
+  zh-CN: 解决GitHub Pages部署失败问题
+  en: Troubleshooting GitHub Pages Build Failures
+summary:
+  zh-CN: 本文总结了GitHub Pages部署失败的常见原因与解决方案，包括邮箱未认证、部署公钥限制、不支持的插件以及容量限制等，同时介绍了源配置和持续集成的注意事项，帮助确保网站稳定部署。
+  en: This article outlines common causes and solutions for GitHub Pages build failures,
+    from unverified emails and deploy key restrictions to unsupported plugins and
+    size limits. It also covers source configuration and continuous integration considerations
+    to ensure reliable site deployment.
+tags:
+- Github
+- Github Page

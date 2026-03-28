@@ -1,0 +1,21 @@
+id: note-guess-number
+kind: note
+slug: guess-number
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:52:06+08:00'
+title:
+  zh-CN: 猜数字游戏解析
+  en: Number Guessing Game with Two Players
+summary:
+  zh-CN: 一则经典逻辑谜题：两人头上各贴一个数字（正整数且相差1），只能看到对方数字，不能看到自己。通过双方交替宣言“我不知道”和“我知道”，考察推理过程。两种不同思路导致不同答案，体现出题目的巧妙与模糊。
+  en: A classic logic puzzle involving two players wearing numbers on their foreheads,
+    each seeing only the other's number, which differ by exactly 1. Through a sequence
+    of statements revealing mutual ignorance and then certainty, the puzzle challenges
+    deduction approaches. Two distinct reasoning paths yield different solutions,
+    highlighting underlying ambiguities.
+tags:
+- logic
+- puzzle
+- knowledge
+- deduction
+- brainstorm

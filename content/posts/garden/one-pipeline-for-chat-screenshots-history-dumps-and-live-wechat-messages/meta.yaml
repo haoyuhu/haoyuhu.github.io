@@ -1,0 +1,19 @@
+id: note-one-pipeline-for-chat-screenshots-history-dumps-and-live-wechat-messages
+kind: note
+slug: one-pipeline-for-chat-screenshots-history-dumps-and-live-wechat-messages
+date: '2024-03-10'
+publishedAt: '2024-03-10T23:51:18+08:00'
+title:
+  zh-CN: 一条流水线统一处理聊天截图、历史导出和实时微信消息
+  en: One Pipeline for Chat Screenshots, History Dumps, and Live WeChat Messages
+summary:
+  zh-CN: 用 Moonshot 将聊天截图 OCR 转成结构化会话记录，再结合 Wechaty 的实时摄取与 WeChat dump 的历史回填，汇入一个可查询的记忆层。
+  en: Use Moonshot to turn chat screenshot OCR into structured conversation records,
+    then combine that with Wechaty live ingestion and WeChat dump backfill into a
+    single queryable memory layer.
+tags:
+- moonshot
+- ocr
+- wechat
+- wechaty
+- conversation-memory

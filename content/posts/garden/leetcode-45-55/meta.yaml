@@ -1,0 +1,18 @@
+id: note-leetcode-45-55
+kind: note
+slug: leetcode-45-55
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LeetCode 45 与 55：跳跃游戏 I 和 II
+  en: 'LeetCode 45 & 55: Jump Game I and II'
+summary:
+  zh-CN: 两个跳跃游戏变体本质上都是前沿扩展问题：贪心能给出最紧凑的线性时间解，而 BFS 仍然是最清晰的图论视角。
+  en: 'Both Jump Game variants are frontier-expansion problems: greedy gives the tightest
+    linear-time solution, while BFS remains the clearest graph interpretation.'
+tags:
+- LeetCode
+- Greedy
+- BFS
+- Arrays
+- C++

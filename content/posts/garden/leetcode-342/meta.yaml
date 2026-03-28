@@ -1,0 +1,18 @@
+id: note-leetcode-342
+kind: note
+slug: leetcode-342
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LeetCode 342：4 的幂
+  en: 'LeetCode 342: Power of Four'
+summary:
+  zh-CN: 判断 4 的幂，最干净的做法是先把问题收缩为“是否为 2 的幂”，再用模运算不变量或位位置掩码，把 `4^k` 和 `2^(2k+1)` 区分开。
+  en: The clean way to test a power of four is to first reduce the problem to a power-of-two
+    check, then separate `4^k` from `2^(2k+1)` with either a modular invariant or
+    a bit-position mask.
+tags:
+- LeetCode
+- Bit Manipulation
+- Number Theory
+- C++

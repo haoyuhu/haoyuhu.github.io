@@ -1,0 +1,20 @@
+id: note-leetcode-23
+kind: note
+slug: leetcode-23
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LeetCode 23 - 合并 k 个排序链表（自定义最小堆实现）
+  en: LeetCode 23 - Merge k Sorted Lists with Custom Heap Implementation
+summary:
+  zh-CN: 本文详细介绍了使用自定义最小堆合并 k 个已排序链表的方法。包括堆的设计思路、核心操作实现，并分析时间复杂度为 O(N log k)，N 为所有链表节点数总和。
+  en: This note presents a detailed approach to merging k sorted linked lists using
+    a custom-built min-heap data structure. It explains the heap design, outlines
+    core operations, and analyzes the time complexity as O(N log k), where N is the
+    total number of nodes across all lists.
+tags:
+- LeetCode
+- Algorithms
+- Heap
+- LinkedList
+- C++

@@ -1,0 +1,19 @@
+id: note-leetcode-201
+kind: note
+slug: leetcode-201
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LeetCode 201：数字范围按位与
+  en: 'LeetCode 201: Bitwise AND of Numbers Range'
+summary:
+  zh-CN: 本文分析了如何高效计算区间 [m, n] 中所有数字的按位与操作。不同于逐个遍历，该方法通过对区间端点数字进行右移，找到它们共同的高位前缀，从而消除差异的低位，得到最终结果。
+  en: This note analyzes an efficient approach to compute the bitwise AND of all numbers
+    in the range [m, n]. Rather than brute forcing the operation across the range,
+    the method leverages shifting to identify the common prefix bits shared by both
+    endpoints, which correspond to the final result after eliminating differing low
+    bits.
+tags:
+- LeetCode
+- 算法
+- 位运算

@@ -1,0 +1,19 @@
+id: note-let-ai-create-options-let-humans-choose
+kind: note
+slug: let-ai-create-options-let-humans-choose
+date: '2024-03-25'
+publishedAt: '2024-03-25T09:35:51+08:00'
+title:
+  zh-CN: 让 AI 生成选项，让人来选择
+  en: Let AI Create Options, Let Humans Choose
+summary:
+  zh-CN: AI 辅助创作的一个实用默认设置：与其只给出一个“修正后”的答案，不如生成几个足够强的候选项。相比从零开始创造，人类往往更擅长做比较和判断。
+  en: 'A useful default for AI-assisted creation: generate several strong candidates
+    instead of one “corrected” answer. Humans are often better at comparative judgment
+    than blank-page generation.'
+tags:
+- ai
+- creative-tools
+- writing
+- human-in-the-loop
+- product-design

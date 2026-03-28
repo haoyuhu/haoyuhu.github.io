@@ -209,6 +209,7 @@ export interface PostEntry {
   kind: 'note' | 'article';
   slug: string;
   date: string;
+  publishedAt?: string | null;
   title: LocalizedText;
   summary: LocalizedText;
   tags: string[];

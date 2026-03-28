@@ -1,0 +1,20 @@
+id: note-ai-assisted-engineering-not-vibe-coding
+kind: note
+slug: ai-assisted-engineering-not-vibe-coding
+date: '2026-01-25'
+publishedAt: '2026-01-25T23:41:45+08:00'
+title:
+  zh-CN: AI 辅助工程，而不是 vibe coding
+  en: AI-Assisted Engineering, Not Vibe Coding
+summary:
+  zh-CN: 更有用的编程新默认，不是 vibe coding，而是有纪律的 AI 辅助工程：先定义清楚，再拆解任务，提供充分上下文，按任务选模型，并用验证、测试和自动化兜底。
+  en: 'The useful new programming default is not vibe coding, but disciplined AI-assisted
+    engineering: clear specs, bounded tasks, rich context, model fit, and constant
+    validation backed by tests and automation.'
+tags:
+- ai-assisted engineering
+- llm
+- software engineering
+- pair programming
+- testing
+- automation

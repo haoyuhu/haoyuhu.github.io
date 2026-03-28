@@ -1,0 +1,17 @@
+id: note-leetcode-330
+kind: note
+slug: leetcode-330
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: 力扣330题：修补数组算法详解
+  en: 'LeetCode 330: Patching Array Algorithm Explained'
+summary:
+  zh-CN: 本文简要分析并实现了力扣经典题目330——修补数组。通过追踪当前无法用已有数组元素组成的最小缺失数，介绍了贪心算法思路，并演示了如何通过合理利用已有数或补充数来有效扩大可覆盖的组合范围。
+  en: This note presents a concise analysis and implementation of the classic LeetCode
+    problem 330—Patching Array. It explains the greedy algorithm based on tracking
+    the smallest missing number that cannot be formed by the existing array elements,
+    and demonstrates how to extend coverage efficiently by either using available
+    numbers or patching the array.
+tags:
+- LeetCode

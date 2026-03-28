@@ -1,0 +1,22 @@
+id: note-leetcode-212
+kind: note
+slug: leetcode-212
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LeetCode 212 - 单词搜索 II：使用字典树优化单词查找
+  en: 'LeetCode 212 - Word Search II: Optimizing Word Lookup with Trie'
+summary:
+  zh-CN: 本文讲解了 LeetCode 单词搜索 II 问题，首先分析了基于字母起点哈希的朴素解法及其效率瓶颈，随后引入字典树（Trie）结构以避免重复前缀搜索，显著提升性能。文中详细说明了结合
+    Trie 的基于坐标的深度优先搜索与回溯算法，并附上完整的 C++ 代码实现。
+  en: This note explores the Word Search II problem on LeetCode, analyzing a naive
+    search approach that leverages letter-position hashing and its limitations. It
+    then presents a refined solution using a Trie (prefix tree) to eliminate redundant
+    prefix searches, significantly improving performance. The coordinate-based DFS
+    algorithm with backtracking and Trie integration is detailed with C++ implementations.
+tags:
+- LeetCode
+- 算法
+- 字典树
+- 回溯
+- 深度优先搜索

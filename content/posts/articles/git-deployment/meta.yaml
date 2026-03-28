@@ -1,0 +1,18 @@
+id: article-git-deployment
+kind: article
+slug: git-deployment
+date: '2020-03-13'
+publishedAt: '2020-03-13T14:52:06+08:00'
+title:
+  zh-CN: 利用Git进行自动化多分支部署
+  en: Automating Multi-Branch Deployment Using Git
+summary:
+  zh-CN: 本文介绍了利用Git裸仓库和钩子实现自动化多分支部署的实用方案。包括创建专用Git用户、在服务器上初始化裸仓库、配置支持分支创建、更新和删除的post-update钩子脚本，以及本地Git配置实现自动化推送部署。
+  en: This article details a practical setup for automating multi-branch deployments
+    using Git bare repositories and hooks. It covers creating a dedicated Git user,
+    initializing a bare repository on the server, configuring a versatile post-update
+    hook script to handle branch creation, updates, and deletions, and local Git configurations
+    to enable streamlined automatic deployment.
+tags:
+- Git
+- 自动化部署

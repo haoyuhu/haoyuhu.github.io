@@ -1,0 +1,17 @@
+id: note-lintcode-57
+kind: note
+slug: lintcode-57
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LintCode 57：三数之和
+  en: 'LintCode 57: 3Sum'
+summary:
+  zh-CN: 一个基于哈希的 `O(n^2)` 三数之和解法：固定一个值，在后缀中匹配补数，并安全地对三元组做去重。
+  en: 'An O(n^2) hash-based 3Sum solution: fix one value, match complements on the
+    suffix, and deduplicate triplets safely.'
+tags:
+- LintCode
+- Algorithms
+- Hashing
+- C++

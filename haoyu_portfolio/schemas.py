@@ -237,6 +237,7 @@ class PostEntry(PortfolioBaseModel):
     kind: str
     slug: str
     date: str
+    publishedAt: str | None = None
     title: LocalizedText
     summary: LocalizedText
     tags: list[str]

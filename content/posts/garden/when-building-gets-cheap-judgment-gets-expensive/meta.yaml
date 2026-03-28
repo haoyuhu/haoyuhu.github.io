@@ -1,0 +1,19 @@
+id: note-when-building-gets-cheap-judgment-gets-expensive
+kind: note
+slug: when-building-gets-cheap-judgment-gets-expensive
+date: '2026-02-21'
+publishedAt: '2026-02-21T17:11:32+08:00'
+title:
+  zh-CN: 当构建变得便宜，判断就变得昂贵
+  en: When Building Gets Cheap, Judgment Gets Expensive
+summary:
+  zh-CN: 随着实现成本持续下降，工程师的工作正向上迁移：从亲手写下每一行代码，转向选择恰当的抽象、筛选真正有意义的问题，以及塑造能在长期内保持清晰可理解的人类与
+    AI 协作系统。
+  en: 'As implementation cost falls, the engineer’s job moves up the stack: from writing
+    every line to choosing abstractions, selecting meaningful problems, and shaping
+    human-AI systems that stay legible over time.'
+tags:
+- software-engineering
+- ai
+- product-thinking
+- abstractions

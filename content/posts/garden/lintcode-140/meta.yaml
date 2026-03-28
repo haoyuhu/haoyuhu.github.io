@@ -1,0 +1,19 @@
+id: note-lintcode-140
+kind: note
+slug: lintcode-140
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LintCode 140：快速幂
+  en: 'LintCode 140: Fast Power'
+summary:
+  zh-CN: 用二进制快速幂在 `O(log n)` 内计算 `a^n % b`。这题真正容易错的不是递推，而是中间乘法先溢出，所以取模前要先提升到 64 位。
+  en: Use binary exponentiation to compute `a^n % b` in `O(log n)`. The main pitfall
+    is not the recurrence but overflow in intermediate multiplication, so promote
+    products to 64-bit before taking the modulo.
+tags:
+- LintCode
+- Algorithm
+- Binary Exponentiation
+- Modular Arithmetic
+- C++

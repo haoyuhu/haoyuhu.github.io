@@ -1,0 +1,18 @@
+id: note-apple-style-ai-starts-with-inputs-not-prompts
+kind: note
+slug: apple-style-ai-starts-with-inputs-not-prompts
+date: '2024-02-28'
+publishedAt: '2024-02-28T03:03:13+08:00'
+title:
+  zh-CN: 苹果式 AI：起点是输入，不是提示词
+  en: Apple-Style AI Starts With Inputs, Not Prompts
+summary:
+  zh-CN: 一份关于苹果式 AI 层的产品草图：把用户现有输入当作界面，并围绕短路径、上下文驱动的操作进行优化。
+  en: A product sketch for an Apple-like AI layer that treats existing user inputs
+    as the interface and optimizes for shallow, contextual actions.
+tags:
+- ai-product
+- ux
+- apple
+- memory
+- product-design

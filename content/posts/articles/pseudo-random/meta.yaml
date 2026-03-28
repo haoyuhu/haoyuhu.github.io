@@ -1,0 +1,18 @@
+id: article-pseudo-random
+kind: article
+slug: pseudo-random
+date: '2016-12-07'
+publishedAt: '2016-12-07T16:16:33+08:00'
+title:
+  zh-CN: 伪随机算法：PRD 提升公平感，RSA 实现无重复洗牌
+  en: 'Pseudo-random Algorithms: PRD for Fairness, RSA for Unique Shuffles'
+summary:
+  zh-CN: 伪随机并不是单一概念：PRD 会平滑触发连串，带来更公平的游戏体验；而 RSA 风格的模幂运算则可作为一种可逆置换，在大型集合中生成不重复的乱序数字。
+  en: 'Pseudo-randomness is not one thing: PRD smooths proc streaks for fairer game
+    feel, while RSA-style modular exponentiation acts as a reversible permutation
+    for large sets of unique shuffled numbers.'
+tags:
+- Pseudo-random
+- Algorithms
+- Game Systems
+- RSA

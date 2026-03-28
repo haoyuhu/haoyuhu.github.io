@@ -1,0 +1,21 @@
+id: note-coin
+kind: note
+slug: coin
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:52:06+08:00'
+title:
+  zh-CN: 翻硬币问题
+  en: The Coin Flipping Problem
+summary:
+  zh-CN: 给定 n 枚硬币初始均为正面朝上，每次可翻转 p 枚硬币（1 ≤ p ≤ n），求将所有硬币翻转为反面所需的最少操作次数。本文分析了 n、p 及它们除法的奇偶关系，推导出可行性条件及最小操作次数公式。
+  en: Given n coins initially all heads up, and a rule allowing flipping exactly p
+    coins per move (1 ≤ p ≤ n), determine the minimum number of moves required to
+    flip all coins to tails. The problem explores parity conditions of n, p, and their
+    division, deriving feasibility conditions and a minimal step formula.
+tags:
+- parity
+- coin flipping
+- algorithm
+- math puzzles
+- problem solving
+- discrete math

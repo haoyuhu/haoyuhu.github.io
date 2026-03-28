@@ -1,0 +1,19 @@
+id: note-rl-feels-wider-than-supervised-learning
+kind: note
+slug: rl-feels-wider-than-supervised-learning
+date: '2026-02-07'
+publishedAt: '2026-02-07T23:18:29+08:00'
+title:
+  zh-CN: RL 似乎比监督学习更“宽”
+  en: RL Feels Wider Than Supervised Learning
+summary:
+  zh-CN: 在监督学习中，核心算法模板大体固定；而在强化学习中，改变算法本身就会改变统计问题。这使得 RL 理论更不像是在解释既有方法，而更像是在为新方法提供规范性的设计原则。
+  en: In supervised learning, the core algorithmic template is mostly fixed; in reinforcement
+    learning, changing the algorithm changes the statistical problem itself. That
+    makes theory in RL feel less explanatory and more prescriptive.
+tags:
+- reinforcement learning
+- supervised learning
+- theory
+- optimization
+- research taste

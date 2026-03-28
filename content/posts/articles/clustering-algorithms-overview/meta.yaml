@@ -1,0 +1,20 @@
+id: article-clustering-algorithms-overview
+kind: article
+slug: clustering-algorithms-overview
+date: '2019-12-11'
+publishedAt: '2019-12-11T00:00:00+08:00'
+title:
+  zh-CN: 聚类算法概述（k-Means++、FCM、凝聚层次聚类和DBSCAN）
+  en: Overview of Clustering Algorithms (k-Means++, FCM, Agglomerative Hierarchical
+    Clustering, DBSCAN)
+summary:
+  zh-CN: 本文回顾了经典聚类算法——k-Means++（k-means优化初始化）、模糊C均值（FCM）、凝聚层次聚类和DBSCAN，介绍了它们的核心概念、算法流程、优缺点。通过Python代码示例和示意图，帮助读者理解基础知识，并链接到一个现代的多语言聚类教程仓库，方便实操学习。
+  en: This article revisits classic clustering algorithms—k-Means++ (a refined k-means
+    initializer), Fuzzy C-Means (FCM), Agglomerative Hierarchical Clustering, and
+    DBSCAN—outlining their core concepts, algorithmic workflows, advantages, and limitations.
+    Illustrated with Python code excerpts and diagrams, it provides foundational insights
+    and connects to a modern, multi-language clustering playbook repository for hands-on
+    exploration.
+tags:
+- Cluster
+- Python

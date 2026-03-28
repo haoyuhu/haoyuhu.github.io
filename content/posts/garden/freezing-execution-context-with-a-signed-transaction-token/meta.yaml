@@ -1,0 +1,19 @@
+id: note-freezing-execution-context-with-a-signed-transaction-token
+kind: note
+slug: freezing-execution-context-with-a-signed-transaction-token
+date: '2024-03-07'
+publishedAt: '2024-03-07T09:52:54+08:00'
+title:
+  zh-CN: 用签名事务令牌冻结执行上下文
+  en: Freezing Execution Context with a Signed Transaction Token
+summary:
+  zh-CN: 一个很实用的模式：从工具、上下文和设备信息中一次性解析出执行配置；对该配置签名；只把过期时间和身份信息放进短时效 JWT；然后在执行前验证配置没有发生漂移。
+  en: 'A useful pattern: resolve execution config once from tool, context, and device;
+    sign that config; put only expiry and identity into a short-lived JWT; then verify
+    the config has not drifted before execution.'
+tags:
+- architecture
+- jwt
+- signing
+- execution
+- integrity

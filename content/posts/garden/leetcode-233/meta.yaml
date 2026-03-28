@@ -1,0 +1,20 @@
+id: note-leetcode-233
+kind: note
+slug: leetcode-233
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LeetCode 233 - 数字 1 的个数
+  en: LeetCode 233 - Number of Digit One
+summary:
+  zh-CN: 给定一个非负整数 n，统计从 0 到 n （含 n）中所有数字出现的 '1' 的总次数。直接遍历数值并统计 '1' 的做法时间复杂度为 O(n log
+    n)，当 n 较大时效率低下。本文介绍一种基于逐位分析数字出现次数的数学方法，将时间复杂度降至 O(log n)。
+  en: Given a non-negative integer n, count the total occurrences of the digit '1'
+    in all numbers from 0 up to n. The naive approach iterates through each number
+    and counts '1's, resulting in O(n log n) time complexity which is inefficient
+    for large n. A digit-position-based mathematical approach reduces this to O(log
+    n) by analyzing each digit's contribution systematically.
+tags:
+- LeetCode
+- Algorithm
+- Digit Counting

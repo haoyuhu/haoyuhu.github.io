@@ -1,0 +1,21 @@
+id: note-leetcode-210
+kind: note
+slug: leetcode-210
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LeetCode 210 - 课程表 II：利用拓扑排序确定课程顺序
+  en: 'LeetCode 210 - Course Schedule II: Topological Sort for Course Ordering'
+summary:
+  zh-CN: 本文分析了LeetCode第210题 —— 在给定课程数和先修课程依赖的情况下，求一种可行的上课顺序。内容涵盖题意解析、拓扑排序核心思想、BFS与DFS两种解法比较与实现细节、边界情况说明，并附上基于DFS方法的完整C++代码。
+  en: This note discusses LeetCode Problem 210, which requires determining a valid
+    order to complete courses given prerequisite relationships. It covers the problem
+    statement, key insights involving topological sorting, a comparison between BFS
+    and DFS approaches, implementation details, edge cases, and provides a full C++
+    DFS-based solution.
+tags:
+- LeetCode
+- 算法
+- 拓扑排序
+- 图论
+- 课程表

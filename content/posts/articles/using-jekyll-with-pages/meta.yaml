@@ -1,0 +1,21 @@
+id: article-using-jekyll-with-pages
+kind: article
+slug: using-jekyll-with-pages
+date: '2016-12-08'
+publishedAt: '2016-12-08T13:48:44+08:00'
+title:
+  zh-CN: 使用Jekyll优化GitHub Pages：安装、配置与实战指南
+  en: 'Optimizing GitHub Pages with Jekyll: Setup, Configuration, and Best Practices'
+summary:
+  zh-CN: 深入了解GitHub Pages如何利用Jekyll这一静态网站生成器，通过全局模板和丰富功能简化网站构建。本指南涵盖GitHub分支上的使用、Jekyll本地安装、运行及更新，`_config.yml`配置方法，常见问题解析，以及关闭Jekyll的方案。
+  en: Explore how GitHub Pages leverages Jekyll, a blog-aware static site generator,
+    to streamline website creation with global templates and advanced features. This
+    guide covers setup on GitHub branches, local installation, running and updating
+    Jekyll, configuring via `_config.yml`, key troubleshooting tips, and how to disable
+    Jekyll if needed.
+tags:
+- Jekyll
+- GitHub Pages
+- Static Site Generator
+- Ruby
+- Web Development

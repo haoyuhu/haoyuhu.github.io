@@ -1,0 +1,19 @@
+id: note-sketch-a-wechat-sync-layer-with-ai-in-the-loop
+kind: note
+slug: sketch-a-wechat-sync-layer-with-ai-in-the-loop
+date: '2024-03-05'
+publishedAt: '2024-03-05T23:30:57+08:00'
+title:
+  zh-CN: 草图：一个让人工智能参与其中的微信同步层
+  en: 'Sketch: a WeChat sync layer with AI in the loop'
+summary:
+  zh-CN: 我一直在反复琢磨一个想法：做一层由用户掌控的微信同步层——本地优先、可选云端支持；它的价值不在于自动化聊天，而在于把对话变成可搜索、可辅助调用的记忆。
+  en: 'I keep circling around the idea of a user-controlled sync layer for WeChat:
+    local-first, optionally cloud-backed, and useful not because it automates chat,
+    but because it turns conversation into searchable, assistive memory.'
+tags:
+- wechat
+- sync
+- ai
+- local-first
+- personal-infrastructure

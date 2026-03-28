@@ -1,0 +1,17 @@
+id: note-design-for-multilingual-reality-early
+kind: note
+slug: design-for-multilingual-reality-early
+date: '2024-03-07'
+publishedAt: '2024-03-07T00:14:19+08:00'
+title:
+  zh-CN: 尽早为多语言现实而设计
+  en: Design for Multilingual Reality Early
+summary:
+  zh-CN: 提醒自己：多语言支持应被视为系统设计问题，而不是上线前补做的一轮翻译。
+  en: A reminder to treat multilingual support as a systems design problem, not a
+    late translation pass.
+tags:
+- i18n
+- localization
+- software-design
+- product-engineering

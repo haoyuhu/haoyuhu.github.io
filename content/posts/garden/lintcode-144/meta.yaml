@@ -1,0 +1,18 @@
+id: note-lintcode-144
+kind: note
+slug: lintcode-144
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LintCode 144：正负数交错排列
+  en: 'LintCode 144: Interleaving Positive and Negative Numbers'
+summary:
+  zh-CN: 先统计正负数量失衡，再用偶/奇指针在线性时间、常数空间内交换错位元素。
+  en: Count the sign imbalance first, then use even/odd pointers to swap misplaced
+    elements in linear time and constant space.
+tags:
+- LintCode
+- Algorithms
+- Array
+- Two Pointers
+- C++

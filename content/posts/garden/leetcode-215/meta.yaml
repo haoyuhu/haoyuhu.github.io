@@ -1,0 +1,20 @@
+id: note-leetcode-215
+kind: note
+slug: leetcode-215
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LeetCode 215 - 数组中的第K大元素
+  en: LeetCode 215 - Kth Largest Element in an Array
+summary:
+  zh-CN: 本文介绍一种经典算法，利用快速选择（Quickselect）思想寻找无序数组中的第k大元素。算法基于快速排序的划分步骤，通过计算排序位置的秩来逐步缩小搜索区间，从而高效定位目标元素。
+  en: This note presents a classic algorithm to find the kth largest element in an
+    unsorted array using a Quickselect-based approach, inspired by the partitioning
+    step of QuickSort. The solution efficiently narrows down the search space by comparing
+    ranks derived from partition indices.
+tags:
+- LeetCode
+- 算法
+- Quickselect
+- QuickSort Partition
+- Order Statistics

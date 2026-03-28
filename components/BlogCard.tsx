@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, FileText, Image as ImageIcon, Mic, Share2 } from 'lucide-react';
-import ReactMarkdown from 'react-markdown';
 import { toPng } from 'html-to-image';
 import AudioPlayer from './AudioPlayer';
+import MarkdownRenderer from './MarkdownRenderer';
 import { LocaleCode, PostEntry } from '../types';
-import { formatDate, getLocalizedText } from '../lib/i18n';
+import { formatPostDate, getLocalizedText } from '../lib/i18n';
 
 interface BlogCardProps {
   post: PostEntry;
@@ -66,7 +66,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, locale, defaultExpanded = fal
               )}
             </div>
             <div className="mt-1 flex items-center gap-2 text-xs text-ide-text-dim">
-              <span>{formatDate(post.date, locale)}</span>
+              <span>{formatPostDate(post.date, post.publishedAt, locale)}</span>
               <span>•</span>
               <span className="text-accent">{post.kind}</span>
             </div>
@@ -90,7 +90,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, locale, defaultExpanded = fal
             )}
 
             <div className="markdown-body text-sm leading-7">
-              <ReactMarkdown>{getLocalizedText(post.body, locale)}</ReactMarkdown>
+              <MarkdownRenderer content={getLocalizedText(post.body, locale)} />
             </div>
 
             <div className="flex items-center justify-between gap-4 border-t border-dashed border-ide-border pt-4">

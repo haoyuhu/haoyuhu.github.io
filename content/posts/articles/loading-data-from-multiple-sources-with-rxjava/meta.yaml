@@ -1,0 +1,18 @@
+id: article-loading-data-from-multiple-sources-with-rxjava
+kind: article
+slug: loading-data-from-multiple-sources-with-rxjava
+date: '2016-01-19'
+publishedAt: '2016-01-19T00:00:00+08:00'
+title:
+  zh-CN: 使用 RxJava 从多个数据源加载数据
+  en: Loading Data from Multiple Sources with RxJava
+summary:
+  zh-CN: 一种简洁的 RxJava 分层数据加载模式：优先检查内存，其次磁盘，最后网络；跳过过期缓存项，并在有效数据出现时立即停止。
+  en: 'A clean RxJava pattern for layered data loading: check memory first, then disk,
+    then network, while skipping stale cache entries and stopping as soon as valid
+    data appears.'
+tags:
+- RxJava
+- Java
+- Android
+- Caching

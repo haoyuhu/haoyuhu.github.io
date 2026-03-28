@@ -1,0 +1,19 @@
+id: note-video-gif-as-a-stability-first-compatibility-layer
+kind: note
+slug: video-gif-as-a-stability-first-compatibility-layer
+date: '2024-03-01'
+publishedAt: '2024-03-01T02:45:11+08:00'
+title:
+  zh-CN: 视频 -> GIF：稳定性优先的兼容层
+  en: Video -> GIF as a Stability-First Compatibility Layer
+summary:
+  zh-CN: 我把兼容性处理管线从直接处理视频切换为生成 GIF，因为它在高负载下稳定得多；下一步是在不丢掉这些运维收益的前提下，有选择地把部分画质补回来。
+  en: I switched the compatibility pipeline from direct video handling to GIF generation
+    because it is dramatically more stable under load; the next step is to selectively
+    buy back quality without losing those operational gains.
+tags:
+- video-processing
+- gif
+- ffmpeg
+- performance
+- pricing

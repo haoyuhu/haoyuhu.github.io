@@ -1,0 +1,19 @@
+id: note-leetcode-331
+kind: note
+slug: leetcode-331
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LeetCode 331：验证二叉树的前序序列化
+  en: 'LeetCode 331: Verify Preorder Serialization of a Binary Tree'
+summary:
+  zh-CN: 利用栈追踪节点子女状态，验证二叉树前序序列化的有效性，保证树结构正确而无需重建树。
+  en: A stack-based algorithm to verify the validity of a binary tree's preorder serialization,
+    tracking node child states to ensure correct tree structure without rebuilding
+    the tree.
+tags:
+- LeetCode
+- Binary Tree
+- Stack
+- Preorder Serialization
+- Algorithm

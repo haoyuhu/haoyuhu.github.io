@@ -1,0 +1,16 @@
+id: note-leetcode-208
+kind: note
+slug: leetcode-208
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LeetCode 208：实现字典树（Trie）
+  en: 'LeetCode 208: Implementing a Trie (Prefix Tree)'
+summary:
+  zh-CN: 本文介绍了一个经典的字典树（Trie）实现，支持插入、精确查找和前缀查找，所有输入均为小写字母a-z。内容涵盖节点设计、方法语义以及简洁的C++代码示例。
+  en: This note presents a classic implementation of a Trie data structure supporting
+    insertion, exact word search, and prefix-based search, with all inputs restricted
+    to lowercase letters a-z. It includes a detailed node design, method behaviors,
+    and a clean C++ code example.
+tags:
+- LeetCode

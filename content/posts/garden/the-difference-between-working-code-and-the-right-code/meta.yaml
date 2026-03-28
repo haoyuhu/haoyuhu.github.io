@@ -1,0 +1,19 @@
+id: note-the-difference-between-working-code-and-the-right-code
+kind: note
+slug: the-difference-between-working-code-and-the-right-code
+date: '2026-02-07'
+publishedAt: '2026-02-07T16:38:33+08:00'
+title:
+  zh-CN: 能跑的代码与正确代码之间的区别
+  en: The Difference Between Working Code and the Right Code
+summary:
+  zh-CN: 人工智能可以生成能运行、也能通过测试的代码，但它依然可能让人觉得不对劲。这种判断通常来自维护经验：那是一种刻进身体里的能力，能在缺陷报告出现之前就认出未来的痛苦。
+  en: 'AI can produce code that runs and passes tests, yet still feels wrong. That
+    judgment usually comes from maintenance experience: the embodied ability to recognize
+    future pain before the bug report exists.'
+tags:
+- software-engineering
+- ai-assisted-programming
+- code-quality
+- maintenance
+- programming-taste

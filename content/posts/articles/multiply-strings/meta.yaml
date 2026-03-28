@@ -1,0 +1,18 @@
+id: article-multiply-strings
+kind: article
+slug: multiply-strings
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:29:40+08:00'
+title:
+  zh-CN: 大整数乘法（`Multiply Strings`）：从竖式到 Karatsuba
+  en: 'Big Integer Multiplication (`Multiply Strings`): From Schoolbook to Karatsuba'
+summary:
+  zh-CN: 对基于字符串的大整数乘法做一次紧凑的现代化重写，对比主要方法，并聚焦于带有恰当辅助例程的 Karatsuba 风格分治实现。
+  en: A compact modern rewrite of string-based big integer multiplication, comparing
+    the main approaches and focusing on a Karatsuba-style divide-and-conquer implementation
+    with the right helper routines.
+tags:
+- big-integer
+- multiply-strings
+- karatsuba
+- string-arithmetic

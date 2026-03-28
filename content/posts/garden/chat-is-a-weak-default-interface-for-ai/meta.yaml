@@ -1,0 +1,18 @@
+id: note-chat-is-a-weak-default-interface-for-ai
+kind: note
+slug: chat-is-a-weak-default-interface-for-ai
+date: '2024-03-07'
+publishedAt: '2024-03-07T20:48:16+08:00'
+title:
+  zh-CN: 聊天作为 AI 的默认界面，其实很弱
+  en: Chat Is a Weak Default Interface for AI
+summary:
+  zh-CN: 聊天作为通用兜底方式很好用，但对于可重复的 AI 任务，它并不适合作为主要交互面。具备上下文感知、能主动呈现的交互入口，可以缩短触发路径、降低使用成本，并帮助用户形成习惯。
+  en: Chat works well as a universal fallback, but it is a poor primary surface for
+    repeatable AI tasks. Context-aware, proactive affordances shorten the trigger
+    path, reduce effort, and help usage become habit.
+tags:
+- ai-product-design
+- ux
+- proactive-interfaces
+- chat-ui

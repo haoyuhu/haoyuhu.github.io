@@ -1,0 +1,20 @@
+id: article-a-star
+kind: article
+slug: a-star
+date: '2016-12-07'
+publishedAt: '2016-12-07T16:17:31+08:00'
+title:
+  zh-CN: A-star算法概述及其在游戏开发中的应用分析
+  en: Overview of the A-star Algorithm and Its Applications in Game Development
+summary:
+  zh-CN: 本文全面介绍了A-star（A*）算法的发展脉络，涵盖了从Dijkstra算法和最佳优先搜索算法的演变过程。阐述了代价函数与启发式函数的核心思想及其权衡，分析了高效实现所需的数据结构，并结合Amit
+    Patel的经典研究探讨了A*算法在游戏开发中面临的实际应用挑战，如群体移动、动态障碍物以及响应时间优化。
+  en: This article presents a comprehensive overview of the A-star (A*) algorithm,
+    tracing its evolution from Dijkstra and Best-First Search algorithms. It details
+    the core concepts of cost and heuristic functions, practical trade-offs in their
+    design, and efficient data structures for implementation. The article also analyzes
+    adaptations and challenges for applying A* in complex game scenarios, including
+    group movement, dynamic obstacles, and response time optimization, backed by insights
+    from Amit Patel's seminal work on pathfinding.
+tags:
+- A-star

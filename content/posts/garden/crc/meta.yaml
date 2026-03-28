@@ -1,0 +1,19 @@
+id: note-crc
+kind: note
+slug: crc
+date: '2016-04-29'
+publishedAt: '2016-04-29T00:00:00+08:00'
+title:
+  zh-CN: CRC：循环冗余校验码
+  en: 'CRC: Cyclic Redundancy Check'
+summary:
+  zh-CN: CRC 通过模 2 多项式除法的余数为消息附加校验值。它在网络和存储中对随机损坏的检测高效且廉价，但由于线性结构，并不适合作为完整性或防篡改保证。
+  en: CRC appends the remainder of a modulo-2 polynomial division to a message. It
+    is fast, cheap, and highly effective at detecting accidental corruption in networks
+    and storage, but its linear structure makes it unsuitable for integrity or anti-tamper
+    guarantees.
+tags:
+- CRC
+- error-detection
+- networking
+- storage

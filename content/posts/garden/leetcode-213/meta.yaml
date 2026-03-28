@@ -1,0 +1,21 @@
+id: note-leetcode-213
+kind: note
+slug: leetcode-213
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LeetCode 213：打家劫舍 II - 环形房屋的动态规划
+  en: 'LeetCode 213: House Robber II - Dynamic Programming on Circular Houses'
+summary:
+  zh-CN: 本文扩展了经典的打家劫舍问题，讨论房屋环形排列的情况。由于首尾相邻，无法同时偷窃第一间和最后一间房屋。通过引入两位二进制状态来跟踪第一家和当前房屋的偷窃情况，实现了适应环形结构的动态规划解决方案。
+  en: This note extends the classic House Robber problem to houses arranged in a circle.
+    The challenge is that the first and last houses are neighbors, so they cannot
+    be robbed simultaneously. We introduce a two-bit state system to track whether
+    the first house and the current house have been robbed, enabling a dynamic programming
+    solution that accounts for this circular constraint.
+tags:
+- LeetCode
+- Dynamic Programming
+- House Robber
+- Algorithm
+- Circular DP

@@ -1,0 +1,18 @@
+id: note-lintcode-58
+kind: note
+slug: lintcode-58
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LintCode 58：4Sum
+  en: 'LintCode 58: 4Sum'
+summary:
+  zh-CN: 这是对经典 4Sum 解法的一次现代化改写：先排序，固定两个位置，再用双指针扫描剩余两个数。这样既保留了原本 `O(n^3)` 的思路，也去掉了脆弱的基于哈希的去重方式。
+  en: 'A modern rewrite of the classic 4Sum solution: sort the array, fix two positions,
+    and use a two-pointer sweep for the remaining pair. This preserves the original
+    O(n^3) idea while removing fragile hash-based deduplication.'
+tags:
+- LintCode
+- algorithm
+- array
+- two-pointers

@@ -1,0 +1,22 @@
+id: article-aho-corasick-automaton
+kind: article
+slug: aho-corasick-automaton
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:29:40+08:00'
+title:
+  zh-CN: AC自动机及多模式匹配
+  en: Aho-Corasick Automaton and Multi-Pattern Matching
+summary:
+  zh-CN: 本文介绍了AC自动机，这是一种结合字典树与KMP失配指针思想的高效多模式字符串匹配算法。算法时间复杂度为O(Σmi + n)，n为文本长度，mi为各模式串长度。文章重点讲解了fail指针的构造及提供了实用的C++代码实现。
+  en: This article explores the Aho-Corasick (AC) automaton, a powerful algorithm
+    combining trie structures and KMP fail function concepts to efficiently solve
+    multi-pattern string matching. It achieves a linear-time complexity of O(Σmi +
+    n), where n is the length of the text and mi are the lengths of each pattern.
+    Key details on constructing the fail pointers and practical C++ implementation
+    are provided.
+tags:
+- AC自动机
+- 字符串匹配
+- 算法
+- 数据结构
+- 多模式匹配

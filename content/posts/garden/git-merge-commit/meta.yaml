@@ -1,0 +1,20 @@
+id: note-git-merge-commit
+kind: note
+slug: git-merge-commit
+date: '2016-12-08'
+publishedAt: '2016-12-08T13:49:08+08:00'
+title:
+  zh-CN: 用 `git rebase -i` 合并多个 commit
+  en: Squashing Commits with `git rebase -i`
+summary:
+  zh-CN: 交互式 rebase 是整理个人提交历史的精确工具，尤其适合已经先 `rebase upstream` 的协作场景。`reset --soft`
+    太粗，容易把别人的改动一起卷进来；`rebase -i` 则只改你想改的那段历史。
+  en: Interactive rebase is the precise way to squash, reorder, and polish your own
+    commits—especially after rebasing onto `upstream`. `reset --soft` is coarse and
+    can accidentally absorb collaborators' changes; `rebase -i` rewrites only the
+    history you intend.
+tags:
+- Git
+- rebase
+- commit-history
+- collaboration

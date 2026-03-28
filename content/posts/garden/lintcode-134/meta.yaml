@@ -1,0 +1,19 @@
+id: note-lintcode-134
+kind: note
+slug: lintcode-134
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LintCode 134：用单向链表实现 LRU 缓存
+  en: 'LintCode 134: LRU Cache with a Singly Linked List'
+summary:
+  zh-CN: 一个紧凑的 LintCode 134 解法：让最久未使用的条目位于 `head`，最新访问的条目位于 `tail`，并在 `get` 和成功的 `set`
+    时都把对应节点移动到尾部。
+  en: 'A compact LintCode 134 solution: keep the least recently used entry at `head`,
+    the most recent at `tail`, and promote nodes on both `get` and successful `set`.'
+tags:
+- LintCode
+- algorithm
+- LRU
+- linked-list
+- C++

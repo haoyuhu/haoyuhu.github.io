@@ -1,0 +1,17 @@
+id: note-lintcode-167
+kind: note
+slug: lintcode-167
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LintCode 167：用链表实现两数相加
+  en: 'LintCode 167: Add Two Numbers with a Linked List'
+summary:
+  zh-CN: 一种简洁的单趟解法，用于求两个逆序链表之和：逐位相加、传递进位，最后那个进位节点绝不能漏掉。
+  en: 'A clean one-pass solution for summing two reverse-order linked lists: add digit
+    by digit, propagate carry, and never forget the final carry node.'
+tags:
+- LintCode
+- Linked List
+- Algorithm
+- C++

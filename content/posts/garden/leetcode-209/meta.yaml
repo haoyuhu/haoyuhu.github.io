@@ -1,0 +1,18 @@
+id: note-leetcode-209
+kind: note
+slug: leetcode-209
+date: '2017-12-08'
+publishedAt: '2017-12-08T14:06:50+08:00'
+title:
+  zh-CN: LeetCode 209：长度最小的子数组和
+  en: 'LeetCode 209: Minimum Size Subarray Sum'
+summary:
+  zh-CN: 给定由正整数构成的数组和目标和s，寻找和至少为s的连续子数组的最小长度。本文详解了一个O(n)滑动窗口双指针解法及一个O(n log n)分治法实现。
+  en: Given an array of positive integers and a target sum s, find the minimal length
+    of a continuous subarray whose sum is at least s. This note covers an O(n) two-pointer
+    sliding window solution and an O(n log n) divide-and-conquer approach.
+tags:
+- LeetCode
+- 算法
+- 滑动窗口
+- 分治法
