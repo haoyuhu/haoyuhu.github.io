@@ -82,6 +82,7 @@ config/.key
 *.temp
 .cache/
 .tmp/
+/.tmp_*
 tmp/
 artifacts/
 uploads/
@@ -109,3 +110,6 @@ playwright-report/
 test-results/
 .playwright/
 .playwright-cache/
+
+# Python test/cache artifacts
+.pytest_cache/
