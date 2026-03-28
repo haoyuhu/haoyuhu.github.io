@@ -23,14 +23,16 @@ import {
 } from 'lucide-react';
 import BlogCard from './components/BlogCard';
 import ChatTerminal from './components/ChatTerminal';
+import MarkdownRenderer from './components/MarkdownRenderer';
 import ProjectCard from './components/ProjectCard';
 import ResumeView from './components/ResumeView';
 import StudioView from './components/StudioView';
 import { PixelMascot } from './constants';
-import { formatDate, getLocalizedText, normalizeApiBaseUrl } from './lib/i18n';
+import { formatDate, getLocalizedText, localizePostTag, normalizeApiBaseUrl, summarizePostTags } from './lib/i18n';
 import {
   ExperienceEntry,
   LocaleCode,
+  MetricItem,
   NavigationItem,
   PortfolioBundle,
   PostEntry,
@@ -94,7 +96,7 @@ type HomeSpotlightCard = {
 
 const buildSystemIdentityNarratives = (
   rows: SystemIdentityItem[],
-  techStack: Array<{ name: string; level: number }>,
+  techStack: MetricItem[],
   locale: LocaleCode,
 ): IdentityNarrative[] => {
   return rows.map((row, index) => {
@@ -129,10 +131,10 @@ const App: React.FC = () => {
   const [terminalOpen, setTerminalOpen] = useState(false);
   const [gardenLimit, setGardenLimit] = useState(PAGE_SIZE);
   const [articleLimit, setArticleLimit] = useState(PAGE_SIZE);
-  const [careerLogDescriptionLines, setCareerLogDescriptionLines] = useState(10);
+  const [careerLogDescriptionMaxHeight, setCareerLogDescriptionMaxHeight] = useState<number | null>(null);
   const careerLogFlowRef = useRef<HTMLDivElement | null>(null);
   const careerLogProjectsRef = useRef<HTMLDivElement | null>(null);
-  const careerLogDescriptionRef = useRef<HTMLParagraphElement | null>(null);
+  const careerLogDescriptionRef = useRef<HTMLDivElement | null>(null);
 
   const loadBundle = async () => {
     setLoading(true);
@@ -224,7 +226,7 @@ const App: React.FC = () => {
       return;
     }
 
-    const computeDescriptionLines = () => {
+    const computeDescriptionMaxHeight = () => {
       const flowHeight = flowElement.getBoundingClientRect().height;
       const projectsHeight = projectsElement.getBoundingClientRect().height;
       const flowStyle = window.getComputedStyle(flowElement);
@@ -236,18 +238,19 @@ const App: React.FC = () => {
       }
 
       const availableHeight = Math.max(flowHeight - projectsHeight - gap, lineHeight * 3);
-      const nextLines = Math.max(3, Math.floor(availableHeight / lineHeight));
-      setCareerLogDescriptionLines((current) => (current === nextLines ? current : nextLines));
+      const nextHeight = Math.floor(availableHeight);
+      setCareerLogDescriptionMaxHeight((current) =>
+        current !== null && Math.abs(current - nextHeight) < 1 ? current : nextHeight,
+      );
     };
 
-    computeDescriptionLines();
+    computeDescriptionMaxHeight();
     const observer = new ResizeObserver(() => {
-      window.requestAnimationFrame(computeDescriptionLines);
+      window.requestAnimationFrame(computeDescriptionMaxHeight);
     });
 
     observer.observe(flowElement);
     observer.observe(projectsElement);
-    observer.observe(descriptionElement);
 
     return () => observer.disconnect();
   }, [activeTab, bundle, locale]);
@@ -321,16 +324,7 @@ const App: React.FC = () => {
       getLocalizedText(experience.role, locale),
     ]) ?? bundle.resume.experience[0];
   const latestEducation = bundle.resume.education[0];
-  const topPostTags = Object.entries(
-    posts.reduce<Record<string, number>>((counts, post) => {
-      post.tags.forEach((tag) => {
-        counts[tag] = (counts[tag] || 0) + 1;
-      });
-      return counts;
-    }, {}),
-  )
-    .sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0]))
-    .slice(0, 6);
+  const topPostTags = summarizePostTags(posts, locale);
 
   const uptime = new Date().getFullYear() - bundle.profile.careerStartYear;
   const systemIdentityNarratives = buildSystemIdentityNarratives(
@@ -420,8 +414,8 @@ const App: React.FC = () => {
       footer: (
         <div className="flex flex-wrap gap-1">
           {latestNote.tags.map((tag) => (
-            <span key={tag} className="rounded bg-ide-panel px-1.5 py-0.5 text-[10px] text-ide-text-dim">
-              #{tag}
+            <span key={`${latestNote.id}-${tag}`} className="rounded bg-ide-panel px-1.5 py-0.5 text-[10px] text-ide-text-dim">
+              #{localizePostTag(tag, locale)}
             </span>
           ))}
         </div>
@@ -443,8 +437,8 @@ const App: React.FC = () => {
       footer: (
         <div className="flex flex-wrap gap-1">
           {latestArticle.tags.map((tag) => (
-            <span key={tag} className="rounded bg-ide-panel px-1.5 py-0.5 text-[10px] text-ide-text">
-              #{tag}
+            <span key={`${latestArticle.id}-${tag}`} className="rounded bg-ide-panel px-1.5 py-0.5 text-[10px] text-ide-text">
+              #{localizePostTag(tag, locale)}
             </span>
           ))}
         </div>
@@ -598,7 +592,7 @@ const App: React.FC = () => {
   const SpotlightCard = ({ card }: { card: HomeSpotlightCard }) => {
     const Icon = card.icon;
     return (
-      <div className="mb-4 break-inside-avoid">
+      <div className="mb-4 inline-block w-full break-inside-avoid">
         <button
           onClick={() => setActiveTab(card.targetTab)}
           className="group flex w-full cursor-pointer flex-col rounded-xl border border-ide-border bg-ide-bg p-5 text-left transition-all hover:border-accent hover:shadow-md"
@@ -912,17 +906,18 @@ const App: React.FC = () => {
                             <div className="text-base font-bold text-ide-text">{getLocalizedText(experience.role, locale)}</div>
                             <div className="mb-3 text-xs text-sky-400">@{getLocalizedText(experience.company, locale)}</div>
                             <div ref={careerLogFlowRef} className="flex min-h-0 flex-1 flex-col gap-3">
-                              <p
+                              <div
                                 ref={careerLogDescriptionRef}
-                                className="overflow-hidden text-xs leading-5 text-ide-text-dim"
+                                className="markdown-body overflow-hidden text-xs leading-5 text-ide-text-dim"
                                 style={{
-                                  display: '-webkit-box',
-                                  WebkitBoxOrient: 'vertical',
-                                  WebkitLineClamp: careerLogDescriptionLines,
+                                  maxHeight:
+                                    careerLogDescriptionMaxHeight !== null
+                                      ? `${careerLogDescriptionMaxHeight}px`
+                                      : undefined,
                                 }}
                               >
-                                {experience.description[locale].map((line) => `- ${line}`).join(' ')}
-                              </p>
+                                <MarkdownRenderer content={experience.description[locale].map((line) => `- ${line}`).join('\n')} />
+                              </div>
                               <div ref={careerLogProjectsRef} className="space-y-3">
                                 {experience.projects.map((project, projectIndex) => (
                                   <div key={`${experience.id}-${projectIndex}`} className="rounded border border-ide-border bg-ide-bg px-3 py-2 text-xs text-ide-text-dim">

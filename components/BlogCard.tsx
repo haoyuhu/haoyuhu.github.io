@@ -4,7 +4,7 @@ import { toPng } from 'html-to-image';
 import AudioPlayer from './AudioPlayer';
 import MarkdownRenderer from './MarkdownRenderer';
 import { LocaleCode, PostEntry } from '../types';
-import { formatPostDate, getLocalizedText } from '../lib/i18n';
+import { formatPostDate, getLocalizedText, localizePostTag } from '../lib/i18n';
 
 interface BlogCardProps {
   post: PostEntry;
@@ -97,10 +97,10 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, locale, defaultExpanded = fal
               <div className="flex flex-wrap gap-2">
                 {post.tags.map((tag) => (
                   <span
-                    key={tag}
+                    key={`${post.slug}-${tag}`}
                     className="rounded border border-ide-border bg-ide-panel px-2 py-1 text-[10px] uppercase tracking-wide text-ide-text-dim"
                   >
-                    #{tag}
+                    #{localizePostTag(tag, locale)}
                   </span>
                 ))}
               </div>

@@ -1,4 +1,4 @@
-import { LocaleCode, LocalizedText } from '../types';
+import { LocaleCode, LocalizedText, PostEntry } from '../types';
 
 export const getLocalizedText = (
   value: LocalizedText | string | undefined | null,
@@ -63,3 +63,78 @@ export const getTerminalTextWidth = (raw: string): number =>
 
 export const padTerminalText = (raw: string, width: number): string =>
   raw + ' '.repeat(Math.max(0, width - getTerminalTextWidth(raw)));
+
+const POST_TAG_LOCALIZATIONS: Record<string, LocalizedText> = {
+  algorithms: { 'zh-CN': '算法', en: 'Algorithms' },
+  'string-algorithms': { 'zh-CN': '字符串算法', en: 'String Algorithms' },
+  'data-structures': { 'zh-CN': '数据结构', en: 'Data Structures' },
+};
+
+const POST_TAG_ALIASES: Record<string, string> = {
+  algorithm: 'algorithms',
+  algorithms: 'algorithms',
+  '算法': 'algorithms',
+  'string-algorithm': 'string-algorithms',
+  'string-algorithms': 'string-algorithms',
+  '字符串算法': 'string-algorithms',
+  'data-structure': 'data-structures',
+  'data-structures': 'data-structures',
+  '数据结构': 'data-structures',
+};
+
+const normalizeTagToken = (raw: string): string => raw.trim().toLowerCase().replace(/\s+/g, '-');
+
+const containsCjk = (raw: string): boolean => /[\u3400-\u9fff]/u.test(raw);
+
+const getCanonicalPostTag = (raw: string): string => {
+  const normalized = normalizeTagToken(raw);
+  return POST_TAG_ALIASES[normalized] ?? raw.trim();
+};
+
+export const localizePostTag = (raw: string, locale: LocaleCode): string => {
+  const canonical = getCanonicalPostTag(raw);
+  const localized = POST_TAG_LOCALIZATIONS[canonical];
+  return localized ? getLocalizedText(localized, locale) : raw;
+};
+
+export const summarizePostTags = (posts: Array<Pick<PostEntry, 'tags'>>, locale: LocaleCode): Array<[string, number]> => {
+  const counts = new Map<string, { count: number; variants: Map<string, number> }>();
+
+  posts.forEach((post) => {
+    post.tags.forEach((rawTag) => {
+      const tag = rawTag.trim();
+      if (!tag) {
+        return;
+      }
+
+      const key = getCanonicalPostTag(tag);
+      const entry = counts.get(key) ?? { count: 0, variants: new Map<string, number>() };
+      entry.count += 1;
+      entry.variants.set(tag, (entry.variants.get(tag) ?? 0) + 1);
+      counts.set(key, entry);
+    });
+  });
+
+  const pickDisplayTag = (key: string, variants: Map<string, number>): string => {
+    const localized = POST_TAG_LOCALIZATIONS[key];
+    if (localized) {
+      return getLocalizedText(localized, locale);
+    }
+
+    const rankedVariants = [...variants.entries()].sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0]));
+    if (rankedVariants.length === 0) {
+      return key;
+    }
+
+    if (locale === 'zh-CN') {
+      return rankedVariants.find(([variant]) => containsCjk(variant))?.[0] ?? rankedVariants[0][0];
+    }
+
+    return rankedVariants.find(([variant]) => !containsCjk(variant))?.[0] ?? rankedVariants[0][0];
+  };
+
+  return [...counts.entries()]
+    .map(([key, entry]) => [pickDisplayTag(key, entry.variants), entry.count] as [string, number])
+    .sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0]))
+    .slice(0, 6);
+};
