@@ -218,6 +218,16 @@ button {
   height: auto;
 }
 
+.markdown-body .mermaid-block svg foreignObject div,
+.markdown-body .mermaid-block svg foreignObject span,
+.markdown-body .mermaid-block svg foreignObject p {
+  line-height: 1.5;
+}
+
+.markdown-body .mermaid-block svg foreignObject p {
+  margin: 0;
+}
+
 .markdown-body .hljs-comment,
 .markdown-body .hljs-quote {
   color: #6e7781;
