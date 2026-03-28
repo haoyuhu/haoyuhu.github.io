@@ -8,7 +8,7 @@ title:
   zh-CN: 长时运行的智能体需要 Oracle 和记忆
 summary:
   en: The most useful lesson from long-running Claude is not that agents can work for hours or days. It is that autonomy only becomes durable when the environment can judge progress, preserve state, and let the system recover without starting from zero.
-  zh-CN: long-running Claude 最有价值的启发，不是智能体能连续工作数小时甚至数天，而是只有当环境能判断进展、保存状态，并允许系统从中间恢复时，自主性才会真正变得可靠。
+  zh-CN: 长程任务 Claude 最有价值的启发，不是智能体能连续工作数小时甚至数天，而是只有当环境能判断进展、保存状态，并允许系统从中间恢复时，自主性才会真正变得可靠。
 tags:
   - long-running-agents
   - evaluation
