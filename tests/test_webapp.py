@@ -10,7 +10,7 @@ def test_build_preview_and_chat_endpoints(temp_repo):
 
     preview = client.get("/api/preview/bundle")
     assert preview.status_code == 200
-    assert preview.json()["profile"]["name"] == "Haoyu Hu"
+    assert preview.json()["profile"]["name"] == "胡皓宇"
 
     build = client.post("/api/build")
     assert build.status_code == 200

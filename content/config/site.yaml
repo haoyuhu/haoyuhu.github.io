@@ -132,9 +132,30 @@ site:
       education:
         zh-CN: "教育背景"
         en: "Education Stack"
+      educationBody:
+        zh-CN: "当前履历中的最近教育节点，会在首页作为基础背景信息展示。"
+        en: "The latest education node from the resume is surfaced here as background context."
       signalDeck:
         zh-CN: "信号面板"
         en: "Signal Deck"
+      signalDeckTitle:
+        zh-CN: "内容与仓库的实时脉冲"
+        en: "Pulse across content and repositories"
+      signalDeckSubtitle:
+        zh-CN: "配置、公开仓库与 Markdown 内容共同驱动首页卡片。"
+        en: "Config, public repositories, and Markdown content drive the home surface together."
+      signalDeckRepos:
+        zh-CN: "仓库"
+        en: "Repos"
+      signalDeckNotes:
+        zh-CN: "短文"
+        en: "Notes"
+      signalDeckArticles:
+        zh-CN: "文章"
+        en: "Articles"
+      signalDeckFollowers:
+        zh-CN: "关注者"
+        en: "Followers"
     loadMore:
       zh-CN: "加载更多"
       en: "Load More"
@@ -150,3 +171,108 @@ site:
     localeToggle:
       zh-CN: "语言"
       en: "Locale"
+    followersLabel:
+      zh-CN: "关注者"
+      en: "Followers"
+    yearsExperienceLabel:
+      zh-CN: "年经验"
+      en: "years experience"
+    primaryLinkLabel:
+      zh-CN: "主链接"
+      en: "Primary Link"
+    projectsSortHint:
+      zh-CN: "按 stars、最近 push、forks、watchers 排序"
+      en: "Sorted by stars, recent pushes, forks, and watchers"
+    projectsEmptyState:
+      zh-CN: "尚未同步到公开仓库数据，请先运行 portfolio sync github。"
+      en: "No public repositories are cached yet. Run portfolio sync github first."
+    resumeView:
+      switchToVisual:
+        zh-CN: "切换到可视视图"
+        en: "Switch to Visual View"
+      title:
+        zh-CN: "git log --graph --all"
+        en: "git log --graph --all"
+      jsonToggle:
+        zh-CN: "{ JSON }"
+        en: "{ JSON }"
+      experienceHeading:
+        zh-CN: "经历时间线"
+        en: "EXPERIENCE_HISTORY"
+      educationHeading:
+        zh-CN: "教育背景"
+        en: "EDUCATION_LOG"
+      skillGroupsHeading:
+        zh-CN: "技能分组"
+        en: "SKILL_GROUPS"
+    projectCard:
+      pinned:
+        zh-CN: "置顶"
+        en: "PINNED"
+      featured:
+        zh-CN: "推荐"
+        en: "FEATURED"
+      live:
+        zh-CN: "在线"
+        en: "LIVE"
+      contributor:
+        zh-CN: "贡献者"
+        en: "CONTRIBUTOR"
+      owner:
+        zh-CN: "维护者"
+        en: "OWNER"
+      contributedWith:
+        zh-CN: "协作方"
+        en: "Contributed with"
+      ownedBy:
+        zh-CN: "维护方"
+        en: "Owned by"
+      updated:
+        zh-CN: "更新于"
+        en: "Updated"
+    studio:
+      resumeImportHeading:
+        zh-CN: "简历导入"
+        en: "Resume Import"
+      selectResumeFirst:
+        zh-CN: "请先选择简历文件。"
+        en: "Please select a resume file first."
+      importing:
+        zh-CN: "导入中..."
+        en: "Importing..."
+      importResume:
+        zh-CN: "导入简历"
+        en: "Import Resume"
+      bundleOpsHeading:
+        zh-CN: "Bundle 操作"
+        en: "Bundle Ops"
+      buildBundle:
+        zh-CN: "构建 Bundle"
+        en: "Build Bundle"
+      runChecks:
+        zh-CN: "运行校验"
+        en: "Run Checks"
+      previewBundle:
+        zh-CN: "预览 Bundle"
+        en: "Preview Bundle"
+      publishNoteHeading:
+        zh-CN: "发布短文"
+        en: "Publish Note"
+      publishNote:
+        zh-CN: "发布短文"
+        en: "Publish Note"
+      publishArticleHeading:
+        zh-CN: "发布文章"
+        en: "Publish Article"
+      publishArticle:
+        zh-CN: "发布文章"
+        en: "Publish Article"
+      publishing:
+        zh-CN: "发布中..."
+        en: "Publishing..."
+      studioResponse:
+        zh-CN: "创作台响应"
+        en: "Studio Response"
+      voiceHint:
+        zh-CN: "语音录制仅在 CLI 路径中可用，并依赖本地可选扩展。"
+        en: "Voice capture is available through the CLI path and only activates when optional local extras are installed."

@@ -7,11 +7,18 @@ import { formatDate, getLocalizedText } from '../lib/i18n';
 interface ProjectCardProps {
   project: ProjectItem;
   locale: LocaleCode;
+  copy: Record<string, any>;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project, locale }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project, locale, copy }) => {
   const languageColor = LANGUAGE_COLORS[project.language] || LANGUAGE_COLORS.Unknown;
-  const relationshipLabel = project.relationship === 'contributor' ? 'CONTRIBUTOR' : 'OWNER';
+  const projectCopy = copy.projectCard ?? {};
+  const relationshipLabel = getLocalizedText(
+    project.relationship === 'contributor'
+      ? projectCopy.contributor ?? { 'zh-CN': '贡献者', en: 'CONTRIBUTOR' }
+      : projectCopy.owner ?? { 'zh-CN': '维护者', en: 'OWNER' },
+    locale,
+  );
   const relationshipTone =
     project.relationship === 'contributor'
       ? 'border-sky-500/30 bg-sky-500/10 text-sky-300'
@@ -29,7 +36,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, locale }) => {
           <div className="mb-3 flex flex-wrap gap-2">
             {project.pinned && (
               <span className="rounded-full border border-amber-500/30 bg-amber-500/10 px-2 py-1 text-[10px] uppercase tracking-[0.2em] text-amber-300">
-                PINNED
+                {getLocalizedText(projectCopy.pinned ?? { 'zh-CN': '置顶', en: 'PINNED' }, locale)}
               </span>
             )}
             <span
@@ -39,12 +46,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, locale }) => {
             </span>
             {project.featured && (
               <span className="rounded-full border border-accent/30 bg-accent/10 px-2 py-1 text-[10px] uppercase tracking-[0.2em] text-accent">
-                FEATURED
+                {getLocalizedText(projectCopy.featured ?? { 'zh-CN': '推荐', en: 'FEATURED' }, locale)}
               </span>
             )}
             {project.homepage && (
               <span className="rounded-full border border-ide-border bg-ide-panel px-2 py-1 text-[10px] uppercase tracking-[0.2em] text-ide-text-dim">
-                LIVE
+                {getLocalizedText(projectCopy.live ?? { 'zh-CN': '在线', en: 'LIVE' }, locale)}
               </span>
             )}
           </div>
@@ -103,10 +110,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, locale }) => {
         <div className="flex flex-wrap items-center justify-between gap-2 border-t border-dashed border-ide-border pt-3">
           <div className="break-words text-[11px]">
             {project.relationship === 'contributor'
-              ? `Contributed with @${project.repositoryOwner}`
-              : `Owned by @${project.repositoryOwner}`}
+              ? `${getLocalizedText(projectCopy.contributedWith ?? { 'zh-CN': '协作方', en: 'Contributed with' }, locale)} @${project.repositoryOwner}`
+              : `${getLocalizedText(projectCopy.ownedBy ?? { 'zh-CN': '维护方', en: 'Owned by' }, locale)} @${project.repositoryOwner}`}
           </div>
-          {project.pushedAt && <div className="text-[11px]">Updated {formatDate(project.pushedAt, locale)}</div>}
+          {project.pushedAt && (
+            <div className="text-[11px]">
+              {getLocalizedText(projectCopy.updated ?? { 'zh-CN': '更新于', en: 'Updated' }, locale)} {formatDate(project.pushedAt, locale)}
+            </div>
+          )}
         </div>
 
         {project.homepage && (

@@ -14,6 +14,7 @@ class OpenAICompatibleProvider(LLMProvider):
         super().__init__(model=model or os.environ.get("PORTFOLIO_OPENAI_MODEL") or "gpt-4o-mini")
         self.api_key = os.environ.get("OPENAI_API_KEY") or os.environ.get("PORTFOLIO_OPENAI_API_KEY")
         self.base_url = os.environ.get("OPENAI_BASE_URL") or os.environ.get("PORTFOLIO_OPENAI_BASE_URL")
+        self.timeout = float(os.environ.get("OPENAI_TIMEOUT") or os.environ.get("PORTFOLIO_OPENAI_TIMEOUT") or "180")
 
     @property
     def name(self) -> str:
@@ -42,7 +43,7 @@ class OpenAICompatibleProvider(LLMProvider):
                 "Content-Type": "application/json",
             },
             json=payload,
-            timeout=60,
+            timeout=self.timeout,
         )
         response.raise_for_status()
         content = response.json()["choices"][0]["message"]["content"]

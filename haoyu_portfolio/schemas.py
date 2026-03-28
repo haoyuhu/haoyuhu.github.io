@@ -180,7 +180,7 @@ class EducationEntry(PortfolioBaseModel):
     id: str
     school: str
     degree: LocalizedText
-    field: LocalizedText
+    field: LocalizedText | None = None
     startDate: str
     endDate: str
 

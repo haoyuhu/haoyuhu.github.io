@@ -152,7 +152,7 @@ export interface EducationEntry {
   id: string;
   school: string;
   degree: LocalizedText;
-  field: LocalizedText;
+  field?: LocalizedText | null;
   startDate: string;
   endDate: string;
 }

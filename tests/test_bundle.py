@@ -7,7 +7,7 @@ from haoyu_portfolio.bundle import build_bundle
 
 def test_build_bundle_writes_public_json(temp_repo):
     bundle = build_bundle(write=True)
-    assert bundle.profile.name == "Haoyu Hu"
+    assert bundle.profile.name == "胡皓宇"
     payload = json.loads((temp_repo / "public" / "data.json").read_text(encoding="utf-8"))
     assert payload["site"]["localeDefault"] == "en"
     assert payload["site"]["runtime"]["chatEnabled"] is False
@@ -104,3 +104,44 @@ def test_build_bundle_merges_cached_github_profile_and_projects(temp_repo):
     assert bundle.projects.items[0].relationship == "contributor"
     assert bundle.projects.items[1].featured is True
     assert bundle.projects.items[1].description["en"].startswith("A Python client for the Dify API")
+
+
+def test_build_bundle_generates_project_topics_when_missing(temp_repo):
+    cache_dir = temp_repo / "content" / "cache"
+    cache_dir.mkdir(parents=True, exist_ok=True)
+
+    (cache_dir / "github_repos.json").write_text(
+        json.dumps(
+            {
+                "items": [
+                    {
+                        "id": "haoyuhu--agent-cli",
+                        "name": "agent-cli",
+                        "nameWithOwner": "haoyuhu/agent-cli",
+                        "repositoryOwner": "haoyuhu",
+                        "description": {
+                            "zh-CN": "面向智能体工作流的 Python CLI 工具。",
+                            "en": "A Python CLI tool for agent workflows.",
+                        },
+                        "language": "Python",
+                        "stars": 5,
+                        "forks": 1,
+                        "watchers": 1,
+                        "url": "https://github.com/haoyuhu/agent-cli",
+                        "homepage": None,
+                        "topics": [],
+                        "featured": False,
+                        "relationship": "owner",
+                        "source": "github-sync",
+                        "pushedAt": "2026-03-21T08:00:00Z",
+                        "updatedAt": "2026-03-21T08:00:00Z",
+                    }
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    bundle = build_bundle(write=False)
+
+    assert bundle.projects.items[0].topics[:4] == ["python", "agent", "cli", "workflow"]

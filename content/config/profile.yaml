@@ -1,105 +1,114 @@
 profile:
-  name: "Haoyu Hu"
-  avatarUrl: "https://avatars.githubusercontent.com/u/9149575?v=4"
-  primaryUrl: "https://github.com/haoyuhu"
+  name: 胡皓宇
+  avatarUrl: https://avatars.githubusercontent.com/u/9149575?v=4
+  primaryUrl: https://www.huhaoyu.com
   title:
-    zh-CN: "智能体工程 / AI 基础设施 / 全栈系统设计"
-    en: "Agent Engineering / AI Infrastructure / Full-stack Systems"
+    zh-CN: 算法工程专家
+    en: Algorithm Engineering Expert
   heroExtends:
-    zh-CN: "AgentOrchestrator, AIInfraArchitect"
-    en: "AgentOrchestrator, AIInfraArchitect"
+    zh-CN: AgentOrchestrator, AIInfraArchitect
+    en: AgentOrchestrator, AIInfraArchitect
   biography:
-    zh-CN: "正在构建面向下一代 AI 应用的智能体系统、内容工作流与可扩展基础设施，让个人表达和工程实践可以被持续编排、持续交付。"
-    en: "Building intelligent agents, content workflows, and scalable infrastructure for the next generation of AI-native products."
+    zh-CN: 算法工程专家，具备推荐系统、自然语言处理、高并发、推理架构、大模型与智能体相关经验，曾任职于字节跳动、腾讯、深褐科技等公司。
+    en: Algorithm engineering expert with experience in recommendation systems, natural
+      language processing, high-concurrency systems, inference architecture, large
+      language models, and AI agents. Previously worked at ByteDance, Tencent, and
+      Deep Brown Technology.
   location:
-    zh-CN: "中国，上海"
-    en: "Shanghai, China"
-  email: "im@huhaoyu.com"
+    zh-CN: 上海
+    en: Shanghai
+  email: im@huhaoyu.com
   socialLinks:
-    - id: "github"
-      label:
-        zh-CN: "GitHub"
-        en: "GitHub"
-      url: "https://github.com/haoyuhu"
-      icon: "github"
+  - id: github
+    label:
+      zh-CN: GitHub
+      en: GitHub
+    url: https://github.com/haoyuhu
+    icon: github
+  - id: homepage
+    label:
+      zh-CN: 个人主页
+      en: Homepage
+    url: https://www.huhaoyu.com
+    icon: globe
   stats:
     publicRepos: 30
     followers: 46
     following: 17
   systemIdentity:
-    - label:
-        zh-CN: "Host"
-        en: "Host"
-      value:
-        zh-CN: "github.com/haoyuhu"
-        en: "github.com/haoyuhu"
-      detail:
-        zh-CN: "公开仓库、文章与部署产物都从这个主节点出发，保证内容与代码的发布来源一致。"
-        en: "Public repositories, writing, and deployment artifacts all publish from this primary node."
-    - label:
-        zh-CN: "Base"
-        en: "Base"
-      value:
-        zh-CN: "上海，中国"
-        en: "Shanghai, China"
-      detail:
-        zh-CN: "常驻上海，默认按中英双语组织内容与个人信息，兼顾本地构建与异步协作。"
-        en: "Operating from Shanghai with bilingual-by-default content organization and async-friendly delivery."
-    - label:
-        zh-CN: "Edu"
-        en: "Edu"
-      value:
-        zh-CN: "上海交通大学（计算机硕士）"
-        en: "SJTU (M.S. in Computer Science)"
-      detail:
-        zh-CN: "计算机科学训练提供了研究、算法与系统设计的共同底座，也让表达更偏向结构化。"
-        en: "Computer science training provides the shared base for research, algorithms, and system-oriented thinking."
-    - label:
-        zh-CN: "Focus"
-        en: "Focus"
-      value:
-        zh-CN: "配置驱动内容系统 / 智能体工程 / AI 基础设施"
-        en: "Config-first content systems / Agent engineering / AI infrastructure"
-      detail:
-        zh-CN: "当前重点围绕内容工作流、智能体系统与可扩展交付链路持续推进。"
-        en: "Current work centers on content workflows, agent systems, and scalable delivery loops."
-      useTechStackAsTags: true
+  - label:
+      zh-CN: Host
+      en: Host
+    value:
+      zh-CN: github.com/haoyuhu
+      en: github.com/haoyuhu
+    detail:
+      zh-CN: 主要公开资料入口与作品链接。
+      en: Primary public entry point for repositories and work.
+  - label:
+      zh-CN: Base
+      en: Base
+    value:
+      zh-CN: 上海
+      en: Shanghai
+    detail:
+      zh-CN: 当前常驻城市。
+      en: Current base location.
+  - label:
+      zh-CN: Edu
+      en: Edu
+    value:
+      zh-CN: 清华大学（硕士）
+      en: 清华大学 (Master's Degree)
+    detail:
+      zh-CN: 来自导入简历的最近教育节点。
+      en: Latest education node derived from the imported resume.
+  - label:
+      zh-CN: Focus
+      en: Focus
+    value:
+      zh-CN: Golang / Node.js / Java / Python
+      en: Golang / Node.js / Java / Python
+    detail:
+      zh-CN: 根据简历中的岗位与技能归纳的当前关注方向。
+      en: Current focus derived from imported roles and skills.
+    useTechStackAsTags: true
   techStack:
-    - name: "Agent Arch"
-      level: 95
-    - name: "SFT / RLHF"
-      level: 85
-    - name: "Inference"
-      level: 90
-    - name: "Full Stack"
-      level: 92
+  - name: Agent Arch
+    level: 95
+  - name: SFT / RLHF
+    level: 85
+  - name: Inference
+    level: 90
+  - name: Full Stack
+    level: 92
   aiTools:
-    - name: "Claude Code"
-      level: 96
-      usage: "1250h"
-      rating: "S-Tier"
-      summary:
-        zh-CN: "主力重构、代码生成与仓库级实现。"
-        en: "Primary driver for refactors, code generation, and repo-wide implementation."
-    - name: "Trae"
-      level: 78
-      usage: "340h"
-      rating: "A-Tier"
-      summary:
-        zh-CN: "用于快速草拟、探索与轻量协作。"
-        en: "Used for fast drafts, exploration, and lightweight collaboration."
-    - name: "OpenClaw"
-      level: 84
-      usage: "680h"
-      rating: "A-Tier"
-      summary:
-        zh-CN: "偏向多步骤任务编排与自动化实验。"
-        en: "Best suited for multi-step orchestration and automation experiments."
-    - name: "Codex"
-      level: 62
-      usage: "2.1kh"
-      rating: "Legacy"
-      summary:
-        zh-CN: "长期积累使用经验，偏经典代码工作流。"
-        en: "Long-term accumulated usage in more classic code workflows."
-  careerStartYear: 2018
+  - name: Claude Code
+    level: 96
+    usage: 1250h
+    rating: S-Tier
+    summary:
+      zh-CN: 主力重构、代码生成与仓库级实现。
+      en: Primary driver for refactors, code generation, and repo-wide implementation.
+  - name: Trae
+    level: 78
+    usage: 340h
+    rating: A-Tier
+    summary:
+      zh-CN: 用于快速草拟、探索与轻量协作。
+      en: Used for fast drafts, exploration, and lightweight collaboration.
+  - name: OpenClaw
+    level: 84
+    usage: 680h
+    rating: A-Tier
+    summary:
+      zh-CN: 偏向多步骤任务编排与自动化实验。
+      en: Best suited for multi-step orchestration and automation experiments.
+  - name: Codex
+    level: 62
+    usage: 2.1kh
+    rating: Legacy
+    summary:
+      zh-CN: 长期积累使用经验，偏经典代码工作流。
+      en: Long-term accumulated usage in more classic code workflows.
+  careerStartYear: 2017

@@ -50,7 +50,7 @@ def _github_settings() -> dict:
 @profile_app.command("import")
 def profile_import(
     source: Annotated[Path | None, typer.Option("--source", help="本地 PDF 或 Markdown 简历路径。")] = None,
-    provider: Annotated[str, typer.Option("--provider", help="mock / gemini / openai-compatible")] = "mock",
+    provider: Annotated[str | None, typer.Option("--provider", help="mock / gemini / openai-compatible")] = None,
     model: Annotated[str | None, typer.Option("--model", help="覆盖默认模型名称。")] = None,
     interactive: Annotated[bool, typer.Option("--interactive", help="进入交互模式。")] = False,
     dry_run: Annotated[bool, typer.Option("--dry-run", help="只预览不写入。")] = False,
@@ -80,7 +80,7 @@ def create_note(
     source: Annotated[Path | None, typer.Option("--source", help="Markdown 或纯文本文件路径。")] = None,
     title: Annotated[str | None, typer.Option("--title", help="标题，可选。")] = None,
     tags: Annotated[list[str] | None, typer.Option("--tags", help="重复传入多个标签。")] = None,
-    provider: Annotated[str, typer.Option("--provider")] = "mock",
+    provider: Annotated[str | None, typer.Option("--provider")] = None,
     model: Annotated[str | None, typer.Option("--model")] = None,
     interactive: Annotated[bool, typer.Option("--interactive")] = False,
     dry_run: Annotated[bool, typer.Option("--dry-run")] = False,
@@ -97,7 +97,7 @@ def create_article(
     source: Annotated[Path | None, typer.Option("--source", help="Markdown 或纯文本文件路径。")] = None,
     title: Annotated[str | None, typer.Option("--title", help="标题，可选。")] = None,
     tags: Annotated[list[str] | None, typer.Option("--tags", help="重复传入多个标签。")] = None,
-    provider: Annotated[str, typer.Option("--provider")] = "mock",
+    provider: Annotated[str | None, typer.Option("--provider")] = None,
     model: Annotated[str | None, typer.Option("--model")] = None,
     interactive: Annotated[bool, typer.Option("--interactive")] = False,
     dry_run: Annotated[bool, typer.Option("--dry-run")] = False,

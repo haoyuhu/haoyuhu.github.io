@@ -5,6 +5,7 @@ import {
   Calendar,
   ChevronRight,
   ChevronsDown,
+  ExternalLink,
   FileCode,
   FileText,
   Folder,
@@ -48,6 +49,12 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; className?: s
   articles: FileText,
   settings: Settings,
   studio: TerminalIcon,
+};
+
+const socialIconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
+  github: Github,
+  globe: Globe,
+  link: ExternalLink,
 };
 
 const resolveRecommendedItem = <T,>(
@@ -289,9 +296,27 @@ const App: React.FC = () => {
   const isStudioActive = activeTab === 'studio' && studioEnabled;
 
   const projectSortHint =
-    locale === 'zh-CN'
-      ? '按 stars、最近 push、forks、watchers 排序'
-      : 'Sorted by stars, recent pushes, forks, and watchers';
+    getLocalizedText(
+      copy.projectsSortHint ?? {
+        'zh-CN': '按 stars、最近 push、forks、watchers 排序',
+        en: 'Sorted by stars, recent pushes, forks, and watchers',
+      },
+      locale,
+    );
+  const followersLabel = getLocalizedText(
+    copy.followersLabel ?? { 'zh-CN': '关注者', en: 'Followers' },
+    locale,
+  );
+  const primaryProfileLink =
+    bundle.profile.socialLinks.find((link) => link.url === bundle.profile.primaryUrl) ??
+    bundle.profile.socialLinks[0] ??
+    null;
+  const PrimaryProfileLinkIcon =
+    socialIconMap[primaryProfileLink?.icon || (bundle.profile.primaryUrl.includes('github.com') ? 'github' : 'globe')] ??
+    ExternalLink;
+  const primaryProfileLinkLabel = primaryProfileLink
+    ? getLocalizedText(primaryProfileLink.label, locale)
+    : getLocalizedText(copy.primaryLinkLabel ?? { 'zh-CN': '主链接', en: 'Primary Link' }, locale);
 
   const homeSpotlightCards: HomeSpotlightCard[] = [];
 
@@ -391,12 +416,18 @@ const App: React.FC = () => {
       icon: Briefcase,
       body: (
         <div className="space-y-2 text-sm text-ide-text-dim">
-          {currentJob.projects.slice(0, 3).map((project) => (
-            <div key={`${currentJob.id}-${project.name}`} className="rounded border border-ide-border bg-ide-panel px-3 py-2">
-              <div className="font-semibold text-ide-text">{project.name}</div>
-              <div className="mt-1 leading-5">{getLocalizedText(project.description, locale)}</div>
-            </div>
-          ))}
+          {currentJob.projects.length > 0
+            ? currentJob.projects.slice(0, 3).map((project) => (
+                <div key={`${currentJob.id}-${project.name}`} className="rounded border border-ide-border bg-ide-panel px-3 py-2">
+                  <div className="font-semibold text-ide-text">{project.name}</div>
+                  <div className="mt-1 leading-5">{getLocalizedText(project.description, locale)}</div>
+                </div>
+              ))
+            : currentJob.description[locale].slice(0, 3).map((line) => (
+                <div key={`${currentJob.id}-${line}`} className="rounded border border-ide-border bg-ide-panel px-3 py-2 leading-6">
+                  {line}
+                </div>
+              ))}
         </div>
       ),
       footer: (
@@ -414,13 +445,17 @@ const App: React.FC = () => {
       targetTab: 'resume',
       kicker: getLocalizedText(copy.widgets.education, locale),
       title: latestEducation.school,
-      subtitle: `${getLocalizedText(latestEducation.degree, locale)} · ${getLocalizedText(latestEducation.field, locale)}`,
+      subtitle: getLocalizedText(latestEducation.degree, locale),
       icon: Globe,
       body: (
         <p className="text-sm leading-6 text-ide-text-dim">
-          {locale === 'zh-CN'
-            ? '作为当前履历配置中的最高学历节点，它也为研究、系统设计与工程表达提供了稳定背景。'
-            : 'This top education node anchors the current resume config with a stable base for research, systems thinking, and engineering communication.'}
+          {getLocalizedText(
+            copy.widgets.educationBody ?? {
+              'zh-CN': '当前履历中的最近教育节点，会在首页作为基础背景信息展示。',
+              en: 'The latest education node from the resume is surfaced here as background context.',
+            },
+            locale,
+          )}
         </p>
       ),
       footer: (
@@ -436,28 +471,45 @@ const App: React.FC = () => {
     id: 'signal-deck',
     targetTab: 'garden',
     kicker: getLocalizedText(copy.widgets.signalDeck, locale),
-    title: locale === 'zh-CN' ? '内容与仓库的实时脉冲' : 'Pulse across content and repositories',
-    subtitle:
-      locale === 'zh-CN'
-        ? '配置、公开仓库与 Markdown 内容共同驱动首页卡片。'
-        : 'Config, public repositories, and Markdown content drive the home surface together.',
+    title: getLocalizedText(
+      copy.widgets.signalDeckTitle ?? {
+        'zh-CN': '内容与仓库的实时脉冲',
+        en: 'Pulse across content and repositories',
+      },
+      locale,
+    ),
+    subtitle: getLocalizedText(
+      copy.widgets.signalDeckSubtitle ?? {
+        'zh-CN': '配置、公开仓库与 Markdown 内容共同驱动首页卡片。',
+        en: 'Config, public repositories, and Markdown content drive the home surface together.',
+      },
+      locale,
+    ),
     icon: FileCode,
     body: (
       <div className="grid grid-cols-2 gap-3 text-sm">
         <div className="rounded border border-ide-border bg-ide-panel px-3 py-2">
-          <div className="text-[10px] uppercase tracking-wide text-ide-text-dim">{locale === 'zh-CN' ? '仓库' : 'Repos'}</div>
+          <div className="text-[10px] uppercase tracking-wide text-ide-text-dim">
+            {getLocalizedText(copy.widgets.signalDeckRepos ?? { 'zh-CN': '仓库', en: 'Repos' }, locale)}
+          </div>
           <div className="mt-1 text-lg font-bold text-ide-text">{bundle.projects.items.length}</div>
         </div>
         <div className="rounded border border-ide-border bg-ide-panel px-3 py-2">
-          <div className="text-[10px] uppercase tracking-wide text-ide-text-dim">{locale === 'zh-CN' ? '短文' : 'Notes'}</div>
+          <div className="text-[10px] uppercase tracking-wide text-ide-text-dim">
+            {getLocalizedText(copy.widgets.signalDeckNotes ?? { 'zh-CN': '短文', en: 'Notes' }, locale)}
+          </div>
           <div className="mt-1 text-lg font-bold text-ide-text">{notes.length}</div>
         </div>
         <div className="rounded border border-ide-border bg-ide-panel px-3 py-2">
-          <div className="text-[10px] uppercase tracking-wide text-ide-text-dim">{locale === 'zh-CN' ? '文章' : 'Articles'}</div>
+          <div className="text-[10px] uppercase tracking-wide text-ide-text-dim">
+            {getLocalizedText(copy.widgets.signalDeckArticles ?? { 'zh-CN': '文章', en: 'Articles' }, locale)}
+          </div>
           <div className="mt-1 text-lg font-bold text-ide-text">{articles.length}</div>
         </div>
         <div className="rounded border border-ide-border bg-ide-panel px-3 py-2">
-          <div className="text-[10px] uppercase tracking-wide text-ide-text-dim">{locale === 'zh-CN' ? '关注者' : 'Followers'}</div>
+          <div className="text-[10px] uppercase tracking-wide text-ide-text-dim">
+            {getLocalizedText(copy.widgets.signalDeckFollowers ?? { 'zh-CN': '关注者', en: 'Followers' }, locale)}
+          </div>
           <div className="mt-1 text-lg font-bold text-ide-text">{bundle.profile.stats.followers}</div>
         </div>
       </div>
@@ -571,8 +623,8 @@ const App: React.FC = () => {
             </button>
           </div>
           <a href={bundle.profile.primaryUrl} target="_blank" rel="noreferrer" className="flex items-center gap-1 transition-colors hover:text-accent">
-            <Github size={12} />
-            GitHub
+            <PrimaryProfileLinkIcon size={12} />
+            {primaryProfileLinkLabel}
           </a>
         </div>
       </div>
@@ -604,16 +656,21 @@ const App: React.FC = () => {
                 {getLocalizedText(copy.externalLabel, locale)}
               </div>
               {bundle.profile.socialLinks.map((link) => (
-                <a
-                  key={link.id}
-                  href={link.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-2 px-3 py-1.5 text-sm text-ide-text-dim transition-colors hover:text-accent"
-                >
-                  <Github size={14} />
-                  <span className="truncate">{getLocalizedText(link.label, locale)}</span>
-                </a>
+                (() => {
+                  const LinkIcon = socialIconMap[link.icon || 'link'] ?? ExternalLink;
+                  return (
+                    <a
+                      key={link.id}
+                      href={link.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center gap-2 px-3 py-1.5 text-sm text-ide-text-dim transition-colors hover:text-accent"
+                    >
+                      <LinkIcon size={14} />
+                      <span className="truncate">{getLocalizedText(link.label, locale)}</span>
+                    </a>
+                  );
+                })()
               ))}
             </div>
           </div>
@@ -702,7 +759,7 @@ const App: React.FC = () => {
                           <MapPin size={12} /> {getLocalizedText(bundle.profile.location, locale)}
                         </div>
                         <div className="flex items-center gap-1 rounded bg-ide-panel px-2 py-1">
-                          <Users size={12} /> {bundle.profile.stats.followers} followers
+                          <Users size={12} /> {bundle.profile.stats.followers} {followersLabel}
                         </div>
                         {bundle.profile.email && (
                           <div className="max-w-full break-all rounded bg-ide-panel px-2 py-1">{bundle.profile.email}</div>
@@ -792,7 +849,9 @@ const App: React.FC = () => {
                           <span>{getLocalizedText(copy.careerLog, locale)}</span>
                         </div>
                         <div className="rounded border border-ide-border bg-ide-bg px-2 py-1 text-[10px] uppercase tracking-wide text-ide-text-dim">
-                          {locale === 'zh-CN' ? `${uptime} 年经验` : `${uptime} years experience`}
+                          {locale === 'zh-CN'
+                            ? `${uptime} ${getLocalizedText(copy.yearsExperienceLabel ?? { 'zh-CN': '年经验', en: 'years experience' }, locale)}`
+                            : `${uptime} ${getLocalizedText(copy.yearsExperienceLabel ?? { 'zh-CN': '年经验', en: 'years experience' }, locale)}`}
                         </div>
                       </div>
                       <div className="space-y-5">
@@ -855,7 +914,7 @@ const App: React.FC = () => {
                 </div>
               )}
 
-              {activeTab === 'resume' && <ResumeView resume={bundle.resume} locale={locale} />}
+              {activeTab === 'resume' && <ResumeView resume={bundle.resume} locale={locale} copy={copy} />}
 
               {activeTab === 'projects' && (
                 <div>
@@ -874,14 +933,18 @@ const App: React.FC = () => {
                   {bundle.projects.items.length > 0 ? (
                     <div className="grid gap-4 md:grid-cols-2">
                       {bundle.projects.items.map((project) => (
-                        <ProjectCard key={project.id} project={project} locale={locale} />
+                        <ProjectCard key={project.id} project={project} locale={locale} copy={copy} />
                       ))}
                     </div>
                   ) : (
                     <div className="rounded-xl border border-dashed border-ide-border bg-ide-panel p-6 text-sm text-ide-text-dim">
-                      {locale === 'zh-CN'
-                        ? '尚未同步到公开仓库数据，请先运行 portfolio sync github。'
-                        : 'No public repositories are cached yet. Run portfolio sync github first.'}
+                      {getLocalizedText(
+                        copy.projectsEmptyState ?? {
+                          'zh-CN': '尚未同步到公开仓库数据，请先运行 portfolio sync github。',
+                          en: 'No public repositories are cached yet. Run portfolio sync github first.',
+                        },
+                        locale,
+                      )}
                     </div>
                   )}
 

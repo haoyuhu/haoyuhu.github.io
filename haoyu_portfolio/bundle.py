@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from datetime import datetime, timezone
 from typing import Any
 
@@ -10,7 +11,48 @@ from .services.github_sync import (
     load_cached_github_repos,
     refresh_github_caches,
 )
-from .utils import deep_merge, dump_json, load_yaml
+from .utils import deep_merge, dump_json, load_yaml, slugify
+
+
+PROJECT_TOPIC_KEYWORDS: tuple[tuple[str, str], ...] = (
+    ("agent", "agent"),
+    ("llm", "llm"),
+    ("gpt", "gpt"),
+    ("rag", "rag"),
+    ("sdk", "sdk"),
+    ("api", "api"),
+    ("client", "client"),
+    ("cli", "cli"),
+    ("benchmark", "benchmark"),
+    ("inference", "inference"),
+    ("serving", "serving"),
+    ("workflow", "workflow"),
+    ("automation", "automation"),
+    ("wechat", "wechat"),
+    ("bert", "bert"),
+    ("nlp", "nlp"),
+    ("recommend", "recommendation"),
+    ("cluster", "clustering"),
+    ("redis", "redis"),
+    ("postgres", "postgresql"),
+    ("react", "react"),
+    ("typescript", "typescript"),
+    ("python", "python"),
+    ("golang", "go"),
+    ("electron", "electron"),
+)
+
+PROJECT_TOPIC_STOPWORDS = {
+    "and",
+    "for",
+    "with",
+    "from",
+    "repo",
+    "repository",
+    "project",
+    "source",
+    "tool",
+}
 
 
 def _load_config(name: str, top_level_key: str) -> dict[str, Any]:
@@ -131,6 +173,49 @@ def _sort_projects(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
     )
 
 
+def _description_text(description: Any) -> str:
+    if isinstance(description, dict):
+        return " ".join(str(description.get(key) or "") for key in ("zh-CN", "en"))
+    return str(description or "")
+
+
+def _generated_topics(project: dict[str, Any]) -> list[str]:
+    generated: list[str] = []
+    seen: set[str] = set()
+
+    def add_topic(raw: str) -> None:
+        topic = slugify(raw).replace("-", "-")
+        if not topic or topic in seen:
+            return
+        seen.add(topic)
+        generated.append(topic)
+
+    language = str(project.get("language") or "").strip()
+    if language and language.lower() != "unknown":
+        add_topic(language)
+
+    haystack = " ".join(
+        [
+            str(project.get("name") or ""),
+            str(project.get("nameWithOwner") or ""),
+            _description_text(project.get("description")),
+        ]
+    ).lower()
+    for keyword, topic in PROJECT_TOPIC_KEYWORDS:
+        if keyword in haystack:
+            add_topic(topic)
+
+    name_tokens = re.split(r"[^a-zA-Z0-9]+", str(project.get("name") or "").lower())
+    for token in name_tokens:
+        if len(token) < 3 or token in PROJECT_TOPIC_STOPWORDS:
+            continue
+        add_topic(token)
+        if len(generated) >= 6:
+            break
+
+    return generated[:6]
+
+
 def _merge_projects(projects: dict[str, Any], cached: list[dict[str, Any]]) -> list[dict[str, Any]]:
     github_settings = projects.get("github", {})
     include_contribution_repos = github_settings.get("includeContributionRepos", True)
@@ -152,7 +237,7 @@ def _merge_projects(projects: dict[str, Any], cached: list[dict[str, Any]]) -> l
 
         override = overrides.get(full_name) or overrides.get(short_name) or {}
         merged_item = deep_merge(cached_item, override)
-        merged_item["topics"] = override.get("topics") or cached_item.get("topics") or []
+        merged_item["topics"] = override.get("topics") or cached_item.get("topics") or _generated_topics(merged_item)
         merged_item["url"] = override.get("url") or cached_item.get("url") or ""
         merged_item["homepage"] = override.get("homepage") or cached_item.get("homepage")
         merged_item["nameWithOwner"] = full_name

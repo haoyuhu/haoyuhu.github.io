@@ -1,193 +1,464 @@
 resume:
   summary:
-    zh-CN: "聚焦智能体架构、推理基础设施、内容工作流与工程效率平台，能够从产品体验、系统设计到自动化发布链路做端到端落地。"
-    en: "Focused on agent architectures, inference platforms, content workflows, and engineering productivity systems across product, infrastructure, and release pipelines."
+    zh-CN: 具备多年算法与后端工程经验，长期聚焦推荐系统、语音识别、推理架构、大模型平台、智能体系统及高并发服务建设，覆盖从模型训练、推理、评测到工程交付与稳定性治理的完整链路。
+    en: Experienced in algorithm engineering and backend development, with long-term
+      focus on recommendation systems, speech recognition, inference architecture,
+      large model platforms, AI agent systems, and high-concurrency services, covering
+      the full lifecycle from training, inference, and evaluation to engineering delivery
+      and stability governance.
   experience:
-    - id: "exp-ai-infra"
-      company: "Tech Giant Corp"
-      role:
-        zh-CN: "AI 基础设施架构师"
-        en: "AI Infrastructure Architect"
-      startDate: "2021"
-      endDate: "Present"
-      location:
-        zh-CN: "上海"
-        en: "Shanghai"
+  - id: exp-bytedance-202412
+    company: 杭州今日头条科技有限公司
+    role:
+      zh-CN: 算法工程专家 工程与技术架构
+      en: Algorithm Engineering Expert, Engineering and Technical Architecture
+    startDate: 2024-12
+    endDate: Present
+    location:
+      zh-CN: 杭州
+      en: Hangzhou
+    description:
+      zh-CN:
+      - 负责 Cici Page 全球推全，在多国多场景应用 Page 功能，负责在线离线算法模型迭代调优、PE 工程、召回策略设计、数据生产与评估体系建设，在性能、成本、LT
+        上取得显著正向实验收益。
+      - 从零到一高质量交付豆包编程 PC 端和移动端全量需求，包括 Agent 架构、上下文管理、Harness Engineering、PE 工程、模型迭代与推理调优。
+      - 推进训推评一体架构建设，完成 Agent Core 整体重构和多端架构统一，设计 Replay+Bugfixing 循环、大规模真实 Rollout
+        环境与 browser-use 质检，支撑 Coding 方向完整模型迭代闭环。
+      - 通过 Skill、CLI 布道推动工程效率提升，智能化团队技能与自动化研发工作流，持续提升人效比。
+      - 搭建自动化动态 benchmark、评估链路和机评人评结合的评测体系，建设评测周边生态工具和平台。
+      en:
+      - Led the global rollout of Cici Page across multiple countries and scenarios,
+        responsible for online/offline model iteration and tuning, prompt engineering,
+        recall strategy design, data production, and evaluation systems, achieving
+        significant gains in performance, cost, and LT.
+      - Delivered from scratch the full PC and mobile application generation business
+        for Doubao Coding, including agent architecture, context management, harness
+        engineering, prompt engineering, model iteration, and inference tuning.
+      - Built an integrated training-inference-evaluation architecture, completed
+        the overall refactoring of Agent Core and unified multi-end architecture,
+        and designed Replay + Bugfixing loops, large-scale real rollout environments,
+        and browser-use quality inspection to support a complete model iteration loop
+        for coding tasks.
+      - Improved engineering efficiency through Skill and CLI adoption, enabling team
+        capabilities and automated R&D workflows to continuously increase productivity.
+      - Established an automated dynamic benchmark and evaluation pipeline combining
+        machine and human evaluation, along with supporting tools and platforms.
+    projects:
+    - name: Cici Page 全球推全
       description:
-        zh-CN:
-          - "负责大模型推理平台与智能体运行时的架构设计。"
-          - "优化 GPU 资源利用率，并显著降低服务延迟。"
-        en:
-          - "Architected large-model inference platforms and agent runtimes."
-          - "Improved GPU utilization while reducing serving latency."
-      projects:
-        - name: "Model Serving Platform"
-          description:
-            zh-CN: "面向大模型的可扩展 Kubernetes 推理服务层。"
-            en: "A scalable Kubernetes-based serving layer for large language models."
-          tech:
-            - "Go"
-            - "Kubernetes"
-            - "Python"
-        - name: "Data Viz Platform"
-          description:
-            zh-CN: "实时分析看板，处理海量事件流。"
-            en: "A real-time analytics dashboard processing large event streams."
-          tech:
-            - "D3.js"
-            - "Canvas"
-            - "WebSockets"
-        - name: "Agent Runtime Control Plane"
-          description:
-            zh-CN: "统一智能体编排、工具调用与多环境发布的运行时控制平面。"
-            en: "A runtime control plane for agent orchestration, tool execution, and multi-environment releases."
-          tech:
-            - "Python"
-            - "PostgreSQL"
-            - "Kubernetes"
-    - id: "exp-full-stack"
-      company: "Innovative Startup Inc"
-      role:
-        zh-CN: "全栈工程师"
-        en: "Full-stack Developer"
-      startDate: "2019"
-      endDate: "2021"
-      location:
-        zh-CN: "杭州"
-        en: "Hangzhou"
+        zh-CN: 负责 Cici Page 在多国多场景的功能落地，覆盖模型迭代调优、召回策略、数据生产和评估体系。
+        en: Led the rollout of Cici Page across multiple countries and scenarios,
+          covering model iteration and tuning, recall strategy, data production, and
+          evaluation systems.
+      tech:
+      - PE
+      - 召回策略
+      - 评估体系
+      - 模型迭代
+    - name: 豆包编程 PC 和 Mobile 端应用生成业务
       description:
-        zh-CN:
-          - "从零到一搭建产品 MVP 与部署流程。"
-          - "建设 CI/CD 与自动化测试体系。"
-        en:
-          - "Built the MVP and deployment workflow from scratch."
-          - "Established CI/CD pipelines and automated testing strategies."
-      projects:
-        - name: "E-commerce Core"
-          description:
-            zh-CN: "支撑高并发秒杀场景的核心后端服务。"
-            en: "Core backend services for high-concurrency commerce workloads."
-          tech:
-            - "Node.js"
-            - "Redis"
-            - "MongoDB"
-        - name: "Growth CMS"
-          description:
-            zh-CN: "面向市场与运营团队的内容编排后台，支持可视化活动配置。"
-            en: "A growth CMS for marketing and operations teams with visual campaign configuration."
-          tech:
-            - "React"
-            - "TypeScript"
-            - "MySQL"
-    - id: "exp-ml-platform"
-      company: "Research Platform Lab"
-      role:
-        zh-CN: "机器学习平台工程师"
-        en: "ML Platform Engineer"
-      startDate: "2018"
-      endDate: "2019"
-      location:
-        zh-CN: "上海"
-        en: "Shanghai"
+        zh-CN: 从零到一交付豆包编程在 PC 和移动端的全量需求，覆盖 Agent 架构、上下文管理、Harness Engineering、PE 工程与推理调优。
+        en: Delivered the full PC and mobile application generation business for Doubao
+          Coding from scratch, covering agent architecture, context management, harness
+          engineering, prompt engineering, and inference tuning.
+      tech:
+      - Agent
+      - 上下文管理
+      - Harness Engineering
+      - PE
+      - 推理调优
+    - name: 训推评一体架构
       description:
-        zh-CN:
-          - "建设训练任务调度、实验管理与特征处理的基础平台。"
-          - "与算法团队共同推进模型训练效率与可复现性。"
-        en:
-          - "Built the foundations for experiment tracking, scheduling, and feature workflows."
-          - "Partnered with research teams to improve training efficiency and reproducibility."
-      projects:
-        - name: "Training Scheduler"
-          description:
-            zh-CN: "面向 GPU 集群的任务调度与实验排队系统。"
-            en: "A scheduling and experiment queuing system for shared GPU clusters."
-          tech:
-            - "Python"
-            - "Celery"
-            - "Kubernetes"
-        - name: "Feature Workflow Studio"
-          description:
-            zh-CN: "将特征生成、校验与发布流程标准化的内部工具。"
-            en: "An internal tool standardizing feature generation, validation, and release workflows."
-          tech:
-            - "Airflow"
-            - "Spark"
-            - "Vue"
-    - id: "exp-product-engineering"
-      company: "Product Studio"
-      role:
-        zh-CN: "产品工程师"
-        en: "Product Engineer"
-      startDate: "2016"
-      endDate: "2018"
-      location:
-        zh-CN: "上海"
-        en: "Shanghai"
+        zh-CN: 重构 Agent Core 并统一多端架构，构建 Replay+Bugfixing 循环、真实 Rollout 环境和自动化评测体系，支撑完整模型闭环迭代。
+        en: Refactored Agent Core and unified multi-end architecture, building Replay
+          + Bugfixing loops, real rollout environments, and automated evaluation systems
+          to support full closed-loop model iteration.
+      tech:
+      - Agent Core
+      - Replay
+      - Bugfixing
+      - Rollout
+      - benchmark
+      - browser-use
+  - id: exp-bytedance-202112
+    company: 北京字节跳动科技有限公司
+    role:
+      zh-CN: 算法工程专家 Lark AI
+      en: Algorithm Engineering Expert, Lark AI
+    startDate: 2021-12
+    endDate: 2024-12
+    location:
+      zh-CN: 上海
+      en: Shanghai
+    description:
+      zh-CN:
+      - 支持飞书会中字幕及妙记相关功能开发迭代，主导语音热词全面重构，解决超时与资源利用率低等性能缺陷，并培养新人一名。
+      - 建设算法池推理架构及服务质量管理体系，支持 CPU/GPU、进程隔离型与原生型算法插件、流式与非流式泛化推理，以及依赖隔离、资源隔离、动态插拔、负载均衡与容灾恢复。
+      - 推进模型推理全生命周期 DevOps，提供 SDK、脚手架与自定义发布流水线，建立监控告警体系，推动累计五十余个算法模型迁入或新增，峰值 QPS 4k+。
+      - 担任部门稳定性、成本与私有化交付 POC，负责代码质量、变更管控、性能测试、攻防演练、容灾演练、降本优化与 AI 功能私有化交付，累计交付 4 个大版本、7
+        个 AI 业务功能。
+      - 参与打造飞书 LLM 基座和 AI 智能体，支持 AI 智能伙伴项目，建设大模型任务平台和大模型网关，整合安全策略并优化 TTFT、TPOT 等指标，主持模型资源协调、平稳升级和流量迁移。
+      en:
+      - Supported the development and iteration of in-meeting captions and Minutes-related
+        features in Lark, led a full refactor of speech hotwords, resolved timeout
+        and low resource utilization issues, and mentored one new team member.
+      - Built an inference architecture and service quality management system for
+        algorithm pools, supporting CPU/GPU environments, process-isolated and native
+        algorithm plugins, streaming and non-streaming inference, dependency isolation,
+        resource isolation, dynamic plug-and-play, load balancing, and disaster recovery.
+      - Promoted full-lifecycle DevOps for model inference by providing SDKs, scaffolding
+        tools, and custom release pipelines, and built a comprehensive monitoring
+        and alerting system. More than 50 algorithm services were migrated or newly
+        added, with peak QPS exceeding 4k.
+      - Served as the department POC for stability, cost governance, and private deployment
+        delivery, covering code quality, change management, performance testing, attack-defense
+        drills, disaster recovery drills, cost optimization, and high-quality private
+        delivery of AI features. Delivered 4 major versions and 7 AI business features.
+      - Helped build the LLM foundation and AI agents for Lark, supported the AI companion
+        project, built a large model task platform and gateway, integrated security
+        policies, optimized TTFT and TPOT metrics, and led model resource coordination,
+        smooth upgrades, and traffic migration.
+    projects:
+    - name: 会议语音识别
       description:
-        zh-CN:
-          - "负责数据产品前后台开发与交付，连接设计、产品与工程协作。"
-          - "在早期阶段建立设计系统、日志方案与发布节奏。"
-        en:
-          - "Owned front-end and back-end delivery for data-driven products."
-          - "Set up early design system, observability, and release practices."
-      projects:
-        - name: "Insights Workspace"
-          description:
-            zh-CN: "面向业务团队的分析工作台，支持自定义报表与钻取。"
-            en: "An insights workspace for business teams with custom reports and drill-down analysis."
-          tech:
-            - "React"
-            - "Node.js"
-            - "PostgreSQL"
-        - name: "Release Dashboard"
-          description:
-            zh-CN: "统一聚合版本信息、告警与回滚入口的内部发布面板。"
-            en: "An internal release dashboard aggregating versions, alerts, and rollback actions."
-          tech:
-            - "TypeScript"
-            - "GraphQL"
-            - "Docker"
+        zh-CN: 支持飞书会中字幕及妙记相关功能，主导语音热词重构，优化性能问题。
+        en: Supported in-meeting captions and Minutes-related features in Lark, leading
+          the refactor of speech hotwords and optimizing performance issues.
+      tech:
+      - 语音识别
+      - 性能优化
+    - name: 算法池推理架构及服务质量管理
+      description:
+        zh-CN: 建设支持 CPU/GPU、插件隔离、动态插拔、负载均衡和容灾恢复的泛化推理架构。
+        en: Built a generalized inference architecture supporting CPU/GPU, plugin
+          isolation, dynamic plug-and-play, load balancing, and disaster recovery.
+      tech:
+      - CPU
+      - GPU
+      - 流式推理
+      - 负载均衡
+      - 容灾恢复
+    - name: 模型推理全生命周期 DevOps
+      description:
+        zh-CN: 提供 SDK、脚手架工具和发布流水线，建设监控告警体系，支撑五十余个模型服务。
+        en: Provided SDKs, scaffolding tools, and release pipelines, and built monitoring
+          and alerting systems for more than 50 model services.
+      tech:
+      - DevOps
+      - SDK
+      - 监控告警
+      - 发布流水线
+    - name: 飞书 LLM 基座和 AI 智能体
+      description:
+        zh-CN: 建设大模型任务平台与大模型网关，整合安全策略并优化全链路稳定性和推理指标。
+        en: Built a large model task platform and gateway, integrating security policies
+          and optimizing end-to-end stability and inference metrics.
+      tech:
+      - LLM
+      - AI Agent
+      - TNS
+      - DLP
+      - TTFT
+      - TPOT
+  - id: exp-bytedance-202012
+    company: 北京字节跳动科技有限公司
+    role:
+      zh-CN: 后端开发工程师 抖音直播-活动
+      en: Backend Development Engineer, Douyin Live - Activities
+    startDate: 2020-12
+    endDate: 2021-12
+    location:
+      zh-CN: 杭州
+      en: Hangzhou
+    description:
+      zh-CN:
+      - 负责抖音/TikTok 直播活动组件化，迭代活动条件项和组件玩法，包括圈人、任务、榜单、投票、直播间指示器、礼物、奖励等，基于插件化满足扩展性与复用性诉求。
+      - 结合多机房容灾、DTS 同步和缓存技术，稳定支持 150k QPS 高并发直播场景。
+      - 负责 3 场重要营收活动的开发和交付，组建专项团队并推动跨团队协作，超预期完成三端活动总目标。
+      en:
+      - Led componentization for Douyin/TikTok live-streaming activities, iterating
+        on activity conditions and gameplay modules such as audience targeting, tasks,
+        leaderboards, voting, live room indicators, gifts, and rewards through a plugin-based
+        architecture.
+      - Combined multi-region disaster recovery, DTS synchronization, and caching
+        technologies to stably support high-concurrency live scenarios at 150k QPS.
+      - Delivered 3 major revenue-generating campaigns, organized a dedicated task
+        force, and drove cross-team collaboration to exceed overall goals across three
+        platforms.
+    projects:
+    - name: 抖音/TikTok 直播活动组件化
+      description:
+        zh-CN: 通过插件化架构支撑直播活动条件项和多种玩法扩展，并稳定支持高并发场景。
+        en: Supported extensible live activity conditions and gameplay modules with
+          a plugin-based architecture, while reliably handling high-concurrency scenarios.
+      tech:
+      - 插件化
+      - 多机房容灾
+      - DTS
+      - 缓存
+    - name: 重要营收活动专项
+      description:
+        zh-CN: 负责 3 场重要营收活动开发与交付，组建专项团队并推动跨团队协作。
+        en: Led the development and delivery of 3 major revenue campaigns, forming
+          a dedicated team and driving cross-team collaboration.
+      tech:
+      - 项目交付
+      - 跨团队协作
+  - id: exp-deepbrown-201907
+    company: 北京深褐科技有限公司
+    role:
+      zh-CN: 项目经理、技术负责人
+      en: Project Manager, Technical Lead
+    startDate: 2019-07
+    endDate: 2020-09
+    location:
+      zh-CN: 北京
+      en: Beijing
+    description:
+      zh-CN:
+      - 作为项目经理负责需求开发、架构设计、软件实现、软件交付全流程管理，团队规模 10 人。
+      - 开展油气勘探算法开发，自研 LMAS、两段式半幅点、LDPCNN 等算法，基于连续、离散、分层、结构化地质数据实现深度方向高精度预测，复杂薄互层识别能力接近专家水平。
+      - 完成软件系统工程实现，客户端基于 Electron 和 ECharts 支持复杂数据交互，服务端支持数据存储切片索引、细粒度权限控制、Redis 集群热点缓存、增量备份、模型训练/推理、CPU/GPU
+        调度、异常发现恢复、多机 Serving 和推理优化。
+      - 推动私有化部署交付，包括服务代码编译混淆/加密、客户端 License+USBKey 和 Docker 部署。
+      - 主持软件客户管理及售卖，覆盖石油勘探院、中石油、中石化下属研究所的软件推广、商务谈判与售后支持，累计营收数百万元。
+      - 获得创业基金、人工智能产业引导基金、雏鹰计划、中关村高新技术企业认证、北京市双软企业认证、软件信用企业评价及十余项软件著作权。
+      en:
+      - Managed the full lifecycle of software projects as project manager, including
+        requirements development, architecture design, implementation, and delivery,
+        leading a team of 10.
+      - Developed oil and gas exploration algorithms including LMAS, two-stage half-amplitude
+        point, and LDPCNN, achieving high-accuracy prediction of lithology, physical
+        properties, and oil/gas potential from continuous, discrete, layered, and
+        structured geological data, with complex thin interbed recognition approaching
+        expert level.
+      - 'Built the software engineering system: Electron and ECharts on the client
+        side for complex data interaction, and server-side support for sharded storage
+        indexing, fine-grained access control, Redis cluster hot caching, incremental
+        backup, model training/inference, CPU/GPU scheduling, anomaly detection and
+        recovery, multi-machine serving, and inference optimization.'
+      - Delivered private deployments including service code obfuscation/encryption,
+        client License + USBKey, and Docker deployment.
+      - Led customer management and software sales for petroleum exploration institutes
+        and research institutes under CNPC and Sinopec, covering promotion, business
+        negotiation, and after-sales support, with cumulative revenue of several million
+        RMB.
+      - Received startup funding, AI industry guidance funding, Eagle Plan support,
+        Zhongguancun high-tech enterprise certification, Beijing software enterprise
+        certification, software credit enterprise evaluation, and more than ten software
+        copyrights.
+    projects:
+    - name: 油气勘探算法开发
+      description:
+        zh-CN: 自研 LMAS、两段式半幅点、LDPCNN 等算法，实现地质数据上的高精度预测与复杂薄互层识别。
+        en: Developed proprietary algorithms such as LMAS, two-stage half-amplitude
+          point, and LDPCNN for high-accuracy prediction and complex thin interbed
+          recognition on geological data.
+      tech:
+      - LMAS
+      - LDPCNN
+      - CPU/GPU
+    - name: 软件系统工程实现
+      description:
+        zh-CN: 构建基于 Electron 的客户端与支持训推一体的服务端系统，覆盖权限控制、缓存、调度、Serving 和私有化部署。
+        en: Built an Electron-based client and an integrated server system for training
+          and inference, covering access control, caching, scheduling, serving, and
+          private deployment.
+      tech:
+      - Electron
+      - ECharts
+      - Redis
+      - Docker
+      - Serving
+  - id: exp-tencent-201706
+    company: 腾讯科技（北京）有限公司
+    role:
+      zh-CN: 算法开发工程师 MIG/CSIG
+      en: Algorithm Development Engineer, MIG/CSIG
+    startDate: 2017-06
+    endDate: 2019-07
+    location:
+      zh-CN: 北京
+      en: Beijing
+    description:
+      zh-CN:
+      - 参与 LightLDA 分布式机器学习平台建设，包括集群管理、任务调度、异常处理与容灾恢复，支持千万级用户和万级 Topic 的训练与推理。
+      - 开展用户画像与文章模型开发，基于图文 CNN+Bi-LSTM 点击率预估模型，离线 AUC > 0.58。
+      - 开发并在线部署 NSFW 识别模型，基于 Xception+TextCNN，测试集 P/R > 0.8/0.9，采用 Flask+uWSGI+gevent
+        部署。
+      - 建设信息流推荐系统，支持 LR/FM/GBDT(LightGBM) 在线推理、LR+GBDT 融合模型、多模型热更新、精排无量系统、分布式参数训练、模型压缩及热更新。
+      - 基于 TAF 框架采用 C++ 重写召回服务，支持多源倒排召回与 FM 排序，召回峰值 400k QPS/5kecu，解决 hiredis 多线程并发和旧召回服务稳定性缺陷。
+      - 开发用户行为实时/累计多维度分段 CTR 统计及粗排打分能力。
+      - 改进原 google-bert 以支持 Multi-GPU、fp16，以及单标签、多标签、序列标注等自定义任务。
+      en:
+      - Contributed to the LightLDA distributed machine learning platform, including
+        cluster management, task scheduling, exception handling, and disaster recovery,
+        supporting training and inference for tens of millions of users and ten-thousand-level
+        topics.
+      - Developed user profiling and article models, including a CTR prediction model
+        based on image-text CNN + Bi-LSTM with offline AUC greater than 0.58.
+      - Developed and deployed an NSFW recognition model online using Xception + TextCNN,
+        achieving test-set precision/recall above 0.8/0.9, deployed with Flask + uWSGI
+        + gevent.
+      - Built feed recommendation systems supporting online inference for LR/FM/GBDT
+        (LightGBM), LR + GBDT hybrid models, multi-model hot updates, fine-ranking
+        systems, distributed parameter training, model compression, and hot updates.
+      - Rewrote the recall service in C++ based on the TAF framework, supporting multi-source
+        inverted-index recall and FM ranking, reaching peak recall throughput of 400k
+        QPS/5kecu and resolving multithreaded hiredis concurrency and stability issues
+        in the legacy service.
+      - Developed real-time and cumulative multi-dimensional segmented CTR statistics
+        and coarse ranking scoring capabilities.
+      - Enhanced the original google-bert to support Multi-GPU, fp16, and custom tasks
+        including single-label, multi-label, and sequence labeling.
+    projects:
+    - name: LightLDA 分布式机器学习平台
+      description:
+        zh-CN: 参与集群管理、任务调度、异常处理与容灾恢复，支持大规模训练和推理。
+        en: Contributed to cluster management, task scheduling, exception handling,
+          and disaster recovery for large-scale training and inference.
+      tech:
+      - LightLDA
+      - 分布式机器学习
+    - name: NSFW识别模型开发及在线部署
+      description:
+        zh-CN: 基于 Xception+TextCNN 开发 NSFW 识别模型，并使用 Flask+uWSGI+gevent 在线部署。
+        en: Developed an NSFW recognition model based on Xception + TextCNN and deployed
+          it online with Flask + uWSGI + gevent.
+      tech:
+      - Xception
+      - TextCNN
+      - Flask
+      - uWSGI
+      - gevent
+    - name: 信息流推荐系统
+      description:
+        zh-CN: 支持 LR/FM/GBDT 在线推理、融合模型、多模型热更新、召回服务重写与多维 CTR 统计。
+        en: Built feed recommendation capabilities including LR/FM/GBDT online inference,
+          hybrid models, hot updates, recall service rewrite, and multi-dimensional
+          CTR statistics.
+      tech:
+      - LR
+      - FM
+      - GBDT
+      - LightGBM
+      - TAF
+      - C++
+      - hiredis
+    - name: 英文语义相似度算法开发
+      description:
+        zh-CN: 改进 google-bert，支持 Multi-GPU、fp16 和多类自定义任务。
+        en: Enhanced google-bert to support Multi-GPU, fp16, and multiple custom task
+          types.
+      tech:
+      - BERT
+      - Multi-GPU
+      - fp16
+  - id: exp-open-source-201904
+    company: GitHub
+    role:
+      zh-CN: 作者、贡献者
+      en: Author, Contributor
+    startDate: 2019-04
+    endDate: Present
+    location:
+      zh-CN: 线上
+      en: Online
+    description:
+      zh-CN:
+      - 持续维护与参与多个 GitHub 开源项目，包括 BERT 多 GPU 微调、聚类算法分析、NLP 迁移学习框架、ORM 框架和 Python 限流器等。
+      en:
+      - Maintains and contributes to multiple GitHub open-source projects, including
+        BERT multi-GPU fine-tuning, clustering algorithm analysis, NLP transfer learning
+        frameworks, ORM frameworks, and a Python rate limiter.
+    projects:
+    - name: haoyuhu/bert-multi-gpu
+      description:
+        zh-CN: 支持微调大批量的大型 BERT 模型，支持多 GPU 和 FP16。
+        en: Supports fine-tuning large BERT models with large batch sizes, including
+          Multi-GPU and FP16 support.
+      tech:
+      - BERT
+      - Multi-GPU
+      - FP16
+    - name: haoyuhu/cluster-analysis
+      description:
+        zh-CN: 各种聚类算法分析。
+        en: Analysis of various clustering algorithms.
+      tech:
+      - 聚类算法
+    - name: BrikerMan/Kashgari
+      description:
+        zh-CN: 简单而强大的 NLP 迁移学习框架，可快速构建命名实体识别、词性标注和文本分类模型。
+        en: A simple yet powerful NLP transfer learning framework for quickly building
+          models for NER, PoS tagging, and text classification.
+      tech:
+      - NLP
+      - 迁移学习
+      - NER
+      - PoS
+    - name: typeorm/typeorm
+      description:
+        zh-CN: 运行于 NodeJS、Browser、Cordova、PhoneGap、Ionic、React Native、NativeScript、Expo
+          和 Electron 平台的 ORM。
+        en: An ORM that runs on NodeJS, Browser, Cordova, PhoneGap, Ionic, React Native,
+          NativeScript, Expo, and Electron.
+      tech:
+      - TypeORM
+      - NodeJS
+      - Electron
+    - name: vutran1710/PyrateLimiter
+      description:
+        zh-CN: Python 的 Leaky-bucket 算法请求限流器。
+        en: A Python request rate limiter based on the leaky-bucket algorithm.
+      tech:
+      - Python
+      - Leaky-bucket
   education:
-    - id: "edu-sjtu"
-      school: "Shanghai Jiao Tong University"
-      degree:
-        zh-CN: "理学硕士"
-        en: "Master of Science"
-      field:
-        zh-CN: "计算机科学"
-        en: "Computer Science"
-      startDate: "2016"
-      endDate: "2019"
-    - id: "edu-tongji"
-      school: "Tongji University"
-      degree:
-        zh-CN: "工学学士"
-        en: "Bachelor of Engineering"
-      field:
-        zh-CN: "软件工程"
-        en: "Software Engineering"
-      startDate: "2012"
-      endDate: "2016"
+  - id: edu-tsinghua-201409
+    school: 清华大学
+    degree:
+      zh-CN: 硕士
+      en: Master's Degree
+    startDate: 2014-09
+    endDate: 2017-06
+  - id: edu-tsinghua-201009
+    school: 清华大学
+    degree:
+      zh-CN: 本科
+      en: Bachelor's Degree
+    startDate: 2010-09
+    endDate: 2014-06
   skillGroups:
-    - id: "skill-agent"
-      label:
-        zh-CN: "智能体与模型系统"
-        en: "Agents and Model Systems"
-      items:
-        - name: "Agent orchestration"
-          level: "Advanced"
-        - name: "Inference platform"
-          level: "Advanced"
-        - name: "Prompt workflows"
-          level: "Advanced"
-    - id: "skill-platform"
-      label:
-        zh-CN: "平台与工程化"
-        en: "Platform Engineering"
-      items:
-        - name: "Full-stack delivery"
-          level: "Advanced"
-        - name: "CI/CD"
-          level: "Advanced"
-        - name: "Developer tooling"
-          level: "Advanced"
+  - id: skill-languages
+    label:
+      zh-CN: 编程语言
+      en: Programming Languages
+    items:
+    - name: Golang
+      level: Advanced
+    - name: Node.js
+      level: Advanced
+    - name: Java
+      level: Advanced
+    - name: Python
+      level: Advanced
+    - name: C/C++
+      level: Advanced
+  - id: skill-techstack
+    label:
+      zh-CN: 技术栈
+      en: Tech Stack
+    items:
+    - name: 推荐系统
+      level: Advanced
+    - name: 自然语言处理
+      level: Advanced
+    - name: 高并发
+      level: Advanced
+    - name: 推理架构
+      level: Advanced
+    - name: 大模型
+      level: Advanced
+    - name: 智能体
+      level: Advanced
