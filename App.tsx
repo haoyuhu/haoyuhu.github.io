@@ -131,7 +131,9 @@ const App: React.FC = () => {
   const [terminalOpen, setTerminalOpen] = useState(false);
   const [gardenLimit, setGardenLimit] = useState(PAGE_SIZE);
   const [articleLimit, setArticleLimit] = useState(PAGE_SIZE);
+  const [careerLogCardHeight, setCareerLogCardHeight] = useState<number | null>(null);
   const [careerLogDescriptionMaxHeight, setCareerLogDescriptionMaxHeight] = useState<number | null>(null);
+  const systemCardRef = useRef<HTMLDivElement | null>(null);
   const careerLogFlowRef = useRef<HTMLDivElement | null>(null);
   const careerLogProjectsRef = useRef<HTMLDivElement | null>(null);
   const careerLogDescriptionRef = useRef<HTMLDivElement | null>(null);
@@ -219,23 +221,44 @@ const App: React.FC = () => {
       return;
     }
 
+    const systemCardElement = systemCardRef.current;
     const flowElement = careerLogFlowRef.current;
     const projectsElement = careerLogProjectsRef.current;
     const descriptionElement = careerLogDescriptionRef.current;
-    if (!flowElement || !projectsElement || !descriptionElement) {
+    if (!systemCardElement || !flowElement || !projectsElement || !descriptionElement) {
       return;
     }
+    const desktopQuery = window.matchMedia('(min-width: 1024px)');
 
-    const computeDescriptionMaxHeight = () => {
+    const computeCareerLogLayout = () => {
+      if (!desktopQuery.matches) {
+        setCareerLogCardHeight((current) => (current === null ? current : null));
+        setCareerLogDescriptionMaxHeight((current) => (current === null ? current : null));
+        return;
+      }
+
+      const systemCardHeight = systemCardElement.getBoundingClientRect().height;
       const flowHeight = flowElement.getBoundingClientRect().height;
       const projectsHeight = projectsElement.getBoundingClientRect().height;
       const flowStyle = window.getComputedStyle(flowElement);
       const lineHeight = parseFloat(window.getComputedStyle(descriptionElement).lineHeight);
       const gap = parseFloat(flowStyle.rowGap || flowStyle.gap || '0');
 
-      if (!Number.isFinite(flowHeight) || !Number.isFinite(projectsHeight) || !Number.isFinite(lineHeight) || lineHeight <= 0) {
+      if (
+        !Number.isFinite(systemCardHeight) ||
+        systemCardHeight <= 0 ||
+        !Number.isFinite(flowHeight) ||
+        !Number.isFinite(projectsHeight) ||
+        !Number.isFinite(lineHeight) ||
+        lineHeight <= 0
+      ) {
         return;
       }
+
+      const nextCardHeight = Math.floor(systemCardHeight);
+      setCareerLogCardHeight((current) =>
+        current !== null && Math.abs(current - nextCardHeight) < 1 ? current : nextCardHeight,
+      );
 
       const availableHeight = Math.max(flowHeight - projectsHeight - gap, lineHeight * 3);
       const nextHeight = Math.floor(availableHeight);
@@ -244,15 +267,20 @@ const App: React.FC = () => {
       );
     };
 
-    computeDescriptionMaxHeight();
+    computeCareerLogLayout();
     const observer = new ResizeObserver(() => {
-      window.requestAnimationFrame(computeDescriptionMaxHeight);
+      window.requestAnimationFrame(computeCareerLogLayout);
     });
 
+    observer.observe(systemCardElement);
     observer.observe(flowElement);
     observer.observe(projectsElement);
+    desktopQuery.addEventListener('change', computeCareerLogLayout);
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      desktopQuery.removeEventListener('change', computeCareerLogLayout);
+    };
   }, [activeTab, bundle, locale]);
 
   if (loading) {
@@ -808,8 +836,8 @@ const App: React.FC = () => {
                     </div>
                   </section>
 
-                  <div className="grid items-start gap-6 lg:grid-cols-2 lg:items-stretch">
-                    <section className="flex min-h-[320px] flex-col rounded-xl border border-ide-border bg-ide-panel p-6 shadow-sm">
+                  <div className="grid items-start gap-6 lg:grid-cols-2">
+                    <section ref={systemCardRef} className="flex min-h-[320px] flex-col rounded-xl border border-ide-border bg-ide-panel p-6 shadow-sm">
                       <div className="mb-4 text-xs text-ide-text-dim">neofetch_v3.sh</div>
                       <div className="mb-4 text-xs">
                         <span className="font-bold text-accent">{bundle.site.ownerHandle}@portfolio</span>:
@@ -881,7 +909,12 @@ const App: React.FC = () => {
                       </div>
                     </section>
 
-                    <section className="flex h-full min-h-[320px] flex-col rounded-xl border border-ide-border bg-ide-panel p-6 shadow-sm">
+                    <section
+                      className="flex min-h-[320px] flex-col rounded-xl border border-ide-border bg-ide-panel p-6 shadow-sm lg:h-full"
+                      style={{
+                        height: careerLogCardHeight !== null ? `${careerLogCardHeight}px` : undefined,
+                      }}
+                    >
                       <div className="mb-4 text-xs text-ide-text-dim">career_log.txt</div>
                       <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
                         <div className="flex items-center gap-2 font-bold text-accent">
