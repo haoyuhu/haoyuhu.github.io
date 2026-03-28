@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   ArrowRight,
   Briefcase,
@@ -129,6 +129,10 @@ const App: React.FC = () => {
   const [terminalOpen, setTerminalOpen] = useState(false);
   const [gardenLimit, setGardenLimit] = useState(PAGE_SIZE);
   const [articleLimit, setArticleLimit] = useState(PAGE_SIZE);
+  const [careerLogDescriptionLines, setCareerLogDescriptionLines] = useState(10);
+  const careerLogFlowRef = useRef<HTMLDivElement | null>(null);
+  const careerLogProjectsRef = useRef<HTMLDivElement | null>(null);
+  const careerLogDescriptionRef = useRef<HTMLParagraphElement | null>(null);
 
   const loadBundle = async () => {
     setLoading(true);
@@ -207,6 +211,46 @@ const App: React.FC = () => {
     }, 18);
     return () => window.clearInterval(timer);
   }, [bundle, locale]);
+
+  useEffect(() => {
+    if (!bundle || activeTab !== 'home') {
+      return;
+    }
+
+    const flowElement = careerLogFlowRef.current;
+    const projectsElement = careerLogProjectsRef.current;
+    const descriptionElement = careerLogDescriptionRef.current;
+    if (!flowElement || !projectsElement || !descriptionElement) {
+      return;
+    }
+
+    const computeDescriptionLines = () => {
+      const flowHeight = flowElement.getBoundingClientRect().height;
+      const projectsHeight = projectsElement.getBoundingClientRect().height;
+      const flowStyle = window.getComputedStyle(flowElement);
+      const lineHeight = parseFloat(window.getComputedStyle(descriptionElement).lineHeight);
+      const gap = parseFloat(flowStyle.rowGap || flowStyle.gap || '0');
+
+      if (!Number.isFinite(flowHeight) || !Number.isFinite(projectsHeight) || !Number.isFinite(lineHeight) || lineHeight <= 0) {
+        return;
+      }
+
+      const availableHeight = Math.max(flowHeight - projectsHeight - gap, lineHeight * 3);
+      const nextLines = Math.max(3, Math.floor(availableHeight / lineHeight));
+      setCareerLogDescriptionLines((current) => (current === nextLines ? current : nextLines));
+    };
+
+    computeDescriptionLines();
+    const observer = new ResizeObserver(() => {
+      window.requestAnimationFrame(computeDescriptionLines);
+    });
+
+    observer.observe(flowElement);
+    observer.observe(projectsElement);
+    observer.observe(descriptionElement);
+
+    return () => observer.disconnect();
+  }, [activeTab, bundle, locale]);
 
   if (loading) {
     return (
@@ -856,9 +900,9 @@ const App: React.FC = () => {
                             : `${uptime} ${getLocalizedText(copy.yearsExperienceLabel ?? { 'zh-CN': '年经验', en: 'years experience' }, locale)}`}
                         </div>
                       </div>
-                      <div className="space-y-5">
+                      <div className="flex flex-1 min-h-0 flex-col">
                         {bundle.resume.experience.slice(0, 1).map((experience) => (
-                          <div key={experience.id} className="border-l-2 border-ide-border pl-4 transition-colors hover:border-accent">
+                          <div key={experience.id} className="flex h-full min-h-0 flex-col border-l-2 border-ide-border pl-4 transition-colors hover:border-accent">
                             <div className="mb-1 flex flex-wrap justify-between gap-2 text-xs text-ide-text-dim">
                               <span>
                                 {experience.startDate} - {experience.endDate}
@@ -867,33 +911,36 @@ const App: React.FC = () => {
                             </div>
                             <div className="text-base font-bold text-ide-text">{getLocalizedText(experience.role, locale)}</div>
                             <div className="mb-3 text-xs text-sky-400">@{getLocalizedText(experience.company, locale)}</div>
-                            <div className="space-y-3">
+                            <div ref={careerLogFlowRef} className="flex min-h-0 flex-1 flex-col gap-3">
                               <p
+                                ref={careerLogDescriptionRef}
                                 className="overflow-hidden text-xs leading-5 text-ide-text-dim"
                                 style={{
                                   display: '-webkit-box',
                                   WebkitBoxOrient: 'vertical',
-                                  WebkitLineClamp: 4,
+                                  WebkitLineClamp: careerLogDescriptionLines,
                                 }}
                               >
                                 {experience.description[locale].map((line) => `- ${line}`).join(' ')}
                               </p>
-                              {experience.projects.map((project, projectIndex) => (
-                                <div key={`${experience.id}-${projectIndex}`} className="rounded border border-ide-border bg-ide-bg px-3 py-2 text-xs text-ide-text-dim">
-                                  <div className="font-semibold text-ide-text">{getLocalizedText(project.name, locale)}</div>
-                                  <div className="mt-1 leading-5">{getLocalizedText(project.description, locale)}</div>
-                                  <div className="mt-2 flex flex-wrap gap-1">
-                                    {project.tech.map((tech, techIndex) => (
-                                      <span
-                                        key={`${experience.id}-${projectIndex}-${techIndex}`}
-                                        className="rounded border border-ide-border bg-ide-panel px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-ide-text-dim"
-                                      >
-                                        {getLocalizedText(tech, locale)}
-                                      </span>
-                                    ))}
+                              <div ref={careerLogProjectsRef} className="space-y-3">
+                                {experience.projects.map((project, projectIndex) => (
+                                  <div key={`${experience.id}-${projectIndex}`} className="rounded border border-ide-border bg-ide-bg px-3 py-2 text-xs text-ide-text-dim">
+                                    <div className="font-semibold text-ide-text">{getLocalizedText(project.name, locale)}</div>
+                                    <div className="mt-1 leading-5">{getLocalizedText(project.description, locale)}</div>
+                                    <div className="mt-2 flex flex-wrap gap-1">
+                                      {project.tech.map((tech, techIndex) => (
+                                        <span
+                                          key={`${experience.id}-${projectIndex}-${techIndex}`}
+                                          className="rounded border border-ide-border bg-ide-panel px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-ide-text-dim"
+                                        >
+                                          {getLocalizedText(tech, locale)}
+                                        </span>
+                                      ))}
+                                    </div>
                                   </div>
-                                </div>
-                              ))}
+                                ))}
+                              </div>
                             </div>
                           </div>
                         ))}
