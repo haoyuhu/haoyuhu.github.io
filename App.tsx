@@ -23,7 +23,6 @@ import {
 } from 'lucide-react';
 import BlogCard from './components/BlogCard';
 import ChatTerminal from './components/ChatTerminal';
-import MarkdownRenderer from './components/MarkdownRenderer';
 import ProjectCard from './components/ProjectCard';
 import ResumeView from './components/ResumeView';
 import StudioView from './components/StudioView';
@@ -133,6 +132,7 @@ const App: React.FC = () => {
   const [articleLimit, setArticleLimit] = useState(PAGE_SIZE);
   const [careerLogCardHeight, setCareerLogCardHeight] = useState<number | null>(null);
   const [careerLogDescriptionMaxHeight, setCareerLogDescriptionMaxHeight] = useState<number | null>(null);
+  const [careerLogDescriptionTruncated, setCareerLogDescriptionTruncated] = useState(false);
   const systemCardRef = useRef<HTMLDivElement | null>(null);
   const careerLogFlowRef = useRef<HTMLDivElement | null>(null);
   const careerLogProjectsRef = useRef<HTMLDivElement | null>(null);
@@ -283,6 +283,31 @@ const App: React.FC = () => {
     };
   }, [activeTab, bundle, locale]);
 
+  useEffect(() => {
+    if (!bundle || activeTab !== 'home') {
+      return;
+    }
+
+    const descriptionElement = careerLogDescriptionRef.current;
+    if (!descriptionElement) {
+      return;
+    }
+
+    const updateTruncationState = () => {
+      const isTruncated = descriptionElement.scrollHeight - descriptionElement.clientHeight > 1;
+      setCareerLogDescriptionTruncated((current) => (current === isTruncated ? current : isTruncated));
+    };
+
+    updateTruncationState();
+    const observer = new ResizeObserver(() => {
+      window.requestAnimationFrame(updateTruncationState);
+    });
+
+    observer.observe(descriptionElement);
+
+    return () => observer.disconnect();
+  }, [activeTab, bundle, locale, careerLogDescriptionMaxHeight]);
+
   if (loading) {
     return (
       <div className="flex min-h-screen flex-col items-center justify-center bg-slate-950 font-mono text-accent">
@@ -387,6 +412,17 @@ const App: React.FC = () => {
   const heroClassName = getLocalizedText(copy.heroClassName ?? bundle.profile.name, locale);
 
   const homeSpotlightCards: HomeSpotlightCard[] = [];
+  const careerLogDescriptionStyle: React.CSSProperties = {
+    maxHeight: careerLogDescriptionMaxHeight !== null ? `${careerLogDescriptionMaxHeight}px` : undefined,
+    WebkitMaskImage: careerLogDescriptionTruncated
+      ? 'linear-gradient(180deg, #000 0%, #000 calc(100% - 1.75rem), transparent 100%)'
+      : undefined,
+    maskImage: careerLogDescriptionTruncated
+      ? 'linear-gradient(180deg, #000 0%, #000 calc(100% - 1.75rem), transparent 100%)'
+      : undefined,
+    WebkitMaskRepeat: careerLogDescriptionTruncated ? 'no-repeat' : undefined,
+    maskRepeat: careerLogDescriptionTruncated ? 'no-repeat' : undefined,
+  };
 
   if (latestProject) {
     homeSpotlightCards.push({
@@ -941,15 +977,10 @@ const App: React.FC = () => {
                             <div ref={careerLogFlowRef} className="flex min-h-0 flex-1 flex-col gap-3">
                               <div
                                 ref={careerLogDescriptionRef}
-                                className="markdown-body overflow-hidden text-xs leading-5 text-ide-text-dim"
-                                style={{
-                                  maxHeight:
-                                    careerLogDescriptionMaxHeight !== null
-                                      ? `${careerLogDescriptionMaxHeight}px`
-                                      : undefined,
-                                }}
+                                className="overflow-hidden whitespace-pre-line break-words text-xs leading-5 text-ide-text-dim"
+                                style={careerLogDescriptionStyle}
                               >
-                                <MarkdownRenderer content={experience.description[locale].map((line) => `- ${line}`).join('\n')} />
+                                {experience.description[locale].join('\n')}
                               </div>
                               <div ref={careerLogProjectsRef} className="space-y-3">
                                 {experience.projects.map((project, projectIndex) => (
