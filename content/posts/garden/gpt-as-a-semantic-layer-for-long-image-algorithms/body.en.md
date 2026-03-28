@@ -1,4 +1,4 @@
-My current take: GPT is unlikely to optimize the **image-processing core** of a long-image system. It will not beat specialized code at stitching, scaling, seam repair, de-duplication, or saliency estimation. The real leverage is one level higher: <u>decision-making</u>.
+My current take: GPT is unlikely to optimize the **image-processing core** of a long-image system. It will not beat specialized code at stitching, scaling, seam repair, de-duplication, or saliency estimation. The real leverage is one level higher: **decision-making**.
 
 For long images—web page captures, chat exports, article cards, poster-like composites—the hardest failures are often semantic rather than numeric. We care about things like natural cut points, readable rhythm, intact figure-caption pairs, no half-cropped faces, no orphaned headers, and sensible density across a very tall canvas. Those goals are easy for humans to describe, but awkward to encode directly.
 

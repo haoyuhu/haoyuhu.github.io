@@ -10,7 +10,7 @@ That shift matters. A good agent workflow is not just writing code faster; it is
 
 The mistake is to read agent as magic and stop engineering. An agent that cannot be inspected, bounded, and tested is not a new paradigm; it is a vague script with confidence. The frontier is not whether the IDE can spawn agents. It is whether I can reason about those agents with the same discipline I apply to code.
 
-<u>The unit of composition is shifting from files to workers.</u> That is real. But it is a change in abstraction, not an escape from programming. We are still programming, just one layer higher, where orchestration matters as much as implementation.
+**The unit of composition is shifting from files to workers.** That is real. But it is a change in abstraction, not an escape from programming. We are still programming, just one layer higher, where orchestration matters as much as implementation.
 
 **References**
 - Andrej Karpathy, X post on agent IDEs as a higher level of programming, 2026.

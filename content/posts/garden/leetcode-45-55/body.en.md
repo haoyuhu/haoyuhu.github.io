@@ -43,4 +43,4 @@ int jump(vector<int>& nums) {
 
 This is also **O(n)** time and **O(1)** space. If reachability is not guaranteed, add a guard for `i > farthest` and return `-1`.
 
-<u>BFS is still the right mental model</u>; greedy is just the tighter implementation. If you keep the older `distance`-array version, prefer `vector<int>` over the non-standard `int distance[n]`.
+**BFS is still the right mental model**; greedy is just the tighter implementation. If you keep the older `distance`-array version, prefer `vector<int>` over the non-standard `int distance[n]`.

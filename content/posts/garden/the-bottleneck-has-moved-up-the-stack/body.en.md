@@ -7,6 +7,6 @@ The scarce resource is no longer typing. It is **judgment**:
 
 What feels different in practice is this: the earlier decisions matter more. If code is cheap, then bad decisions compound faster. You can build the wrong thing cleanly, scale a poor abstraction confidently, and automate yourself into a deeper mess.
 
-So the job shifts. More time spent on shaping the problem before shaping the code. More energy on constraints, interfaces, failure modes, and the long-term cost of convenience. The most valuable engineering move is often not implementation speed, but <u>refusing unnecessary complexity before it enters the system</u>.
+So the job shifts. More time spent on shaping the problem before shaping the code. More energy on constraints, interfaces, failure modes, and the long-term cost of convenience. The most valuable engineering move is often not implementation speed, but **refusing unnecessary complexity before it enters the system**.
 
 I keep coming back to a simple test: what is worth making easier, and what should not exist at all? That feels closer to the new craft. Code still matters, of course. But it is increasingly the last mile of thought, not the main event.

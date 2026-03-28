@@ -21,7 +21,7 @@ Why I like this approach:
 - **It is easy to inspect and debug.**
 - **It gives me a usable text dump quickly**, which is often enough for indexing, summarization, or note capture.
 
-But this is a blunt tool. It extracts <u>all</u> body text, not the “main article” in any semantic sense. Navigation, footer text, recommendations, and repeated UI labels will come along for the ride. For a one-off scrape, that tradeoff is fine. For higher-quality extraction, I would add targeted selectors, boilerplate removal, or a Readability-style pass.
+But this is a blunt tool. It extracts **all** body text, not the “main article” in any semantic sense. Navigation, footer text, recommendations, and repeated UI labels will come along for the ride. For a one-off scrape, that tradeoff is fine. For higher-quality extraction, I would add targeted selectors, boilerplate removal, or a Readability-style pass.
 
 One small correction to my original sketch: in Playwright Python, `page.text()` is not the call I want here. The useful step is `page.content()`, because once the page is rendered, HTML is the stable thing to parse.
 

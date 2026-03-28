@@ -2,7 +2,7 @@
 
 This solution encodes a binary tree with two traversals: **inorder** and **preorder**. Concatenate them as `inorder#preorder`, where each traversal is a space-separated integer list. During deserialization, rebuild the tree from those two sequences.
 
-The key fact is: **preorder + inorder uniquely determine a binary tree** <u>only when node values are unique</u>. That assumption is implicit in the original note and should be stated clearly.
+The key fact is: **preorder + inorder uniquely determine a binary tree** **only when node values are unique**. That assumption is implicit in the original note and should be stated clearly.
 
 **Encoding**
 

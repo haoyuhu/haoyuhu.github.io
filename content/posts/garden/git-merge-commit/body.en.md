@@ -71,4 +71,4 @@ git push --force-with-lease
 
 Prefer this over `git push -f`. It is safer and less likely to overwrite remote work you have not seen. Avoid rewriting public history on shared mainline branches.
 
-<u>Rule of thumb</u>: `reset --soft` moves pointers; `rebase -i` curates history.
+**Rule of thumb**: `reset --soft` moves pointers; `rebase -i` curates history.

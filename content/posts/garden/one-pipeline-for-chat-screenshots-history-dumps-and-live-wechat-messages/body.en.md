@@ -2,7 +2,7 @@
 
 I keep coming back to the same pattern: chat history exists in two inconvenient forms — screenshot OCR for the messy past, and message streams for the clean future. The useful system is probably one pipeline that handles both.
 
-Moonshot feels like a good fit for the screenshot side. Not just plain OCR cleanup, but turning OCR output into a structured conversation object: speakers, timestamps, quoted replies, topic shifts, action items, and uncertainty markers. Once the structure exists, the more interesting step is <u>drill-down interpretation</u>: ask what happened here, what decision was made, what is missing, what follow-up is implied.
+Moonshot feels like a good fit for the screenshot side. Not just plain OCR cleanup, but turning OCR output into a structured conversation object: speakers, timestamps, quoted replies, topic shifts, action items, and uncertainty markers. Once the structure exists, the more interesting step is **drill-down interpretation**: ask what happened here, what decision was made, what is missing, what follow-up is implied.
 
 **Capture strategy**
 

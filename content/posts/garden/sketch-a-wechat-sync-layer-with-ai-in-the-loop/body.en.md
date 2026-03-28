@@ -4,7 +4,7 @@ The interesting part is not “AI replies.” It is the idea of a new layer betw
 
 A rough design:
 
-- **Capture layer** — ingest messages from a user-controlled source: desktop session events, notifications, or explicit exports. I would strongly prefer <u>consent-based collection</u> over brittle scraping.
+- **Capture layer** — ingest messages from a user-controlled source: desktop session events, notifications, or explicit exports. I would strongly prefer **consent-based collection** over brittle scraping.
 - **Sync engine** — write everything to an append-only local log first, then optionally replicate to a personal cloud. Offline-first, encrypted, reversible.
 - **AI layer** — semantic search, summaries, translation, reply drafting, topic extraction, relationship memory. Ideally raw content stays local; remote models only see minimized context when necessary.
 - **Interface** — not a replacement chat client, but a companion inbox: searchable, annotatable, and able to surface context at the right moment.

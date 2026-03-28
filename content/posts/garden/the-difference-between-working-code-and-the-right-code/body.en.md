@@ -26,7 +26,7 @@ After enough time inside ugly systems, you build a physical sense for code that 
 
 That feeling is hard to formalize. It is part taste, part scar tissue, part memory.
 
-AI is useful here. It can produce a fast draft, explore options, and remove mechanical work. But the judgment of <u>future pain</u> still comes from lived contact with bad code.
+AI is useful here. It can produce a fast draft, explore options, and remove mechanical work. But the judgment of **future pain** still comes from lived contact with bad code.
 
 The job is not only to make code pass today.
 

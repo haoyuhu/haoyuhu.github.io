@@ -42,4 +42,4 @@ vector<vector<int>> threeSum(vector<int>& nums) {
 - Time: `O(n^2)`
 - Extra space: `O(n)` per anchor, plus the dedupe set
 
-<u>If sorting the input is allowed</u>, the classic two-pointer solution is usually cleaner. If constraints are extreme, promote arithmetic to `int64_t`.
+**If sorting the input is allowed**, the classic two-pointer solution is usually cleaner. If constraints are extreme, promote arithmetic to `int64_t`.

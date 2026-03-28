@@ -16,7 +16,7 @@ If the hotspot is the algorithm, then the focus shifts:
 - shrink intermediate tensors or buffers
 - tighten memory lifecycle and reuse allocations where possible
 
-So the next step is not “optimize the whole pipeline.” It is to put a clean breakpoint in the flow and measure each stage separately. <u>Find the dominant cost first, then optimize with intent.</u>
+So the next step is not “optimize the whole pipeline.” It is to put a clean breakpoint in the flow and measure each stage separately. **Find the dominant cost first, then optimize with intent.**
 
 Two guardrails are worth adding immediately, even before deep tuning:
 - **limit upload file size**

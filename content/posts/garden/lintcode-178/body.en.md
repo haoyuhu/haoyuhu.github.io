@@ -52,4 +52,4 @@ One subtle point: DFS here does not track parent nodes. That is intentional. Par
 
 Edge cases: `n == 1` with no edges returns true, while `n == 0` is usually treated as false in interview settings. DFS and BFS are interchangeable here.
 
-<u>Complexity</u>: `O(n + m)` time and `O(n + m)` space, where `m = edges.size()`.
+**Complexity**: `O(n + m)` time and `O(n + m)` space, where `m = edges.size()`.

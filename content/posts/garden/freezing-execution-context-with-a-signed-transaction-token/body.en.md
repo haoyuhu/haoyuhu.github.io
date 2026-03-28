@@ -25,4 +25,4 @@ A few details matter more than they first appear:
 - Keep the JWT short-lived. Expiry is part of the security model, not just housekeeping.
 - Rotate signing keys cleanly.
 
-<u>The core idea:</u> do the expensive resolution once, sign the result, and treat later execution as verification rather than re-interpretation.
+**The core idea:** do the expensive resolution once, sign the result, and treat later execution as verification rather than re-interpretation.

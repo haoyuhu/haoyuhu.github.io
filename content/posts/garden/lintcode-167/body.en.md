@@ -8,7 +8,7 @@ The legacy solution is correct, but it builds the answer by **head insertion** a
 - Compute `sum = x + y + carry`.
 - Append `sum % 10` to the result list.
 - Update `carry = sum / 10`.
-- Continue while `l1`, `l2`, <u>or</u> `carry` still exists.
+- Continue while `l1`, `l2`, **or** `carry` still exists.
 
 ```cpp
 class Solution {

@@ -12,4 +12,4 @@ That framing changes the workflow:
 - **Treat tests and automation as force multipliers.** The faster you can validate, the more safely you can delegate.
 - **Keep learning.** The real skill is not “letting AI code,” but building a workflow where AI reliably amplifies your judgment.
 
-The core idea is simple: <u>AI increases leverage, not responsibility</u>. The engineer still owns direction, trade-offs, and final quality.
+The core idea is simple: **AI increases leverage, not responsibility**. The engineer still owns direction, trade-offs, and final quality.

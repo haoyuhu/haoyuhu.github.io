@@ -30,4 +30,4 @@ A(3, 9) = C(9, 0) + C(9, 1) + C(9, 2) + C(9, 3)
 
 **Answer:** nine planar cuts can produce at most **130 pieces**.
 
-<u>Note</u>: because the watermelon is convex, intersecting the plane arrangement with the melon does not change the maximum count.
+**Note**: because the watermelon is convex, intersecting the plane arrangement with the melon does not change the maximum count.

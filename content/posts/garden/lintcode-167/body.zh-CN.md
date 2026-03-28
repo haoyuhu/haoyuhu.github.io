@@ -8,7 +8,7 @@
 - 计算 `sum = x + y + carry`。
 - 将 `sum % 10` 追加到结果链表末尾。
 - 更新 `carry = sum / 10`。
-- 只要 `l1`、`l2` <u>或</u> `carry` 仍然存在，就继续循环。
+- 只要 `l1`、`l2` **或** `carry` 仍然存在，就继续循环。
 
 ```cpp
 class Solution {

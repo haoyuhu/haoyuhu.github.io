@@ -10,6 +10,6 @@ A few things I now treat as defaults, not edge cases:
 - **Design fallbacks.** Missing translations should fail gracefully and visibly.
 - **Test with hostile samples.** Long German compounds, CJK text, Arabic, accented search queries, mixed-language content.
 
-The deeper point is architectural: <u>language leaks into the whole system</u>. URL design, slugs, caching, CMS workflows, indexing, observability, and customer support all feel it. A useful discipline falls out of this: stable identifiers internally, localized presentation externally.
+The deeper point is architectural: **language leaks into the whole system**. URL design, slugs, caching, CMS workflows, indexing, observability, and customer support all feel it. A useful discipline falls out of this: stable identifiers internally, localized presentation externally.
 
 I have found that the cheapest time to think about multilingual design is before the first string lands in the UI. Even if the first release is single-language, building with multilingual assumptions produces cleaner boundaries and fewer hidden dependencies. It is one of those constraints that quietly improves the system.

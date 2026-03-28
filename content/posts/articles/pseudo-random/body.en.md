@@ -29,7 +29,7 @@ flowchart LR
     G --> A
 ```
 
-The key benefit is <u>distribution shaping</u>. PRD does **not** increase the average power of an ability; it reduces extreme luck. Wiki measurements show the effect clearly: at a nominal `10%` proc rate, the average interval remains `10` attempts, but the standard deviation drops to about `5.06`, versus `9.50` for plain independent RNG. At `80%`, the average interval is `1.50` attempts, with standard deviation `0.50` under PRD versus `0.87` under plain RNG. Fewer absurd streaks means better perceived fairness.
+The key benefit is **distribution shaping**. PRD does **not** increase the average power of an ability; it reduces extreme luck. Wiki measurements show the effect clearly: at a nominal `10%` proc rate, the average interval remains `10` attempts, but the standard deviation drops to about `5.06`, versus `9.50` for plain independent RNG. At `80%`, the average interval is `1.50` attempts, with standard deviation `0.50` under PRD versus `0.87` under plain RNG. Fewer absurd streaks means better perceived fairness.
 
 | Model | Per-attempt rule | Streak behavior | Best use |
 |---|---|---|---|

@@ -73,4 +73,4 @@ git push --force-with-lease
 
 尽量不要直接用 `git push -f`。`--force-with-lease` 更安全，它不会盲目覆盖你还没看到的远端更新。共享主干分支上的公开历史，也应尽量避免重写。
 
-<u>经验法则</u>：`reset --soft` 更像是在移动指针；`rebase -i` 才是在整理历史。
+**经验法则**：`reset --soft` 更像是在移动指针；`rebase -i` 才是在整理历史。

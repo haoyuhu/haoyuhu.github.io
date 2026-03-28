@@ -78,7 +78,7 @@ def chi2_distance(a, b, eps=1e-10):
 score = alpha * color_distance + beta * structure_distance
 ```
 
-<u>Lower scores mean better matches.</u> In practice, the two distances should be normalized or weighted so one descriptor does not dominate the other.
+**Lower scores mean better matches.** In practice, the two distances should be normalized or weighted so one descriptor does not dominate the other.
 
 ## Modernized implementation notes
 

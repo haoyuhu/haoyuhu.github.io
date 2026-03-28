@@ -1,6 +1,6 @@
 **Heuristic**
 
-For modular exponentiation, the algorithm is standard; the bug is usually <u>overflow before `% b` is applied</u>.
+For modular exponentiation, the algorithm is standard; the bug is usually **overflow before `% b` is applied**.
 
 - Reduce the base first
 - Square and multiply in `long long`

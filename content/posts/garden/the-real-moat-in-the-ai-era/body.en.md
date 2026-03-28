@@ -9,4 +9,4 @@ The next step is not to chat more with AI. It is to wrap recurring work in agent
 **3. Decentralized custom tools**
 I do not think one central AI product will fit every team. The winning pattern is a loose ecosystem of small, composable tools built close to the work: a sales copilot for one pipeline, a release agent for engineering, a spec checker for PMs, an internal memory layer for support. Local tools capture local reality. Central platforms should provide rails, not dictate the last mile.
 
-If I were building in this moment, I would start by mapping hidden team context, then pick one painful recurring workflow, then build the narrowest tool that makes the team faster <u>together</u>. In AI, scale will come from context-rich systems, not generic chat windows.
+If I were building in this moment, I would start by mapping hidden team context, then pick one painful recurring workflow, then build the narrowest tool that makes the team faster **together**. In AI, scale will come from context-rich systems, not generic chat windows.

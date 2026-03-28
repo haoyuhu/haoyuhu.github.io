@@ -2,7 +2,7 @@ My current bias for AI tools is simple: use the model to expand the option space
 
 When an assistant gives me one polished answer and asks for approval, I become a reviewer. That mode is narrow, slightly passive, and oddly tiring. But when it gives me 3-5 genuinely different candidates, the interaction changes. I am no longer grading a machine. I am choosing, combining, and steering.
 
-That matters because humans are often better at <u>selection</u> than raw generation. Faced with a blank page, we stall. Faced with a handful of plausible directions, we can quickly say:
+That matters because humans are often better at **selection** than raw generation. Faced with a blank page, we stall. Faced with a handful of plausible directions, we can quickly say:
 - this one has the right energy
 - this structure is cleaner
 - this phrase is worth keeping

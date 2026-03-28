@@ -46,4 +46,4 @@ One loop removes one `1`.
 - Time: `O(total set bits from 0..num)`; commonly treated as `O(n log n)` in the worst case for this per-number method
 - Space: `O(1)` extra, excluding the output
 
-<u>Heuristic</u>: this is the right first answer if you recognize the bit trick quickly. For LeetCode 338’s linear-time follow-up, switch to DP, such as `ans[i] = ans[i & (i - 1)] + 1` or `ans[i] = ans[i >> 1] + (i & 1)`.
+**Heuristic**: this is the right first answer if you recognize the bit trick quickly. For LeetCode 338’s linear-time follow-up, switch to DP, such as `ans[i] = ans[i & (i - 1)] + 1` or `ans[i] = ans[i >> 1] + (i & 1)`.

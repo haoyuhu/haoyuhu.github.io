@@ -19,7 +19,7 @@ So every swap repairs one bad even slot and one bad odd slot at the same time. N
 **Why it works**
 The loop invariant is simple: everything before `even` and `odd` has already been checked for its parity. Each exchange places two elements into the correct alternating groups, so the scan remains linear. If one sign is more frequent, the leftovers naturally drift to the tail, which is the best possible arrangement.
 
-<u>Assumption:</u> values are strictly positive or strictly negative. If `0` is allowed, classify it explicitly before using this method.
+**Assumption:** values are strictly positive or strictly negative. If `0` is allowed, classify it explicitly before using this method.
 
 ```cpp
 class Solution {

@@ -3,7 +3,7 @@ One intuition I keep returning to: if agent systems become a real network—broa
 Every edge is risky: an agent calling another agent, invoking a tool, touching private data, or moving money. I would assume no node is fully trusted; it is only verified, constrained, and observed. In practice, that suggests:
 
 - **Decentralized credentials and attestations** instead of one platform acting as the universal root of trust.
-- **Trusted sandbox execution** for agents and tools: ephemeral state, clean teardown, strict egress controls, and <u>clear fences around sensitive data</u> to limit leakage.
+- **Trusted sandbox execution** for agents and tools: ephemeral state, clean teardown, strict egress controls, and **clear fences around sensitive data** to limit leakage.
 - **Bidirectional defense**: protect the enterprise from the agent, and protect the agent from hostile tools, prompts, peers, or compromised runtimes.
 - **Observability with enterprise-grade auditability** without turning the whole system into permanent surveillance.
 - **Machine-native payment rails** so economic exchange is first-class, not awkwardly tunneled through human checkout flows.

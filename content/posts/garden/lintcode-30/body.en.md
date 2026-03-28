@@ -8,7 +8,7 @@ The input list is already sorted and non-overlapping, so there is no need to re-
 
 This naturally splits the list into **left / overlap / right**. Because the intervals are sorted, once an interval starts after `newInterval.end`, every later interval will also be non-overlapping.
 
-<u>Edge cases</u> are handled without special branching:
+**Edge cases** are handled without special branching:
 - insert at the beginning
 - insert at the end
 - no overlap at all

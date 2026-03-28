@@ -43,4 +43,4 @@ int jump(vector<int>& nums) {
 
 这个解法同样是 **O(n)** 时间、**O(1)** 空间。如果题目不保证一定可达，需要补一个 `i > farthest` 的判断，并返回 `-1`。
 
-<u>BFS 仍然是正确的心智模型</u>；贪心只是更紧凑的实现。如果你还保留旧版的 `distance` 数组写法，优先使用 `vector<int>`，不要用非标准的 `int distance[n]`。
+**BFS 仍然是正确的心智模型**；贪心只是更紧凑的实现。如果你还保留旧版的 `distance` 数组写法，优先使用 `vector<int>`，不要用非标准的 `int distance[n]`。

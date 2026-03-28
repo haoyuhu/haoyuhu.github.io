@@ -1,0 +1,17 @@
+id: note-multi-agent-is-a-boundary-design-problem
+kind: note
+slug: multi-agent-is-a-boundary-design-problem
+date: '2026-03-28'
+publishedAt: '2026-03-28T18:40:00+08:00'
+title:
+  en: Multi-Agent Is a Boundary Design Problem
+  zh-CN: 多智能体首先是边界设计问题
+summary:
+  en: The practical question is not whether multiple agents look smarter. It is whether the task has real boundaries that deserve isolation, parallel search, or specialization.
+  zh-CN: 真正实用的问题，不是多个智能体看起来会不会更聪明，而是任务里是否真的存在值得隔离、并行搜索或专业化处理的边界。
+tags:
+  - multi-agent
+  - context-boundaries
+  - orchestration
+  - product-strategy
+  - claude

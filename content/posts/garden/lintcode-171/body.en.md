@@ -51,4 +51,4 @@ private:
 - **Safer signature**: separators like `#` avoid accidental ambiguity.
 - **Same core idea**: hash by character counts.
 
-<u>Takeaway</u>: for anagram grouping, a frequency signature is a compact and efficient canonical form.
+**Takeaway**: for anagram grouping, a frequency signature is a compact and efficient canonical form.

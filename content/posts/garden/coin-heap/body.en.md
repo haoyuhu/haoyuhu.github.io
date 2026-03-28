@@ -23,6 +23,6 @@ So pile A ends with $k-x$ heads, exactly the same as pile B.
 
 Takeaway
 
-<u>The hidden invariant is this: make one pile's size equal to the total number of heads.</u> Flipping that pile converts its tails into the precise complement of the other pile's heads.
+**The hidden invariant is this: make one pile's size equal to the total number of heads.** Flipping that pile converts its tails into the precise complement of the other pile's heads.
 
 No inspection is needed. The construction works completely blind.

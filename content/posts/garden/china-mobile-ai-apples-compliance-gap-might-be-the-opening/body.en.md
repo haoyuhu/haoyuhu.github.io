@@ -12,7 +12,7 @@ This is where Chinese OEMs may be structurally faster. Huawei, Xiaomi, OPPO, viv
 
 For Apple, the challenge feels structural. Its best AI experience likely depends on a hybrid stack: on-device intelligence plus cloud-backed assistance. In China, any cloud-facing layer may run into the same class of friction that kept OpenAI-style products from landing cleanly: approvals, provider constraints, content governance, data locality, and partnership complexity. That does not make Apple non-competitive, but it could delay rollout or fragment the experience.
 
-<u>Research frame:</u>
+**Research frame:**
 - model source: self-built, local partner, or foreign dependency
 - inference path: on-device vs cloud
 - feature surface: assistant, imaging, search, notes, call, translation

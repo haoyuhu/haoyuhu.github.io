@@ -14,6 +14,6 @@ The catch is coordination cost. In practice, multi-agent systems often consume *
 
 That cost hurts twice: higher spend, and higher complexity. More moving parts means more brittle routing, weaker observability, and harder debugging.
 
-My default now is simple: <u>start with a single agent</u>. Give it strong prompts, useful tools, and clear stopping criteria. Only introduce multiple agents when you can point to one of the three advantages above and measure the gain.
+My default now is simple: **start with a single agent**. Give it strong prompts, useful tools, and clear stopping criteria. Only introduce multiple agents when you can point to one of the three advantages above and measure the gain.
 
 One more thing: the boundary keeps moving. As models improve, the range of tasks a single agent can handle expands. Architecture choices that made sense a year ago may already deserve a fresh look.

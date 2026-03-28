@@ -4,7 +4,7 @@
 
 At Tsinghua University, booking a study room in the Humanities Library was a small but recurring systems problem. Rooms opened on schedule, availability changed fast, and missing a reservation window could lead to a violation record and a temporary booking ban. **Tutu-Android** was built as a focused assistant for that exact scenario.
 
-Instead of acting as a thin mobile wrapper around the web portal, the app modeled reservation as a <u>time-critical workflow</u>: discover inventory, choose intelligently, reserve quickly, get reminded, and recover when plans change. Users could also switch accounts, log out at any time, and send feedback directly from the app.
+Instead of acting as a thin mobile wrapper around the web portal, the app modeled reservation as a **time-critical workflow**: discover inventory, choose intelligently, reserve quickly, get reminded, and recover when plans change. Users could also switch accounts, log out at any time, and send feedback directly from the app.
 
 ## Core capabilities
 

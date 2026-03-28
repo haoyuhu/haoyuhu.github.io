@@ -9,7 +9,7 @@ That shift blurs the old boundary between software engineering and product think
 - **Where should human judgment remain in the loop?**
 - **How do we keep the system understandable as it grows?**
 
-This is the part I keep coming back to: AI does not erase software structure. It <u>amplifies</u> it.
+This is the part I keep coming back to: AI does not erase software structure. It **amplifies** it.
 
 If a codebase is well-factored, explicit, and conceptually clean, AI can accelerate extension and iteration. If the structure is muddy, ownership is vague, and abstractions leak everywhere, AI will happily scale the mess. You do not get less complexity; you get complexity produced faster.
 

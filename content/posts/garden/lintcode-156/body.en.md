@@ -6,7 +6,7 @@ This is a classic sort-and-scan problem. Once the intervals are ordered by `star
 - If the next interval starts after `current.end`, the two intervals are disjoint, so push `current` into the answer and reset it.
 - Otherwise they overlap, so extend `current.end` to the larger end.
 
-The original note is basically correct; the main work is in the details. In particular, the condition `next.start > current.end` treats touching intervals such as `[1,2]` and `[2,3]` as mergeable. That matches the usual interpretation for this problem. <u>If your interval definition is different</u>, this is the line to change.
+The original note is basically correct; the main work is in the details. In particular, the condition `next.start > current.end` treats touching intervals such as `[1,2]` and `[2,3]` as mergeable. That matches the usual interpretation for this problem. **If your interval definition is different**, this is the line to change.
 
 The legacy version also used a handwritten quicksort. In modern C++, `std::sort` is cleaner, safer, and avoids unnecessary implementation risk.
 

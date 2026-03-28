@@ -1,0 +1,17 @@
+id: note-private-plugin-markets-are-how-enterprise-agents-scale
+kind: note
+slug: private-plugin-markets-are-how-enterprise-agents-scale
+date: '2026-03-28'
+publishedAt: '2026-03-28T18:55:00+08:00'
+title:
+  en: Private Plugin Markets Are How Enterprise Agents Scale
+  zh-CN: 企业级智能体扩张，靠的是私有插件市场
+summary:
+  en: The interesting part of enterprise agent adoption is not the chat surface. It is the internal market that makes tools discoverable, reusable, governable, and close to real work.
+  zh-CN: 企业智能体落地最有意思的部分，不是聊天界面，而是那套让工具能被发现、复用、治理，并真正贴近业务工作的内部插件市场。
+tags:
+  - enterprise-agents
+  - plugins
+  - internal-tools
+  - product-distribution
+  - cowork

@@ -1,0 +1,17 @@
+id: article-auto-mode-is-runtime-governance
+kind: article
+slug: auto-mode-is-runtime-governance
+date: '2026-03-28'
+publishedAt: '2026-03-28T18:10:00+08:00'
+title:
+  en: Auto Mode Is Runtime Governance
+  zh-CN: Auto Mode 的本质是运行时治理
+summary:
+  en: The real breakthrough in agentic coding is not giving the model more power. It is replacing all-or-nothing permissions with a runtime policy loop that classifies, escalates, and blocks at the right boundary.
+  zh-CN: 智能体编程真正的突破，不是单纯给模型更大权限，而是把非黑即白的授权，升级成一套能在正确边界上做分类、升级确认与拦截的运行时策略回路。
+tags:
+  - agents
+  - runtime-governance
+  - safety
+  - product-design
+  - claude-code

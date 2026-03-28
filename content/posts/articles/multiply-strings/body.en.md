@@ -74,4 +74,4 @@ A few upgrades make the original code cleaner and safer:
 
 ## Practical takeaway
 
-For the actual **LeetCode `Multiply Strings`** problem, the schoolbook `O(n^2)` solution is usually the best trade-off: shorter code, fewer edge cases, and strong performance on interview-sized inputs. But if the goal is to understand how multiplication scales, the Karatsuba-style rewrite is the right next step. It preserves the same decimal-string model while showing that <u>most of the complexity lives in representation, normalization, and helper operations—not in the final algebraic identity itself</u>.
+For the actual **LeetCode `Multiply Strings`** problem, the schoolbook `O(n^2)` solution is usually the best trade-off: shorter code, fewer edge cases, and strong performance on interview-sized inputs. But if the goal is to understand how multiplication scales, the Karatsuba-style rewrite is the right next step. It preserves the same decimal-string model while showing that **most of the complexity lives in representation, normalization, and helper operations—not in the final algebraic identity itself**.

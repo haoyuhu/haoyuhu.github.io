@@ -7,7 +7,7 @@ I keep coming back to the same idea: an agent-native world is not one killer app
 - **Agent env/infra**: runtime, tools, plugins, memory, observability.
 
 **Safety is not optional**
-Capability without control is a toy or a liability. A real **agent guard** layer needs prompt-injection defense, data-loss prevention, fund safety, action audit, policy enforcement, and fine-grained permission control. <u>Trust must be computable, not implied.</u>
+Capability without control is a toy or a liability. A real **agent guard** layer needs prompt-injection defense, data-loss prevention, fund safety, action audit, policy enforcement, and fine-grained permission control. **Trust must be computable, not implied.**
 
 **Universal adapters**
 The bottleneck is still interface mismatch. I want:

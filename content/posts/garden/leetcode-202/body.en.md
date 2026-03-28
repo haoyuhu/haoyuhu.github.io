@@ -10,8 +10,8 @@ If during this process the number cycles without reaching 1, it is not a Happy N
 indicates an infinite loop without reaching 1.
 
 ## Key Concepts
-- <u>Termination condition:</u> If intermediate sum becomes 1, return **true**.
-- <u>Cycle detection:</u> If a sum repeats (other than 1), it means the process is stuck in a loop, return **false**.
+- **Termination condition:** If intermediate sum becomes 1, return **true**.
+- **Cycle detection:** If a sum repeats (other than 1), it means the process is stuck in a loop, return **false**.
 - Use a hash set (`unordered_set<int>`) to record seen numbers, ensuring O(1) average lookups.
 
 For a deep dive into Happy Numbers, see [Happy Number on Wikipedia](http://en.wikipedia.org/wiki/Happy_number). The article also covers related concepts like Happy Primes and Harshad numbers.

@@ -31,7 +31,7 @@ Divide the received codeword by the same generator:
 - non-zero remainder -> corruption detected
 
 **Boundary of the tool**
-CRC is excellent for catching accidental bit errors cheaply. It is <u>not</u> a reliable integrity or authenticity check:
+CRC is excellent for catching accidental bit errors cheaply. It is **not** a reliable integrity or authenticity check:
 - CRCs are linear
 - an attacker can modify data and recompute a matching CRC
 - if intentional tampering matters, use a cryptographic hash or, better, a MAC

@@ -6,7 +6,7 @@ If the real issue is out-of-distribution generalization, then offline coverage t
 
 - `w(x, a) = pi(a|x) / pi_ref(a|x)`
 
-What matters is not just whether `w` is modest <u>on average</u>, but whether it can become huge anywhere important. That is why controls like:
+What matters is not just whether `w` is modest **on average**, but whether it can become huge anywhere important. That is why controls like:
 
 - the max ratio, `||w||_inf`
 - or second-moment quantities like `E_ref[w^2]` (closely tied to chi-square divergence)

@@ -52,4 +52,4 @@ private:
 
 边界情况：当 `n == 1` 且没有边时，返回 `true`；而 `n == 0` 在面试场景中通常视为 `false`。这里用 DFS 或 BFS 都可以。
 
-<u>复杂度</u>：时间 `O(n + m)`，空间 `O(n + m)`，其中 `m = edges.size()`。
+**复杂度**：时间 `O(n + m)`，空间 `O(n + m)`，其中 `m = edges.size()`。

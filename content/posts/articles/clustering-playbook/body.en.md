@@ -62,7 +62,7 @@ If you remember only one rule, remember this:
 - If outliers are first-class citizens, begin with **DBSCAN** and escalate to **OPTICS** when one global density threshold is too crude.
 - If clusters look like rings, moons, or graph communities, consider **Spectral Clustering** before wasting time on centroid methods.
 
-A second rule is equally practical: <u>parameter tuning should refine an already plausible worldview, not rescue a broken one</u>.
+A second rule is equally practical: **parameter tuning should refine an already plausible worldview, not rescue a broken one**.
 
 ## From Explanation to Use
 

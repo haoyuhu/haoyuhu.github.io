@@ -12,6 +12,6 @@ This is why many AI features feel impressive in demos and strangely absent in da
 
 Examples are simple: summarize this thread, draft a reply, extract action items, compare this file with the last version, turn this note into a ticket. If the system can infer these moments reliably enough, it should present them proactively.
 
-The product goal is not just accuracy. It is <u>activation energy</u>. Shorter trigger paths lower execution cost; lower cost increases repetitions; repetitions become habit. Once a behavior becomes habitual, the AI stops feeling like a special tool and starts feeling like part of the environment.
+The product goal is not just accuracy. It is **activation energy**. Shorter trigger paths lower execution cost; lower cost increases repetitions; repetitions become habit. Once a behavior becomes habitual, the AI stops feeling like a special tool and starts feeling like part of the environment.
 
 That shift—from waiting to be invoked to offering the next useful move—feels like a more durable interaction model than chat alone.

@@ -12,4 +12,4 @@ Once that happens, specs start to compound:
 - they turn organizational knowledge into durable assets,
 - they restructure workflows around intent, review, and exception handling.
 
-So the endgame is not “AI helps engineers code faster.” It is <u>organizational engineering with compounding returns</u>, powered by specs. That feels like the deeper change.
+So the endgame is not “AI helps engineers code faster.” It is **organizational engineering with compounding returns**, powered by specs. That feels like the deeper change.

@@ -29,4 +29,4 @@ This is easier to reason about because sorted order gives a clear invariant: mov
 - Simple early pruning using minimum and maximum possible sums for each fixed `i` and `j`
 - In C++, prefer `long long` for the running sum to avoid overflow
 
-<u>Takeaway</u>: sorting is still the core idea. The modern solution just makes uniqueness explicit, removes the ad hoc hash, and turns a clever but fragile implementation into a standard, reliable 4Sum template.
+**Takeaway**: sorting is still the core idea. The modern solution just makes uniqueness explicit, removes the ad hoc hash, and turns a clever but fragile implementation into a standard, reliable 4Sum template.

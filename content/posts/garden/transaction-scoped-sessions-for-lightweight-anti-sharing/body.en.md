@@ -15,4 +15,4 @@ Treat one user operation as a transaction, even if it spans several HTTP request
 If the client dies mid-transaction, let `runtime_ttl` or a max-call cap expire it naturally. If state gets corrupted, reset the server-side stored session to empty and allow the next preflight to re-enter the cycle.
 
 **What this buys me**
-**This is friction, not security.** It adds continuity and some anti-sharing resistance, but it is not strong device binding. A determined actor can still keep a session alive and resell access, so <u>daily rate limits are still necessary</u>. Also, if the client stores the previous session in a local file or iCloud, decide explicitly whether multi-device sync is a feature or a bug.
+**This is friction, not security.** It adds continuity and some anti-sharing resistance, but it is not strong device binding. A determined actor can still keep a session alive and resell access, so **daily rate limits are still necessary**. Also, if the client stores the previous session in a local file or iCloud, decide explicitly whether multi-device sync is a feature or a bug.

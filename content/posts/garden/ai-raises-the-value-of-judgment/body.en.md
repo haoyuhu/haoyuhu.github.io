@@ -1,6 +1,6 @@
 AI does not feel like a substitute for serious thinking. It feels more like a compression layer on the legible parts of thinking: retrieval, first-pass synthesis, drafting, translation, enumeration, and cleanup. As those operations get cheaper, the center of gravity shifts.
 
-What becomes more valuable is not raw output, but <u>choosing what should exist</u>.
+What becomes more valuable is not raw output, but **choosing what should exist**.
 
 A useful mental model:
 - **AI expands option space.** It can generate many plausible answers, structures, and directions.

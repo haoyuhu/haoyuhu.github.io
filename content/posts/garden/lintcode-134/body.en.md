@@ -31,4 +31,4 @@ void moveToTail(Node* prev, Node* cur) {
 }
 ```
 
-<u>Takeaway</u>: this is a clean interview-level LRU built from one list. For production-grade **O(1)** operations, use **`unordered_map` + doubly linked list**.
+**Takeaway**: this is a clean interview-level LRU built from one list. For production-grade **O(1)** operations, use **`unordered_map` + doubly linked list**.

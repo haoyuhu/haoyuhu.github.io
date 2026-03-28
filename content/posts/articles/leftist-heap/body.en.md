@@ -1,6 +1,6 @@
 ## Mergeable priority queues
 
-Leftist heaps and skew heaps are both binary-tree implementations of a min-priority queue. Their main advantage over an array-based binary heap is that <u>merge is a first-class operation</u>. Once merge is efficient, two other operations become simple wrappers: `insert` is a merge with a single-node heap, and `extract-min` removes the root and merges its two subtrees.
+Leftist heaps and skew heaps are both binary-tree implementations of a min-priority queue. Their main advantage over an array-based binary heap is that **merge is a first-class operation**. Once merge is efficient, two other operations become simple wrappers: `insert` is a merge with a single-node heap, and `extract-min` removes the root and merges its two subtrees.
 
 ## Structural invariants
 

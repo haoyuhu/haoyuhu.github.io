@@ -1,4 +1,4 @@
-This is one of the simplest reactive patterns for building a <u>fast, cache-aware data pipeline</u> in Android.
+This is one of the simplest reactive patterns for building a **fast, cache-aware data pipeline** in Android.
 
 ## The problem
 
