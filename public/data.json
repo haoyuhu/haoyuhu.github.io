@@ -162,14 +162,6 @@
         "zh-CN": "经历时间线",
         "en": "Career Log"
       },
-      "careerLogExpandLabel": {
-        "zh-CN": "展开详情",
-        "en": "Expand Details"
-      },
-      "careerLogCollapseLabel": {
-        "zh-CN": "收起详情",
-        "en": "Collapse Details"
-      },
       "resumeCta": {
         "zh-CN": "了解更多",
         "en": "Learn More"
@@ -4879,7 +4871,7 @@
     }
   },
   "generated": {
-    "generatedAt": "2026-03-28T14:47:24.119755+00:00",
+    "generatedAt": "2026-03-28T14:54:38.808595+00:00",
     "source": "content/config + content/posts",
     "bundleVersion": "3.0.0",
     "warnings": []

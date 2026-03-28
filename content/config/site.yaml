@@ -113,12 +113,6 @@ site:
     careerLog:
       zh-CN: "经历时间线"
       en: "Career Log"
-    careerLogExpandLabel:
-      zh-CN: "展开详情"
-      en: "Expand Details"
-    careerLogCollapseLabel:
-      zh-CN: "收起详情"
-      en: "Collapse Details"
     resumeCta:
       zh-CN: "了解更多"
       en: "Learn More"

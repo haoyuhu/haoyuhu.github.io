@@ -3,9 +3,7 @@ import {
   ArrowRight,
   Briefcase,
   Calendar,
-  ChevronDown,
   ChevronRight,
-  ChevronUp,
   ChevronsDown,
   ExternalLink,
   FileCode,
@@ -131,7 +129,6 @@ const App: React.FC = () => {
   const [terminalOpen, setTerminalOpen] = useState(false);
   const [gardenLimit, setGardenLimit] = useState(PAGE_SIZE);
   const [articleLimit, setArticleLimit] = useState(PAGE_SIZE);
-  const [careerLogExpanded, setCareerLogExpanded] = useState(false);
 
   const loadBundle = async () => {
     setLoading(true);
@@ -870,48 +867,34 @@ const App: React.FC = () => {
                             </div>
                             <div className="text-base font-bold text-ide-text">{getLocalizedText(experience.role, locale)}</div>
                             <div className="mb-3 text-xs text-sky-400">@{getLocalizedText(experience.company, locale)}</div>
-                            <div className="relative">
-                              <div className={`space-y-3 ${careerLogExpanded ? '' : 'max-h-[240px] overflow-hidden'}`}>
-                                <div className="space-y-1 text-xs leading-5 text-ide-text-dim">
-                                  {experience.description[locale].map((line, lineIndex) => (
-                                    <div key={`${experience.id}-${lineIndex}`}>- {line}</div>
-                                  ))}
-                                </div>
-                                {experience.projects.map((project, projectIndex) => (
-                                  <div key={`${experience.id}-${projectIndex}`} className="rounded border border-ide-border bg-ide-bg px-3 py-2 text-xs text-ide-text-dim">
-                                    <div className="font-semibold text-ide-text">{getLocalizedText(project.name, locale)}</div>
-                                    <div className="mt-1 leading-5">{getLocalizedText(project.description, locale)}</div>
-                                    <div className="mt-2 flex flex-wrap gap-1">
-                                      {project.tech.map((tech, techIndex) => (
-                                        <span
-                                          key={`${experience.id}-${projectIndex}-${techIndex}`}
-                                          className="rounded border border-ide-border bg-ide-panel px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-ide-text-dim"
-                                        >
-                                          {getLocalizedText(tech, locale)}
-                                        </span>
-                                      ))}
-                                    </div>
+                            <div className="space-y-3">
+                              <p
+                                className="overflow-hidden text-xs leading-5 text-ide-text-dim"
+                                style={{
+                                  display: '-webkit-box',
+                                  WebkitBoxOrient: 'vertical',
+                                  WebkitLineClamp: 4,
+                                }}
+                              >
+                                {experience.description[locale].map((line) => `- ${line}`).join(' ')}
+                              </p>
+                              {experience.projects.map((project, projectIndex) => (
+                                <div key={`${experience.id}-${projectIndex}`} className="rounded border border-ide-border bg-ide-bg px-3 py-2 text-xs text-ide-text-dim">
+                                  <div className="font-semibold text-ide-text">{getLocalizedText(project.name, locale)}</div>
+                                  <div className="mt-1 leading-5">{getLocalizedText(project.description, locale)}</div>
+                                  <div className="mt-2 flex flex-wrap gap-1">
+                                    {project.tech.map((tech, techIndex) => (
+                                      <span
+                                        key={`${experience.id}-${projectIndex}-${techIndex}`}
+                                        className="rounded border border-ide-border bg-ide-panel px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-ide-text-dim"
+                                      >
+                                        {getLocalizedText(tech, locale)}
+                                      </span>
+                                    ))}
                                   </div>
-                                ))}
-                              </div>
-                              {!careerLogExpanded && (
-                                <div
-                                  className="pointer-events-none absolute inset-x-0 bottom-0 h-20 rounded-b-xl"
-                                  style={{ background: 'linear-gradient(to top, var(--theme-panel), rgba(15, 23, 42, 0))' }}
-                                />
-                              )}
+                                </div>
+                              ))}
                             </div>
-                            <button
-                              onClick={() => setCareerLogExpanded((current) => !current)}
-                              className="mt-3 inline-flex items-center gap-2 rounded border border-ide-border bg-ide-bg px-3 py-1.5 text-[11px] uppercase tracking-wide text-ide-text-dim transition-colors hover:border-accent hover:text-accent"
-                            >
-                              <span>
-                                {careerLogExpanded
-                                  ? getLocalizedText(copy.careerLogCollapseLabel ?? { 'zh-CN': '收起详情', en: 'Collapse Details' }, locale)
-                                  : getLocalizedText(copy.careerLogExpandLabel ?? { 'zh-CN': '展开详情', en: 'Expand Details' }, locale)}
-                              </span>
-                              {careerLogExpanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
-                            </button>
                           </div>
                         ))}
                       </div>
